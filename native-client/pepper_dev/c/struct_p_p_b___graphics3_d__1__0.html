@@ -1,0 +1,1312 @@
+<link href="../../_static/css/nacl.css" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../../../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../../../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../../../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>PPB_Graphics3D Struct Reference - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="struct_p_p_b___graphics3_d__1__0.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../../../index.html">
+          <img alt="Chrome: developer" src="../../../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../../../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../../../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../../../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="../../../apps/index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="../../../apps/first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="../../../apps/app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../../../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="../../../apps/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../../../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="../../../apps/app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="../../../apps/cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="../../../apps/app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_usb.html">USB</a>
+                            </li>
+                            <li><a href="../../../apps/app_serial">Serial</a>
+                            </li>
+                            <li><a href="../../../apps/app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="../../../apps/app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="../../../apps/angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="../../../apps/sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="../../../apps/google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../apps/analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../../apps/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../../apps/webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="../../../apps/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../../apps/app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="../../../apps/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/overview.html">Overview</a>
+                            </li>
+                            <li><a href="../../../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../../../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../../../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="../../../apps/activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../../../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../../../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../../../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../../../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../../../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../../../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../../../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../../../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../../../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../../../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../../overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../../nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../../sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../../sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../../sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devguide/tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../../devguide/tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../../devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devguide/devcycle/building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="../../devguide/devcycle/building.html">Building</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/running.html">Running</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devguide/coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../../devguide/coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../../devguide/coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../../devguide/coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../../devguide/coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../../devguide/coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../../devguide/coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../../devguide/coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../../devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../../devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devguide/distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../../pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../../pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../../glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../../reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../../reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../../reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../../reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../../help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../../publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../../community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../../../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../../../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../../../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../../../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../../../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../../../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../../../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../../../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../../../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../../../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <div itemprop="articleBody">
+
+
+<h1>PPB_Graphics3D Struct Reference</h1>
+<div id="doxygen-ref">
+  <div>
+<!-- Generated by Doxygen 1.7.6.1 -->
+
+
+</div>
+<!--header-->
+<div class="contents">
+<!-- doxytag: class="PPB_Graphics3D" --><h2>
+Data Fields</h2><table class="memberdecls">
+
+<tr><td class="memItemLeft" align="right" valign="top">int32_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a80698c6d8c8b04e07d08c4595e0e977b">GetAttribMaxValue</a> )(<a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a> instance, int32_t attribute, int32_t *value)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a818bc5829aac77215321b30f85e26e01">Create</a> )(<a class="el" href="group___typedefs.html#ga89b662403e6a687bb914b80114c0d19d">PP_Instance</a> instance, <a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a> share_context, const int32_t attrib_list[])</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___enums.html#ga4f272d99be14aacafe08dfd4ef830918">PP_Bool</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#af59ffbcc71e08386f66594a138ab4ea5">IsGraphics3D</a> )(<a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a> resource)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#aae3be34b7308c4510a3952b06fb7d6d9">GetAttribs</a> )(<a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a> context, int32_t attrib_list[])</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a093c4674cef82a08f5726bed8361d49d">SetAttribs</a> )(<a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a> context, const int32_t attrib_list[])</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#ae6e9764a94663000dcb2aa610fac724c">GetError</a> )(<a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a> context)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a3bea5a6f3fc77df73c1cf4f02d32b4ec">ResizeBuffers</a> )(<a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a> context, int32_t width, int32_t height)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a293c6941c0da084267ffba3954793497">SwapBuffers</a> )(<a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a> context, struct <a class="el" href="struct_p_p___completion_callback.html">PP_CompletionCallback</a> callback)</td></tr>
+</table>
+<hr /><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p><code>PPB_Graphics3D</code> defines the interface for a 3D graphics context. </p>
+<p><b>Example usage from plugin code:</b></p>
+<p><b>Setup:</b> </p>
+<div class="fragment"><pre class="fragment"> <a class="code" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7" title="This typedef represents an opaque handle assigned by the browser to the resource.">PP_Resource</a> context;
+ int32_t attribs[] = {<a class="code" href="group___enums.html#gga7df48e1c55f6401beea2a1b9c07967e8a378f15587369cdefbcf565bc8f15db2c" title="Width of surface in pixels.">PP_GRAPHICS3DATTRIB_WIDTH</a>, 800,
+                      <a class="code" href="group___enums.html#gga7df48e1c55f6401beea2a1b9c07967e8ac37b92e8426753d7a24d0cf193a5923d" title="Height of surface in pixels.">PP_GRAPHICS3DATTRIB_HEIGHT</a>, 800,
+                      <a class="code" href="group___enums.html#gga7df48e1c55f6401beea2a1b9c07967e8a66b15e43e8159f71751be033d44fda21" title="Attrib list terminator.">PP_GRAPHICS3DATTRIB_NONE</a>};
+ context = g3d-&gt;Create(instance, 0, attribs);
+ inst-&gt;BindGraphics(instance, context);
+</pre></div><p><b>Present one frame:</b> </p>
+<div class="fragment"><pre class="fragment"> <a class="code" href="struct_p_p___completion_callback.html" title="PP_CompletionCallback is a common mechanism for supporting potentially asynchronous calls in browser ...">PP_CompletionCallback</a> callback = {
+   DidFinishSwappingBuffers, 0, <a class="code" href="group___enums.html#gga7610f0fba2396d46384859caa4d91798a6eedc0f315784a4cb47c5806b828c7cc" title="By default any non-NULL callback will always invoked asynchronously, on success or error...">PP_COMPLETIONCALLBACK_FLAG_NONE</a>,
+ };
+ gles2-&gt;Clear(context, GL_COLOR_BUFFER_BIT);
+ g3d-&gt;SwapBuffers(context, callback);
+</pre></div><p><b>Shutdown:</b> </p>
+<div class="fragment"><pre class="fragment"> core-&gt;ReleaseResource(context);
+</pre></div> </div><hr /><h2>Field Documentation</h2>
+<a class="anchor" id="a818bc5829aac77215321b30f85e26e01"></a><!-- doxytag: member="PPB_Graphics3D::Create" ref="a818bc5829aac77215321b30f85e26e01" args=")(PP_Instance instance, PP_Resource share_context, const int32_t attrib_list[])" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a>(* <a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a818bc5829aac77215321b30f85e26e01">PPB_Graphics3D::Create</a>)(<a class="el" href="group___typedefs.html#ga89b662403e6a687bb914b80114c0d19d">PP_Instance</a> instance, <a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a> share_context, const int32_t attrib_list[])</td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a818bc5829aac77215321b30f85e26e01" title="Create() creates and initializes a 3D rendering context.">Create()</a> creates and initializes a 3D rendering context. </p>
+<p>The returned context is off-screen to start with. It must be attached to a plugin instance using <code><a class="el" href="struct_p_p_b___instance__1__0.html#ae5b0da2fc0975c82213f687d96434625" title="BindGraphics() binds the given graphics as the current display surface.">PPB_Instance::BindGraphics</a></code> to draw on the web page.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>The module instance.</td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">share_context</td><td>The 3D context with which the created context would share resources. If <code>share_context</code> is not 0, then all shareable data, as defined by the client API (note that for OpenGL and OpenGL ES, shareable data excludes texture objects named 0) will be shared by <code>share_context</code><code>, all other contexts </code><code>share_context</code> already shares with, and the newly created context. An arbitrary number of <code>PPB_Graphics3D</code> can share data in this fashion.</td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">attrib_list</td><td><code></code><code>specifies a list of attributes for the context. It is a list of attribute name-value pairs in which each attribute is immediately followed by the corresponding desired value. The list is terminated with </code><code>PP_GRAPHICS3DATTRIB_NONE</code>. The <code>attrib_list</code><code> may be 0 or empty (first attribute is </code><code>PP_GRAPHICS3DATTRIB_NONE</code>). If an attribute is not specified in <code>attrib_list</code>, then the default value is used (it is said to be specified implicitly). Attributes for the context are chosen according to an attribute-specific criteria. Attributes can be classified into two categories:<ul>
+<li>AtLeast: The attribute value in the returned context meets or exceeds the value specified in <code>attrib_list</code>.</li>
+<li>Exact: The attribute value in the returned context is equal to the value specified in <code>attrib_list</code>.</li>
+</ul>
+</td></tr>
+</table>
+</dd>
+</dl>
+<p>Attributes that can be specified in <code>attrib_list</code> include:</p>
+<ul>
+<li><code></code><code></code><code></code><code></code><code>PP_GRAPHICS3DATTRIB_ALPHA_SIZE</code>: Category: AtLeast Default: 0.</li>
+<li><code></code><code></code><code></code><code></code><code>PP_GRAPHICS3DATTRIB_BLUE_SIZE</code>: Category: AtLeast Default: 0.</li>
+<li><code></code><code></code><code></code><code></code><code>PP_GRAPHICS3DATTRIB_GREEN_SIZE</code>: Category: AtLeast Default: 0.</li>
+<li><code></code><code></code><code></code><code></code><code>PP_GRAPHICS3DATTRIB_RED_SIZE</code>: Category: AtLeast Default: 0.</li>
+<li><code></code><code></code><code></code><code></code><code>PP_GRAPHICS3DATTRIB_DEPTH_SIZE</code>: Category: AtLeast Default: 0.</li>
+<li><code></code><code></code><code></code><code></code><code>PP_GRAPHICS3DATTRIB_STENCIL_SIZE</code>: Category: AtLeast Default: 0.</li>
+<li><code></code><code></code><code></code><code></code><code>PP_GRAPHICS3DATTRIB_SAMPLES</code>: Category: AtLeast Default: 0.</li>
+<li><code></code><code></code><code></code><code></code><code>PP_GRAPHICS3DATTRIB_SAMPLE_BUFFERS</code>: Category: AtLeast Default: 0.</li>
+<li><code></code><code></code><code></code><code></code><code>PP_GRAPHICS3DATTRIB_WIDTH</code>: Category: Exact Default: 0.</li>
+<li><code></code><code></code><code></code><code></code><code>PP_GRAPHICS3DATTRIB_HEIGHT</code>: Category: Exact Default: 0.</li>
+<li><code></code><code></code><code></code><code></code><code>PP_GRAPHICS3DATTRIB_SWAP_BEHAVIOR</code>: Category: Exact Default: Implementation defined.</li>
+</ul>
+<p><code></code><code></code><code></code><code> </code></p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A <code>PP_Resource</code> containing the 3D graphics context if successful or 0 if unsuccessful. </dd></dl>
+<p></p>
+</div>
+</div>
+<a class="anchor" id="a80698c6d8c8b04e07d08c4595e0e977b"></a><!-- doxytag: member="PPB_Graphics3D::GetAttribMaxValue" ref="a80698c6d8c8b04e07d08c4595e0e977b" args=")(PP_Resource instance, int32_t attribute, int32_t *value)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t(* <a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a80698c6d8c8b04e07d08c4595e0e977b">PPB_Graphics3D::GetAttribMaxValue</a>)(<a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a> instance, int32_t attribute, int32_t *value)</td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a80698c6d8c8b04e07d08c4595e0e977b" title="GetAttribMaxValue() retrieves the maximum supported value for the given attribute.">GetAttribMaxValue()</a> retrieves the maximum supported value for the given attribute. </p>
+<p>This function may be used to check if a particular attribute value is supported before attempting to create a context.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>The module instance. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">attribute</td><td>The attribute for which maximum value is queried. Attributes that can be queried for include:<ul>
+<li><code>PP_GRAPHICS3DATTRIB_ALPHA_SIZE</code></li>
+<li><code>PP_GRAPHICS3DATTRIB_BLUE_SIZE</code></li>
+<li><code>PP_GRAPHICS3DATTRIB_GREEN_SIZE</code></li>
+<li><code>PP_GRAPHICS3DATTRIB_RED_SIZE</code></li>
+<li><code>PP_GRAPHICS3DATTRIB_DEPTH_SIZE</code></li>
+<li><code>PP_GRAPHICS3DATTRIB_STENCIL_SIZE</code></li>
+<li><code>PP_GRAPHICS3DATTRIB_SAMPLES</code></li>
+<li><code>PP_GRAPHICS3DATTRIB_SAMPLE_BUFFERS</code></li>
+<li><code>PP_GRAPHICS3DATTRIB_WIDTH</code></li>
+<li><code>PP_GRAPHICS3DATTRIB_HEIGHT</code> </li>
+</ul>
+</td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">value</td><td>The maximum supported value for <code>attribute</code></td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Returns <code>PP_TRUE</code> on success or the following on error:<ul>
+<li><code>PP_ERROR_BADRESOURCE</code> if <code>instance</code> is invalid</li>
+<li><code>PP_ERROR_BADARGUMENT</code> if <code>attribute</code> is invalid or <code>value</code> is 0 </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="aae3be34b7308c4510a3952b06fb7d6d9"></a><!-- doxytag: member="PPB_Graphics3D::GetAttribs" ref="aae3be34b7308c4510a3952b06fb7d6d9" args=")(PP_Resource context, int32_t attrib_list[])" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t(* <a class="el" href="struct_p_p_b___graphics3_d__1__0.html#aae3be34b7308c4510a3952b06fb7d6d9">PPB_Graphics3D::GetAttribs</a>)(<a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a> context, int32_t attrib_list[])</td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#aae3be34b7308c4510a3952b06fb7d6d9" title="GetAttribs() retrieves the value for each attribute in attrib_list.">GetAttribs()</a> retrieves the value for each attribute in <code>attrib_list</code>. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The 3D graphics context. </td></tr>
+<tr><td class="paramdir">[in,out]</td><td class="paramname">attrib_list</td><td>The list of attributes that are queried. <code>attrib_list</code> has the same structure as described for <code><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a818bc5829aac77215321b30f85e26e01" title="Create() creates and initializes a 3D rendering context.">PPB_Graphics3D::Create</a></code>. It is both input and output structure for this function. All attributes specified in <code><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a818bc5829aac77215321b30f85e26e01" title="Create() creates and initializes a 3D rendering context.">PPB_Graphics3D::Create</a></code> can be queried for.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Returns <code>PP_OK</code> on success or:<ul>
+<li><code>PP_ERROR_BADRESOURCE</code> if context is invalid</li>
+<li><code>PP_ERROR_BADARGUMENT</code> if attrib_list is 0 or any attribute in the <code>attrib_list</code> is not a valid attribute.</li>
+</ul>
+</dd></dl>
+<p><b>Example usage:</b> To get the values for rgb bits in the color buffer, this function must be called as following: </p>
+<div class="fragment"><pre class="fragment"> <span class="keywordtype">int</span> attrib_list[] = {<a class="code" href="group___enums.html#gga7df48e1c55f6401beea2a1b9c07967e8a7caad99c8c857fdb804c6755551398f5" title="Bits of Red in the color buffer.">PP_GRAPHICS3DATTRIB_RED_SIZE</a>, 0,
+                      <a class="code" href="group___enums.html#gga7df48e1c55f6401beea2a1b9c07967e8ade95a6e685ca23522da80c1703d294a7" title="Bits of Green in the color buffer.">PP_GRAPHICS3DATTRIB_GREEN_SIZE</a>, 0,
+                      <a class="code" href="group___enums.html#gga7df48e1c55f6401beea2a1b9c07967e8a519cd199423721033780ee13ecb0e60b" title="Bits of Blue in the color buffer.">PP_GRAPHICS3DATTRIB_BLUE_SIZE</a>, 0,
+                      <a class="code" href="group___enums.html#gga7df48e1c55f6401beea2a1b9c07967e8a66b15e43e8159f71751be033d44fda21" title="Attrib list terminator.">PP_GRAPHICS3DATTRIB_NONE</a>};
+ <a class="code" href="struct_p_p_b___graphics3_d__1__0.html#aae3be34b7308c4510a3952b06fb7d6d9" title="GetAttribs() retrieves the value for each attribute in attrib_list.">GetAttribs</a>(context, attrib_list);
+ <span class="keywordtype">int</span> red_bits = attrib_list[1];
+ <span class="keywordtype">int</span> green_bits = attrib_list[3];
+ <span class="keywordtype">int</span> blue_bits = attrib_list[5];
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="ae6e9764a94663000dcb2aa610fac724c"></a><!-- doxytag: member="PPB_Graphics3D::GetError" ref="ae6e9764a94663000dcb2aa610fac724c" args=")(PP_Resource context)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t(* <a class="el" href="struct_p_p_b___graphics3_d__1__0.html#ae6e9764a94663000dcb2aa610fac724c">PPB_Graphics3D::GetError</a>)(<a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a> context)</td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#ae6e9764a94663000dcb2aa610fac724c" title="GetError() returns the current state of the given 3D context.">GetError()</a> returns the current state of the given 3D context. </p>
+<p>The recoverable error conditions that have no side effect are detected and returned immediately by all functions in this interface. In addition the implementation may get into a fatal state while processing a command. In this case the application must destroy the context and reinitialize client API state and objects to continue rendering.</p>
+<p>Note that the same error code is also returned in the SwapBuffers callback. It is recommended to handle error in the SwapBuffers callback because GetError is synchronous. This function may be useful in rare cases where drawing a frame is expensive and you want to verify the result of ResizeBuffers before attempting to draw a frame.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">The</td><td>3D graphics context. </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Returns:<ul>
+<li><code>PP_OK</code> if no error</li>
+<li><code>PP_ERROR_NOMEMORY</code></li>
+<li><code>PP_ERROR_CONTEXT_LOST</code> </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="af59ffbcc71e08386f66594a138ab4ea5"></a><!-- doxytag: member="PPB_Graphics3D::IsGraphics3D" ref="af59ffbcc71e08386f66594a138ab4ea5" args=")(PP_Resource resource)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="group___enums.html#ga4f272d99be14aacafe08dfd4ef830918">PP_Bool</a>(* <a class="el" href="struct_p_p_b___graphics3_d__1__0.html#af59ffbcc71e08386f66594a138ab4ea5">PPB_Graphics3D::IsGraphics3D</a>)(<a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a> resource)</td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#af59ffbcc71e08386f66594a138ab4ea5" title="IsGraphics3D() determines if the given resource is a valid Graphics3D context.">IsGraphics3D()</a> determines if the given resource is a valid <code>Graphics3D</code> context. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">resource</td><td>A <code>Graphics3D</code> context resource.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>PP_TRUE if the given resource is a valid <code>Graphics3D</code>, <code>PP_FALSE</code> if it is an invalid resource or is a resource of another type. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a3bea5a6f3fc77df73c1cf4f02d32b4ec"></a><!-- doxytag: member="PPB_Graphics3D::ResizeBuffers" ref="a3bea5a6f3fc77df73c1cf4f02d32b4ec" args=")(PP_Resource context, int32_t width, int32_t height)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t(* <a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a3bea5a6f3fc77df73c1cf4f02d32b4ec">PPB_Graphics3D::ResizeBuffers</a>)(<a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a> context, int32_t width, int32_t height)</td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a3bea5a6f3fc77df73c1cf4f02d32b4ec" title="ResizeBuffers() resizes the backing surface for context.">ResizeBuffers()</a> resizes the backing surface for context. </p>
+<p>If the surface could not be resized due to insufficient resources, <code>PP_ERROR_NOMEMORY</code> error is returned on the next <code>SwapBuffers</code> callback.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The 3D graphics context. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>The width of the backing surface. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>The height of the backing surface. </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Returns <code>PP_OK</code> on success or:<ul>
+<li><code>PP_ERROR_BADRESOURCE</code> if context is invalid.</li>
+<li><code>PP_ERROR_BADARGUMENT</code> if the value specified for <code>width</code> or <code>height</code> is less than zero. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="a093c4674cef82a08f5726bed8361d49d"></a><!-- doxytag: member="PPB_Graphics3D::SetAttribs" ref="a093c4674cef82a08f5726bed8361d49d" args=")(PP_Resource context, const int32_t attrib_list[])" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t(* <a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a093c4674cef82a08f5726bed8361d49d">PPB_Graphics3D::SetAttribs</a>)(<a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a> context, const int32_t attrib_list[])</td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a093c4674cef82a08f5726bed8361d49d" title="SetAttribs() sets the values for each attribute in attrib_list.">SetAttribs()</a> sets the values for each attribute in <code>attrib_list</code>. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The 3D graphics context. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">attrib_list</td><td>The list of attributes whose values need to be set. <code>attrib_list</code> has the same structure as described for <code><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a818bc5829aac77215321b30f85e26e01" title="Create() creates and initializes a 3D rendering context.">PPB_Graphics3D::Create</a></code>. Attributes that can be specified are:<ul>
+<li><code>PP_GRAPHICS3DATTRIB_SWAP_BEHAVIOR</code></li>
+</ul>
+</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Returns <code>PP_OK</code> on success or:<ul>
+<li><code>PP_ERROR_BADRESOURCE</code> if <code>context</code> is invalid.</li>
+<li><code>PP_ERROR_BADARGUMENT</code> if <code>attrib_list</code> is 0 or any attribute in the <code>attrib_list</code> is not a valid attribute. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="a293c6941c0da084267ffba3954793497"></a><!-- doxytag: member="PPB_Graphics3D::SwapBuffers" ref="a293c6941c0da084267ffba3954793497" args=")(PP_Resource context, struct PP_CompletionCallback callback)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t(* <a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a293c6941c0da084267ffba3954793497">PPB_Graphics3D::SwapBuffers</a>)(<a class="el" href="group___typedefs.html#gafdc3895ee80f4750d0d95ae1b677e9b7">PP_Resource</a> context, struct <a class="el" href="struct_p_p___completion_callback.html">PP_CompletionCallback</a> callback)</td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="struct_p_p_b___graphics3_d__1__0.html#a293c6941c0da084267ffba3954793497" title="SwapBuffers() makes the contents of the color buffer available for compositing.">SwapBuffers()</a> makes the contents of the color buffer available for compositing. </p>
+<p>This function has no effect on off-screen surfaces - ones not bound to any plugin instance. The contents of ancillary buffers are always undefined after calling <code>SwapBuffers</code>. The contents of the color buffer are undefined if the value of the <code>PP_GRAPHICS3DATTRIB_SWAP_BEHAVIOR</code> attribute of context is not <code>PP_GRAPHICS3DATTRIB_BUFFER_PRESERVED</code>.</p>
+<p><code>SwapBuffers</code> runs in asynchronous mode. Specify a callback function and the argument for that callback function. The callback function will be executed on the calling thread after the color buffer has been composited with rest of the html page. While you are waiting for a SwapBuffers callback, additional calls to SwapBuffers will fail.</p>
+<p>Because the callback is executed (or thread unblocked) only when the plugin's current state is actually on the screen, this function provides a way to rate limit animations. By waiting until the image is on the screen before painting the next frame, you can ensure you're not generating updates faster than the screen can be updated.</p>
+<p>SwapBuffers performs an implicit flush operation on context. If the context gets into an unrecoverable error condition while processing a command, the error code will be returned as the argument for the callback. The callback may return the following error codes:</p>
+<ul>
+<li><code>PP_ERROR_NOMEMORY</code></li>
+<li><code>PP_ERROR_CONTEXT_LOST</code> Note that the same error code may also be obtained by calling GetError.</li>
+</ul>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The 3D graphics context. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>The callback that will executed when <code>SwapBuffers</code> completes.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Returns PP_OK on success or:<ul>
+<li><code>PP_ERROR_BADRESOURCE</code> if context is invalid.</li>
+<li><code>PP_ERROR_BADARGUMENT</code> if callback is invalid. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<hr />The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="ppb__graphics__3d_8h.html">ppb_graphics_3d.h</a></li>
+</ul>
+</div><!-- contents -->
+</div>
+    
+    <footer id="cc-info">
+      <button id="send-feedback" class="google-button" data-feedback>Send Feedback</button>
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo"><a href="http://creativecommons.org/licenses/by/3.0/"><img src="../../../static/images/cc_by.png" alt="Licensed Creative Commons by Attribution"></a></p>
+    </footer>
+    <nav class="inline-toc no-permalink">
+      <section class="related">
+      <ol class="toc">
+      </ol>
+      </section>
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="struct_p_p_b___graphics3_d__1__0.html#"
+          >Data Fields</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="struct_p_p_b___graphics3_d__1__0.html#"
+          >Detailed Description</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="struct_p_p_b___graphics3_d__1__0.html#"
+          >Field Documentation</a>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="struct_p_p_b___graphics3_d__1__0.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../../../static/js/fatnav.js"></script>
+    <script src="../../../static/js/article.js"></script>
+    <script src="../../../static/js/prettify.js"></script>
+    <script src="../../../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../../../static/js/site.js"></script>
+  </body>
+</html>

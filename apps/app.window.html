@@ -1,0 +1,2024 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>chrome.app.window - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="../extensions/app.window.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../index.html">
+          <img alt="Chrome: developer" src="../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="app_usb.html">USB</a>
+                            </li>
+                            <li><a href="app_serial">Serial</a>
+                            </li>
+                            <li><a href="app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="overview.html">Overview</a>
+                            </li>
+                            <li><a href="../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../native-client/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../native-client/nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../native-client/sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../native-client/sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/devcycle/building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/devcycle/building.html">Building</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/running.html">Running</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../native-client/reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../native-client/reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../native-client/help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../native-client/publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../native-client/community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article>
+  <div itemprop="articleBody" class="api">
+    <h1>chrome.app.window</h1>
+    <table class="intro" id="intro">
+      <tr>
+        <td class="title">Description:</td>
+        <td>
+             Use the <code>chrome.app.window</code> API to create windows. Windows
+             have an optional frame with title bar and size controls. They are not
+             associated with any Chrome browser windows.
+                    <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Availability:</td>
+        <td>
+            Stable since Chrome 23.
+            <br>
+        </td>
+      </tr>
+    </table>
+    <section id="toc">
+    <h2>Summary</h2>
+    <table class="api-summary">
+      <tr>
+        <tr><th colspan="2">Types</th></tr>
+          <tr><td><a href="../extensions/app.window.html#type-ContentBounds">ContentBounds</a></td></tr>
+          <tr><td><a href="../extensions/app.window.html#type-BoundsSpecification">BoundsSpecification</a></td></tr>
+          <tr><td><a href="../extensions/app.window.html#type-Bounds">Bounds</a></td></tr>
+          <tr><td><a href="../extensions/app.window.html#type-FrameOptions">FrameOptions</a></td></tr>
+          <tr><td><a href="../extensions/app.window.html#type-AppWindow">AppWindow</a></td></tr>
+        <tr><th colspan="2">Methods</th></tr>
+        <tr><td><a href="../extensions/app.window.html#method-create">create</a> &minus;
+            <code class="prettyprint">
+            chrome.app.window.create(<span>string url</span>, <span class="optional">object options</span>, <span class="optional">function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="../extensions/app.window.html#method-current">current</a> &minus;
+            <code class="prettyprint">
+                AppWindow
+            chrome.app.window.current()
+            </code>
+          </td></tr>
+        <tr><td><a href="../extensions/app.window.html#method-getAll">getAll</a> &minus;
+            <code class="prettyprint">
+            array of     <a href="app.window.html#type-AppWindow">AppWindow</a>
+            chrome.app.window.getAll()
+            </code>
+          </td></tr>
+        <tr><td><a href="../extensions/app.window.html#method-get">get</a> &minus;
+            <code class="prettyprint">
+                AppWindow
+            chrome.app.window.get(<span>string id</span>)
+            </code>
+          </td></tr>
+        <tr><th colspan="2">Events</th></tr>
+          <tr><td><a href="../extensions/app.window.html#event-onBoundsChanged">onBoundsChanged</a></td></tr>
+          <tr><td><a href="../extensions/app.window.html#event-onClosed">onClosed</a></td></tr>
+          <tr><td><a href="../extensions/app.window.html#event-onFullscreened">onFullscreened</a></td></tr>
+          <tr><td><a href="../extensions/app.window.html#event-onMaximized">onMaximized</a></td></tr>
+          <tr><td><a href="../extensions/app.window.html#event-onMinimized">onMinimized</a></td></tr>
+          <tr><td><a href="../extensions/app.window.html#event-onRestored">onRestored</a></td></tr>
+    </table>
+    </section>
+    <section>
+      <div class="api-reference">
+          <h2 id="types">Types</h2>
+            <div>
+              <h3 id="type-ContentBounds">ContentBounds</h3>
+              <table>
+                  <tr><th colspan="3" id="ContentBounds-properties">properties</th></tr>
+                  <tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        left</td>
+                    <td>
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        top</td>
+                    <td>
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        width</td>
+                    <td>
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        height</td>
+                    <td>
+                    </td>
+                  </tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-BoundsSpecification">BoundsSpecification</h3>
+              <table>
+                  <tr><th colspan="3" id="BoundsSpecification-properties">properties</th></tr>
+                  <tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        left</td>
+                    <td>
+                      The X coordinate of the content or window.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        top</td>
+                    <td>
+                      The Y coordinate of the content or window.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        width</td>
+                    <td>
+                      The width of the content or window.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        height</td>
+                    <td>
+                      The height of the content or window.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        minWidth</td>
+                    <td>
+                      The minimum width of the content or window.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        minHeight</td>
+                    <td>
+                      The minimum height of the content or window.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        maxWidth</td>
+                    <td>
+                      The maximum width of the content or window.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        maxHeight</td>
+                    <td>
+                      The maximum height of the content or window.
+                    </td>
+                  </tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-Bounds">Bounds</h3>
+              <table>
+                  <tr><th colspan="3" id="Bounds-properties">properties</th></tr>
+                  <tr>
+                    <td>integer</td>
+                    <td>
+                        left</td>
+                    <td>
+                      This property can be used to read or write the current X coordinate of the content or window.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td>
+                        top</td>
+                    <td>
+                      This property can be used to read or write the current Y coordinate of the content or window.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td>
+                        width</td>
+                    <td>
+                      This property can be used to read or write the current width of the content or window.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td>
+                        height</td>
+                    <td>
+                      This property can be used to read or write the current height of the content or window.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        minWidth</td>
+                    <td>
+                      This property can be used to read or write the current minimum width of the content or window. A value of <code>null</code> indicates 'unspecified'.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        minHeight</td>
+                    <td>
+                      This property can be used to read or write the current minimum height of the content or window. A value of <code>null</code> indicates 'unspecified'.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        maxWidth</td>
+                    <td>
+                      This property can be used to read or write the current maximum width of the content or window. A value of <code>null</code> indicates 'unspecified'.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        maxHeight</td>
+                    <td>
+                      This property can be used to read or write the current maximum height of the content or window. A value of <code>null</code> indicates 'unspecified'.
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        setPosition</td>
+                    <td>
+                      Set the left and top position of the content or window.
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                        <tr>
+                          <td>integer</td>
+                          <td>
+                              left</td>
+                          <td>
+                          </td>
+                        </tr><tr>
+                          <td>integer</td>
+                          <td>
+                              top</td>
+                          <td>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        setSize</td>
+                    <td>
+                      Set the width and height of the content or window.
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                        <tr>
+                          <td>integer</td>
+                          <td>
+                              width</td>
+                          <td>
+                          </td>
+                        </tr><tr>
+                          <td>integer</td>
+                          <td>
+                              height</td>
+                          <td>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        setMinimumSize</td>
+                    <td>
+                      Set the minimum size constraints of the content or window. The minimum width or height can be set to <code>null</code> to remove the constraint. A value of <code>undefined</code> will leave a constraint unchanged.
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                        <tr>
+                          <td>integer</td>
+                          <td>
+                              minWidth</td>
+                          <td>
+                          </td>
+                        </tr><tr>
+                          <td>integer</td>
+                          <td>
+                              minHeight</td>
+                          <td>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        setMaximumSize</td>
+                    <td>
+                      Set the maximum size constraints of the content or window. The maximum width or height can be set to <code>null</code> to remove the constraint. A value of <code>undefined</code> will leave a constraint unchanged.
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                        <tr>
+                          <td>integer</td>
+                          <td>
+                              maxWidth</td>
+                          <td>
+                          </td>
+                        </tr><tr>
+                          <td>integer</td>
+                          <td>
+                              maxHeight</td>
+                          <td>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-FrameOptions">FrameOptions</h3>
+              <table>
+                  <tr><th colspan="3" id="FrameOptions-properties">properties</th></tr>
+                  <tr>
+                    <td>string</td>
+                    <td><span class="optional">(optional)</span>
+                        type</td>
+                    <td>
+                      Frame type: <code>none</code> or <code>chrome</code> (defaults to <code>chrome</code>).<br> For <code>none</code>, the <code>-webkit-app-region</code> CSS property can be used to apply draggability to the app's window. <code>-webkit-app-region: drag</code> can be used to mark regions draggable. <code>no-drag</code> can be used to disable this style on nested elements.<br>
+                    </td>
+                  </tr><tr>
+                    <td>string</td>
+                    <td><span class="optional">(optional)</span>
+                        color</td>
+                    <td>
+                      Allows the frame color to be set. Frame coloring is only available if the frame type is <code>chrome</code>. Frame coloring is experimental and only available in dev channel.
+                    </td>
+                  </tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-AppWindow">AppWindow</h3>
+              <table>
+                  <tr><th colspan="3" id="AppWindow-properties">properties</th></tr>
+                  <tr>
+                    <td>function</td>
+                    <td>
+                        focus</td>
+                    <td>
+                      Focus the window.
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        fullscreen</td>
+                    <td>
+                      Fullscreens the window.<br> The user will be able to restore the window by pressing ESC. An application can prevent the fullscreen state to be left when ESC is pressed by requesting the <b>app.window.fullscreen.overrideEsc</b> permission and canceling the event by calling .preventDefault(), like this:<br> <code>window.onKeyDown = function(e) { if (e.keyCode == 27 /* ESC */) { e.preventDefault(); } };</code>
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        isFullscreen</td>
+                    <td>
+                      Is the window fullscreen?
+                    	
+                      <br/>Returns<span class="property">	
+                        boolean.
+                      </span>
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        minimize</td>
+                    <td>
+                      Minimize the window.
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        isMinimized</td>
+                    <td>
+                      Is the window minimized?
+                    	
+                      <br/>Returns<span class="property">	
+                        boolean.
+                      </span>
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        maximize</td>
+                    <td>
+                      Maximize the window.
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        isMaximized</td>
+                    <td>
+                      Is the window maximized?
+                    	
+                      <br/>Returns<span class="property">	
+                        boolean.
+                      </span>
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        restore</td>
+                    <td>
+                      Restore the window, exiting a maximized, minimized, or fullscreen state.
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        moveTo</td>
+                    <td>
+                      Move the window to the position (|left|, |top|).
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                        <tr>
+                          <td>integer</td>
+                          <td>
+                              left</td>
+                          <td>
+                          </td>
+                        </tr><tr>
+                          <td>integer</td>
+                          <td>
+                              top</td>
+                          <td>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        resizeTo</td>
+                    <td>
+                      Resize the window to |width|x|height| pixels in size.
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                        <tr>
+                          <td>integer</td>
+                          <td>
+                              width</td>
+                          <td>
+                          </td>
+                        </tr><tr>
+                          <td>integer</td>
+                          <td>
+                              height</td>
+                          <td>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        drawAttention</td>
+                    <td>
+                      Draw attention to the window.
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        clearAttention</td>
+                    <td>
+                      Clear attention to the window.
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        close</td>
+                    <td>
+                      Close the window.
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        show</td>
+                    <td>
+                      Show the window. Does nothing if the window is already visible. Focus the window if |focused| is set to true or omitted.
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                        <tr>
+                          <td>boolean</td>
+                          <td><span class="optional">(optional)</span>
+                              focused</td>
+                          <td>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        hide</td>
+                    <td>
+                      Hide the window. Does nothing if the window is already hidden.
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        getBounds</td>
+                    <td>
+                      Get the window's inner bounds as a <a href="app.window.html#type-ContentBounds">ContentBounds</a> object.
+                    	
+                      <br/>Returns<span class="property">	
+                            <a href="app.window.html#type-ContentBounds">ContentBounds</a>.
+                      </span>
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        setBounds</td>
+                    <td>
+                      Set the window's inner bounds.
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                        <tr>
+                          <td>    <a href="app.window.html#type-ContentBounds">ContentBounds</a></td>
+                          <td>
+                              bounds</td>
+                          <td>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        isAlwaysOnTop</td>
+                    <td>
+                      Is the window always on top?
+                    	
+                      <br/>Returns<span class="property">	
+                        boolean.
+                      </span>
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        setAlwaysOnTop</td>
+                    <td>
+                      Set whether the window should stay above most other windows. Requires the <code>"app.window.alwaysOnTop"</code> permission.
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                        <tr>
+                          <td>boolean</td>
+                          <td>
+                              alwaysOnTop</td>
+                          <td>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr><tr>
+                    <td>Window</td>
+                    <td>
+                        contentWindow</td>
+                    <td>
+                      The JavaScript 'window' object for the created child.
+                    </td>
+                  </tr><tr>
+                    <td>string</td>
+                    <td>
+                        id</td>
+                    <td>
+                      The id the window was created with.
+                    </td>
+                  </tr><tr>
+                    <td>    <a href="app.window.html#type-Bounds">Bounds</a></td>
+                    <td>
+                        innerBounds</td>
+                    <td>
+                      The position, size and constraints of the window's content, which does not include window decorations. Currently only available on the Dev channel from Chrome 35.
+                    </td>
+                  </tr><tr>
+                    <td>    <a href="app.window.html#type-Bounds">Bounds</a></td>
+                    <td>
+                        outerBounds</td>
+                    <td>
+                      The position, size and constraints of the window, which includes window decorations, such as the title bar and frame. Currently only available on the Dev channel from Chrome 35.
+                    </td>
+                  </tr>
+              </table>
+            </div>
+          <h2 id="methods">Methods</h2>
+            <div>
+              <h3
+                  id="method-create"
+                  >create
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.app.window.create(<span>string url</span>, <span class="optional">object options</span>, <span class="optional">function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  The size and position of a window can be specified in a number of different ways. The most simple option is not specifying anything at all, in which case a default size and platform dependent position will be used.<br/><br/> Another option is to use the <code>bounds</code> property, which will put the window at the specified coordinates with the specified size. If the window has a frame, it's total size will be the size given plus the size of the frame; that is, the size in bounds is the content size, not the window size.<br/><br/> To automatically remember the positions of windows you can give them ids. If a window has an id, This id is used to remember the size and position of the window whenever it is moved or resized. This size and position is then used instead of the specified bounds on subsequent opening of a window with the same id. If you need to open a window with an id at a location other than the remembered default, you can create it hidden, move it to the desired location, then show it.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>string</td>
+                      <td>
+                          url</td>
+                      <td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>object</td>
+                      <td><span class="optional">(optional)</span>
+                          options</td>
+                      <td>
+                        <table class="innerTable">
+                          <tr>
+                            <td>string</td>
+                            <td><span class="optional">(optional)</span>
+                                id</td>
+                            <td>
+                              Id to identify the window. This will be used to remember the size and position of the window and restore that geometry when a window with the same id is later opened. If a window with a given id is created while another window with the same id already exists, the currently opened window will be focused instead of creating a new window.
+                            </td>
+                          </tr><tr>
+                            <td>    <a href="app.window.html#type-BoundsSpecification">BoundsSpecification</a></td>
+                            <td><span class="optional">(optional)</span>
+                                innerBounds</td>
+                            <td>
+                              Used to specify the initial position, initial size and constraints of the window's content (excluding window decorations). If an <code>id</code> is also specified and a window with a matching <code>id</code> has been shown before, the remembered bounds will be used instead.<br/><br/> Note that the padding between the inner and outer bounds is determined by the OS. Therefore setting the same bounds property for both the <code>innerBounds</code> and <code>outerBounds</code> will result in an error.<br/><br/> Currently only available on the Dev channel from Chrome 35.
+                            </td>
+                          </tr><tr>
+                            <td>    <a href="app.window.html#type-BoundsSpecification">BoundsSpecification</a></td>
+                            <td><span class="optional">(optional)</span>
+                                outerBounds</td>
+                            <td>
+                              Used to specify the initial position, initial size and constraints of the window (including window decorations such as the title bar and frame). If an <code>id</code> is also specified and a window with a matching <code>id</code> has been shown before, the remembered bounds will be used instead.<br/><br/> Note that the padding between the inner and outer bounds is determined by the OS. Therefore setting the same bounds property for both the <code>innerBounds</code> and <code>outerBounds</code> will result in an error.<br/><br/> Currently only available on the Dev channel from Chrome 35.
+                            </td>
+                          </tr><tr>
+                            <td>integer</td>
+                            <td><span class="optional">(optional)</span>
+                                minWidth</td>
+                            <td>
+                              Minimum width of the window.
+                            </td>
+                          </tr><tr>
+                            <td>integer</td>
+                            <td><span class="optional">(optional)</span>
+                                minHeight</td>
+                            <td>
+                              Minimum height of the window.
+                            </td>
+                          </tr><tr>
+                            <td>integer</td>
+                            <td><span class="optional">(optional)</span>
+                                maxWidth</td>
+                            <td>
+                              Maximum width of the window.
+                            </td>
+                          </tr><tr>
+                            <td>integer</td>
+                            <td><span class="optional">(optional)</span>
+                                maxHeight</td>
+                            <td>
+                              Maximum height of the window.
+                            </td>
+                          </tr><tr>
+                            <td>string or     <a href="app.window.html#type-FrameOptions">FrameOptions</a></td>
+                            <td><span class="optional">(optional)</span>
+                                frame</td>
+                            <td>
+                              Frame type: <code>none</code> or <code>chrome</code> (defaults to <code>chrome</code>). For <code>none</code>, the <code>-webkit-app-region</code> CSS property can be used to apply draggability to the app's window. <code>-webkit-app-region: drag</code> can be used to mark regions draggable. <code>no-drag</code> can be used to disable this style on nested elements.<br> Use of <code>FrameOptions</code> is only supported in dev channel.
+                            </td>
+                          </tr><tr>
+                            <td>    <a href="app.window.html#type-ContentBounds">ContentBounds</a></td>
+                            <td><span class="optional">(optional)</span>
+                                bounds</td>
+                            <td>
+                              Size and position of the content in the window (excluding the titlebar). If an id is also specified and a window with a matching id has been shown before, the remembered bounds of the window will be used instead.
+                            </td>
+                          </tr><tr>
+                            <td>boolean</td>
+                            <td><span class="optional">(optional)</span>
+                                transparentBackground</td>
+                            <td>
+                              Enable window background transparency. Only supported in ash. Requires experimental API permission.
+                            </td>
+                          </tr><tr>
+                            <td>enum of <code>"normal"</code>, <code>"fullscreen"</code>, <code>"maximized"</code>, or <code>"minimized"</code></td>
+                            <td><span class="optional">(optional)</span>
+                                state</td>
+                            <td>
+                              The initial state of the window, allowing it to be created already fullscreen, maximized, or minimized. Defaults to 'normal'.
+                            </td>
+                          </tr><tr>
+                            <td>boolean</td>
+                            <td><span class="optional">(optional)</span>
+                                hidden</td>
+                            <td>
+                              If true, the window will be created in a hidden state. Call show() on the window to show it once it has been created. Defaults to false.
+                            </td>
+                          </tr><tr>
+                            <td>boolean</td>
+                            <td><span class="optional">(optional)</span>
+                                resizable</td>
+                            <td>
+                              If true, the window will be resizable by the user. Defaults to true.
+                            </td>
+                          </tr><tr>
+                            <td>boolean</td>
+                            <td><span class="optional">(optional)</span>
+                                singleton</td>
+                            <td>
+                              <p class="warning">
+                                singleton is deprecated. Multiple windows with the same id is no longer supported.
+                              </p>
+                              By default if you specify an id for the window, the window will only be created if another window with the same id doesn't already exist. If a window with the same id already exists that window is activated instead. If you do want to create multiple windows with the same id, you can set this property to false.
+                            </td>
+                          </tr><tr>
+                            <td>boolean</td>
+                            <td><span class="optional">(optional)</span>
+                                alwaysOnTop</td>
+                            <td>
+                              If true, the window will stay above most other windows. If there are multiple windows of this kind, the currently focused window will be in the foreground. Requires the <code>"app.window.alwaysOnTop"</code> permission. Defaults to false.<br> Call <code>setAlwaysOnTop()</code> on the window to change this property after creation.<br>
+                            </td>
+                          </tr><tr>
+                            <td>boolean</td>
+                            <td><span class="optional">(optional)</span>
+                                focused</td>
+                            <td>
+                              If true, the window will be focused when created. Defaults to true.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>function</td>
+                      <td><span class="optional">(optional)</span>
+                          callback</td>
+                      <td>
+                        Called in the creating window (parent) before the load event is called in the created window (child). The parent can set fields or functions on the child usable from onload. E.g. background.js:<br> <code>function(createdWindow) { createdWindow.contentWindow.foo = function () { }; };</code> <br>window.js:<br> <code>window.onload = function () { foo(); }</code>
+                          <p>
+                              If you specify the <em>callback</em> parameter, it should
+                              be a function that looks like this:
+                          </p>
+                        <code class="prettyprint">function(AppWindow createdWindow) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>AppWindow</td>
+                              <td>
+                                  createdWindow</td>
+                              <td>
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-current"
+                  >current
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+                  <a href="app.window.html#type-AppWindow">AppWindow</a>
+              chrome.app.window.current()
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Returns an <a href="app.window.html#type-AppWindow">AppWindow</a> object for the current script context (ie JavaScript 'window' object). This can also be called on a handle to a script context for another page, for example: otherWindow.chrome.app.window.current().
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-getAll"
+                  >getAll
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              array of     <a href="app.window.html#type-AppWindow">AppWindow</a>
+              chrome.app.window.getAll()
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Gets an array of all currently created app windows. This method is new in Chrome 33.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-get"
+                  >get
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+                  <a href="app.window.html#type-AppWindow">AppWindow</a>
+              chrome.app.window.get(<span>string id</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Gets an <a href="app.window.html#type-AppWindow">AppWindow</a> with the given id. If no window with the given id exists null is returned. This method is new in Chrome 33.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>string</td>
+                      <td>
+                          id</td>
+                      <td>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+          <h2 id="events">Events</h2>
+            <div>
+              <h3 id="event-onBoundsChanged">onBoundsChanged</h3>
+              <div class="description">
+            <p>
+                  Fired when the window is resized.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.app.window.onBoundsChanged.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+            <div>
+              <h3 id="event-onClosed">onClosed</h3>
+              <div class="description">
+            <p>
+                  Fired when the window is closed.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.app.window.onClosed.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+            <div>
+              <h3 id="event-onFullscreened">onFullscreened</h3>
+              <div class="description">
+            <p>
+                  Fired when the window is fullscreened.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.app.window.onFullscreened.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+            <div>
+              <h3 id="event-onMaximized">onMaximized</h3>
+              <div class="description">
+            <p>
+                  Fired when the window is maximized.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.app.window.onMaximized.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+            <div>
+              <h3 id="event-onMinimized">onMinimized</h3>
+              <div class="description">
+            <p>
+                  Fired when the window is minimized.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.app.window.onMinimized.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+            <div>
+              <h3 id="event-onRestored">onRestored</h3>
+              <div class="description">
+            <p>
+                  Fired when the window is restored from being minimized or maximized.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.app.window.onRestored.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+      </div>
+    </section>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="../extensions/app.window.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../static/js/fatnav.js"></script>
+    <script src="../static/js/article.js"></script>
+    <script src="../static/js/prettify.js"></script>
+    <script src="../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../static/js/site.js"></script>
+  </body>
+</html>

@@ -1,10 +1,12 @@
-# [Chrome Extensions Documentation](http://developer.chrome.com/extensions/index.html)
+# [Chrome Developer Documentation](http://developer.chrome.com/extensions/index.html)
 
-> Offline copy of the Google Chrome Extensions Documentation. Useful when you want to develop offline.
+> Offline copy of the Google Chrome Documentation. Useful when you want to develop offline. Now includes Chrome apps, chrome, devtools, multidevice, native-client, and webstore.
+
 
 # Updates
 
-* Last updated 12/11/13
+* 03/30/14 - add apps, chrome, devtools, multidevice, native-client, webstore
+* 12/11/13 - initial chrome extensions 
 
 # License 
 

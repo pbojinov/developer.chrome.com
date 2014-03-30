@@ -1,0 +1,1517 @@
+<link href="../../_static/css/nacl.css" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../../../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../../../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../../../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>Security Contest FAQ - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="contest-faq.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../../../index.html">
+          <img alt="Chrome: developer" src="../../../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../../../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../../../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../../../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="../../../apps/index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="../../../apps/first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="../../../apps/app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../../../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="../../../apps/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../../../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="../../../apps/app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="../../../apps/cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="../../../apps/app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_usb.html">USB</a>
+                            </li>
+                            <li><a href="../../../apps/app_serial">Serial</a>
+                            </li>
+                            <li><a href="../../../apps/app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="../../../apps/app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="../../../apps/angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="../../../apps/sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="../../../apps/google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../apps/analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../../apps/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../../apps/webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="../../../apps/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../../apps/app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="../../../apps/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/overview.html">Overview</a>
+                            </li>
+                            <li><a href="../../../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../../../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../../../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="../../../apps/activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../../../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../../../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../../../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../../../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../../../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../../../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../../../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../../../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../../../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../../../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../../overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../../nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../../sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../../sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../../sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devguide/tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../../devguide/tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../../devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devguide/devcycle/building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="../../devguide/devcycle/building.html">Building</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/running.html">Running</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devguide/coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../../devguide/coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../../devguide/coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../../devguide/coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../../devguide/coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../../devguide/coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../../devguide/coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../../devguide/coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../../devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../../devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devguide/distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../../pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../../pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../../glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../../reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../../reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../../reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../../reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../../help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../../publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../../../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../../../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../../../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../../../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../../../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../../../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../../../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../../../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../../../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../../../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <div itemprop="articleBody">
+
+
+
+<section id="security-contest-faq">
+<span id="contest-faq"></span><h1 id="security-contest-faq"><span id="contest-faq"></span>Security Contest FAQ</h1>
+<aside class="caution">
+The Native Client Security Contest has ended&#8212;check out the
+<a class="reference internal" href="index.html#contest-winners"><em>winning submissions</em></a>.  We welcome your
+continued involvement in the project. You can help by submitting
+<a class="reference external" href="http://code.google.com/p/nativeclient/issues/list">bugs</a> and
+participating in the <a class="reference external" href="http://groups.google.com/group/native-client-discuss">Native Client discussion group</a>.
+</aside>
+<p>This FAQ is provided for reference only. For the complete official
+contest rules, see the Terms and Conditions.</p>
+<div class="contents local" id="contents" style="display: none">
+<ul class="small-gap">
+<li><a class="reference internal" href="contest-faq.html#what-is-this-contest-about" id="id1">What is this contest about?</a></li>
+<li><a class="reference internal" href="contest-faq.html#where-can-i-get-more-information-on-native-client" id="id2">Where can I get more information on Native Client?</a></li>
+<li><a class="reference internal" href="contest-faq.html#what-people-are-you-looking-for" id="id3">What people are you looking for?</a></li>
+<li><a class="reference internal" href="contest-faq.html#how-do-i-sign-up" id="id4">How do I sign up?</a></li>
+<li><a class="reference internal" href="contest-faq.html#what-is-the-process-of-participating" id="id5">What is the process of participating?</a></li>
+<li><a class="reference internal" href="contest-faq.html#how-many-prizes-are-there-what-are-the-prizes" id="id6">How many prizes are there? What are the prizes?</a></li>
+<li><a class="reference internal" href="contest-faq.html#can-i-sign-up-as-a-team-how-many-people-can-be-a-member-of-my-team" id="id7">Can I sign up as a team? How many people can be a member of my team?</a></li>
+<li><a class="reference internal" href="contest-faq.html#what-will-i-need-to-do-to-win" id="id8">What will I need to do to win?</a></li>
+<li><a class="reference internal" href="contest-faq.html#who-is-going-to-judge-these-entries-who-are-these-people" id="id9">Who is going to judge these entries? Who are these people?</a></li>
+<li><a class="reference internal" href="contest-faq.html#when-can-i-start-submitting-issues" id="id10">When can I start submitting issues?</a></li>
+<li><a class="reference internal" href="contest-faq.html#registration-does-not-work-for-me-what-can-i-do" id="id11">Registration does not work for me&#8212;what can I do?</a></li>
+<li><a class="reference internal" href="contest-faq.html#i-registered-as-a-team-but-i-want-to-change-the-team-composition-by-adding-or-removing-members-what-should-i-do" id="id12">I registered as a team but I want to change the team composition by adding or removing members. What should I do?</a></li>
+<li><a class="reference internal" href="contest-faq.html#i-have-a-previous-engagement-and-i-cannot-sign-up-until-after-the-competition-starts-is-this-ok" id="id13">I have a previous engagement and I cannot sign up until after the competition starts. Is this ok?</a></li>
+<li><a class="reference internal" href="contest-faq.html#my-team-has-accepted-the-terms-and-conditions-except-for-one-person-who-is-unavailable-whose-email-was-misspelled-etc-what-can-i-do" id="id14">My team has accepted the Terms and Conditions except for one person who is unavailable / whose email was misspelled / etc. What can I do?</a></li>
+<li><a class="reference internal" href="contest-faq.html#can-i-enter-multiple-times" id="id15">Can I enter multiple times?</a></li>
+<li><a class="reference internal" href="contest-faq.html#why-do-you-need-a-prize-recipient" id="id16">Why do you need a prize recipient?</a></li>
+<li><a class="reference internal" href="contest-faq.html#we-want-to-change-the-prize-recipient-what-can-we-do" id="id17">We want to change the prize recipient. What can we do?</a></li>
+<li><a class="reference internal" href="contest-faq.html#i-want-to-remain-anonymous-during-the-contest-is-this-possible" id="id18">I want to remain anonymous during the contest. Is this possible?</a></li>
+<li><a class="reference internal" href="contest-faq.html#one-of-my-professors-friends-is-a-judge-can-i-participate" id="id19">One of my professors / friends is a judge. Can I participate?</a></li>
+<li><a class="reference internal" href="contest-faq.html#can-my-company-be-registered-as-an-entrant" id="id20">Can my company be registered as an entrant?</a></li>
+<li><a class="reference internal" href="contest-faq.html#i-never-signed-up-for-this-contest-but-i-got-an-email-from-you-what-is-this-about" id="id21">I never signed up for this contest, but I got an email from you. What is this about?</a></li>
+<li><a class="reference internal" href="contest-faq.html#i-tried-to-sign-up-and-it-seems-someone-who-wants-to-be-a-member-of-my-team-has-already-registered-with-another-team-what-can-we-do" id="id22">I tried to sign up and it seems someone who wants to be a member of my team has already registered with another team. What can we do?</a></li>
+<li><a class="reference internal" href="contest-faq.html#i-lost-or-never-got-the-email-asking-me-to-confirm-the-terms-and-conditions-what-can-i-do" id="id23">I lost or never got the email asking me to confirm the Terms and Conditions. What can I do?</a></li>
+<li><a class="reference internal" href="contest-faq.html#one-of-our-team-members-rejected-the-terms-and-conditions-what-can-we-do" id="id24">One of our team members rejected the Terms and Conditions. What can we do?</a></li>
+<li><a class="reference internal" href="contest-faq.html#how-are-you-going-to-evaluate-the-submissions" id="id25">How are you going to evaluate the submissions?</a></li>
+<li><a class="reference internal" href="contest-faq.html#can-i-include-issues-i-submitted-before-the-contest" id="id26">Can I include issues I submitted before the contest?</a></li>
+<li><a class="reference internal" href="contest-faq.html#what-is-the-difference-between-exploit-issue-and-summary" id="id27">What is the difference between exploit, issue and summary?</a></li>
+<li><a class="reference internal" href="contest-faq.html#what-issues-should-i-include-in-the-summary" id="id28">What issues should I include in the summary?</a></li>
+<li><a class="reference internal" href="contest-faq.html#why-are-you-asking-for-the-top-10-issues-only" id="id29">Why are you asking for the top 10 issues only?</a></li>
+<li><a class="reference internal" href="contest-faq.html#my-english-is-not-great-will-this-count-against-me-in-the-judging-process" id="id30">My English is not great&#8212;will this count against me in the judging process?</a></li>
+<li><a class="reference internal" href="contest-faq.html#what-information-do-i-need-to-include-in-the-issue-submission" id="id31">What information do I need to include in the issue submission?</a></li>
+<li><a class="reference internal" href="contest-faq.html#how-do-i-contest-a-decision-that-a-bug-is-a-duplicate" id="id32">How do I contest a decision that a bug is a duplicate?</a></li>
+<li><a class="reference internal" href="contest-faq.html#why-is-the-native-client-team-updating-the-source-code-during-the-contest" id="id33">Why is the Native Client team updating the source code during the contest?</a></li>
+<li><a class="reference internal" href="contest-faq.html#i-forgot-to-include-something-in-the-summary-what-can-i-do" id="id34">I forgot to include something in the summary&#8212;what can I do?</a></li>
+<li><a class="reference internal" href="contest-faq.html#someone-from-our-team-submitted-a-summary-on-behalf-of-our-team-without-consulting-with-everyone-else-how-can-we-ensure-that-the-judges-will-use-the-previous-summary-and-not-the-last-one" id="id35">Someone from our team submitted a summary on behalf of our team without consulting with everyone else. How can we ensure that the judges will use the previous summary and not the last one?</a></li>
+<li><a class="reference internal" href="contest-faq.html#will-you-be-evaluating-each-exploit-separately-for-every-one-of-the-criteria" id="id36">Will you be evaluating each exploit separately for every one of the criteria?</a></li>
+<li><a class="reference internal" href="contest-faq.html#i-only-found-one-exploit-but-i-think-it-is-very-good-can-i-still-win" id="id37">I only found one exploit but I think it is very good. Can I still win?</a></li>
+<li><a class="reference internal" href="contest-faq.html#how-are-you-going-to-pick-the-winners" id="id38">How are you going to pick the winners?</a></li>
+<li><a class="reference internal" href="contest-faq.html#when-and-how-are-we-going-to-find-out-the-results-of-the-contest" id="id39">When and how are we going to find out the results of the contest?</a></li>
+<li><a class="reference internal" href="contest-faq.html#what-will-google-do-with-my-data" id="id40">What will Google do with my data?</a></li>
+<li><a class="reference internal" href="contest-faq.html#i-have-more-questions-where-can-i-get-a-response" id="id41">I have more questions&#8212;where can I get a response?</a></li>
+<li><a class="reference internal" href="contest-faq.html#i-like-this-project-are-you-hiring-people-to-work-on-it-full-time" id="id42">I like this project. Are you hiring people to work on it full time?</a></li>
+<li><a class="reference internal" href="contest-faq.html#how-can-i-get-involved-in-this-project-besides-the-contest" id="id43">How can I get involved in this project besides the contest?</a></li>
+<li><a class="reference internal" href="contest-faq.html#why-is-my-country-province-excluded-from-the-contest" id="id44">Why is my country/province excluded from the contest?</a></li>
+</ul>
+
+</div><section id="what-is-this-contest-about">
+<h2 id="what-is-this-contest-about">What is this contest about?</h2>
+<p>We launched this contest in order to help make Native Client more
+secure. We invite participants to discover security bugs in our
+technology in order to compete to win cash prizes.</p>
+</section><section id="where-can-i-get-more-information-on-native-client">
+<h2 id="where-can-i-get-more-information-on-native-client">Where can I get more information on Native Client?</h2>
+<p>You can read our <a class="reference external" href="http://static.googleusercontent.com/external_content/untrusted_dlcp/research.google.com/en/us/pubs/archive/34913.pdf">research paper</a>
+(PDF) or visit the site for the <a class="reference external" href="http://code.google.com/p/nativeclient">Native Client open-source project</a>.</p>
+</section><section id="what-people-are-you-looking-for">
+<h2 id="what-people-are-you-looking-for">What people are you looking for?</h2>
+<p>We are not looking for any particular participant profile. Everyone
+who is eligible to participate based on the <a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a> of the contest can sign up.</p>
+</section><section id="how-do-i-sign-up">
+<h2 id="how-do-i-sign-up">How do I sign up?</h2>
+<p>The first thing you need to do is to register. Then you and your team
+members (if any) will receive an email from our team asking you to
+review and accept the <a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a>:doc:` of the contest &lt;contest-terms&gt;`. Once everyone
+from your team has accepted the <a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a> you can start submitting bugs through the Native
+Client issue tracker.  You should not submit any bugs as part of your
+contest entries until everyone on your team has accepted the
+<a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a>, as those bugs will not be
+eligible for consideration in the contest.</p>
+</section><section id="what-is-the-process-of-participating">
+<h2 id="what-is-the-process-of-participating">What is the process of participating?</h2>
+<p>After you register yourself or your team and every member of your team
+has accepted the <a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a>, download
+the latest build of Native Client, attack it, and identify security
+exploits. Submit these bugs through our Native Client Issue Tracker as
+quickly as you can, as you will only get credit for exploits that are
+first reported by yourself or your team. Before the end of the
+contest, you will need to submit a summary with the top 10 exploits
+you identified. Our judges will review submitted summaries and will
+select the top 5 contestants.</p>
+</section><section id="how-many-prizes-are-there-what-are-the-prizes">
+<span id="contest-faq-prizes"></span><h2 id="how-many-prizes-are-there-what-are-the-prizes"><span id="contest-faq-prizes"></span>How many prizes are there? What are the prizes?</h2>
+<p>There are five cash prizes: The first prize is $8,192, the second
+prize $4,096, the third prize is $2,048, the fourth prize is $1,024
+and the fifth prize is $1,024. All amounts are in USD.</p>
+</section><section id="can-i-sign-up-as-a-team-how-many-people-can-be-a-member-of-my-team">
+<h2 id="can-i-sign-up-as-a-team-how-many-people-can-be-a-member-of-my-team">Can I sign up as a team? How many people can be a member of my team?</h2>
+<p>You can sign up as a team. There is no limit to how many people can
+participate in your team. However we recommend that you keep the size
+of your team small so as to be able to better coordinate during the
+contest.</p>
+</section><section id="what-will-i-need-to-do-to-win">
+<h2 id="what-will-i-need-to-do-to-win">What will I need to do to win?</h2>
+<p>To participate, you will need to test the Native Client builds,
+identify security exploits which affect the current Native Client
+build at the time of submission and report them to our team. Our
+judges will review your entry. If you are one of the top five
+participants selected by the judges and satisfy the requirements for
+eligibility, then you will win a cash prize. For more information on
+how to participate and how your entry will be evaluated please review
+our detailed <a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a>.</p>
+</section><section id="who-is-going-to-judge-these-entries-who-are-these-people">
+<h2 id="who-is-going-to-judge-these-entries-who-are-these-people">Who is going to judge these entries? Who are these people?</h2>
+<p>Google has recruited a group of distinguished security experts to
+serve as judges for this contest:</p>
+<ul class="small-gap">
+<li>Edward Felten — jury chair (Princeton)</li>
+<li>Alex Halderman (Michigan)</li>
+<li>Brad Karp (University College London)</li>
+<li>Greg Morrisett (Harvard)</li>
+<li>Niels Provos (Google)</li>
+<li>Stefan Savage (UCSD)</li>
+<li>Dan Wallach (Rice)</li>
+<li>Bennet Yee (Google)</li>
+<li>Nickolai Zeldovich (MIT)</li>
+</ul>
+<p>Check out the <a class="reference internal" href="index.html#contest-judges"><em>Judges info</em></a> to learn more about
+their careers and contributions to the security community.</p>
+</section><section id="when-can-i-start-submitting-issues">
+<h2 id="when-can-i-start-submitting-issues">When can I start submitting issues?</h2>
+<p>You can start submitting issues after you and your team members (if
+any) have completed the registration process and accepted the
+<a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a>.</p>
+</section><section id="registration-does-not-work-for-me-what-can-i-do">
+<h2 id="registration-does-not-work-for-me-what-can-i-do">Registration does not work for me&#8212;what can I do?</h2>
+<p>We recommend that you post this problem at the Google Group. Once you
+do so, a member from our team will reach out to you to try to diagnose
+the issue. We will try to help you out; keep in mind though that we
+can not be responsible for the inability of a participant to register.</p>
+</section><section id="i-registered-as-a-team-but-i-want-to-change-the-team-composition-by-adding-or-removing-members-what-should-i-do">
+<h2 id="i-registered-as-a-team-but-i-want-to-change-the-team-composition-by-adding-or-removing-members-what-should-i-do">I registered as a team but I want to change the team composition by adding or removing members. What should I do?</h2>
+<p>Please reply to one of the registration email messages you received
+(it should be sent to <a class="reference external" href="mailto:nacl-security-contest&#37;&#52;&#48;google&#46;com">nacl-security-contest<span>&#64;</span>google<span>&#46;</span>com</a>) and indicate
+the changes you&#8217;d like to make. Please note that neither the team name
+nor team membership can be changed once all members have accepted the
+<a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a>.</p>
+</section><section id="i-have-a-previous-engagement-and-i-cannot-sign-up-until-after-the-competition-starts-is-this-ok">
+<h2 id="i-have-a-previous-engagement-and-i-cannot-sign-up-until-after-the-competition-starts-is-this-ok">I have a previous engagement and I cannot sign up until after the competition starts. Is this ok?</h2>
+<p>You can sign up until the last day of the contest May
+5th, 2009. However, keep in mind that while you can submit bugs
+through the Native Client Issue Tracker, none of these will be taken
+into account unless you (and all your team members) have completed the
+registration process prior to submitting any bugs.</p>
+</section><section id="my-team-has-accepted-the-terms-and-conditions-except-for-one-person-who-is-unavailable-whose-email-was-misspelled-etc-what-can-i-do">
+<h2 id="my-team-has-accepted-the-terms-and-conditions-except-for-one-person-who-is-unavailable-whose-email-was-misspelled-etc-what-can-i-do">My team has accepted the Terms and Conditions except for one person who is unavailable / whose email was misspelled / etc. What can I do?</h2>
+<p>To make edits to your team&#8217;s composition, or to update the contact
+information of a team member, you will need to reply to one of the
+registration emails you received (it should be sent to
+<a class="reference external" href="mailto:nacl-security-contest&#37;&#52;&#48;google&#46;com">nacl-security-contest<span>&#64;</span>google<span>&#46;</span>com</a>) and indicate the changes you&#8217;d like
+to make. Please note that this will mean that your team members will
+receive an email notifying them of the changes in the team&#8217;s
+composition and asking them to re-accept the <a class="reference internal" href="contest-terms.html"><em>Terms and
+Conditions</em></a>. All team members will need to re-accept
+the <a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a> for the team to be
+considered as active.</p>
+</section><section id="can-i-enter-multiple-times">
+<h2 id="can-i-enter-multiple-times">Can I enter multiple times?</h2>
+<p>No, you cannot enter multiple times. If you register as an individual
+you can not also register on a team and if you are on a team you can
+not also be on another team.</p>
+</section><section id="why-do-you-need-a-prize-recipient">
+<h2 id="why-do-you-need-a-prize-recipient">Why do you need a prize recipient?</h2>
+<p>Google will not be responsible for the division of any prize money
+between members of a potential winning team. Instead Google will
+deliver the prize to one member indicated by the team. The team is
+solely responsible for managing the logistics of distributing the
+prize among team members. This is why Google asks all participating
+teams to identify a prize recipient.</p>
+</section><section id="we-want-to-change-the-prize-recipient-what-can-we-do">
+<h2 id="we-want-to-change-the-prize-recipient-what-can-we-do">We want to change the prize recipient. What can we do?</h2>
+<p>To make edits to the prize recipient before all team members have
+accepted the <a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a>, you will
+need to reply to one of the registration emails you received (it
+should be sent to <a class="reference external" href="mailto:nacl-security-contest&#37;&#52;&#48;google&#46;com">nacl-security-contest<span>&#64;</span>google<span>&#46;</span>com</a>) and indicate the
+changes you&#8217;d like to make. Please note that this will mean that your
+team members will receive an email notifying them of the change and
+asking them to re-accept the <a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a>. All team members will need to re-accept the
+<a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a> for the team to be
+considered registered. After all team members have accepted the
+<a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a>, there can be no changes
+to the prize recipient.</p>
+</section><section id="i-want-to-remain-anonymous-during-the-contest-is-this-possible">
+<h2 id="i-want-to-remain-anonymous-during-the-contest-is-this-possible">I want to remain anonymous during the contest. Is this possible?</h2>
+<p>Yes. However, you will still need to provide us with your email
+address to register. After the contest ends and if you are one of the
+top 5 participants, to claim your prize, you and all of your team
+members (if any) will need to submit to Google all necessary tax and
+legal information that Google will need to comply with US and
+international legal and tax regulations.</p>
+</section><section id="one-of-my-professors-friends-is-a-judge-can-i-participate">
+<h2 id="one-of-my-professors-friends-is-a-judge-can-i-participate">One of my professors / friends is a judge. Can I participate?</h2>
+<p>Yes, you can participate.</p>
+</section><section id="can-my-company-be-registered-as-an-entrant">
+<h2 id="can-my-company-be-registered-as-an-entrant">Can my company be registered as an entrant?</h2>
+<p>No, this is not possible under our <a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a>.</p>
+</section><section id="i-never-signed-up-for-this-contest-but-i-got-an-email-from-you-what-is-this-about">
+<h2 id="i-never-signed-up-for-this-contest-but-i-got-an-email-from-you-what-is-this-about">I never signed up for this contest, but I got an email from you. What is this about?</h2>
+<p>You have probably received an e-mail identifying you as a member of
+team that another person has created. In our email, we identified the
+email address of a person who registered you as a teammate in the
+Native Client Security Contest. If you want to participate in this
+person&#8217;s team, then accept the <a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a> by clicking on the link included in the email. If you
+do not wish to participate in the contest or you want to do so as a
+member of a different team, then you can remove yourself from the list
+of team members of that particular team.</p>
+</section><section id="i-tried-to-sign-up-and-it-seems-someone-who-wants-to-be-a-member-of-my-team-has-already-registered-with-another-team-what-can-we-do">
+<h2 id="i-tried-to-sign-up-and-it-seems-someone-who-wants-to-be-a-member-of-my-team-has-already-registered-with-another-team-what-can-we-do">I tried to sign up and it seems someone who wants to be a member of my team has already registered with another team. What can we do?</h2>
+<p>If everyone in your potential teammate&#8217;s original team (including
+himself/herself) has accepted the <a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a> of the contest, then unfortunately you will have to
+look for other potential partners. Otherwise, your potential teammate
+can remove himself from the other team. All he/she will need to do is
+to reply to one of the registration emails he/she received (it should
+be sent to <a class="reference external" href="mailto:nacl-security-contest&#37;&#52;&#48;google&#46;com">nacl-security-contest<span>&#64;</span>google<span>&#46;</span>com</a>) and indicate the changes
+to be made. Please note that this will mean that his/her team members
+will receive an email notifying them of the changes in the team&#8217;s
+composition and asking them to re-accept the <a class="reference internal" href="contest-terms.html"><em>Terms and
+Conditions</em></a>. All team members of that team will need
+to re-accept the <a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a> for that
+team to be considered as active.</p>
+</section><section id="i-lost-or-never-got-the-email-asking-me-to-confirm-the-terms-and-conditions-what-can-i-do">
+<h2 id="i-lost-or-never-got-the-email-asking-me-to-confirm-the-terms-and-conditions-what-can-i-do">I lost or never got the email asking me to confirm the Terms and Conditions. What can I do?</h2>
+<p>Don&#8217;t worry, just send us an email at <a class="reference external" href="mailto:nacl-security-contest&#37;&#52;&#48;google&#46;com">nacl-security-contest<span>&#64;</span>google<span>&#46;</span>com</a>
+and we will send you the link you need.</p>
+</section><section id="one-of-our-team-members-rejected-the-terms-and-conditions-what-can-we-do">
+<h2 id="one-of-our-team-members-rejected-the-terms-and-conditions-what-can-we-do">One of our team members rejected the Terms and Conditions. What can we do?</h2>
+<p>Your team is now considered to be invalid. If this rejection happened
+by accident, please restart the registration process. If it was
+deliberate then create a new team with teammates who are willing to
+accept the <a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a>. No one can
+participate in the contest unless they have accepted the <a class="reference internal" href="contest-terms.html"><em>Terms
+and Conditions</em></a> and no team can participate unless all
+team members have accepted the <a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a>.</p>
+</section><section id="how-are-you-going-to-evaluate-the-submissions">
+<h2 id="how-are-you-going-to-evaluate-the-submissions">How are you going to evaluate the submissions?</h2>
+<p>The judges will evaluate each Summary based on the following
+criteria: a) Quality (Severity, Scope, Reliability and Style) and b)
+Quantity. Please review the judging criteria in the contest
+<a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a> for more information.</p>
+</section><section id="can-i-include-issues-i-submitted-before-the-contest">
+<h2 id="can-i-include-issues-i-submitted-before-the-contest">Can I include issues I submitted before the contest?</h2>
+<p>No, you can not.</p>
+</section><section id="what-is-the-difference-between-exploit-issue-and-summary">
+<h2 id="what-is-the-difference-between-exploit-issue-and-summary">What is the difference between exploit, issue and summary?</h2>
+<p>An exploit becomes an issue once you submit it through the Native
+Client issue tracker. A summary can include multiple issues but not
+more than 10.</p>
+</section><section id="what-issues-should-i-include-in-the-summary">
+<h2 id="what-issues-should-i-include-in-the-summary">What issues should I include in the summary?</h2>
+<p>You should include a maximum of 10 issues that you and your team
+members (if any) submitted to the Native Client Issue tracker. We
+recommend that you carefully review the judging criteria in the
+<a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a> to identify which bugs are
+more likely to be perceived as high impact from our judges and could
+help you win one of the five cash prizes. Do not include issues that
+have been marked as duplicates or unverifiable, as these will not be
+taken into account by our judges.</p>
+</section><section id="why-are-you-asking-for-the-top-10-issues-only">
+<h2 id="why-are-you-asking-for-the-top-10-issues-only">Why are you asking for the top 10 issues only?</h2>
+<p>We want to make sure that we use our judges&#8217; time wisely. Rather than
+having them review hundreds of similar or small scale bugs, sometimes
+identified with the same automatic process, we are limiting the number
+of issues that each participant can submit in his/her/their summary.</p>
+</section><section id="my-english-is-not-great-will-this-count-against-me-in-the-judging-process">
+<h2 id="my-english-is-not-great-will-this-count-against-me-in-the-judging-process">My English is not great&#8212;will this count against me in the judging process?</h2>
+<p>Entries in languages other than in English or entries that are deemed
+incomprehensible by the judges will not be reviewed. We do not plan to
+penalize summaries for spelling or grammar mistakes, but please make
+your descriptions as clear as possible.</p>
+</section><section id="what-information-do-i-need-to-include-in-the-issue-submission">
+<h2 id="what-information-do-i-need-to-include-in-the-issue-submission">What information do I need to include in the issue submission?</h2>
+<p>Please review the &#8220;Minimum requirements for issues&#8221; section of
+contest&#8217;s <a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a>. You will find a
+list of all the information you will need to include in every
+submitted issue. Failure to provide this information might make the
+submitted issue invalid for the purposes of this contest.</p>
+</section><section id="how-do-i-contest-a-decision-that-a-bug-is-a-duplicate">
+<h2 id="how-do-i-contest-a-decision-that-a-bug-is-a-duplicate">How do I contest a decision that a bug is a duplicate?</h2>
+<p>Please highlight this in our Google Group and a member of our team
+will get in touch with you.</p>
+</section><section id="why-is-the-native-client-team-updating-the-source-code-during-the-contest">
+<h2 id="why-is-the-native-client-team-updating-the-source-code-during-the-contest">Why is the Native Client team updating the source code during the contest?</h2>
+<p>We are updating Native Client&#8217;s source code to fix bugs reported by
+contest participants or exploits identified by our team. Our goal is
+to protect contestants and other users of the Native Client software
+from exploits that could damage their system. In addition, by updating
+our builds, we will be providing you with more opportunities to find
+new security bugs. Finally, we believe this will make the contest more
+interesting by continuously raising the bar of bug finding.</p>
+</section><section id="i-forgot-to-include-something-in-the-summary-what-can-i-do">
+<h2 id="i-forgot-to-include-something-in-the-summary-what-can-i-do">I forgot to include something in the summary&#8212;what can I do?</h2>
+<p>If the contest has not ended, you may submit an updated summary. You
+may not submit an updated summary once the contest has ended.</p>
+</section><section id="someone-from-our-team-submitted-a-summary-on-behalf-of-our-team-without-consulting-with-everyone-else-how-can-we-ensure-that-the-judges-will-use-the-previous-summary-and-not-the-last-one">
+<h2 id="someone-from-our-team-submitted-a-summary-on-behalf-of-our-team-without-consulting-with-everyone-else-how-can-we-ensure-that-the-judges-will-use-the-previous-summary-and-not-the-last-one">Someone from our team submitted a summary on behalf of our team without consulting with everyone else. How can we ensure that the judges will use the previous summary and not the last one?</h2>
+<p>If your team member submitted his / her version of the team&#8217;s summary
+before the end date of the contest, and if this is the last summary
+that was submitted from your team, then the Judges will disregard all
+previous versions of your summary and will only review this last
+one. If the contest has not ended, you may resubmit a previous summary
+to override the first.</p>
+</section><section id="will-you-be-evaluating-each-exploit-separately-for-every-one-of-the-criteria">
+<h2 id="will-you-be-evaluating-each-exploit-separately-for-every-one-of-the-criteria">Will you be evaluating each exploit separately for every one of the criteria?</h2>
+<p>We will use our criteria to evaluate submitted summaries, not
+individual exploits.</p>
+</section><section id="i-only-found-one-exploit-but-i-think-it-is-very-good-can-i-still-win">
+<h2 id="i-only-found-one-exploit-but-i-think-it-is-very-good-can-i-still-win">I only found one exploit but I think it is very good. Can I still win?</h2>
+<p>Yes. Quantity is only one of the criteria we use to evaluate submitted
+summaries.</p>
+</section><section id="how-are-you-going-to-pick-the-winners">
+<h2 id="how-are-you-going-to-pick-the-winners">How are you going to pick the winners?</h2>
+<p>After the contest ends, all submitted Summaries will be judged by a
+panel of at least three judges. The judges will evaluate each Summary
+based on the following criteria: a) Quality (Severity, Scope,
+Reliability and Style) and b) Quantity. Each panel will evaluate a
+number of the submitted summaries and will select the highest ranking
+Summaries to move to the next level of judging. Those top Summaries
+will then be evaluated by all Judges using the same Criteria, and the
+top five Summaries will be selected as potential winners. For more
+information on the judging criteria and the judging process please
+review the relevant section of the <a class="reference internal" href="contest-terms.html"><em>Terms and Conditions</em></a>.</p>
+</section><section id="when-and-how-are-we-going-to-find-out-the-results-of-the-contest">
+<h2 id="when-and-how-are-we-going-to-find-out-the-results-of-the-contest">When and how are we going to find out the results of the contest?</h2>
+<p>We will contact all prospective winners at the email address provided
+to us at the registration process. You may request a list of winners
+after December 7th, 2009 by writing to: Native Client Security Contest
+Google Inc. 1600 Amphitheater Parkway Mountain View, CA 94043 USA</p>
+</section><section id="what-will-google-do-with-my-data">
+<h2 id="what-will-google-do-with-my-data">What will Google do with my data?</h2>
+<p>The personal data you provided to Google during the Contest will be
+stored and processed in the US within the context of the Contest. We
+will maintain your data in the way described at the Google Privacy
+Policy found at <a class="reference external" href="http://www.google.com/privacypolicy.html">http://www.google.com/privacypolicy.html</a>. Google may
+use your data to verify your identity, postal address and telephone
+number in the event you qualify for a prize. You have a right to
+access and withdraw your personal data. To exercise this right, you
+may write to: Native Client Security Contest, Google Inc., 1600
+Amphitheater Parkway, Mountain View, CA 94043, USA.</p>
+</section><section id="i-have-more-questions-where-can-i-get-a-response">
+<h2 id="i-have-more-questions-where-can-i-get-a-response">I have more questions&#8212;where can I get a response?</h2>
+<p>We recommend to ask any additional questions you might have in the
+Google Group. Members from our team will be monitoring the group and
+will respond to your question there, to benefit other contest
+participants.</p>
+</section><section id="i-like-this-project-are-you-hiring-people-to-work-on-it-full-time">
+<h2 id="i-like-this-project-are-you-hiring-people-to-work-on-it-full-time">I like this project. Are you hiring people to work on it full time?</h2>
+<p>At Google we are always looking for great people. Please review our
+current openings at www.google.com/jobs.</p>
+</section><section id="how-can-i-get-involved-in-this-project-besides-the-contest">
+<h2 id="how-can-i-get-involved-in-this-project-besides-the-contest">How can I get involved in this project besides the contest?</h2>
+<p>Thank you for your interest in Native Client. You can help us by:</p>
+<ul class="small-gap">
+<li>Identifying bugs</li>
+<li>Porting OS libraries</li>
+<li>Writing apps</li>
+</ul>
+<p>We would also like to see you participate in our discussion group.</p>
+</section><section id="why-is-my-country-province-excluded-from-the-contest">
+<h2 id="why-is-my-country-province-excluded-from-the-contest">Why is my country/province excluded from the contest?</h2>
+<p>While we seek to make this contest open worldwide, we cannot open it
+to residents of Cuba, Iran, Syria, North Korea, Sudan, or Myanmar
+(Burma) because of U.S. laws. In addition, the contest is not open to
+residents of Brazil, Italy, or Quebec because of local
+restrictions. For more information on eligibility, see the <a class="reference internal" href="contest-terms.html"><em>Terms
+and Conditions</em></a>.</p>
+</section></section>
+    
+    <footer id="cc-info">
+      <button id="send-feedback" class="google-button" data-feedback>Send Feedback</button>
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo"><a href="http://creativecommons.org/licenses/by/3.0/"><img src="../../../static/images/cc_by.png" alt="Licensed Creative Commons by Attribution"></a></p>
+    </footer>
+    <nav class="inline-toc no-permalink">
+      <section class="related">
+      <ol class="toc">
+      </ol>
+      </section>
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="contest-faq.html#what-is-this-contest-about"
+          >What is this contest about?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#where-can-i-get-more-information-on-native-client"
+          >Where can I get more information on Native Client?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#what-people-are-you-looking-for"
+          >What people are you looking for?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#how-do-i-sign-up"
+          >How do I sign up?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#what-is-the-process-of-participating"
+          >What is the process of participating?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#how-many-prizes-are-there-what-are-the-prizes"
+          >How many prizes are there? What are the prizes?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#can-i-sign-up-as-a-team-how-many-people-can-be-a-member-of-my-team"
+          >Can I sign up as a team? How many people can be a member of my team?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#what-will-i-need-to-do-to-win"
+          >What will I need to do to win?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#who-is-going-to-judge-these-entries-who-are-these-people"
+          >Who is going to judge these entries? Who are these people?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#when-can-i-start-submitting-issues"
+          >When can I start submitting issues?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#registration-does-not-work-for-me-what-can-i-do"
+          >Registration does not work for mewhat can I do?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#i-registered-as-a-team-but-i-want-to-change-the-team-composition-by-adding-or-removing-members-what-should-i-do"
+          >I registered as a team but I want to change the team composition by adding or removing members. What should I do?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#i-have-a-previous-engagement-and-i-cannot-sign-up-until-after-the-competition-starts-is-this-ok"
+          >I have a previous engagement and I cannot sign up until after the competition starts. Is this ok?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#my-team-has-accepted-the-terms-and-conditions-except-for-one-person-who-is-unavailable-whose-email-was-misspelled-etc-what-can-i-do"
+          >My team has accepted the Terms and Conditions except for one person who is unavailable / whose email was misspelled / etc. What can I do?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#can-i-enter-multiple-times"
+          >Can I enter multiple times?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#why-do-you-need-a-prize-recipient"
+          >Why do you need a prize recipient?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#we-want-to-change-the-prize-recipient-what-can-we-do"
+          >We want to change the prize recipient. What can we do?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#i-want-to-remain-anonymous-during-the-contest-is-this-possible"
+          >I want to remain anonymous during the contest. Is this possible?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#one-of-my-professors-friends-is-a-judge-can-i-participate"
+          >One of my professors / friends is a judge. Can I participate?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#can-my-company-be-registered-as-an-entrant"
+          >Can my company be registered as an entrant?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#i-never-signed-up-for-this-contest-but-i-got-an-email-from-you-what-is-this-about"
+          >I never signed up for this contest, but I got an email from you. What is this about?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#i-tried-to-sign-up-and-it-seems-someone-who-wants-to-be-a-member-of-my-team-has-already-registered-with-another-team-what-can-we-do"
+          >I tried to sign up and it seems someone who wants to be a member of my team has already registered with another team. What can we do?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#i-lost-or-never-got-the-email-asking-me-to-confirm-the-terms-and-conditions-what-can-i-do"
+          >I lost or never got the email asking me to confirm the Terms and Conditions. What can I do?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#one-of-our-team-members-rejected-the-terms-and-conditions-what-can-we-do"
+          >One of our team members rejected the Terms and Conditions. What can we do?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#how-are-you-going-to-evaluate-the-submissions"
+          >How are you going to evaluate the submissions?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#can-i-include-issues-i-submitted-before-the-contest"
+          >Can I include issues I submitted before the contest?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#what-is-the-difference-between-exploit-issue-and-summary"
+          >What is the difference between exploit, issue and summary?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#what-issues-should-i-include-in-the-summary"
+          >What issues should I include in the summary?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#why-are-you-asking-for-the-top-10-issues-only"
+          >Why are you asking for the top 10 issues only?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#my-english-is-not-great-will-this-count-against-me-in-the-judging-process"
+          >My English is not greatwill this count against me in the judging process?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#what-information-do-i-need-to-include-in-the-issue-submission"
+          >What information do I need to include in the issue submission?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#how-do-i-contest-a-decision-that-a-bug-is-a-duplicate"
+          >How do I contest a decision that a bug is a duplicate?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#why-is-the-native-client-team-updating-the-source-code-during-the-contest"
+          >Why is the Native Client team updating the source code during the contest?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#i-forgot-to-include-something-in-the-summary-what-can-i-do"
+          >I forgot to include something in the summarywhat can I do?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#someone-from-our-team-submitted-a-summary-on-behalf-of-our-team-without-consulting-with-everyone-else-how-can-we-ensure-that-the-judges-will-use-the-previous-summary-and-not-the-last-one"
+          >Someone from our team submitted a summary on behalf of our team without consulting with everyone else. How can we ensure that the judges will use the previous summary and not the last one?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#will-you-be-evaluating-each-exploit-separately-for-every-one-of-the-criteria"
+          >Will you be evaluating each exploit separately for every one of the criteria?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#i-only-found-one-exploit-but-i-think-it-is-very-good-can-i-still-win"
+          >I only found one exploit but I think it is very good. Can I still win?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#how-are-you-going-to-pick-the-winners"
+          >How are you going to pick the winners?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#when-and-how-are-we-going-to-find-out-the-results-of-the-contest"
+          >When and how are we going to find out the results of the contest?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#what-will-google-do-with-my-data"
+          >What will Google do with my data?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#i-have-more-questions-where-can-i-get-a-response"
+          >I have more questionswhere can I get a response?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#i-like-this-project-are-you-hiring-people-to-work-on-it-full-time"
+          >I like this project. Are you hiring people to work on it full time?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#how-can-i-get-involved-in-this-project-besides-the-contest"
+          >How can I get involved in this project besides the contest?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="contest-faq.html#why-is-my-country-province-excluded-from-the-contest"
+          >Why is my country/province excluded from the contest?</a>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="contest-faq.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../../../static/js/fatnav.js"></script>
+    <script src="../../../static/js/article.js"></script>
+    <script src="../../../static/js/prettify.js"></script>
+    <script src="../../../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../../../static/js/site.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3748 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../../../../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../../../../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../../../../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>1.1: Debugger - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="debugger.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../../../../index.html">
+          <img alt="Chrome: developer" src="../../../../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../../../index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../../videos.html">Videos</a>
+                            </li>
+                            <li><a href="../../blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../../contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../../dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../../elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../../css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../../resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../../network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../../javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../../heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../../console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../../integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../../sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../../debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../../debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../../../../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../../../../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../../../../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../../../../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../../../../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../../../../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../../../../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="../../../../apps/index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../../../apps/index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="../../../../apps/first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="../../../../apps/app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../../../../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="../../../../apps/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../apps/app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="../../../../apps/app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="../../../../apps/app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="../../../../apps/app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="../../../../apps/app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="../../../../apps/app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="../../../../apps/app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="../../../../apps/app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="../../../../apps/app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../apps/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../apps/offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="../../../../apps/offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../../../../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="../../../../apps/app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="../../../../apps/cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="../../../../apps/app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../apps/app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="../../../../apps/app_usb.html">USB</a>
+                            </li>
+                            <li><a href="../../../../apps/app_serial">Serial</a>
+                            </li>
+                            <li><a href="../../../../apps/app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="../../../../apps/app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../apps/app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="../../../../apps/app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="../../../../apps/angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="../../../../apps/sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../../../../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="../../../../apps/google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../../apps/analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../apps/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../../../apps/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../../../apps/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../../../apps/webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="../../../../apps/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../../../apps/app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../apps/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../../apps/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="../../../../apps/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../../../apps/overview.html">Overview</a>
+                            </li>
+                            <li><a href="../../../../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../../../../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../../../../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="../../../../apps/activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../../../../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../apps/getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../../../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../../../../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../../../../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../../../../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../../../../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../../../../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../../../../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../../../../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../../../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../../../../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../../../../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../../../../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../../../../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../../../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../../../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../../../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../../../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../../../../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../../../../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../../../../native-client/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../../../native-client/overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../../../../native-client/nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../native-client/sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../../../../native-client/sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../../../../native-client/sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../../../../native-client/sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../native-client/devguide/tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../../../../native-client/devguide/tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../../../../native-client/devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../native-client/devguide/devcycle/building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="../../../../native-client/devguide/devcycle/building.html">Building</a>
+                            </li>
+                            <li><a href="../../../../native-client/devguide/devcycle/running.html">Running</a>
+                            </li>
+                            <li><a href="../../../../native-client/devguide/devcycle/debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../../../../native-client/devguide/devcycle/vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="../../../../native-client/devguide/devcycle/dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../native-client/devguide/coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../../../../native-client/devguide/coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../../../../native-client/devguide/coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../../../../native-client/devguide/coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../../../../native-client/devguide/coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../../../../native-client/devguide/coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="../../../../native-client/devguide/devcycle/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../../../../native-client/devguide/coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../../../../native-client/devguide/coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../../../../native-client/devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../../../../native-client/devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../native-client/devguide/distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../native-client/pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../../../../native-client/pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../../../../native-client/pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../../../../native-client/pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../../../../native-client/pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../../../../native-client/pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../../../../native-client/pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../native-client/glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../../../../native-client/glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../../../../native-client/reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../../../../native-client/reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../../../../native-client/reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../../../../native-client/reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../native-client/faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../../native-client/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../../../../native-client/help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../../../../native-client/publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../../../../native-client/community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../../../../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../../../../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../../../../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../../../../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../../../../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../../../../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../../../../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../../../../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../../../../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../../../../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../../../../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../../../../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../../../../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../../../../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../../../../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <div itemprop="articleBody">
+
+
+<h1>1.1: Debugger</h1>
+<div>
+ <!-- TABLE OF CONTENTS -->
+ <div id="toc">
+<div class="collapsible">
+ <h2>Contents</h2>
+ <ol>
+ 
+ <li>
+ <a href='debugger.html#commands'">Commands</a>
+ <ol>
+ 
+ <li>
+ <a href="debugger.html#command-canSetScriptSource" href="debugger.html#command-anchor">canSetScriptSource</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#command-continueToLocation" href="debugger.html#command-anchor">continueToLocation</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#command-disable" href="debugger.html#command-anchor">disable</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#command-enable" href="debugger.html#command-anchor">enable</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#command-evaluateOnCallFrame" href="debugger.html#command-anchor">evaluateOnCallFrame</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#command-getScriptSource" href="debugger.html#command-anchor">getScriptSource</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#command-pause" href="debugger.html#command-anchor">pause</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#command-removeBreakpoint" href="debugger.html#command-anchor">removeBreakpoint</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#command-resume" href="debugger.html#command-anchor">resume</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#command-searchInContent" href="debugger.html#command-anchor">searchInContent</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#command-setBreakpoint" href="debugger.html#command-anchor">setBreakpoint</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#command-setBreakpointByUrl" href="debugger.html#command-anchor">setBreakpointByUrl</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#command-setBreakpointsActive" href="debugger.html#command-anchor">setBreakpointsActive</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#command-setPauseOnExceptions" href="debugger.html#command-anchor">setPauseOnExceptions</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#command-setScriptSource" href="debugger.html#command-anchor">setScriptSource</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#command-stepInto" href="debugger.html#command-anchor">stepInto</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#command-stepOut" href="debugger.html#command-anchor">stepOut</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#command-stepOver" href="debugger.html#command-anchor">stepOver</a>
+ </li>
+ 
+ </ol>
+ </li>
+ 
+ 
+ <li>
+ <a href='debugger.html#events'">Notifications</a>
+ <ol>
+ 
+ <li>
+ <a href="debugger.html#event-breakpointResolved" href="debugger.html#command-anchor">breakpointResolved</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#event-globalObjectCleared" href="debugger.html#command-anchor">globalObjectCleared</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#event-paused" href="debugger.html#command-anchor">paused</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#event-resumed" href="debugger.html#command-anchor">resumed</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#event-scriptFailedToParse" href="debugger.html#command-anchor">scriptFailedToParse</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#event-scriptParsed" href="debugger.html#command-anchor">scriptParsed</a>
+ </li>
+ 
+ </ol>
+ </li>
+ </li>
+ 
+ 
+ <li>
+ <a href="debugger.html#types">Types</a>
+ <ol>
+ 
+ <li>
+ <a href="debugger.html#type-BreakpointId">BreakpointId</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#type-CallFrame">CallFrame</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#type-CallFrameId">CallFrameId</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#type-Location">Location</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#type-Scope">Scope</a>
+ </li>
+ 
+ <li>
+ <a href="debugger.html#type-ScriptId">ScriptId</a>
+ </li>
+ 
+ </ol>
+ </li>
+ 
+ </ol>
+ </div><!-- /TABLE OF CONTENTS -->
+ <!-- API PAGE -->
+ <div>
+ 
+ <p>Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing breakpoints, stepping through execution, exploring stack traces, etc.</p>
+ 
+ <!-- COMMANDS -->
+ 
+ <div class="protocol-group">
+ <a name="commands"></a>
+ <h3>Commands</h3>
+ 
+ <div class="protocol-item">
+ <a name="command-canSetScriptSource"></a>
+ <h4>Debugger.canSetScriptSource</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.canSetScriptSource"
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;,<br>
+ 
+ "result": {<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">result</span>": &lt;boolean&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Always returns true.</p>
+ 
+ 
+ 
+ <!-- RETURNS -->
+ <h4>Returns</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ result
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ boolean
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ True if <code>setScriptSource</code> is supported.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="command-continueToLocation"></a>
+ <h4>Debugger.continueToLocation</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.continueToLocation",<br>
+ 
+ "params": {<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">location</span>": &lt;<a href="debugger.html#type-Location">Location</a>&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Continues execution until specific location is reached.</p>
+ 
+ 
+ <!-- PARAMETERS -->
+ <h4>Parameters</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ location
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="debugger.html#type-Location">Location</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Location to continue to.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="command-disable"></a>
+ <h4>Debugger.disable</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.disable"
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Disables debugger for given page.</p>
+ 
+ 
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="command-enable"></a>
+ <h4>Debugger.enable</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.enable"
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Enables debugger for the given page. Clients should not assume that the debugging has been enabled until the result for this command is received.</p>
+ 
+ 
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="command-evaluateOnCallFrame"></a>
+ <h4>Debugger.evaluateOnCallFrame</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.evaluateOnCallFrame",<br>
+ 
+ "params": {<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">callFrameId</span>": &lt;<a href="debugger.html#type-CallFrameId">CallFrameId</a>&gt;,<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">expression</span>": &lt;string&gt;,<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">objectGroup</span>": &lt;string&gt;,<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">returnByValue</span>": &lt;boolean&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;,<br>
+ 
+ "result": {<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">result</span>": &lt;<a href="http://developer.chrome.com/devtools/docs/protocol/1.1/runtime.html.html#type-RemoteObject">Runtime.RemoteObject</a>&gt;,<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">wasThrown</span>": &lt;boolean&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Evaluates expression on a given call frame.</p>
+ 
+ 
+ <!-- PARAMETERS -->
+ <h4>Parameters</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ callFrameId
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="debugger.html#type-CallFrameId">CallFrameId</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Call frame identifier to evaluate on.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ expression
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ string
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Expression to evaluate.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ objectGroup
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ <span class="optional">optional</span>
+ 
+ string
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ String object group name to put result into (allows rapid releasing resulting object handles using <code>releaseObjectGroup</code>).
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ returnByValue
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ <span class="optional">optional</span>
+ 
+ boolean
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Whether the result is expected to be a JSON object that should be sent by value.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ 
+ <!-- RETURNS -->
+ <h4>Returns</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ result
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="http://developer.chrome.com/devtools/docs/protocol/1.1/runtime.html.html#type-RemoteObject">Runtime.RemoteObject</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Object wrapper for the evaluation result.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ wasThrown
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ <span class="optional">optional</span>
+ 
+ boolean
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ True if the result was thrown during the evaluation.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="command-getScriptSource"></a>
+ <h4>Debugger.getScriptSource</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.getScriptSource",<br>
+ 
+ "params": {<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">scriptId</span>": &lt;<a href="debugger.html#type-ScriptId">ScriptId</a>&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;,<br>
+ 
+ "result": {<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">scriptSource</span>": &lt;string&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Returns source for the script with given id.</p>
+ 
+ 
+ <!-- PARAMETERS -->
+ <h4>Parameters</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ scriptId
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="debugger.html#type-ScriptId">ScriptId</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Id of the script to get source for.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ 
+ <!-- RETURNS -->
+ <h4>Returns</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ scriptSource
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ string
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Script source.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="command-pause"></a>
+ <h4>Debugger.pause</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.pause"
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Stops on the next JavaScript statement.</p>
+ 
+ 
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="command-removeBreakpoint"></a>
+ <h4>Debugger.removeBreakpoint</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.removeBreakpoint",<br>
+ 
+ "params": {<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">breakpointId</span>": &lt;<a href="debugger.html#type-BreakpointId">BreakpointId</a>&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Removes JavaScript breakpoint.</p>
+ 
+ 
+ <!-- PARAMETERS -->
+ <h4>Parameters</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ breakpointId
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="debugger.html#type-BreakpointId">BreakpointId</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ 
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="command-resume"></a>
+ <h4>Debugger.resume</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.resume"
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Resumes JavaScript execution.</p>
+ 
+ 
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="command-searchInContent"></a>
+ <h4>Debugger.searchInContent</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.searchInContent",<br>
+ 
+ "params": {<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">scriptId</span>": &lt;<a href="debugger.html#type-ScriptId">ScriptId</a>&gt;,<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">query</span>": &lt;string&gt;,<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">caseSensitive</span>": &lt;boolean&gt;,<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">isRegex</span>": &lt;boolean&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;,<br>
+ 
+ "result": {<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">result</span>": &lt;array of <a href="http://developer.chrome.com/devtools/docs/protocol/1.1/page.html.html#type-SearchMatch">Page.SearchMatch</a>&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Searches for given string in script content.</p>
+ 
+ 
+ <!-- PARAMETERS -->
+ <h4>Parameters</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ scriptId
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="debugger.html#type-ScriptId">ScriptId</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Id of the script to search in.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ query
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ string
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ String to search for.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ caseSensitive
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ <span class="optional">optional</span>
+ 
+ boolean
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ If true, search is case sensitive.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ isRegex
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ <span class="optional">optional</span>
+ 
+ boolean
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ If true, treats string parameter as regex.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ 
+ <!-- RETURNS -->
+ <h4>Returns</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ result
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ array of <a href="http://developer.chrome.com/devtools/docs/protocol/1.1/page.html.html#type-SearchMatch">Page.SearchMatch</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ List of search matches.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="command-setBreakpoint"></a>
+ <h4>Debugger.setBreakpoint</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.setBreakpoint",<br>
+ 
+ "params": {<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">location</span>": &lt;<a href="debugger.html#type-Location">Location</a>&gt;,<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">condition</span>": &lt;string&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;,<br>
+ 
+ "result": {<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">breakpointId</span>": &lt;<a href="debugger.html#type-BreakpointId">BreakpointId</a>&gt;,<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">actualLocation</span>": &lt;<a href="debugger.html#type-Location">Location</a>&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Sets JavaScript breakpoint at a given location.</p>
+ 
+ 
+ <!-- PARAMETERS -->
+ <h4>Parameters</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ location
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="debugger.html#type-Location">Location</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Location to set breakpoint in.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ condition
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ <span class="optional">optional</span>
+ 
+ string
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Expression to use as a breakpoint condition. When specified, debugger will only stop on the breakpoint if this expression evaluates to true.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ 
+ <!-- RETURNS -->
+ <h4>Returns</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ breakpointId
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="debugger.html#type-BreakpointId">BreakpointId</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Id of the created breakpoint for further reference.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ actualLocation
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="debugger.html#type-Location">Location</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Location this breakpoint resolved into.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="command-setBreakpointByUrl"></a>
+ <h4>Debugger.setBreakpointByUrl</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.setBreakpointByUrl",<br>
+ 
+ "params": {<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">lineNumber</span>": &lt;integer&gt;,<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">url</span>": &lt;string&gt;,<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">urlRegex</span>": &lt;string&gt;,<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">columnNumber</span>": &lt;integer&gt;,<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">condition</span>": &lt;string&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;,<br>
+ 
+ "result": {<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">breakpointId</span>": &lt;<a href="debugger.html#type-BreakpointId">BreakpointId</a>&gt;,<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">locations</span>": &lt;array of <a href="debugger.html#type-Location">Location</a>&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Sets JavaScript breakpoint at given location specified either by URL or URL regex. Once this command is issued, all existing parsed scripts will have breakpoints resolved and returned in <code>locations</code> property. Further matching script parsing will result in subsequent <code>breakpointResolved</code> events issued. This logical breakpoint will survive page reloads.</p>
+ 
+ 
+ <!-- PARAMETERS -->
+ <h4>Parameters</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ lineNumber
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ integer
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Line number to set breakpoint at.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ url
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ <span class="optional">optional</span>
+ 
+ string
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ URL of the resources to set breakpoint on.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ urlRegex
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ <span class="optional">optional</span>
+ 
+ string
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Regex pattern for the URLs of the resources to set breakpoints on. Either <code>url</code> or <code>urlRegex</code> must be specified.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ columnNumber
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ <span class="optional">optional</span>
+ 
+ integer
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Offset in the line to set breakpoint at.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ condition
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ <span class="optional">optional</span>
+ 
+ string
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Expression to use as a breakpoint condition. When specified, debugger will only stop on the breakpoint if this expression evaluates to true.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ 
+ <!-- RETURNS -->
+ <h4>Returns</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ breakpointId
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="debugger.html#type-BreakpointId">BreakpointId</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Id of the created breakpoint for further reference.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ locations
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ array of <a href="debugger.html#type-Location">Location</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ List of the locations this breakpoint resolved into upon addition.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="command-setBreakpointsActive"></a>
+ <h4>Debugger.setBreakpointsActive</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.setBreakpointsActive",<br>
+ 
+ "params": {<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">active</span>": &lt;boolean&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Activates / deactivates all breakpoints on the page.</p>
+ 
+ 
+ <!-- PARAMETERS -->
+ <h4>Parameters</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ active
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ boolean
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ New value for breakpoints active state.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="command-setPauseOnExceptions"></a>
+ <h4>Debugger.setPauseOnExceptions</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.setPauseOnExceptions",<br>
+ 
+ "params": {<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">state</span>": &lt;string&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Defines pause on exceptions state. Can be set to stop on all exceptions, uncaught exceptions or no exceptions. Initial pause on exceptions state is <code>none</code>.</p>
+ 
+ 
+ <!-- PARAMETERS -->
+ <h4>Parameters</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ state
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ <span>enumerated</span>
+ string
+ 
+ [
+ 
+ "all"
+ , 
+ 
+ "none"
+ , 
+ 
+ "uncaught"
+ 
+ 
+ ]
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Pause on exceptions mode.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="command-setScriptSource"></a>
+ <h4>Debugger.setScriptSource</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.setScriptSource",<br>
+ 
+ "params": {<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">scriptId</span>": &lt;<a href="debugger.html#type-ScriptId">ScriptId</a>&gt;,<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">scriptSource</span>": &lt;string&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;,<br>
+ 
+ "result": {<br>
+ 
+ &nbsp;&nbsp;"<span class="specific">callFrames</span>": &lt;array of <a href="debugger.html#type-CallFrame">CallFrame</a>&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Edits JavaScript source live.</p>
+ 
+ 
+ <!-- PARAMETERS -->
+ <h4>Parameters</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ scriptId
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="debugger.html#type-ScriptId">ScriptId</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Id of the script to edit.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ scriptSource
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ string
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ New content of the script.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ 
+ <!-- RETURNS -->
+ <h4>Returns</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ callFrames
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ <span class="optional">optional</span>
+ 
+ array of <a href="debugger.html#type-CallFrame">CallFrame</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ New stack trace in case editing has happened while VM was stopped.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="command-stepInto"></a>
+ <h4>Debugger.stepInto</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.stepInto"
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Steps into the function call.</p>
+ 
+ 
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="command-stepOut"></a>
+ <h4>Debugger.stepOut</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.stepOut"
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Steps out of the function call.</p>
+ 
+ 
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="command-stepOver"></a>
+ <h4>Debugger.stepOver</h4>
+ <div class="summary">
+ <!-- REQUEST -->
+ request: {<br>
+ "id": &lt;number&gt;,<br>
+ "method": "Debugger.stepOver"
+ 
+ <div>}</div>
+ <!-- RESPONSE -->
+ response: {<br>
+ "id": &lt;number&gt;,<br>
+ "error": &lt;object&gt;
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ 
+ <p>Steps over the statement.</p>
+ 
+ 
+ 
+ </div>
+ </div>
+  <!-- for commands -->
+ </div>
+  <!-- if commands -->
+ <!-- EVENTS -->
+ 
+ <div class="protocol-group">
+ <a name="events"></a>
+ <h3>Notifications</h3>
+ 
+ <div class="protocol-item">
+ <a name="event-breakpointResolved"></a>
+ <h4>Debugger.breakpointResolved</h4>
+ <div class="summary">
+ {<br>
+ "method": "Debugger.breakpointResolved",<br>
+ 
+ "params": {<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"breakpointId"</span>: &lt;<a href="debugger.html#type-BreakpointId">BreakpointId</a>&gt;,<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"location"</span>: &lt;<a href="debugger.html#type-Location">Location</a>&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ <p>Fired when breakpoint is resolved to an actual script and location.</p>
+ 
+ <!-- PARAMETERS -->
+ <h4>Parameters</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ breakpointId
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="debugger.html#type-BreakpointId">BreakpointId</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Breakpoint unique identifier.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ location
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="debugger.html#type-Location">Location</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Actual breakpoint location.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="event-globalObjectCleared"></a>
+ <h4>Debugger.globalObjectCleared</h4>
+ <div class="summary">
+ {<br>
+ "method": "Debugger.globalObjectCleared"
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ <p>Called when global has been cleared and debugger client should reset its state. Happens upon navigation or reload.</p>
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="event-paused"></a>
+ <h4>Debugger.paused</h4>
+ <div class="summary">
+ {<br>
+ "method": "Debugger.paused",<br>
+ 
+ "params": {<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"callFrames"</span>: &lt;array of <a href="debugger.html#type-CallFrame">CallFrame</a>&gt;,<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"reason"</span>: &lt;string&gt;,<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"data"</span>: &lt;object&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ <p>Fired when the virtual machine stopped on breakpoint or exception or any other stop criteria.</p>
+ 
+ <!-- PARAMETERS -->
+ <h4>Parameters</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ callFrames
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ array of <a href="debugger.html#type-CallFrame">CallFrame</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Call stack the virtual machine stopped on.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ reason
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ <span>enumerated</span>
+ string
+ 
+ [
+ 
+ "CSPViolation"
+ , 
+ 
+ "DOM"
+ , 
+ 
+ "EventListener"
+ , 
+ 
+ "XHR"
+ , 
+ 
+ "assert"
+ , 
+ 
+ "debugCommand"
+ , 
+ 
+ "exception"
+ , 
+ 
+ "other"
+ 
+ 
+ ]
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Pause reason.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ data
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ <span class="optional">optional</span>
+ 
+ object
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Object containing break-specific auxiliary properties.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="event-resumed"></a>
+ <h4>Debugger.resumed</h4>
+ <div class="summary">
+ {<br>
+ "method": "Debugger.resumed"
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ <p>Fired when the virtual machine resumed execution.</p>
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="event-scriptFailedToParse"></a>
+ <h4>Debugger.scriptFailedToParse</h4>
+ <div class="summary">
+ {<br>
+ "method": "Debugger.scriptFailedToParse",<br>
+ 
+ "params": {<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"url"</span>: &lt;string&gt;,<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"scriptSource"</span>: &lt;string&gt;,<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"startLine"</span>: &lt;integer&gt;,<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"errorLine"</span>: &lt;integer&gt;,<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"errorMessage"</span>: &lt;string&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ <p>Fired when virtual machine fails to parse the script.</p>
+ 
+ <!-- PARAMETERS -->
+ <h4>Parameters</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ url
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ string
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ URL of the script that failed to parse.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ scriptSource
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ string
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Source text of the script that failed to parse.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ startLine
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ integer
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Line offset of the script within the resource.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ errorLine
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ integer
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Line with error.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ errorMessage
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ string
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Parse error message.
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ </div>
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="event-scriptParsed"></a>
+ <h4>Debugger.scriptParsed</h4>
+ <div class="summary">
+ {<br>
+ "method": "Debugger.scriptParsed",<br>
+ 
+ "params": {<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"scriptId"</span>: &lt;<a href="debugger.html#type-ScriptId">ScriptId</a>&gt;,<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"url"</span>: &lt;string&gt;,<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"startLine"</span>: &lt;integer&gt;,<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"startColumn"</span>: &lt;integer&gt;,<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"endLine"</span>: &lt;integer&gt;,<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"endColumn"</span>: &lt;integer&gt;,<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"isContentScript"</span>: &lt;boolean&gt;,<br>
+ 
+ &nbsp;&nbsp;<span class="specific">"sourceMapURL"</span>: &lt;string&gt;<br>
+ 
+ }
+ 
+ <div>}</div>
+ </div>
+ <div class="description">
+ <p>Fired when virtual machine parses script. This event is also fired for all known and uncollected scripts upon enabling debugger.</p>
+ 
+ <!-- PARAMETERS -->
+ <h4>Parameters</h4>
+ <div class="parameters">
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ scriptId
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="debugger.html#type-ScriptId">ScriptId</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Identifier of the script parsed.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ url
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ string
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ URL or name of the script parsed (if any).
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ startLine
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ integer
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Line offset of the script within the resource with given URL (for script tags).
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ startColumn
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ integer
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Column offset of the script within the resource with given URL.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ endLine
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ integer
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Last line of the script.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ endColumn
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ integer
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Length of the last line of the script.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ isContentScript
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ <span class="optional">optional</span>
+ 
+ boolean
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Determines whether this script is a user extension script.
+ 
+ </div>
+</span>
+</div>
+ 
+ <div><span class="value">
+ <strong>
+ <var>
+
+ sourceMapURL
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ <span class="optional">optional</span>
+ 
+ string
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ URL of source map associated with script (if any).
+ 
+ </div>
+</span>
+</div>
+ 
+ </div>
+ 
+ </div>
+ </div>
+  <!-- for events -->
+ </div>
+  <!-- if events -->
+ <!-- TYPES -->
+ 
+ <a name="types" id="types"></a>
+ <h3 id="types">Types</h3>
+ 
+ <div class="protocol-item">
+ <a name="type-BreakpointId"></a>
+ <h4>BreakpointId: <var>string</var></h4>
+ 
+ 
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="type-CallFrame"></a>
+ <h4>CallFrame: <var>object</var></h4>
+ 
+ 
+ <div class="property">
+ <span class="value">
+ <strong>
+ <var>
+
+ callFrameId
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="debugger.html#type-CallFrameId">CallFrameId</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Call frame identifier. This identifier is only valid while the virtual machine is paused.
+ 
+ </div>
+</span>
+
+ </div>
+ 
+ <div class="property">
+ <span class="value">
+ <strong>
+ <var>
+
+ functionName
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ string
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Name of the JavaScript function called on this call frame.
+ 
+ </div>
+</span>
+
+ </div>
+ 
+ <div class="property">
+ <span class="value">
+ <strong>
+ <var>
+
+ location
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="debugger.html#type-Location">Location</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Location in the source code.
+ 
+ </div>
+</span>
+
+ </div>
+ 
+ <div class="property">
+ <span class="value">
+ <strong>
+ <var>
+
+ scopeChain
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ array of <a href="debugger.html#type-Scope">Scope</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Scope chain for this call frame.
+ 
+ </div>
+</span>
+
+ </div>
+ 
+ <div class="property">
+ <span class="value">
+ <strong>
+ <var>
+
+ this
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="http://developer.chrome.com/devtools/docs/protocol/1.1/runtime.html.html#type-RemoteObject">Runtime.RemoteObject</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ <code>this</code> object for this call frame.
+ 
+ </div>
+</span>
+
+ </div>
+ 
+ 
+ 
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="type-CallFrameId"></a>
+ <h4>CallFrameId: <var>string</var></h4>
+ 
+ 
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="type-Location"></a>
+ <h4>Location: <var>object</var></h4>
+ 
+ 
+ <div class="property">
+ <span class="value">
+ <strong>
+ <var>
+
+ columnNumber
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ <span class="optional">optional</span>
+ 
+ integer
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Column number in the script (0-based).
+ 
+ </div>
+</span>
+
+ </div>
+ 
+ <div class="property">
+ <span class="value">
+ <strong>
+ <var>
+
+ lineNumber
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ integer
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Line number in the script (0-based).
+ 
+ </div>
+</span>
+
+ </div>
+ 
+ <div class="property">
+ <span class="value">
+ <strong>
+ <var>
+
+ scriptId
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="debugger.html#type-ScriptId">ScriptId</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Script identifier as reported in the <code>Debugger.scriptParsed</code>.
+ 
+ </div>
+</span>
+
+ </div>
+ 
+ 
+ 
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="type-Scope"></a>
+ <h4>Scope: <var>object</var></h4>
+ 
+ 
+ <div class="property">
+ <span class="value">
+ <strong>
+ <var>
+
+ object
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ 
+ <a href="http://developer.chrome.com/devtools/docs/protocol/1.1/runtime.html.html#type-RemoteObject">Runtime.RemoteObject</a>
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Object representing the scope. For <code>global</code> and <code>with</code> scopes it represents the actual object; for the rest of the scopes, it is artificial transient object enumerating scope variables as its properties.
+ 
+ </div>
+</span>
+
+ </div>
+ 
+ <div class="property">
+ <span class="value">
+ <strong>
+ <var>
+
+ type
+
+ <!-- TYPE -->
+ <div style="display:inline">
+ (
+ 
+ <span>enumerated</span>
+ string
+ 
+ [
+ 
+ "catch"
+ , 
+ 
+ "closure"
+ , 
+ 
+ "global"
+ , 
+ 
+ "local"
+ , 
+ 
+ "with"
+ 
+ 
+ ]
+ 
+ )
+ </div>
+ </var>
+ </strong>
+ <div class="description">
+ Scope type.
+ 
+ </div>
+</span>
+
+ </div>
+ 
+ 
+ 
+ </div>
+ 
+ <div class="protocol-item">
+ <a name="type-ScriptId"></a>
+ <h4>ScriptId: <var>string</var></h4>
+ 
+ 
+ </div>
+  <!-- for types -->
+ </div>
+  <!-- if types -->
+ </div><!-- API PAGE -->
+</div>
+</div>
+    
+    <footer id="cc-info">
+      <button id="send-feedback" class="google-button" data-feedback>Send Feedback</button>
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo"><a href="http://creativecommons.org/licenses/by/3.0/"><img src="../../../../static/images/cc_by.png" alt="Licensed Creative Commons by Attribution"></a></p>
+    </footer>
+    <nav class="inline-toc no-permalink">
+      <section class="related">
+      <ol class="toc">
+      </ol>
+      </section>
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="debugger.html#"
+          >Contents</a>
+          <ol class="toc">
+              <li><a data-list-item href="debugger.html#"
+                     >Commands</a>
+                  <ol class="toc">
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.canSetScriptSource</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Returns</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.continueToLocation</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Parameters</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.disable</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.enable</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.evaluateOnCallFrame</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Parameters</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Returns</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.getScriptSource</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Parameters</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Returns</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.pause</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.removeBreakpoint</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Parameters</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.resume</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.searchInContent</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Parameters</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Returns</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.setBreakpoint</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Parameters</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Returns</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.setBreakpointByUrl</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Parameters</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Returns</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.setBreakpointsActive</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Parameters</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.setPauseOnExceptions</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Parameters</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.setScriptSource</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Parameters</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Returns</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.stepInto</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.stepOut</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.stepOver</a></li>
+                  </ol>
+              </li>
+              <li><a data-list-item href="debugger.html#"
+                     >Notifications</a>
+                  <ol class="toc">
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.breakpointResolved</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Parameters</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.globalObjectCleared</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.paused</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Parameters</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.resumed</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.scriptFailedToParse</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Parameters</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Debugger.scriptParsed</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Parameters</a></li>
+                  </ol>
+              </li>
+              <li><a data-list-item href="debugger.html#types"
+                     >Types</a>
+                  <ol class="toc">
+                      <li><a data-list-item href="debugger.html#"
+                             >BreakpointId: string</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >CallFrame: object</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >CallFrameId: string</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Location: object</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >Scope: object</a></li>
+                      <li><a data-list-item href="debugger.html#"
+                             >ScriptId: string</a></li>
+                  </ol>
+              </li>
+          </ol>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="debugger.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../../../../static/js/fatnav.js"></script>
+    <script src="../../../../static/js/article.js"></script>
+    <script src="../../../../static/js/prettify.js"></script>
+    <script src="../../../../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../../../../static/js/site.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="https://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="https://developer.chrome.com/static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="https://developer.chrome.com/static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="https://developer.chrome.com/static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>Tips And Tricks - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="tips-and-tricks.1#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="https://developer.chrome.com/">
+          <img alt="Chrome: developer" src="https://developer.chrome.com/static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/index">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="authoring-development-workflow.1">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/console">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="tips-and-tricks.1">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/videos">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/devtools/docs/videos">Videos</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/contributing">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/dom-and-styles">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/css-preprocessors">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/resource-panel">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="javascript-debugging.1">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="mobile-emulation.1">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="remote-debugging.1">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/network">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/timeline">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/cpu-profiling">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/javascript-memory-profiling">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/devtools/docs/javascript-memory-profiling">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/heap-profiling-summary">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="clean-testing-environment.1">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/console-api">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/commandline-api">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/integrating">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/devtools/docs/integrating">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/sample-extensions">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/debugging-clients">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/shortcuts">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/settings">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/debugger-protocol">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/devtools/docs/debugger-protocol">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/protocol/1.1/index">Version 1.1</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/protocol/1.0/index">Version 1.0</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/protocol/0.1/index">Version .1</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/protocol/tot/index">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/index">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/user-agent">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="mobile-emulation.1">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="remote-debugging.1">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/faq">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/android/overview">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/android/intents">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/android/installtohomescreen">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/webview/overview">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/webview/gettingstarted">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/webview/workflow">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/ios/overview">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/ios/links">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/multidevice/ios/pocket">Pocket</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/multidevice/ios/feedly">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/about_apps">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/about_apps">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/first_app">Create Your First App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_architecture">App Architecture</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_lifecycle">App Lifecycle</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/contentSecurityPolicy">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/app_codelab1_setup">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab1_setup">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab2_basic">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab3_mvc">3 - Create MVC</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab5_data">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab6_lifecycle">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab7_useridentification">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab8_webresources">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab_10_publishing">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/samples">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/offline_apps">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/offline_apps">Offline First</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_external">Handling External Content</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_storage">Storing Data</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/cloudMessaging">Cloud Messaging</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_identity">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/app_usb">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/app_usb">USB</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_serial">Serial</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_network">Network Communications</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_bluetooth">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/app_frameworks">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/app_frameworks">About MVC Architecture</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/angular_framework">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/sencha_framework">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/publish_app">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/publish_app">Publish Your App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/google_wallet">Monetize Your App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/analytics">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/api_index">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/api_index">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../apps/manifest.1">Manifest File Format</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/tags/webview">Webview Tag</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/api_other">Web APIs</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_deprecated">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/extensions/overview">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/extensions/overview">Overview</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/event_pages">Event Pages</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/content_scripts">Content Scripts</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/activeTab">activeTab Permission</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/whats_new">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/extensions/getstarted">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/extensions/samples">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/extensions/a11y">Accessibility</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/contentSecurityPolicy">Content Security Policy</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/xhr">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../../extensions/tut_debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/i18n">Internationalization</a>
+                            </li>
+                            <li><a href="../../extensions/messaging.html">Message Passing</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/extensions/hosting">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/extensions/hosting">Hosting</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/packaging">Packaging</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/autoupdate">Autoupdating</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/external_extensions">Other Deployment Options</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/tut_analytics">Google Analytics</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/themes">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/extensions/api_index">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/extensions/api_index">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../extensions/manifest.1">Manifest File Format</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/api_other">Web APIs</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/permission_warnings">Permission Warnings</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/permissions">Optional Permissions</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/match_patterns">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/overview">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/overview">What Is Native Client?</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/nacl-and-pnacl">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/sdk/download">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/download">Download SDK</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/examples">Examples</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/release-notes">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part1">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part1">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/devcycle/building">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/building">Building</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/running">Running</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/debugging">Debugging</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/vs-addin">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/dynamic-loading">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/coding/application-structure">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/application-structure">Application Structure</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/native-client-modules">Native Client Modules</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/3D-graphics">3D Graphics</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/audio">Audio</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/file-io">File I/O</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/message-system">Messaging System</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/progress-events">Progress Events</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/distributing">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/pepper_stable/index">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/pepper_stable/c/group___interfaces">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/pepper_stable/c/group___structs">Pepper C Structures</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/pepper_stable/c/group___functions">Pepper C Functions</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/pepper_stable/c/group___enums">Pepper C Enums</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/pepper_stable/c/group___typedefs">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/pepper_stable/cpp/inherits">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/glossary">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/glossary">Glossary</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/nacl-manifest-format">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-bitcode-abi">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-c-cpp-language-support">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/help">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/community/security-contest/index">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/index">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/overview">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/get_started_simple">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/samples">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/branding">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/webstore/branding">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../../webstore/images.1">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/money">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/webstore/money">Monetizing Your App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/identify_user">Using Google Accounts</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/check_for_payment">Checking for Payment</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/pricing">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/publish">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/webstore/publish">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/i18n">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/inline_installation">Using Inline Installation</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/rating">Rating Guidelines</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/program_policies">Program Policies</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/terms">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/best_practices">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/webstore/best_practices">Best Practices</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="https://developer.chrome.com/static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <div itemprop="articleBody">
+
+
+<h1>Tips And Tricks</h1>
+
+
+
+
+
+
+
+
+<div class="collapsible">
+<h2>Console</h2>
+
+<h3 id="multiline-commands">Write multi-line commands</h3>
+
+<p>When in the console's multi-line editing mode, you can treat blocks of text as if you were using a standard text editor. <span class="kbd">Shift</span> + <span class="kbd">Enter</span> allows you enter multi-line mode in the console.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/consolemultiline.png"/></p>
+
+<p>This can be particularly helpful when writing JavaScript that is more complex than a simple one-liner. Once you've entered a block of text, press <span class="kbd">Enter</span> at the end of the command and it should run.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/consolerun.png"/></p>
+
+<p>For a multi-line console which supports persistence, read about <a href="https://developer.chrome.com/devtools/docs/authoring-development-workflow.html#snippets">Snippets</a> - a feature which can save and execute custom snippets of JavaScripts which are always available inside the DevTools.</p>
+
+<h3 id="inspect-element-line">A shortcut to launch in inspect-element mode</h3>
+
+<p><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span> or <span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span> will open up DevTools in inspect element mode (or switch focus to it) so you can inspect the current page immediately. Repeating returns focus to the page. On Mac, use <span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span> to achieve the same.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_10.png"  /></p>
+
+<p><a href="https://developer.chrome.com/devtools/docs/console.md">More: Using The Console | DevTools Docs</a></p>
+
+<h3 id="console-table">Support for the console.table command</h3>
+
+<p>This command logs any supplied data using a tabular layout. Some examples of how to use it include:</p>
+
+<pre>
+console.table([{a:1, b:2, c:3}, {a:"foo", b:false, c:undefined}]);
+console.table([[1,2,3], [2,3,4]]);
+</pre>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/consoleg1.png"  /></p>
+
+<p>There is also an optional 'columns' parameter which takes the form of an array of strings. Below, we define a family object containing many "Person"s and can then choose which columns we would like displayed using it:</p>
+
+<p><pre>
+function Person(firstName, lastName, age) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+}
+
+var family = {};
+family.mother = new Person("Susan", "Doyle", 32);
+family.father = new Person("John", "Doyle", 33);
+family.daughter = new Person("Lily", "Doyle", 5);
+family.son = new Person("Mike", "Doyle", 8);
+
+console.table(family, ["firstName", "lastName", "age"]);
+</pre></p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/consoleperson.png"  /></p>
+
+<p>whilst, if you just want to output the first two of these columns, use:</p>
+
+<pre>
+console.table(family, ["firstName", "lastName"]);
+</pre>
+
+<p><a href="https://plus.google.com/u/0/115133653231679625609/posts/PmTC5wwJVEc">More: Support for the console.table command has landed | G+</a>.</p>
+
+<h3 id="preview-logged-objects">Preview logged console objects</h3>
+
+<p>Objects logged using console.log() can be previewed directly inside the DevTools without further work on your part.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_12.png"  /></p>
+
+<h3 id="styled-console-multiple">Pass multiple arguments to styled console logs</h3>
+
+<p>As we've documented you can add style to your console logs via <code>%c</code>, just like you can in Firebug. e.g</p>
+
+<pre>
+console.log("%cBlue!", "color: blue;");
+</pre>
+
+<p>Blocks specifying multiple styles are also supported:</p>
+
+
+<pre>
+console.log('%cBlue! %cRed!', 'color: blue;', 'color: red;');
+</pre>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_13.png"  /></p>
+
+<p><a href="https://plus.google.com/115133653231679625609/posts/TanDFKEN9Kn">More: Styled Console Logging In The DevTools | G+</a></p>
+
+<h3 id="clear-console-history">Shortcut to clear the console history</h3>
+
+<p>With the console open you can easily clear your console history using the <span class="kbd">Ctrl</span> + <span class="kbd">L</span> or <span class="kbd">Cmd</span> + <span class="kbd">L</span>  <a href="https://developer.chrome.com/devtools/docs/shortcuts.html">shortcut</a>. A clear() command is also available at the shell prompt as is the <a href="https://developer.chrome.com/devtools/docs/console.md#clearing-the-console-history">console.clear()</a> method via the Console API from JavaScript.</p>
+
+<h3 id="keyboard-ninja">Become a keyboard ninja</h3>
+
+<p>With the DevTools open you can just use <span class="kbd">?</span> to see all of the <a href="https://developer.chrome.com/devtools/docs/shortcuts.html">supported shortcuts</a> in a convenient panel.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_14.png"  /></p>
+
+<h3 id="access-elements-console">Accessing elements from the console</h3>
+
+<p>Select an element and type <code>$0</code> in the console, it will be used by the script. If you have jQuery on the page, you can then use <code>$($0)</code> to reselect the element in the page.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_15.png"  /></p>
+
+<p>You can also right click on any element output to the console and click 'Reveal in Elements Panel' to find it in the DOM.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_16.png"  /></p>
+
+<h3 id="dom-xpath-expressions">Querying the DOM using XPath expressions</h3>
+
+<p>XPath is a query language for selecting nodes from documents and generally returns a node-set, string, boolean or number. You can use XPath expressions to query the DOM from the DevTools JavaScript console.</p>
+
+<p>The <code>$x(xpath)</code> command will allow you to execute a query - see below for an example of how to search for the images in a page using <code>$x('//img')</code>:</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_17.png"  /></p>
+
+<p>However, the function also accepts an optional second argument for the path context - i.e <code>$x(xpath, context)</code>. This lets us select a specific context (e.g an iframe) and run an XPath query against it.</p>
+
+<pre>
+var frame = document.getElementsByTagName('iframe')[0].contentWindow.document.body;
+$x('//'img, frame);
+</pre>
+
+<p>which queries the images within the specified iframe.</p>
+
+
+<h3 id="access-elements-console">Access the last console result</h3>
+
+<p>Using the $_ helper will allow you to access the last console result. We can demonstrate using this with another XPath example:</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_17a.png"  /></p>
+
+
+<h3 id="console-dir">Using console.dir</h3>
+
+<p>The <a href="https://developer.chrome.com/devtools/docs/console-api.md#consoledirobject">console.dir(object)</a> command lists out all of the properties of a provided object as an expandable JavaScript object. Below is an example displaying an expandable object representing the properties found under document.body.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_18.png"  /></p>
+
+<h3 id="console-iframe">Running the JS console in a specific iframe</h3>
+
+<p>Along the bottom bar of the DevTools are drop-down options that change depending on the context of your current tab. When you’re in the Console panel, there’s a drop-down that allows you to select the frame context that the console will operate in. Select your frame in the drop-down and you’ll find yourself in the right context in no time.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_19.png"  /></p>
+
+<h3 id="console-persist">Stop the console clearing when navigating to a new page</h3>
+
+<p>Sometimes you want to be able to preserve your console log history when you navigate to a new page. To enable this, right-click in the console and select "Preserve Log upon Navigation". When you navigate to a different page from the current tab, the console history will no longer be cleared.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_20.png"  /></p>
+
+<h3 id="benchmarking-console">Benchmark loops using <code>console.time()</code> and <code>console.timeEnd()</code></h3>
+
+<p><a href="https://developer.chrome.com/devtools/docs/console-api.md#consoletimelabel">console.time()</a> begins a new timer using a specific label. When <a href="https://developer.chrome.com/devtools/docs/console-api.md#consoletimeendlabel">console.timeEnd()</a> is called using the same label the time is stopped and the elapsed time between both is logged to the console. This is particularly useful for benchmarking loops or code which doesn’t call a function.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_21.png"  /></p>
+
+<h3 id="profiling-console">Profiling with <code>console.profile()</code> and <code>console.profileEnd()</code></h3>
+
+<p>With the DevTools open, calling <a href="https://developer.chrome.com/devtools/docs/console-api.md#consoleprofilelabel">console.profile()</a> begins a JavaScript CPU profile. A label for the profile can be optionally passed, as seen below in console.profile("Processing"). To complete a profile run, call <a href="https://developer.chrome.com/devtools/docs/console-api.md#consoleprofileend">console.profileEnd()</a>.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_22.png"  /></p>
+
+<p>Each profile run gets added to the <a href="https://developer.chrome.com/devtools/docs/profiles.html">Profiles</a> panel:</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_23.png"  /></p>
+
+<p>It is also added to the <code>console.profiles[]</code> array for inspection later on:</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_24.png"  /></p>
+
+
+<div class="drop-shadow extdoc">
+
+  <!--Description-->
+  <p>For more key tricks with the console, dive into <a href="https://developer.chrome.com/devtools/docs/console.md">Using The Console</a>:</p>
+  <!--Screenshot -->
+ <p><a href="https://developer.chrome.com/devtools/docs/console.md"><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/preview_console.png"/></a></p>
+
+</div>
+
+
+
+</div>
+<div class="collapsible">
+<h2>Timeline</h2>
+
+<h3 id="timeline-frames-mode">Frame profiling with Timeline Frames Mode</h3>
+
+<p>The Timeline panel provides an overview of where time is spent loading up your web application such as how long it takes to process DOM events, render page layouts or paint elements to the screen. It allows you to drill down into three separate facets that can help discover why your application is slow: Events, Frames and actual Memory usage.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_0.png"  /></p>
+
+<p>Timeline won’t display any data by default but you can begin a recording session with it by opening your app and clicking on the circle <img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/recordbuttonblack.png"/> at the bottom of the pane. Using the <span class="kbd">Ctrl</span> + <span class="kbd">E</span> or <span class="kbd">Cmd</span> + <span class="kbd">E</span> shortcut will also trigger a record.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_1.png"  /></p>
+
+<p>This record button will turn from gray to red and the Timeline will begin to capture the timelines for your page. Complete a few actions inside your app and after a few seconds, click the button again to stop recording.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_2.png"  /></p>
+
+<p>Frames mode gives you insight into the tasks Chrome had to perform to generate a single frame (update) of your application for presentation on the screen. In this mode, the shaded vertical bars correspond to recalculating styles, compositing and so on. The transparent areas of each vertical bar correspond to idle time, at least, idle on the part of your page.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_3.png"  /></p>
+
+<p>For example, say your first frame takes 15ms to execute and the next takes 30ms. A common situation is that frames are synchronized to refresh rate and in this case, the second frame took slightly longer than 15ms to render. Here, frame 3 missed the "true" hardware frame and was rendered upon the next frame, hence, the length of the second frame was effectively doubled.</p>
+
+<p>If your app doesn't have a lot of animation in it, the idea of frames is useful as the browser has to perform a repeated sequence of actions while processing input events. When you leave enough time to process such events in a frame, it makes your app more responsive, meaning a better user experience.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_4.png"  /></p>
+
+<p>When we target 60fps, we have a max of 16.66ms to do everything. That's not a lot of time and so squeezing as much performance out of your animations as possible is important.</p>
+
+<p><a href="https://developer.chrome.com/devtools/docs/timeline.md">More: Improving Performance With The DevTools Timeline | DevTools Docs</a></p>
+
+<h3 id="forced-layout-events">Spot forced layout events using warnings</h3>
+
+<p>In the DevTools Timeline, if you see a yellow triangular icon in the Records view, this is an indication some of your code is triggering forced/synchronous layout events.</p>
+
+<p>You ideally want to avoid unnecessary layout triggers as they can have a significant impact on the performance of your page.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_5.png"  /></p>
+
+<p><a href="https://plus.google.com/u/0/115133653231679625609/posts/A7rYqkMMmW8">More: Timeline Warnings Are A Performance Smell | G+</a></p>
+
+<h3 id="timeline-shared">Share and analyze a Timeline recorded by someone else</h3>
+
+<p>You can view and share Timelines with other developers thanks to a useful import/export feature. Use <span class="kbd">Ctrl</span> + <span class="kbd">E</span>  or <span class="kbd">Cmd</span> + <span class="kbd">E</span> to start &amp; stop recording then right-click inside the Timeline and use Save Timeline data. The same menu supports Load Timeline data for loading an exported file back in for viewing.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_6.png"  /></p>
+
+<h3 id="timeline-recordings">Annotating Timeline Recordings</h3>
+
+<p>Your code can add annotations to Timeline recordings using the <a href="https://developer.chrome.com/devtools/docs/console.md#marking-the-timeline">console.timeStamp()</a> method. This helps correlate code in your web app to other activity going on or browser events.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_7.png"  /></p>
+
+<p><a href="https://developer.chrome.com/devtools/docs/console.md#marking-the-timeline">More: DevTools Console API - Marking The Timeline | DevTools Docs</a></p>
+
+<p>Your application can add annotations to Timeline recordings by calling the console.timeStamp() method. This lets you easily correlate code in your application to other activity in your application or browser events. In the following recording, the Timeline is annotated with the string "Adding result". See Marking the Timeline in Using the Console for example code.</p>
+
+<h3 id="counter-display">FPS Counter/HUD Display</h3>
+
+<p>A useful tool for visualizing frame rate and jank is the real-time FPS counter. This can be enabled in the DevTools by going to the Settings menu and checking “Show FPS meter”.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_8.png"  /></p>
+
+<p>When activated, you will see a dark box in the top-right corner of your page with frame statistics. The counter can be used during live editing to diagnose what in your page is causing a drop-off in frame rate without having to switch back and forth with the Timeline view.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_9.png"  /></p>
+
+<p><a href="http://updates.html5rocks.com/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode">More: Profiling Long Paint Times with DevTools' Continuous Painting Mode | HTML5Rocks</a></p>
+
+
+<p>Keep in mind that just tracking the FPS counter may lead to you not noticing frames with intermittent jank. Be careful when using the content. It is also worth noting that FPS on desktop does not equal FPS on devices and special care should be taken to profile the performance there too.</p>
+
+
+
+<div class="drop-shadow extdoc">
+
+  <!--Description-->
+  <p>For more key tricks with profiling using the Timeline, dive into <a href="https://developer.chrome.com/devtools/docs/timeline.md">Performance Profiling With The Timeline</a>:</p>
+  <!--Screenshot -->
+<p><a href="https://developer.chrome.com/devtools/docs/timeline.md"><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/preview_timeline.png"/></a></p>
+
+</div>
+
+
+
+</div>
+<div class="collapsible">
+<h2>Profiles</h2>
+
+<h3 id="three-snapshot-technique">Finding JavaScript memory leaks with the '3 snapshot' technique</h3>
+
+<ol>
+<li><p>Open up the DevTools and switch to the Profiles panel</p></li>
+<li><p>Perform an action in your page that makes a leak</p></li>
+<li><p>Take a new heap snaphot</p></li>
+<li><p>Repeat steps 2 and 3 three times</p></li>
+<li><p>Select the latest heap snapshot</p></li>
+<li><p>Change the filter 'All Object' to 'Objects between Snapshot 1 and 2'</p></li>
+<li><p>You should now see a set of leaked objects. You can select one and look at the list of retainers in the Object's retaining tree for insights into what is causing leaks.</p></li>
+</ol>
+
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_25.png"  /></p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_26.png"  /></p>
+
+<p><a href="https://docs.google.com/presentation/d/1wUVmf78gG-ra5aOxvTfYdiLkdGaR9OhXRnOlIcEmu2s/pub?start=false&amp;loop=false&amp;delayms=3000#slide=id.g1d65bdf6_0_0">More: BloatBusters - Eliminating Memory Leaks In GMail</a></p>
+
+<h3 id="nodes-heap-profiler">Understanding Nodes In The Heap Profiler</h3>
+
+<p>Red nodes are those that are staying alive because they're part of a detached DOM tree and there is a node in the tree referenced from JavaScript (either as a closure variable or by some property).</p>
+
+<p>Yellow nodes indicate a detached DOM node reference from an object's property or an array element - there should be a chain of properties leading from the DOM window to the element (e.g window.foo.bar[2].baz).</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_27.jpg"  /></p>
+
+<p><a href="https://plus.google.com/u/0/115133653231679625609/posts/hEMupRLRJSF">More: Understanding Nodes In The Heap Profiler | G+</a></p>
+
+<h3 id="timespent-cpu-profiler">Understanding time spent in CPU profiler</h3>
+
+<p>In the CPU profiler, "(idle)" time is now marked as such. Time spent in non-browser processing is "(program)".</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_28.png"  /></p>
+
+<h3 id="moreinsights-heapprofiler">Additional insights with Heap profiler views</h3>
+
+<p>One common question we get asked is 'what are the differences between the Comparison, Dominator, Containment and Summary views in DevTools > Profiles > Heap snapshot'. These views provide additional insights into the data exposed by the profiler and break down as follows:</p>
+
+<p>Comparison view helps you track down memory leaks, by displaying which objects have been correctly cleaned up by the garbage collector. Generally used to record and compare two (or more) memory snapshots of before and after an operation. The idea is that inspecting the delta in freed memory and reference count lets you confirm the presence and cause of a memory leak.</p>
+
+<p>Dominators view helps confirm that no unexpected references to objects are still hanging around (i.e that they are well contained) and that deletion/garbage collection is actually working.</p>
+
+<p>Summary view helps you hunt down objects (and their memory use) based on type grouped by constructor name. This view is particularly helpful for tracking down DOM leaks.</p>
+
+<p>Containment view provides a better view of object structure, helping us analyze objects referenced in the global namespace (i.e. window) to find out what is keeping them around. It lets you analyze closures and dive into your objects at a low level.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_29.png"  /></p>
+
+
+<p><a href="http://addyosmani.com/blog/taming-the-unicorn-easing-javascript-memory-profiling-in-devtools/">More: Taming The Unicorn: Easing JavaScript Memory Profiling In Chrome | AddyOsmani.com</a></p>
+
+
+<div class="drop-shadow extdoc">
+
+  <!--Description-->
+  <p>For more key tricks with memory profiling, dive into <a href="https://developer.chrome.com/devtools/docs/heap-profiling.html">Profiling Memory Performance</a>:</p>
+  <!--Screenshot -->
+<p><a href="https://developer.chrome.com/devtools/docs/heap-profiling.md"><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/preview_memory.png"/></a></p>
+
+</div>
+
+
+
+
+</div>
+<div class="collapsible">
+<h2>Sources</h2>
+
+<h3 id="debug-dom-modifications">Debug on DOM modifications</h3>
+
+<p>Right-click an element and enable ‘Break on Subtree Modifications’: whenever a script traverses that element childs and modifies them, the debugger rolls in automatically to let you inspect what’s happening:</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_30.png"  /></p>
+
+<p>Also worth noting is that Attribute modifications pause on inline style changes which can be useful for debugging DOM animations.</p>
+
+<h3 id="tracking-uncaught-exceptions">Tracking uncaught exceptions</h3>
+
+<p>From the Sources pane, double clicking the pause script execution (<img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_31.png"  />) button will break the code when an uncaught exception occurs, preserving the call stack and the current state of the application - some refer to this as the purple pause.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_32.png"  /></p>
+
+<h3 id="conditional-breakpoint-actions">Conditional breakpoint actions with console.log</h3>
+
+<p>The DevTools support conditional breakpoints, which we know can be set by clicking the line you wish to set a breakpoint on and applying a breakpoint as normal.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_33.png"  /></p>
+
+<p>You then right-click the line and "Edit Breakpoint" where you are presented with an expression field. Define your condition here (e.g if the expression evaluates as truthy execution will break here).</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_34.png"  /></p>
+
+<p>A normal expression may be of the form <code>x === 5</code>, however console.log statements are also completely valid input in the field.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_35.png"  /></p>
+
+<p>This approach works well and we can easily see the console.log statements being fired in the console on breakpoints:</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_36.png"  /></p>
+
+<p>As console.log doesn't have a real return value, undefined means the conditional breakpoint won't result in execution being paused and your code will continue to run. It's much like a hard-coded console.log statement without the need to modify your code directly.</p>
+
+<p><a href="http://www.google.com/url?q=http%3A%2F%2Fwww.randomthink.net%2Fblog%2F2012%2F11%2Fbreakpoint-actions-in-javascript%2F&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNE9yz1n3H6Boru1bl11nQdiUwmR4w">More: Breakpoint Actions In JavaScript | randomthink.net</a></p>
+
+<h3 id="prettyprint-javascript">Pretty Print JavaScript</h3>
+
+<p>The DevTools support prettifying of minified JavaScript to a more readable form. To pretty print:</p>
+
+
+<p>Before</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_38.png"  /></p>
+
+<p>After</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_39.png"  /></p>
+
+<h3 id="favorite-expression">‘Favorite’ an expression or variable value</h3>
+
+<p>Instead of writing again and again a variable name or an expression you are going to check a lot during a debug session, add it to the ‘Watch Expression’ list. You refresh the values if you modify them directly, or just watch them change while the code runs</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_40.png"  /></p>
+
+<h3 id="insights-internal">Get insights into internal properties</h3>
+
+<p>Suppose you've defined a variable of value `s` and it performs the following operation:</p>
+
+<pre>
+s.substring(1, 4)  // returns 'ell'
+</pre>
+
+<p>Do you think that `s` is a string? Not necessarily. It also can be a string object wrapper. Try the following in watch expressions:</p>
+
+<pre>
+"hello"
+Object("hello")
+</pre>
+
+<p>First is a regular string value, the second is a full-featured object. As confusing as it could be, the two values behave almost identically. But the second one has real properties and you can set your own too.</p>
+
+<p>Expand the properties list and you will notice, how it's not a completely regular object: it will have an internal property <code>[[PrimitiveValue]]</code>, where the original string value is stored. You cannot access this property from your code, but you can see it in DevTools debugger now.</p>
+
+<p><a href="http://www.google.com/url?q=https%3A%2F%2Fgist.github.com%2Fpaulirish%2F4158604&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEoLc-D7771J2l_GvAj0QkGOuT0QQ">More: Learn JavaScript Concepts With The DevTools | GitHub</a></p>
+
+<h3 id="debug-xhr">Easily debug XHRs</h3>
+
+<p>From the debugger open the “XHR Breakpoints” section, you can specify any URL (even a substring) your code should break into when doing an XHR request. Or even tell it to break on every XHR:</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_41.jpg"  /></p>
+
+<h3 id="retrieve-handlers">Retrieve event handlers registered on elements</h3>
+
+<p>With the "Elements" tab open, find an element in the DOM tree and click to select the node. Note: You can also do this using the console API with <code>getEventListeners(targetNode);</code></p>
+
+<p>Next on the right, click to expand the "Event Listeners" section. There you will find a list of all event listeners attached to the element.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_42.png"  /></p>
+
+<h3 id="escape-console">Escape to see the console</h3>
+
+<p>When debugging in the Sources panel, you sometimes require simultaneous access to a console. Simply hit the escape key and the console panel will be displayed.</p>
+
+<p>You can write and execute JavaScript in this console as expected, but what's even better is if you're paused at a breakpoint, JS executed will be within the currently paused context.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_43.png"  /></p>
+
+<h3 id="paused-breakpoint">Become more effective when paused at a breakpoint</h3>
+
+<p>While your script is paused at a breakpoint, there are a number of useful features at your disposal.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_44.png"  /></p>
+
+<p>You might know that you can move around using "Continue", "Step Over", "Step Into" and "Step Out", but there are keyboard shortcuts available for each of these buttons. As mentioned in an earlier tip, <span class="kbd">?</span> will bring up a panel displaying them. Learn them as they'll make you more efficient at navigating through your code.</p>
+
+<p>Watch Expressions (in the sidebar to the right) will keep an eye on expressions so you don't have to keep switching back to the console (e.g X === Y). Call Stack (under it) displays function cals the system has gone through to achieve where it is at present.</p>
+
+<p>In Scope Variables, you're able to right click on any function and hten use "Jump to definition" to jump to the line in your script that defines that function.</p>
+
+<p>DOM Breakpoints display any "Break on" modifications taken by right-clicking on a node in the Elements panel. This is helpful for debugging whether listeners have been correctly attached to nodes and what occurs when they are invokved.</p>
+
+<p>The XHR Breakpoints panel is also useful as it can setup a breakpoint for XMLHttpRequests. Specify a breakpoint by typing in a substring of the URL you wish to inspect.</p>
+
+<h3 id="pause-exceptions">Pause on exceptions</h3>
+
+<p>You may want to pause JavaScript execution next time an exception is thrown and inspect its call stack, scope variables and state of your app.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_45.png"  /></p>
+
+<p>A tri-state stop button ( <img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_46.png"  />) at the bottom of the Scripts panel enables you to switch between different exception handling modes:</p>
+
+
+
+<h3 id="textsearch-across-allscripts">Text search across all scripts</h3>
+
+<p>If you wish to search across all of the files loaded for a page for a particular string, you can load up the search pane using the following shortcut:</p>
+
+
+<p>This supports both regular expressions and case sensitive search.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_50.png"  /></p>
+
+<h3 id="coffeescript-sourcemaps">Debugging CoffeeScript With DevTools And Source Maps</h3>
+
+<p>Source Maps provide a language-agnostic way to map compiled production code back to the original source code that was authored in your development environment.</p>
+
+<p>When analyzing code generated for production, it is often minified (and in the case of a language that tranpiles to JavaScript, compiled) making it difficult to locate where the lines map to your originally authored code.</p>
+
+<p>During the compilation phase, source maps can store this information, allowing you to debug production code, a line will return the exact location in the original file back to you. This makes a world of difference as you can both read and debug production code, whether it's in CoffeeScript or otherwise - as long as it has a source map.</p>
+
+<p>To enable Source Maps support in Chrome:</p>
+
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_51.png"  /></p>
+
+<p>Next:</p>
+
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_52.png"  /></p>
+
+<p>Now when you're debugging CoffeeScript code, thanks to this statement the DevTools know where your original source file lives.</p>
+
+<p>You could then take this source map and during your optimization/minification phase use a tool like UglifyJS2 to reference this first source map (CS to JS) and have it map the minified JavaScript back to the CoffeeScript and not the compiled JavaScript output. This allows you to debug production code straight back to your source CoffeeScript code.</p>
+
+<p><a href="http://net.tutsplus.com/tutorials/tools-and-tips/source-maps-101/">More: NetTuts - Source Maps 101</a></p>
+
+
+<div class="drop-shadow extdoc">
+
+  <!--Description-->
+  <p>For more key tricks with your authoring workflow, dive into <a href="https://developer.chrome.com/devtools/docs/authoring-development-workflow.html">Authoring And Development Workflow</a>:</p>
+  <!--Screenshot -->
+<p><a href="https://developer.chrome.com/devtools/docs/authoring-development-workflow.html"><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/preview_authoring.png"/></a></p>
+</div>
+
+
+
+</div>
+<div class="collapsible">
+<h2>Elements</h2>
+
+<h3 id="enable-rulers">Enable rulers</h3>
+
+<p>Under Settings > General > Show rulers a ruler can be enabled which will be displayed when you hover over or select an element in the Elements panel.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_53.png"  /></p>
+
+<h3 id="css-autocomplete">Autocompletion of CSS properties</h3>
+
+<p>The DevTools support autocompletion of known CSS properties and values (including those requiring a prefix), which is a useful way to determine which properties can be set for the current element.</p>
+
+<p>Suggestions are displayed when you begin to type in a name for for a property or value, but you can also scroll through the available options for some properties using the right arrow key. It's also useful to know that the selected item will get applied to the page stylesheet so its effect will become visible instantly.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_55.png"  /></p>
+
+<p>Colors can be defined within the Styles pane using named (e.g ‘red’), HSL, HEX or RGB values. You can shift/click to iterate through these if required.</p>
+
+<p>Should you wish to display all supported values for a property, you can use <span class="kbd">Ctrl</span> + <span class="kbd">space</span> to display a complete list of suggestions.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_56.png"  /></p>
+
+<p>The list of suggestions is context-specific and in certain cases (e.g font) numeric, named and prefixed values supported will also be displayed.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_57.png"  /></p>
+
+<h3 id="colorpicker">Color picker in the DevTools</h3>
+
+<p>The DevTools include a built-in color picker which is displayed when clicking on the colored preview square next to any valid color.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/colorpickercanary.png"  /></p>
+
+<p>You can <span class="kbd">Shift</span> + click to change the color format of the color being selected.</p>
+
+<h3 id="adding-styles">Adding new CSS styles</h3>
+
+<p>Clicking anywhere within the opening and closing brackets for a CSS rule (including within "element.style"), allows you to add a new CSS property which will similarly be instantly applied.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_60.png"  /></p>
+
+<p>Once you have finished adding a property, you can hit the tab key to set the next property.</p>
+
+<p>New selectors can be added by clicking the <img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_61.png"  />button to the right-hand side of the "Styles" sub-panel. This allows you to define a selector and similarly, add new properties and values as needed.</p>
+
+<p>Note: You can also edit any selector in the Styles pane by single-clicking on the name of a selector. Once the name has been changed, the existing properties for the selector will be applied to the element selection defined by the new selector.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_62.png"  /></p>
+
+<p>New pseudo-selectors can be added in a similar fashion, by appending them to the name of a selector. Also note that clicking on the "toggle element states" <img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_63.png"  />button, to the right of the  new selector button will toggle the visibility of the "Force element state" pane.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_64.png"  /></p>
+
+<p>Going back to the “Matched CSS Rules” panel, clicking on the link to the stylesheet next to a rule will take you to the Sources panel.  The will display the complete stylesheet and take you to the line number where the relevant CSS rule exists.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_65.png"  /></p>
+
+<h3 id="dragdrop-elements">Drag and drop in the Elements panel</h3>
+
+<p>In the Elements panel you can drag-and-drop an element to change its position within its parent, or move it to a completely different part of the document.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_66.png"  /></p>
+
+<h3 id="force-element-state">Force Element State</h3>
+
+<p>Want to force an element to adopt a particular state?</p>
+
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_67.png"  /></p>
+
+<h3 id="debugging-sass">Writing and debugging Sass with the DevTools</h3>
+
+<p class="note"><strong>Note:</strong> To use Sass debugging in Chrome you need to have version <a href="http://sass-lang.com/download.html">3.3.0 (pre-release)</a> of the Sass compiler, which is the only version that currently supports source map generation.</p>
+
+<p>Working with a page containing pre-processed CSS can be a challenge as modifications made to your CSS styles within the DevTools typically won’t apply them back to your Sass source files. This means if making changes to your styles on the fly, you would need to go back and manually apply them to your source files using an external editor if you wanted to maintain them.</p>
+
+<p>This is no longer an issue with recent improvements which improve the Sass development workflow. To enable Sass support:</p>
+
+<ol>
+<li><p>Check to ensure you have Developer Tools experiments enabled in about:flags.</p></li>
+<li><p>Next, go to the Settings cog > Experiments and enable “Sass stylesheet debugging” (Note that this feature will be out of experiments soon).</p> <p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/stylesheetdebugging.png"/></p></li>
+<li><p>Go to the General menu > Settings > Check “Enable source maps” and “Auto-reload CSS upon Sass save”.</p>
+
+  <p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/autoreload.png"  /></p>
+
+  <p>You can leave the timeout at its default value. Depending on how long the Sass compiler needs to complete its work, you may need to adjust the auto-reload delay. You can also disable auto-reload to manually reload the page as necessary.</p> </li>
+<li><p>Navigate to the page for a project you wish to debug Sass on in Chrome (with the DevTools open)</p></li>
+<li><p>Next, fire up the Sass compiler using the following flags (which also specify a target CSS compile target): <code>sass --watch --sourcemap sass/styles.scss:styles.css</code>. This will have Sass watch for changes to your Sass source files and create source map files (.map) for each generated CSS file. You should see something similar to the below in your terminal:</p> <p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_70.png"  /></p><p>This confirms Sass debugging is indeed working.</p></li>
+
+<li><p>If the setup worked as expected, you can go to the Elements panel. The first thing you’ll notice is that the filename for your styles will now display the corresponding .scss source file as well as the line number reflecting the line number in your source.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_71.png"  /></p>
+</li>
+<li>
+<p>Clicking on a filename from here will take you directly to the Sources panel, with the line that corresponds to the selector highlighted. You’re now able to work with your Sass source file directly inside the developer tools with syntax highlighting in place.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_72.jpg"  /></p>
+</li>
+<li>
+<p>When you wish to edit a Sass file from inside the Sources panel, the one thing you need to ensure is that DevTools is aware of where this file exists in your local file system. Right-click within the editor and choose “Save As” to overwrite your original source file with the one you are editing. As auto-reloading has been enabled and Sass is running in the background, changes we make are instantaneously shown inside both Chrome and the DevTools editor.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_73.png"  /></p>
+</li>
+</ol>
+
+
+
+<div class="drop-shadow extdoc">
+
+  <!--Description-->
+  <p>For more key tricks with working with elements and styles, dive into <a href="https://developer.chrome.com/devtools/docs/dom-and-styles.html">Editing Styles And The DOM</a>:</p>
+</p>
+  <!--Screenshot -->
+<p><a href="https://developer.chrome.com/devtools/docs/dom-and-styles.html"><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/preview_elements.png"/></a></p>
+
+</div>
+
+
+</div>
+<div class="collapsible">
+<h2>Network</h2>
+
+<h3 id="replay-xhrs">Replay XHRs</h3>
+
+<p>As you probably know, the Network panel shows a list of all the requests your page has made including XHRs. You can replay any XHR (POST or GET) by right-clicking on the request to display the context-menu then selecting “Replay XHR”.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_74.png"  /></p>
+
+<h3 id="clear-network">Clear the network cache or cookies</h3>
+
+<p>Right-click/<span class="kbd">Ctrl</span>-click anywhere in Network panel and select Clear Browser Cache/Network Cache from context menu.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_75.png"  /></p>
+
+<h3 id="record-export-trace">Record a trace &amp; export the waterfall</h3>
+
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_76.png"  /></p>
+
+<p><a href="http://www.google.com/url?q=http%3A%2F%2Fwww.igvita.com%2Fslides%2F2012%2Fdevtools-tips-and-tricks%2F%231&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNHwM1MWYUas6E9zsZxBARF0igWUow">More: Wait, DevTools Could Do That? | Igvita.com</a></p>
+
+<h3 id="details-network">Using large resource rows in network timeline for more detail</h3>
+
+<p>By triggering the “Use large resource rows” icon in the bottom of the Network panel, you can enable display of additional insights not found in the more compact/smaller resource rows view.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_77.png"  /></p>
+
+<p>Compare the smaller resource rows view:</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_78.png"  /></p>
+
+<p>and the larger row version:</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_79.png"  /></p>
+
+<h3>Tricks for getting more information out of the Network panel</h3>
+
+<p><strong>Left-click</strong> on the header of the Timeline column in the Network panel to get access to further insights about network requests. You can switch between:</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/network-left.png"  /></p>
+
+<b>View the text in gray for insights into:</b>
+
+<p><strong>Right-click</strong> anywhere on the header of any column in the network panel and you can enable or disable columns. 3 of these columns are not shown by default:</p>
+<p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/network-right.png"  /></p>
+
+<h3 id="websocket-inspection">WebSocket inspection</h3>
+
+<p>In the Network panel, you can use the filters at the bottom of the window to inspect WebSocket message frames.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/websocketbar.png"  /></p>
+
+<p>For example, navigate to the <a href="http://www.websocket.org/echo.html">Echo</a> demo, select the "WebSockets" filter from the bottom of the Network panel then click the "Connect" button. Any messages you send by clicking the 'Send' button can be inspected using the 'Frames' subpanel.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/websocketdemo.png"  /></p>
+
+<p>Green reflects messages sent by your client. WebSocket inspection is useful has it allows you to inspect both the WebSocket handshake as well as individual WebSocket frames.</p>
+
+
+<p><a href="http://www.igvita.com/slides/2012/devtools-tips-and-tricks/#1">More: Wait, DevTools Could Do That? | Igvita.com</a></p>
+
+<p><a href="http://blog.kaazing.com/2012/05/09/inspecting-websocket-traffic-with-chrome-developer-tools/">More: WebSocket inspection with DevTools | Kaazing</a></p>
+
+<h3 id="find-filter-xhrs">Find and filter XHRs from the Network panel</h3>
+
+<p>When inspecting network requests in the Network panel you often need to narrow down to a specific request based on a specific keyboard. This can be easily done using the<span class="kbd">Ctrl</span> + <span class="kbd">F</span> or <span class="kbd">Cmd</span> + <span class="kbd">F</span> keyboard shortcut.</p>
+
+<p>In the search input field, type in the keyword you are searching for and those requests with a filename/URL matching it will be highlighted. You can flip between results using the up and down buttons beside the input field.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_82.png"  /></p>
+
+<p>Although this is useful, it can be of more help to only display those results in the Network panel that matched your search term. Checking the “Filter” option will do this and we can see below.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_83.png"  /></p>
+
+<p><a href="https://developer.chrome.com/devtools/docs/network.md">More: Evaluating Network Performance | DevTools Docs</a></p>
+
+<h3 id="dump-network-stack">Get a dump of the network stack’s internal state</h3>
+
+<p>The "about:net-internals" page is a special URL that dumps a view of the network stack's internal state. This data can be helpful when debugging performance or connectivity problems. It includes information on request performance, proxy settings and DNS cache.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_84.png"  /></p>
+
+<p>Also note that <code>about:net-internals/#tests</code> is able to run tests for a specific URL.</p>
+
+
+
+<div class="drop-shadow extdoc">
+
+  <!--Description-->
+  <p>For more key tricks with measuring network performance, dive into <a href="https://developer.chrome.com/devtools/docs/network.md">Evaluating Network Performance</a>:</p>
+</p>
+  <!--Screenshot -->
+<p><a href="https://developer.chrome.com/devtools/docs/network.md"><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/preview_network.png"/></a></p>
+
+</div>
+
+
+
+</div>
+<div class="collapsible">
+<h2>Settings</h2>
+
+<h3 id="emulating-touch">Emulating touch events</h3>
+
+<p>Touch is an input method that's difficult to test on the desktop, since most desktops don't have touch input. Having to test on mobile can lengthen your development cycle, since every change you make needs to be pushed out to a server and then loaded on the device.</p>
+
+<p>A solution to this problem is to simulate touch events on your development machine. For single-touches, the Chrome DevTools supports single<a href="http://www.w3.org/TR/touch-events/"> touch event</a> emulation to make it easier to debug mobile applications on the desktop.</p>
+
+<p>To enable support for touch event emulation:</p>
+
+<ol>
+<li><p>Open up the overrides menu in the DevTools</p></li>
+<li><p>Scroll down and check “Enable touch events”</p></li>
+</ol>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_85.png"  /></p>
+
+<p>We can now debug touch events in the same way that we can with standard desktop events via Event Listener Breakpoints in Sources.</p>
+
+<p class="note"><strong>Note:</strong> A caveat with touch event emulation is that the DOM0 event handlers do not currently work with the emulation
+mode. See <a href="https://code.google.com/p/chromium/issues/detail?id=133915">here</a> for the relevant bug to track.</p>
+
+<p><a href="https://developer.chrome.com/devtools/docs/mobile-emulation.html">More: DevTools Mobile Emulation | DevTools Docs</a></p>
+
+<h3 id="emulating-ua-viewports">Emulating UA Strings &amp; Device Viewports</h3>
+
+<p>It’s often easier to start prototyping on the desktop and then tackle the mobile-specific parts on the devices you intend to support. Device emulation can make this process more straightforward.</p>
+
+<p>The DevTools support for device emulation includes native User Agent and dimension overriding. This allows developers to debug mobile browsers on different devices and operating systems via the overrides Menu.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_86.png"  /></p>
+
+<p>Now you can emulate the exact device metrics of devices like the Galaxy Nexus and the iPhone to test your media query-driven design.</p>
+
+<p><a href="https://developer.chrome.com/devtools/docs/mobile-emulation.html">More: DevTools Mobile Emulation | DevTools Docs</a></p>
+
+<h3 id="emulating-gelocation">Emulating Geolocation</h3>
+
+<p>When working with HTML5 geolocation support in an application, it can be useful to debug the output received when using different values for longitude and latitude.</p>
+
+<p>The DevTools support both overriding position values for navigator.geolocation and simulating geolocation not being available via the overrides menu.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_87.png"  /></p>
+
+<p>Overriding geolocation positions</p>
+
+<ol>
+<li><p>Navigate to the<a href="http://html5demos.com/geo"> Geolocation</a> demo</p></li>
+<li><p>Allow the page access to your position. This should hopefully be accurate.</p></li>
+<li><p>Open up the overrides menu in the DevTools</p></li>
+<li><p>Check “Override Geolocation” then enter in Lat = 41.4949819 and Lat = -0.1461206</p></li>
+</ol>
+
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_88.png"  /></p>
+
+<ol>
+<li>Refresh the page. The demo will now use your overridden positions for geolocation</li>
+</ol>
+
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_89.png"  /></p>
+
+<ol>
+<li><p>Now check the “Emulate position unavailable” option</p></li>
+<li><p>Refresh the page. The demo will now inform you that finding your location failed</p></li>
+</ol>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_90.png"  /></p>
+
+<p><a href="https://developer.chrome.com/devtools/docs/mobile-emulation.html">More: DevTools Mobile Emulation | DevTools Docs</a></p>
+
+<h3 id="dock-to-right-viewport">Dock-to-right for viewport debugging</h3>
+
+<p>Dock-to-right mode is also useful for previewing how your pages look when viewed on screens with smaller viewports. To use this:</p>
+
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_92.png"  /></p>
+
+<h3 id="disable-javascript">Disable JavaScript</h3>
+
+<p>Click the Settings cog in the lower-right corner, then under Settings -> General enable “Disable JavaScript”. While the DevTools are open and this option is checked JavaScript will be disabled in the current page.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/disablejavascript.png"  /></p>
+
+<p>Should you require it, you can also run Chrome with the “-disable-javascript” flag to achieve the same effect.</p>
+
+</div>
+<div class="collapsible">
+<h2>General</h2>
+
+<h3 id="switch-between-tabs">Quickly switch between tabs</h3>
+
+<p>The <span class="kbd">Cmd</span> + <span class="kbd">]</span> and <span class="kbd">Cmd</span> + <span class="kbd">[</span> (or <span class="kbd">Ctrl</span> + <span class="kbd">]</span> and <span class="kbd">Ctrl</span> + <span class="kbd">[</span>) shortcuts allow you to move right and left between the different tabs within the DevTools with ease. Use them to avoid manually selecting the tab you’re after!.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_94.png"  /></p>
+
+<h3 id="improved-dock-to-right">Get an improved dock-to-right experience</h3>
+
+<p>Improved horizontal splitting for the Elements and Sources panels are now in Chrome beta and can be experienced anytime you toggle dock-to-right mode:</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_95.png"  /></p>
+
+<p>However, if you have a very wide screen and would like to disable this, simply uncheck the “Split panels vertically when docked to right” option in the Settings panel.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/toolbaricons.png"  /></p>
+
+<p><a href="https://plus.google.com/u/0/115133653231679625609/posts/8bfFX8BVzTQ">More: 3 Steps To A Better Dock-To-Right Experience | G+</a></p>
+
+<h3 id="disable-cache">Use ‘Disable Cache’ for cache invalidation</h3>
+
+<p>Under the Settings cog, you can enable ‘Disable cache’ to invalidate the disk cache. This is great for developing, but the DevTools must be visible/open for this to work.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/disablecache.png"  /></p>
+
+<h3 id="inspect-shadow-dom">Inspect Shadow DOM</h3>
+
+<p>Elements which have Shadow DOM elements will now be displayed in the elements tab.</p>
+
+<ol>
+<li><p>Enable the ‘Show Shadow DOM’ checkbox in Settings</p></li>
+<li><p>Restart the DevTools</p></li>
+</ol>
+
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_98.png"  /></p>
+
+<p>You can now peek inside Shadow DOM. For example, you can poke around the Shadow DOM <a href="http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/">Title</a> demo on HTML5 Rocks:</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_99.png"  /></p>
+
+<h3 id="preview-inspectable-pages">Preview all inspectable pages</h3>
+
+<p>If you find yourself regularly using remote debugging, you might enjoy “about:inspect” which displays all inspectable tabs/extensions in Chrome. Click 'inspect' to switch to a page &amp; launch the DevTools for it in one go.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_100.png"  /></p>
+
+<h3 id="appcached-sites">Get insights into which sites have appcache'd</h3>
+
+<p>You can see information about appcached sites by visiting “about:appcache-internals”. This allows you to see which sites have appcached, when they were last modified, and how much space they're using. You can also remove appcaches here.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_101.png"  /></p>
+
+<h3 id="multiple-filters">Select multiple filters in the Network/Console panels</h3>
+
+<p>You’re probably aware that there are filters available in the Network and Console panels, allowing you to narrow down the data displays based on different criteria.</p>
+
+<p>What you probably don’t know is that you can use a shortcut (<span class="kbd">Cmd</span> / <span class="kbd">Ctrl</span> + click) to select more than one filter to be applied to view. Below you can see this in action across both panels.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_102.png"  /></p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_103.png"  /></p>
+
+<h3 id="hard-reload">Clear the cache and perform a hard reload</h3>
+
+<p>If you require a hard refresh, click and hold Chrome’s refresh button with the DevTools open. You should see a drop-down menu allowing you to clear the cache and do a hard reload in one go. Time saver!.</p>
+
+<p>Note: This is currently only available on Windows and ChromeOS</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_104.png"  /></p>
+
+<h3 id="chrome-task-manager">Insights with the Chrome Task Manager</h3>
+
+<p>The task manager in Chrome can give you useful insights into the GPU, CPU and JavaScript memory usage, CSS and Script cache usage and more for any tab.</p>
+
+<p>Follow these steps to open the task manager:</p>
+
+<ol>
+<li><p>Click the Chrome menu on the browser toolbar.</p></li>
+<li><p>Select Tools.</p></li>
+<li><p>Select Task manager.</p></li>
+<li><p>From there you can either select additional views to drill down to by right-clicking on any column or end a process by right-clicking on it.</p></li>
+</ol>
+
+</div>
+<div class="collapsible">
+<h2>Additional Tools</h2>
+
+<h3 id="debugging-ios-apps">Debugging iOS apps in DevTools</h3>
+
+<p><a href="https://github.com/square/PonyDebugger">PonyDebugger</a> is a client library and gateway server combination that uses Chrome Developer Tools on your browser to debug your application's network traffic and managed object contexts.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_105.png"  /></p>
+
+<h3 id="jsruntime">JSRunTime: DevTools Extension For Grepping JavaScript Objects</h3>
+
+<p><a href="https://plus.google.com/114708134049085210473">Andrei Kashcha</a> wrote a very useful extension for DevTools that can grep a reachable graph of JavaScript objects in memory and find matches by their value or name.</p>
+
+<p><img src="https://developer.chrome.com/devtools/docs/tips-and-tricks/image_106.jpg"  /></p>
+
+<p><a href="https://plus.google.com/u/0/115133653231679625609/posts/ih85hKCyGve">More: JSRuntime - A DevTools Extension For Grepping Objects | G+</a>.</p>
+
+</div>
+<div class="collapsible">
+<h2 id="other-resources">Other Resources</h2>
+
+<p>In addition to the tips above, there are also a number of fantastic external resources, slides, articles and videos that discuss the lesser known capabilities of the DevTools. We recommend looking at:</p>
+
+
+
+</div>
+    
+    <footer id="cc-info">
+      <button id="send-feedback" class="google-button" data-feedback>Send Feedback</button>
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo"><a href="http://creativecommons.org/licenses/by/3.0/"><img src="https://developer.chrome.com/static/images/cc_by.png" alt="Licensed Creative Commons by Attribution"></a></p>
+    </footer>
+    <nav class="inline-toc no-permalink">
+      <section class="related">
+                  <h3 title="">Learn Basics</h3>
+      <ol class="toc">
+                        <li>
+                          <a href="https://developer.chrome.com/devtools/index">Overview</a>
+                        </li>
+                        <li>
+                          <a href="authoring-development-workflow.1">Authoring &amp; Development Workflow</a>
+                        </li>
+                        <li>
+                          <a href="https://developer.chrome.com/devtools/docs/console">Using the Console</a>
+                        </li>
+                        <li>
+                          <a href="tips-and-tricks.1" class="active">Tips &amp; Tricks</a>
+                        </li>
+                        <li>
+                          <a href="https://developer.chrome.com/devtools/docs/videos">Additional Resources</a>
+                        </li>
+      </ol>
+      </section>
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="tips-and-tricks.1#"
+          >Console</a>
+          <ol class="toc">
+              <li><a data-list-item href="tips-and-tricks.1#multiline-commands"
+                     >Write multi-line commands</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#inspect-element-line"
+                     >A shortcut to launch in inspect-element mode</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#console-table"
+                     >Support for the console.table command</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#preview-logged-objects"
+                     >Preview logged console objects</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#styled-console-multiple"
+                     >Pass multiple arguments to styled console logs</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#clear-console-history"
+                     >Shortcut to clear the console history</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#keyboard-ninja"
+                     >Become a keyboard ninja</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#access-elements-console"
+                     >Accessing elements from the console</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#dom-xpath-expressions"
+                     >Querying the DOM using XPath expressions</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#access-elements-console"
+                     >Access the last console result</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#console-dir"
+                     >Using console.dir</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#console-iframe"
+                     >Running the JS console in a specific iframe</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#console-persist"
+                     >Stop the console clearing when navigating to a new page</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#benchmarking-console"
+                     >Benchmark loops using console.time() and console.timeEnd()</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#profiling-console"
+                     >Profiling with console.profile() and console.profileEnd()</a>
+              </li>
+          </ol>
+      </li>
+      <li class="toplevel"><a data-list-item href="tips-and-tricks.1#"
+          >Timeline</a>
+          <ol class="toc">
+              <li><a data-list-item href="tips-and-tricks.1#timeline-frames-mode"
+                     >Frame profiling with Timeline Frames Mode</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#forced-layout-events"
+                     >Spot forced layout events using warnings</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#timeline-shared"
+                     >Share and analyze a Timeline recorded by someone else</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#timeline-recordings"
+                     >Annotating Timeline Recordings</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#counter-display"
+                     >FPS Counter/HUD Display</a>
+              </li>
+          </ol>
+      </li>
+      <li class="toplevel"><a data-list-item href="tips-and-tricks.1#"
+          >Profiles</a>
+          <ol class="toc">
+              <li><a data-list-item href="tips-and-tricks.1#three-snapshot-technique"
+                     >Finding JavaScript memory leaks with the '3 snapshot' technique</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#nodes-heap-profiler"
+                     >Understanding Nodes In The Heap Profiler</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#timespent-cpu-profiler"
+                     >Understanding time spent in CPU profiler</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#moreinsights-heapprofiler"
+                     >Additional insights with Heap profiler views</a>
+              </li>
+          </ol>
+      </li>
+      <li class="toplevel"><a data-list-item href="tips-and-tricks.1#"
+          >Sources</a>
+          <ol class="toc">
+              <li><a data-list-item href="tips-and-tricks.1#debug-dom-modifications"
+                     >Debug on DOM modifications</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#tracking-uncaught-exceptions"
+                     >Tracking uncaught exceptions</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#conditional-breakpoint-actions"
+                     >Conditional breakpoint actions with console.log</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#prettyprint-javascript"
+                     >Pretty Print JavaScript</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#favorite-expression"
+                     >‘Favorite’ an expression or variable value</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#insights-internal"
+                     >Get insights into internal properties</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#debug-xhr"
+                     >Easily debug XHRs</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#retrieve-handlers"
+                     >Retrieve event handlers registered on elements</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#escape-console"
+                     >Escape to see the console</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#paused-breakpoint"
+                     >Become more effective when paused at a breakpoint</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#pause-exceptions"
+                     >Pause on exceptions</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#textsearch-across-allscripts"
+                     >Text search across all scripts</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#coffeescript-sourcemaps"
+                     >Debugging CoffeeScript With DevTools And Source Maps</a>
+              </li>
+          </ol>
+      </li>
+      <li class="toplevel"><a data-list-item href="tips-and-tricks.1#"
+          >Elements</a>
+          <ol class="toc">
+              <li><a data-list-item href="tips-and-tricks.1#enable-rulers"
+                     >Enable rulers</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#css-autocomplete"
+                     >Autocompletion of CSS properties</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#colorpicker"
+                     >Color picker in the DevTools</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#adding-styles"
+                     >Adding new CSS styles</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#dragdrop-elements"
+                     >Drag and drop in the Elements panel</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#force-element-state"
+                     >Force Element State</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#debugging-sass"
+                     >Writing and debugging Sass with the DevTools</a>
+              </li>
+          </ol>
+      </li>
+      <li class="toplevel"><a data-list-item href="tips-and-tricks.1#"
+          >Network</a>
+          <ol class="toc">
+              <li><a data-list-item href="tips-and-tricks.1#replay-xhrs"
+                     >Replay XHRs</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#clear-network"
+                     >Clear the network cache or cookies</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#record-export-trace"
+                     >Record a trace  export the waterfall</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#details-network"
+                     >Using large resource rows in network timeline for more detail</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#"
+                     >Tricks for getting more information out of the Network panel</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#websocket-inspection"
+                     >WebSocket inspection</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#find-filter-xhrs"
+                     >Find and filter XHRs from the Network panel</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#dump-network-stack"
+                     >Get a dump of the network stack’s internal state</a>
+              </li>
+          </ol>
+      </li>
+      <li class="toplevel"><a data-list-item href="tips-and-tricks.1#"
+          >Settings</a>
+          <ol class="toc">
+              <li><a data-list-item href="tips-and-tricks.1#emulating-touch"
+                     >Emulating touch events</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#emulating-ua-viewports"
+                     >Emulating UA Strings  Device Viewports</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#emulating-gelocation"
+                     >Emulating Geolocation</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#dock-to-right-viewport"
+                     >Dock-to-right for viewport debugging</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#disable-javascript"
+                     >Disable JavaScript</a>
+              </li>
+          </ol>
+      </li>
+      <li class="toplevel"><a data-list-item href="tips-and-tricks.1#"
+          >General</a>
+          <ol class="toc">
+              <li><a data-list-item href="tips-and-tricks.1#switch-between-tabs"
+                     >Quickly switch between tabs</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#improved-dock-to-right"
+                     >Get an improved dock-to-right experience</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#disable-cache"
+                     >Use ‘Disable Cache’ for cache invalidation</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#inspect-shadow-dom"
+                     >Inspect Shadow DOM</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#preview-inspectable-pages"
+                     >Preview all inspectable pages</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#appcached-sites"
+                     >Get insights into which sites have appcache'd</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#multiple-filters"
+                     >Select multiple filters in the Network/Console panels</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#hard-reload"
+                     >Clear the cache and perform a hard reload</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#chrome-task-manager"
+                     >Insights with the Chrome Task Manager</a>
+              </li>
+          </ol>
+      </li>
+      <li class="toplevel"><a data-list-item href="tips-and-tricks.1#"
+          >Additional Tools</a>
+          <ol class="toc">
+              <li><a data-list-item href="tips-and-tricks.1#debugging-ios-apps"
+                     >Debugging iOS apps in DevTools</a>
+              </li>
+              <li><a data-list-item href="tips-and-tricks.1#jsruntime"
+                     >JSRunTime: DevTools Extension For Grepping JavaScript Objects</a>
+              </li>
+          </ol>
+      </li>
+      <li class="toplevel"><a data-list-item href="tips-and-tricks.1#other-resources"
+          >Other Resources</a>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="tips-and-tricks.1" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="https://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="https://developer.chrome.com/static/js/fatnav.js"></script>
+    <script src="https://developer.chrome.com/static/js/article.js"></script>
+    <script src="https://developer.chrome.com/static/js/prettify.js"></script>
+    <script src="https://developer.chrome.com/static/js/search.js"></script>
+    <script src="https://www.gstatic.com/feedback/api.js"></script>
+    <script src="https://developer.chrome.com/static/js/site.js"></script>
+  </body>
+</html>

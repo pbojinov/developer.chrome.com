@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>Create MVC - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="app_codelab3_mvc.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../index.html">
+          <img alt="Chrome: developer" src="../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="app_usb.html">USB</a>
+                            </li>
+                            <li><a href="app_serial">Serial</a>
+                            </li>
+                            <li><a href="app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="overview.html">Overview</a>
+                            </li>
+                            <li><a href="../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../native-client/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../native-client/nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../native-client/sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../native-client/sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/devcycle/building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/devcycle/building.html">Building</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/running.html">Running</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../native-client/reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../native-client/reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../native-client/help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../native-client/publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../native-client/community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <div itemprop="articleBody">
+
+<h1 id="lab_3_model_view_controller">Create MVC</h1>
+
+<p>Whenever your application grows beyond a single script with a few dozen lines,
+it gets harder and harder to manage without a good separation
+of roles among app components.
+One of the most common models for structuring a complex application,
+no matter what language,
+is the Model-View-Controller (MVC) and its variants,
+like Model-View-Presentation (MVP).</p>
+
+<p>There are several frameworks to help apply
+<a href="app_frameworks.html">MVC concepts</a>
+to a Javascript application, and most of them,
+as long as they are CSP compliant, can be used in a Chrome App.
+In this lab,
+we'll add an MVC model using both pure JavaScript and
+the <a href="http://angularjs.org/">AngularJS</a> framework.
+Most of the AngularJS code from this section was copied,
+with small changes, from the AngularJS Todo tutorial.</p>
+
+<p class="note"><b>Note:</b>
+Chrome Apps don&#39;t enforce any specific framework or programming style.
+</p>
+
+<h2 id="simple">Create a simple view</h2>
+
+<h3 id="basic-mvc">Add MVC basics</h3>
+
+<p>If using AngularJS, download the
+<a href="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js">Angular script</a>
+and save it as
+<a href="https://github.com/GoogleChrome/chrome-app-codelab/blob/master/lab3_mvc/angularjs/simpleview/angular.min.js">angular.min.js</a>.</p>
+
+<p>If using JavaScript,
+you will need to add a very simple controller with basic MVC functionalities:
+<a href="https://github.com/GoogleChrome/chrome-app-codelab/blob/master/lab3_mvc/javascript/simpleview/controller.js">JavaScript controller.js</a></p>
+
+<h3 id="update-view">Update view</h3>
+
+<p>Change the <a href="https://github.com/GoogleChrome/chrome-app-codelab/blob/master/lab3_mvc/angularjs/simpleview/index.html">AngularJS index.html</a> or
+<a href="https://github.com/GoogleChrome/chrome-app-codelab/blob/master/lab3_mvc/javascript/simpleview/index.html">JavaScript index.html</a> to use a simple sample:
+</p>
+
+<tabs data-group="source">
+
+  <header tabindex="0" data-value="angular">Angular</header>
+  <header tabindex="0" data-value="js">JavaScript</header>
+
+  <content>
+    <pre data-filename="index.html">
+&lt;!doctype html&gt;
+&lt;html ng-app ng-csp&gt;
+  &lt;head&gt;
+    &lt;script src=&quot;angular.min.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel="stylesheet" href="todo.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;Todo&lt;/h2&gt;
+    &lt;div&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &#123;&#123;todoText&#125;&#125;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;input type=&quot;text&quot; ng-model=&quot;todoText&quot;  size="30"
+             placeholder=&quot;type your todo here&quot;&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+  </content>
+  <content>
+    <pre data-filename="index.html">
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;todo.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;Todo&lt;/h2&gt;
+    &lt;div&gt;
+      &lt;ul&gt;
+        &lt;li id=&quot;todoText&quot;&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;input type=&quot;text&quot; id=&quot;newTodo&quot; size=&quot;30&quot;
+             placeholder=&quot;type your todo here&quot;&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;controller.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+  </content>
+</tabs>
+
+<p class="note"><b>Note:</b>  The <code>ng-csp</code> directive tells Angular to run in a &quot;content security mode&quot;. You don&#39;t need this directive when using Angular v1.1.0+. We&#39;ve included it here so that the sample works regardless of the Angular version in use.</p>
+
+<h3 id="stylesheet">Add stylesheet</h3>
+
+<p><a href="https://github.com/GoogleChrome/chrome-app-codelab/blob/master/lab3_mvc/angularjs/simpleview/todo.css">AngularJS todo.css</a> and
+<a href="https://github.com/GoogleChrome/chrome-app-codelab/blob/master/lab3_mvc/javascript/simpleview/todo.css">JavaScript todo.css</a> are the same:
+</p>
+
+<pre data-filename="todo.css">
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input[type=submit] {
+  background-color: #0074CC;
+  background-image: linear-gradient(top, #08C, #05C);
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: white;
+}
+
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
+</pre>
+
+<h3 id="check1">Check the results</h3>
+
+<p>
+Check the results by reloading the app: open the app, right-click and select Reload App.</li>
+</p>
+
+<h2 id="real-todo">Create real Todo list</h2>
+
+<p>
+The previous sample, although interesting, is not exactly useful.
+Let&#39;s transform it into a real Todo list, instead of a simple Todo item.
+</p>
+
+<h3 id="controller">Add controller</h3>
+
+<p>
+Whether using pure JavaScript or AngularJS,
+the controller manages the Todo list:
+<a href="https://github.com/GoogleChrome/chrome-app-codelab/blob/master/lab3_mvc/angularjs/withcontroller/controller.js">AngularJS controller.js</a> or
+<a href="https://github.com/GoogleChrome/chrome-app-codelab/blob/master/lab3_mvc/javascript/withcontroller/controller.js">JavaScript controller.js</a>.
+</p>
+
+<tabs data-group="source">
+
+  <header tabindex="0" data-value="angular">Angular</header>
+  <header tabindex="0" data-value="js">JavaScript</header>
+
+  <content>
+    <pre data-filename="controller.js">
+function TodoCtrl($scope) {
+  $scope.todos = [
+    {text:&#39;learn angular&#39;, done:true},
+    {text:&#39;build an angular Chrome packaged app&#39;, done:false}];
+
+$scope.addTodo = function() {
+    $scope.todos.push({text:$scope.todoText, done:false});
+    $scope.todoText = &#39;&#39;;
+  };
+
+$scope.remaining = function() {
+    var count = 0;
+    angular.forEach($scope.todos, function(todo) {
+      count += todo.done ? 0 : 1;
+    });
+    return count;
+  };
+
+$scope.archive = function() {
+    var oldTodos = $scope.todos;
+    $scope.todos = [];
+    angular.forEach(oldTodos, function(todo) {
+      if (!todo.done) $scope.todos.push(todo);
+    });
+  };
+}
+    </pre>
+  </content>
+  <content>
+    <pre data-filename="controller.js">
+(function(exports) {
+
+  var nextId = 1;
+
+  var TodoModel = function() {
+    this.todos = {};
+    this.listeners = [];
+  }
+
+  TodoModel.prototype.clearTodos = function() {
+    this.todos = {};
+    this.notifyListeners('removed');
+  }
+
+  TodoModel.prototype.archiveDone = function() {
+    var oldTodos = this.todos;
+    this.todos={};
+    for (var id in oldTodos) {
+      if ( ! oldTodos[id].isDone ) {
+        this.todos[id] = oldTodos[id];
+      }
+    }
+    this.notifyListeners('archived');
+  }
+
+  TodoModel.prototype.setTodoState = function(id, isDone) {
+    if ( this.todos[id].isDone != isDone ) {
+      this.todos[id].isDone = isDone;
+      this.notifyListeners('stateChanged', id);
+    }
+  }
+
+  TodoModel.prototype.addTodo = function(text, isDone) {
+    var id = nextId++;
+    this.todos[id]={'id': id, 'text': text, 'isDone': isDone};
+    this.notifyListeners('added', id);
+  }
+
+  TodoModel.prototype.addListener = function(listener) {
+    this.listeners.push(listener);
+  }
+
+  TodoModel.prototype.notifyListeners = function(change, param) {
+    var this_ = this;
+    this.listeners.forEach(function(listener) {
+      listener(this_, change, param);
+    });
+  }
+
+  exports.TodoModel = TodoModel;
+
+})(window);
+
+
+window.addEventListener('DOMContentLoaded', function() {
+
+  var model = new TodoModel();
+  var form = document.querySelector('form');
+  var archive = document.getElementById('archive');
+  var list = document.getElementById('list');
+  var todoTemplate = document.querySelector('#templates &gt; [data-name="list"]');
+
+  form.addEventListener('submit', function(e) {
+    var textEl = e.target.querySelector('input[type="text"]');
+    model.addTodo(textEl.value, false);
+    textEl.value=null;
+    e.preventDefault();
+  });
+
+  archive.addEventListener('click', function(e) {
+    model.archiveDone();
+    e.preventDefault();
+  });
+
+  model.addListener(function(model, changeType, param) {
+    if ( changeType === 'removed' || changeType === 'archived') {
+      redrawUI(model);
+    } else if ( changeType === 'added' ) {
+      drawTodo(model.todos[param], list);
+    } else if ( changeType === 'stateChanged') {
+      updateTodo(model.todos[param]);
+    }
+    updateCounters(model);
+  });
+
+  var redrawUI = function(model) {
+    list.innerHTML='';
+    for (var id in model.todos) {
+      drawTodo(model.todos[id], list);
+    }
+  };
+  
+  var drawTodo = function(todoObj, container) {
+    var el = todoTemplate.cloneNode(true);
+    el.setAttribute('data-id', todoObj.id);
+    container.appendChild(el);
+    updateTodo(todoObj);
+    var checkbox = el.querySelector('input[type="checkbox"]');
+    checkbox.addEventListener('change', function(e) {
+      model.setTodoState(todoObj.id, e.target.checked);
+    });
+  }
+
+  var updateTodo = function(model) {
+    var todoElement = list.querySelector('li[data-id="'+model.id+'"]');
+    if (todoElement) {
+      var checkbox = todoElement.querySelector('input[type="checkbox"]');
+      var desc = todoElement.querySelector('span');
+      checkbox.checked = model.isDone;
+      desc.innerText = model.text;
+      desc.className = "done-"+model.isDone;
+    }
+  }
+
+  var updateCounters = function(model) {
+    var count = 0;
+    var notDone = 0;
+    for (var id in model.todos) {
+      count++;
+      if ( ! model.todos[id].isDone ) {
+        notDone ++;
+      }
+    }
+    document.getElementById('remaining').innerText = notDone;
+    document.getElementById('length').innerText = count;
+  }
+
+  updateCounters(model);
+
+});
+    </pre>
+  </content>
+</tabs>
+
+<h3 id="index">Update view</h3>
+
+<p>Change the <a href="https://github.com/GoogleChrome/chrome-app-codelab/blob/master/lab3_mvc/angularjs/withcontroller/index.html">AngularJS index.html</a> or
+<a href="https://github.com/GoogleChrome/chrome-app-codelab/blob/master/lab3_mvc/javascript/withcontroller/index.html">JavaScript index.html</a>:
+</p>
+
+<tabs data-group="source">
+
+  <header tabindex="0" data-value="angular">Angular</header>
+  <header tabindex="0" data-value="js">JavaScript</header>
+
+  <content>
+    <pre data-filename="index.html">
+&lt;html ng-app ng-csp&gt;
+  &lt;head&gt;
+    &lt;script src=&quot;angular.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;controller.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;todo.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;Todo&lt;/h2&gt;
+    &lt;div ng-controller=&quot;TodoCtrl&quot;&gt;
+      &lt;span&gt;&#123;&#123;remaining()&#125;&#125; of &#123;&#123;todos.length&#125;&#125; remaining&lt;/span&gt;
+      [ &lt;a href=&quot;&quot; ng-click=&quot;archive()&quot;&gt;archive&lt;/a&gt; ]
+      &lt;ul&gt;
+        &lt;li ng-repeat=&quot;todo in todos&quot;&gt;
+          &lt;input type=&quot;checkbox&quot; ng-model=&quot;todo.done&quot;&gt;
+          &lt;span class=&quot;done-&#123;&#123;todo.done&#125;&#125;&quot;&gt;&#123;&#123;todo.text&#125;&#125;&lt;/span&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;form ng-submit=&quot;addTodo()&quot;&gt;
+        &lt;input type=&quot;text&quot; ng-model=&quot;todoText&quot; size=&quot;30&quot;
+               placeholder=&quot;add new todo here&quot;&gt;
+        &lt;input class=&quot;btn-primary&quot; type=&quot;submit&quot; value=&quot;add&quot;&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+  </content>
+  <content>
+    <pre data-filename="index.html">
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;todo.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;Todo&lt;/h2&gt;
+    &lt;div&gt;
+      &lt;span&gt;&lt;span id=&quot;remaining&quot;&gt;&lt;/span&gt; of &lt;span id=&quot;length&quot;&gt;&lt;/span&gt; remaining&lt;/span&gt;
+      [ &lt;a href=&quot;&quot; id=&quot;archive&quot;&gt;archive&lt;/a&gt; ]
+      &lt;ul class=&quot;unstyled&quot; id=&quot;list&quot;&gt;
+      &lt;/ul&gt;
+      &lt;form&gt;
+        &lt;input type=&quot;text&quot; size=&quot;30&quot;
+               placeholder=&quot;add new todo here&quot;&gt;
+        &lt;input class=&quot;btn-primary&quot; type=&quot;submit&quot; value=&quot;add&quot;&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+
+    &lt;!-- poor man's template --&gt;
+    &lt;div id=&quot;templates&quot; style=&quot;display: none;&quot;&gt;
+      &lt;li data-name=&quot;list&quot;&gt;
+        &lt;input type=&quot;checkbox&quot;&gt;
+        &lt;span&gt;&lt;/span&gt;
+      &lt;/li&gt;
+    &lt;/div&gt;
+
+    &lt;script src=&quot;controller.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+  </content>
+</tabs>
+
+<p>Note how the data, stored in an array inside the controller, binds to the view and is automatically updated when it is changed by the controller.</p>
+
+<h3 id="check2">Check the results</h3>
+
+<p>
+Check the results by reloading the app: open the app, right-click and select Reload App.</li>
+</p>
+
+<h2 id="takeaways_">Takeaways</h2>
+
+<ul>
+<li><p>Chrome Apps are
+<a href="offline_apps.html">offline first</a>,
+so the recommended way to include third-party scripts is to download
+and package them inside your app.</p></li>
+<li><p>You can use any framework you want,
+as long as it complies with Content Security Policies
+and other restrictions that Chrome Apps are enforced to follow.</p></li>
+<li><p>MVC frameworks make your life easier.
+Use them, specially if you want to build a non-trivial application.</p></li>
+</ul>
+
+<h2 id="you_should_also_read">You should also read</h2>
+
+<ul>
+<li><p><a href="angular_framework.html">Build Apps with AngularJS</a> tutorial</p></li>
+<li><p><a href="http://angularjs.org/">AngularJS Todo</a> tutorial</p></li>
+</ul>
+
+<h2 id="what_39_s_next_">What's next?</h2>
+
+<p>In <a href="app_codelab5_data.html">4 - Save and Fetch Data</a>,
+you will modify your Todo list app so that Todo items are saved.</p>
+    
+    <footer id="cc-info">
+      <button id="send-feedback" class="google-button" data-feedback>Send Feedback</button>
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo"><a href="http://creativecommons.org/licenses/by/3.0/"><img src="../static/images/cc_by.png" alt="Licensed Creative Commons by Attribution"></a></p>
+    </footer>
+    <nav class="inline-toc no-permalink">
+      <section class="related">
+                      <h3 title="">Learn with Codelab</h3>
+      <ol class="toc">
+                              <li>
+                                <a href="app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                              </li>
+                              <li>
+                                <a href="app_codelab2_basic.html">2 - Create Basic App</a>
+                              </li>
+                              <li>
+                                <a href="app_codelab3_mvc.html" class="active">3 - Create MVC</a>
+                              </li>
+                              <li>
+                                <a href="app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                              </li>
+                              <li>
+                                <a href="app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                              </li>
+                              <li>
+                                <a href="app_codelab7_useridentification.html">6 - Access User's Data</a>
+                              </li>
+                              <li>
+                                <a href="app_codelab8_webresources.html">7 - Access Web Resources</a>
+                              </li>
+                              <li>
+                                <a href="app_codelab_10_publishing.html">8 - Publish App</a>
+                              </li>
+      </ol>
+      </section>
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="app_codelab3_mvc.html#simple"
+          >Create a simple view</a>
+          <ol class="toc">
+              <li><a data-list-item href="app_codelab3_mvc.html#basic-mvc"
+                     >Add MVC basics</a>
+              </li>
+              <li><a data-list-item href="app_codelab3_mvc.html#update-view"
+                     >Update view</a>
+              </li>
+              <li><a data-list-item href="app_codelab3_mvc.html#stylesheet"
+                     >Add stylesheet</a>
+              </li>
+              <li><a data-list-item href="app_codelab3_mvc.html#check1"
+                     >Check the results</a>
+              </li>
+          </ol>
+      </li>
+      <li class="toplevel"><a data-list-item href="app_codelab3_mvc.html#real-todo"
+          >Create real Todo list</a>
+          <ol class="toc">
+              <li><a data-list-item href="app_codelab3_mvc.html#controller"
+                     >Add controller</a>
+              </li>
+              <li><a data-list-item href="app_codelab3_mvc.html#index"
+                     >Update view</a>
+              </li>
+              <li><a data-list-item href="app_codelab3_mvc.html#check2"
+                     >Check the results</a>
+              </li>
+          </ol>
+      </li>
+      <li class="toplevel"><a data-list-item href="app_codelab3_mvc.html#takeaways_"
+          >Takeaways</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="app_codelab3_mvc.html#you_should_also_read"
+          >You should also read</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="app_codelab3_mvc.html#what_39_s_next_"
+          >What's next?</a>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="app_codelab3_mvc.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../static/js/fatnav.js"></script>
+    <script src="../static/js/article.js"></script>
+    <script src="../static/js/prettify.js"></script>
+    <script src="../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../static/js/site.js"></script>
+  </body>
+</html>

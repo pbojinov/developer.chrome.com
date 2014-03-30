@@ -1,0 +1,1686 @@
+<link href="../../_static/css/nacl.css" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../../../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../../../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../../../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>Building - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="building.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../../../index.html">
+          <img alt="Chrome: developer" src="../../../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../../../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../../../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../../../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="../../../apps/index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="../../../apps/first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="../../../apps/app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../../../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="../../../apps/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../../../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="../../../apps/app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="../../../apps/cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="../../../apps/app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_usb.html">USB</a>
+                            </li>
+                            <li><a href="../../../apps/app_serial">Serial</a>
+                            </li>
+                            <li><a href="../../../apps/app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="../../../apps/app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="../../../apps/angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="../../../apps/sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="../../../apps/google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../apps/analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../../apps/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../../apps/webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="../../../apps/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../../apps/app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="../../../apps/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/overview.html">Overview</a>
+                            </li>
+                            <li><a href="../../../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../../../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../../../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="../../../apps/activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../../../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../../../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../../../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../../../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../../../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../../../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../../../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../../../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../../../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../../../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../../overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../../nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../../sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../../sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../../sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="building.html">Building</a>
+                            </li>
+                            <li><a href="running.html">Running</a>
+                            </li>
+                            <li><a href="debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../../pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../../pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../../glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../../reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../../reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../../reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../../reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../../help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../../publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../../community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../../../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../../../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../../../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../../../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../../../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../../../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../../../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../../../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../../../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../../../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <div itemprop="articleBody">
+
+
+
+<section id="building">
+<span id="devcycle-building"></span><h1 id="building"><span id="devcycle-building"></span>Building</h1>
+<div class="contents local" id="table-of-contents" style="display: none">
+<p class="topic-title first">Table Of Contents</p>
+<ul class="small-gap">
+<li><p class="first"><a class="reference internal" href="building.html#introduction" id="id4">Introduction</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="building.html#target-architectures" id="id5">Target architectures</a></li>
+<li><a class="reference internal" href="building.html#c-libraries" id="id6">C libraries</a></li>
+<li><a class="reference internal" href="building.html#c-standard-libraries" id="id7">C++ standard libraries</a></li>
+<li><a class="reference internal" href="building.html#sdk-toolchains" id="id8">SDK toolchains</a></li>
+<li><a class="reference internal" href="building.html#sdk-toolchains-versus-your-hosted-toolchain" id="id9">SDK toolchains versus your hosted toolchain</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="building.html#the-pnacl-toolchain" id="id10">The PNaCl toolchain</a></li>
+<li><p class="first"><a class="reference internal" href="building.html#using-the-pnacl-tools-to-compile-link-debug-and-deploy" id="id11">Using the PNaCl tools to compile, link, debug, and deploy</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="building.html#compile" id="id12">Compile</a></li>
+<li><a class="reference internal" href="building.html#create-a-static-library" id="id13">Create a static library</a></li>
+<li><a class="reference internal" href="building.html#link-the-application" id="id14">Link the application</a></li>
+<li><a class="reference internal" href="building.html#finalizing-the-pexe-for-deployment" id="id15">Finalizing the <strong>pexe</strong> for deployment</a></li>
+<li><a class="reference internal" href="building.html#compressing-the-pexe-for-deployment" id="id16">Compressing the <strong>pexe</strong> for deployment</a></li>
+</ul>
+</li>
+<li><p class="first"><a class="reference internal" href="building.html#the-gnu-based-toolchains" id="id17">The GNU-based toolchains</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="building.html#compiling" id="id18">Compiling</a></li>
+<li><a class="reference internal" href="building.html#creating-libraries-and-linking" id="id19">Creating libraries and Linking</a></li>
+<li><a class="reference internal" href="building.html#finalizing-a-nexe-for-deployment" id="id20">Finalizing a <strong>nexe</strong> for deployment</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="building.html#using-make" id="id21">Using make</a></li>
+<li><a class="reference internal" href="building.html#libraries-and-header-files-provided-with-the-sdk" id="id22">Libraries and header files provided with the SDK</a></li>
+<li><p class="first"><a class="reference internal" href="building.html#troubleshooting" id="id23">Troubleshooting</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="building.html#undefined-reference-error" id="id24">&#8220;Undefined reference&#8221; error</a></li>
+<li><a class="reference internal" href="building.html#can-t-find-libraries-containing-necessary-symbols" id="id25">Can&#8217;t find libraries containing necessary symbols</a></li>
+<li><a class="reference internal" href="building.html#pnacl-abi-verification-errors" id="id26">PNaCl ABI Verification errors</a></li>
+</ul>
+</li>
+</ul>
+
+</div><section id="introduction">
+<h2 id="introduction">Introduction</h2>
+<p>This document describes how to build Native Client modules. It is intended for
+developers who have experience writing, compiling, and linking C and C++ code.
+If you haven&#8217;t read the Native Client <a class="reference internal" href="../../overview.html"><em>Technical Overview</em></a> and <a class="reference internal" href="../tutorial/index.html"><em>Tutorial</em></a>, we recommend starting
+with those.</p>
+<section id="target-architectures">
+<span id="id1"></span><h3 id="target-architectures"><span id="id1"></span>Target architectures</h3>
+<p>Portable Native Client (PNaCl) modules are written in C or C++ and compiled
+into an executable file ending in a <strong>.pexe</strong> extension using the PNaCl
+toolchain in the Native Client SDK. Chrome can load <strong>pexe</strong> files
+embedded in web pages and execute them as part of a web application.</p>
+<p>As explained in the Technical Overview, PNaCl modules are
+operating-system-independent <strong>and</strong> processor-independent. The same
+<strong>pexe</strong>  will run on Windows, Mac, Linux, and ChromeOS and it will run on
+any processor, e.g., x86-32, x86-64, and ARM.</p>
+<p>Native Client also supports architecture-specific <strong>nexe</strong> files.
+These <strong>nexe</strong> files are <strong>also</strong> operating-system-independent,
+but they are <strong>not</strong> processor-independent. To support a wide variety of
+devices you must compile separate versions of your Native Client module
+for different processors on end-user machines. A
+<a class="reference internal" href="../../overview.html#application-files"><em>manifest file</em></a> will then specify which version
+of the module to load based on the end-user&#8217;s architecture. The SDK
+includes a script&#8212;<code>create_nmf.py</code> (in the <code>tools/</code> directory)&#8212;to
+generate manifest files. For examples of how to compile modules
+for multiple target architectures and how to generate manifest files, see the
+Makefiles included with the SDK examples.</p>
+<p>This section will mostly cover PNaCl, but also describes how to build
+nexe applications.</p>
+</section><section id="c-libraries">
+<h3 id="c-libraries">C libraries</h3>
+<p>The PNaCl SDK has a single choice of C library: <a class="reference external" href="http://sourceware.org/newlib/">newlib</a>.</p>
+<p>The Native Client SDK also has a GCC-based toolchain for building
+<strong>nexes</strong>. The GCC-based toolchain has support for two C libraries:
+<a class="reference external" href="http://sourceware.org/newlib/">newlib</a> and <a class="reference external" href="http://www.gnu.org/software/libc/">glibc</a>.  See <a class="reference internal" href="dynamic-loading.html"><em>Dynamic Linking &amp; Loading with glibc</em></a> for information about these libraries, including factors to
+help you decide which to use.</p>
+</section><section id="c-standard-libraries">
+<span id="building-cpp-libraries"></span><h3 id="c-standard-libraries"><span id="building-cpp-libraries"></span>C++ standard libraries</h3>
+<p>The PNaCl SDK can use either LLVM&#8217;s <a class="reference external" href="http://libcxx.llvm.org/">libc++</a>
+(the current default) or GCC&#8217;s <a class="reference external" href="http://gcc.gnu.org/libstdc++">libstdc++</a> (deprecated). The
+<code>-stdlib=[libc++|libstdc++]</code> command line argument can be used to
+choose which standard library to use.</p>
+<p>The GCC-based Native Client SDK only has support for GCC&#8217;s <a class="reference external" href="http://gcc.gnu.org/libstdc++">libstdc++</a>.</p>
+<p>C++11 library support is only complete in libc++ but other non-library
+language features should work regardless of which standard library is
+used. The <code>-std=[c++98|c++11]</code> command line argument can be used to
+indicate which C++ language standard to use (or <code>-std=gnu++11</code> to
+access non-standard extensions).</p>
+</section><section id="sdk-toolchains">
+<h3 id="sdk-toolchains">SDK toolchains</h3>
+<p>The Native Client SDK includes multiple toolchains. It has one PNaCl toolchain
+and it has multiple GCC-based toolchains that are differentiated by target
+architectures and C libraries. The single PNaCl toolchain is located
+in a directory named <code>toolchain/&lt;OS_platform&gt;_pnacl</code>, and the GCC-based
+toolchains are located in directories named
+<code>toolchain/&lt;OS_platform&gt;_&lt;architecture&gt;_&lt;library&gt;</code>, where:</p>
+<ul class="small-gap">
+<li><em>&lt;platform&gt;</em> is the platform of your development machine (win, mac, or linux)</li>
+<li><em>&lt;architecture&gt;</em> is your target architecture (x86 or arm)</li>
+<li><em>&lt;library&gt;</em> is the C library you are compiling with (newlib or glibc)</li>
+</ul>
+<p>The compilers, linkers, and other tools are located in the <code>bin/</code>
+subdirectory in each toolchain. For example, the tools in the Windows SDK
+for PNaCl has a C++ compiler in <code>toolchain/win_pnacl/bin/pnacl-clang++</code>.
+As another example, the GCC-based C++ compiler that targets the x86 and uses the
+newlib library, is located at <code>toolchain/win_x86_newlib/bin/x86_64-nacl-g++</code>.</p>
+<aside class="note">
+The SDK toolchains descend from the <code>toolchain/</code> directory. The SDK also
+has a <code>tools/</code> directory; this directory contains utilities that are not
+properly part of the toolchains but that you may find helpful in building and
+testing your application (e.g., the <code>create_nmf.py</code> script, which you can
+use to create a manifest file).
+</aside>
+</section><section id="sdk-toolchains-versus-your-hosted-toolchain">
+<h3 id="sdk-toolchains-versus-your-hosted-toolchain">SDK toolchains versus your hosted toolchain</h3>
+<p>To build NaCl modules, you must use one of the Native Client toolchains
+included in the SDK. The SDK toolchains use a variety of techniques to
+ensure that your NaCl modules comply with the security constraints of
+the Native Client sandbox.</p>
+<p>During development, you have another choice: You can build modules using a
+<em>standard</em> toolchain, such as the hosted toolchain on your development
+machine. This can be Visual Studio&#8217;s standard compiler, XCode, LLVM, or
+GNU-based compilers on your development machine. These standard toolchains
+will not produce executables that comply with the Native Client sandbox
+security constraints. They are also not portable across operating systems
+and not portable across different processors. However, using a standard
+toolchain allows you to develop modules in your favorite IDE and use
+your favorite debugging and profiling tools. The drawback is that modules
+compiled in this manner can only run as Pepper (PPAPI) plugins in Chrome.
+To publish and distribute Native Client modules as part of a web
+application, you must eventually use a toolchain in the Native
+Client SDK.</p>
+<aside class="note">
+In the future, additional tools will be available to compile Native Client
+modules written in other programming languages, such as C#. But this
+document covers only compiling C and C++ code, using the toolchains
+provided in the SDK.
+</aside>
+</section></section><section id="the-pnacl-toolchain">
+<h2 id="the-pnacl-toolchain">The PNaCl toolchain</h2>
+<p>The PNaCl toolchain contains modified versions of the tools in the
+LLVM toolchain, as well as linkers and other tools from binutils.
+To determine which version of LLVM or binutils the tools are based upon,
+run the tool with the <code>--version</code> command line flag. These tools
+are used to compile and link applications into .pexe files. The toolchain
+also contains a tool to translate a .pexe file into a
+architecture-specific .nexe (e.g., for debugging purposes).</p>
+<p>Each tool&#8217;s name is preceded by the prefix &#8220;pnacl-&#8221;. Some of the useful
+tools include:</p>
+<dl class="docutils">
+<dt>pnacl-abicheck</dt>
+<dd>Check that the <strong>pexe</strong> follows the PNaCl ABI rules.</dd>
+<dt>pnacl-ar</dt>
+<dd>Creates archives (i.e., static libraries)</dd>
+<dt>pnacl-clang</dt>
+<dd>C compiler and compiler driver</dd>
+<dt>pnacl-clang++</dt>
+<dd>C++ compiler and compiler driver</dd>
+<dt>pnacl-compress</dt>
+<dd>Size compresses a finalized <strong>pexe</strong> file for deployment.</dd>
+<dt>pnacl-dis</dt>
+<dd>Disassembler for both <strong>pexe</strong> files and <strong>nexe</strong> files</dd>
+<dt>pnacl-finalize</dt>
+<dd>Finalizes <strong>pexe</strong> files for deployment</dd>
+<dt>pnacl-ld</dt>
+<dd>Bitcode linker</dd>
+<dt>pnacl-nm</dt>
+<dd>Lists symbols in bitcode files, native code, and libraries</dd>
+<dt>pnacl-ranlib</dt>
+<dd>Generates a symbol table for archives (i.e., static libraries)</dd>
+<dt>pnacl-translate</dt>
+<dd>Translates a <strong>pexe</strong> to a native architecture, outside of the browser</dd>
+</dl>
+<p>For the full list of tools, see the
+<code>&lt;NACL_SDK_ROOT&gt;/toolchain/&lt;platform&gt;_pnacl/bin</code> directory.</p>
+</section><section id="using-the-pnacl-tools-to-compile-link-debug-and-deploy">
+<h2 id="using-the-pnacl-tools-to-compile-link-debug-and-deploy">Using the PNaCl tools to compile, link, debug, and deploy</h2>
+<p>To build an application with the PNaCl SDK toolchain, you must compile
+your code, link it, test and debug it, and then deploy it. This section goes
+over some examples of how to use the tools.</p>
+<section id="compile">
+<h3 id="compile">Compile</h3>
+<p>To compile a simple application consisting of <code>file1.cc</code> and <code>file2.cc</code> into
+<code>hello_world.pexe</code> with a single command, use the <code>pnacl-clang++</code> tool</p>
+<pre>
+&lt;NACL_SDK_ROOT&gt;/toolchain/win_pnacl/bin/pnacl-clang++ file1.cc file2.cc ^
+  -I&lt;NACL_SDK_ROOT&gt;/include -L&lt;NACL_SDK_ROOT&gt;/lib/pnacl/Release ^
+  -o hello_world.pexe -g -O2 -lppapi_cpp -lppapi
+</pre>
+<p>(The carat <code>^</code> allows the command to span multiple lines on Windows;
+to do the same on Mac and Linux use a backslash instead. Or you can
+simply type the command and all its arguments on one
+line. <code>&lt;NACL_SDK_ROOT&gt;</code> represents the path to the top-level
+directory of the bundle you are using, e.g.,
+<code>&lt;location-where-you-installed-the-SDK&gt;/pepper_31</code>.)</p>
+<p>However, the typical application consists of many files. In that case,
+each file can be compiled separately so that only files that are
+affected by a change need to be recompiled. To compile an individual
+file from your application, you must use either the <code>pnacl-clang</code> C
+compiler, or the <code>pnacl-clang++</code> C++ compiler. The compiler produces
+separate bitcode files. For example:</p>
+<pre>
+&lt;NACL_SDK_ROOT&gt;/toolchain/win_pnacl/bin/pnacl-clang++ hello_world.cc ^
+  -I&lt;NACL_SDK_ROOT&gt;/include -c -o hello_world.o -g -O0
+</pre>
+<p>For a description of each command line flag, run <code>pnacl-clang --help</code>.
+For convenience, here is a description of some of the flags used in
+the example.</p>
+<dl class="docutils" id="compile-flags">
+<dt><code>-c</code></dt>
+<dd>indicates that <code>pnacl-clang++</code> should only compile an individual file,
+rather than continue the build process and link together the
+full application.</dd>
+<dt><code>-o &lt;output_file&gt;</code></dt>
+<dd>indicates the <strong>output</strong> filename.</dd>
+<dt><code>-g</code></dt>
+<dd>tells the compiler to include debug information in the result.
+This debug information can be used during development, and then <strong>stripped</strong>
+before actually deploying the application to keep the application&#8217;s
+download size small.</dd>
+<dt><code>-On</code></dt>
+<dd><p class="first">sets the optimization level to n. Use 0 when debugging, and -O2 or -O3
+for profiling and deployment.</p>
+<p class="last">The main difference between -O2 and -O3 is whether the compiler performs
+optimizations that involve a space-speed tradeoff. It could be the case that
+<code>-O3</code> optimizations are not desirable due to increased <strong>pexe</strong>
+download size; you should make your own performance measurements to determine
+which level of optimization is right for you. When looking at code size,
+note that what you generally care about is not the size of the pexe
+produced by pnacl-clang, but the size of the compressed pexe that you upload
+your application to the server or to the Chrome Web Store.
+Optimizations that increase the size of a pexe may not increase the size of
+the compressed pexe that much.</p>
+</dd>
+<dt><code>-I&lt;directory&gt;</code></dt>
+<dd>adds a directory to the search path for <strong>include</strong> files. The SDK has
+Pepper (PPAPI) headers located at <code>&lt;NACL_SDK_ROOT&gt;/include</code>, so add
+that directory when compiling to be able to include the headers.</dd>
+</dl>
+</section><section id="create-a-static-library">
+<h3 id="create-a-static-library">Create a static library</h3>
+<p>The <code>pnacl-ar</code> and <code>pnacl-ranlib</code> tools allow you to create a
+<strong>static</strong> library from a set of bitcode files, which can later be linked
+into the full application.</p>
+<pre>
+&lt;NACL_SDK_ROOT&gt;/toolchain/win_pnacl/bin/pnacl-ar cr libfoo.a ^
+  foo1.o foo2.o foo3.o
+
+&lt;NACL_SDK_ROOT&gt;/toolchain/win_pnacl/bin/pnacl-ranlib libfoo.a
+</pre>
+</section><section id="link-the-application">
+<h3 id="link-the-application">Link the application</h3>
+<p>The <code>pnacl-clang++</code> tool is used to compile applications, but it can
+also be used link together compiled bitcode and libraries into a
+full application.</p>
+<pre>
+&lt;NACL_SDK_ROOT&gt;/toolchain/win_pnacl/bin/pnacl-clang++ -o hello_world.pexe ^
+  hello_world.o -L&lt;NACL_SDK_ROOT&gt;/lib/pnacl/Debug -lfoo -lppapi_cpp -lppapi
+</pre>
+<p>This links the hello world bitcode with the <code>foo</code> library in the example
+as well as the <em>Debug</em> version of the Pepper libraries which are located
+in <code>&lt;NACL_SDK_ROOT&gt;/lib/pnacl/Debug</code>. If you wish to link against the
+<em>Release</em> version of the Pepper libraries, change the
+<code>-L&lt;NACL_SDK_ROOT&gt;/lib/pnacl/Debug</code> to
+<code>-L&lt;NACL_SDK_ROOT&gt;/lib/pnacl/Release</code>.</p>
+</section><section id="finalizing-the-pexe-for-deployment">
+<h3 id="finalizing-the-pexe-for-deployment">Finalizing the <strong>pexe</strong> for deployment</h3>
+<p>Typically you would run the application to test it and debug it if needed
+before deploying. See the <a class="reference internal" href="running.html"><em>running</em></a> documentation for how
+to run a PNaCl application, and see the <a class="reference internal" href="debugging.html"><em>debugging</em></a>
+documentation for debugging techniques and workflow. After testing a PNaCl
+application, you must <strong>&#8220;finalize&#8221;</strong> it. The <code>pnacl-finalize</code>
+tool handles this.</p>
+<pre>
+&lt;NACL_SDK_ROOT&gt;/toolchain/win_pnacl/bin/pnacl-finalize ^
+  hello_world.pexe -o hello_world.final.pexe
+</pre>
+<p>Prior to finalization, the application <strong>pexe</strong> is stored in a binary
+format that is subject to change.  After finalization, the application
+pexe is <strong>rewritten</strong> into a different binary format that is <strong>stable</strong>
+and will be supported by future versions of PNaCl. The finalization step
+also helps minimize the size of your application for distribution by
+stripping out debug information and other metadata.</p>
+<p>Once the application is finalized, be sure to adjust the manifest file to
+refer to the final version of the application before deployment.
+The <code>create_nmf.py</code> tool helps generate an <code>.nmf</code> file, but <code>.nmf</code>
+files can also be written by hand.</p>
+</section><section id="compressing-the-pexe-for-deployment">
+<h3 id="compressing-the-pexe-for-deployment">Compressing the <strong>pexe</strong> for deployment</h3>
+<p>Size compression is an optional step for deployment, and reduces the
+size of the pexe file that must be transmitted over the wire. The tool
+<code>pnacl-compress</code> applies compression strategies that are already built
+into the <strong>stable</strong> binary format of a pexe application. As such,
+compressed pexe files do not need any extra time to be decompressed on
+the client&#8217;s side. All costs are upfront when you call <code>pnacl-compress</code>.</p>
+<p>Currently, this tool will compress pexe files by about 25%. However,
+it is somewhat slow (can take from seconds to minutes on large
+appications). Hence, this step is optional.</p>
+<pre>
+&lt;NACL_SDK_ROOT&gt;/toolchain/win_pnacl/bin/pnacl-compress ^
+  hello_world.final.pexe
+</pre>
+<p>Tool <code>pnacl-compress</code> must be called after a pexe file has been finalized
+for deployment (via <code>pnacl-finalize</code>). Alternatively, you can apply this
+step as part of the finalizing step by adding the <code>--compress</code> flag
+to the pnacl-finalize command line.</p>
+<p>Note that this compression step doesn&#8217;t replace gzip. This compression
+step is in addition to gzipping a file for deployment. One should note
+that while the gzipped version of a compressed pexe file is still
+smaller than the corresponding uncompressed pexe file, the gains is
+somewhat smaller after being gzipped. Expected reduction in size
+(after being gzipped) is more like 7.5% to 10%.</p>
+</section></section><section id="the-gnu-based-toolchains">
+<h2 id="the-gnu-based-toolchains">The GNU-based toolchains</h2>
+<p>Besides the PNaCl toolchain, the Native Client SDK also includes modified
+versions of the tools in the standard GNU toolchain, including the GCC
+compilers and the linkers and other tools from binutils. These tools only
+support building <strong>nexe</strong> files. Run the tool with the <code>--version</code>
+command line flag to determine the current version of the tools.</p>
+<p>Each tool in the toolchain is prefixed with the name of the target
+architecture. In the toolchain for the ARM target architecture, each
+tool&#8217;s name is preceded by the prefix &#8220;arm-nacl-&#8221;. In the toolchains for
+the x86 target architecture, there are actually two versions of each
+tool&#8212;one to build Native Client modules for the x86-32
+target architecture, and one to build modules for the x86-64 target
+architecture. &#8220;i686-nacl-&#8221; is the prefix for tools used to build
+32-bit .nexes, and &#8220;x86_64-nacl-&#8221; is the prefix for tools used to
+build 64-bit .nexes</p>
+<p>These prefixes conform to gcc naming standards and make it easy to use tools
+like autoconf. As an example, you can use <code>i686-nacl-gcc</code> to compile 32-bit
+.nexes, and <code>x86_64-nacl-gcc</code> to compile 64-bit .nexes. Note that you can
+typically override a tool&#8217;s default target architecture with command line
+flags, e.g., you can specify <code>x86_64-nacl-gcc -m32</code> to compile a 32-bit
+.nexe.</p>
+<p>The GNU-based SDK toolchains include the following tools:</p>
+<ul class="small-gap">
+<li>&lt;prefix&gt;addr2line</li>
+<li>&lt;prefix&gt;ar</li>
+<li>&lt;prefix&gt;as</li>
+<li>&lt;prefix&gt;c++</li>
+<li>&lt;prefix&gt;c++filt</li>
+<li>&lt;prefix&gt;cpp</li>
+<li>&lt;prefix&gt;g++</li>
+<li>&lt;prefix&gt;gcc</li>
+<li>&lt;prefix&gt;gcc-4.4.3</li>
+<li>&lt;prefix&gt;gccbug</li>
+<li>&lt;prefix&gt;gcov</li>
+<li>&lt;prefix&gt;gprof</li>
+<li>&lt;prefix&gt;ld</li>
+<li>&lt;prefix&gt;nm</li>
+<li>&lt;prefix&gt;objcopy</li>
+<li>&lt;prefix&gt;objdump</li>
+<li>&lt;prefix&gt;ranlib</li>
+<li>&lt;prefix&gt;readelf</li>
+<li>&lt;prefix&gt;size</li>
+<li>&lt;prefix&gt;strings</li>
+<li>&lt;prefix&gt;strip</li>
+</ul>
+<section id="compiling">
+<h3 id="compiling">Compiling</h3>
+<p>Compiling files with the GNU-based toolchain is similar to compiling
+files with the PNaCl-based toolchain, except that the output is
+architecture specific.</p>
+<p>For example, assuming you&#8217;re developing on a Windows machine, targeting the x86
+architecture, and using the newlib library, you can compile a 32-bit .nexe for
+the hello_world example with the following command:</p>
+<pre>
+&lt;NACL_SDK_ROOT&gt;/toolchain/win_x86_newlib/bin/i686-nacl-gcc hello_world.c ^
+  -I&lt;NACL_SDK_ROOT&gt;/include -L&lt;NACL_SDK_ROOT&gt;/lib/newlib/Release ^
+  -o hello_world_x86_32.nexe -m32 -g -O2 -lppapi
+</pre>
+<p>To compile a 64-bit .nexe, you can run the same command but use -m64 instead of
+-m32. Alternatively, you could also use the version of the compiler that
+targets the x86-64 architecture, i.e., <code>x86_64-nacl-gcc</code>.</p>
+<p>You should name executable modules with a <strong>.nexe</strong> filename extension,
+regardless of what platform you&#8217;re using.</p>
+</section><section id="creating-libraries-and-linking">
+<h3 id="creating-libraries-and-linking">Creating libraries and Linking</h3>
+<p>Creating libraries and linking with the GNU-based toolchain is similar
+to doing the same with the PNaCl toolchain.  The relevant tools
+for creating <strong>static</strong> libraries are <code>&lt;prefix&gt;ar</code> and <code>&lt;prefix&gt;ranlib</code>.
+Linking can be done with <code>&lt;prefix&gt;g++</code>. See the
+<a class="reference internal" href="dynamic-loading.html"><em>Dynamic Linking &amp; Loading with glibc</em></a>
+section on how to create <strong>shared</strong> libraries.</p>
+</section><section id="finalizing-a-nexe-for-deployment">
+<h3 id="finalizing-a-nexe-for-deployment">Finalizing a <strong>nexe</strong> for deployment</h3>
+<p>Unlike the PNaCl toolchain, no separate finalization step is required
+for <strong>nexe</strong> files. The nexe files are always in a <strong>stable</strong> format.
+However, the nexe file may contain debug information and symbol information
+which may make the nexe file larger than needed for distribution.
+To minimize the size of the distributed file, you can run the
+<code>&lt;prefix&gt;strip</code> tool to strip out debug information.</p>
+</section></section><section id="using-make">
+<h2 id="using-make">Using make</h2>
+<p>This document doesn&#8217;t cover how to use <code>make</code>, but if you want to use
+<code>make</code> to build your Native Client module, you can base your Makefile on the
+ones in the SDK examples.</p>
+<p>The Makefiles for the SDK examples build most of the examples in multiple
+configurations (using PNaCl vs NaCl, using different C libraries,
+targeting different architectures, and using different levels of optimization).
+To select a specific toolchain, set the <strong>environment variable</strong>
+<code>TOOLCHAIN</code> to either <code>pnacl</code>, <code>newlib</code>, <code>glibc</code>, or <code>host</code>.
+To select a specific level of optimization set the <strong>environment
+variable</strong> <code>CONFIG</code> to either <code>Debug</code>, or <code>Release</code>. Running
+<code>make</code> in each example&#8217;s directory does <strong>one</strong> of the following,
+depending on the setting of the environment variables.</p>
+<ul class="small-gap">
+<li><p class="first">If <code>TOOLCHAIN=pnacl</code> creates a subdirectory called <code>pnacl</code>;</p>
+<ul class="small-gap">
+<li>builds a .pexe (architecture-independent Native Client executable) using
+the newlib library</li>
+<li>generates a Native Client manifest (.nmf) file for the pnacl version of the
+example</li>
+</ul>
+</li>
+<li><p class="first">If <code>TOOLCHAIN=newlib</code> creates a subdirectory called <code>newlib</code>;</p>
+<ul class="small-gap">
+<li>builds .nexes for the x86-32, x86-64, and ARM architectures using the
+newlib library</li>
+<li>generates a Native Client manifest (.nmf) file for the newlib version of
+the example</li>
+</ul>
+</li>
+<li><p class="first">If <code>TOOLCHAIN=glibc</code> creates a subdirectory called <code>glibc</code>;</p>
+<ul class="small-gap">
+<li>builds .nexes for the x86-32 and x86-64 architectures using the glibc
+library</li>
+<li>generates a Native Client manifest (.nmf) file for the glibc version of the
+example</li>
+</ul>
+</li>
+<li><p class="first">If <code>TOOLCHAIN=host</code> creates a subdirectory called <code>windows</code>, <code>linux</code>,
+or <code>mac</code> (depending on your development machine);</p>
+<ul class="small-gap">
+<li>builds a Pepper plugin (.dll for Windows, .so for Linux/Mac) using the
+hosted toolchain on your development machine</li>
+<li>generates a Native Client manifest (.nmf) file for the host Pepper plugin
+version of the example</li>
+</ul>
+</li>
+</ul>
+<aside class="note">
+The glibc library is not yet available for the ARM and PNaCl toolchains.
+</aside>
+<p>Here is how to build the examples with PNaCl in Release mode on Windows.
+The resulting files for <code>examples/api/audio</code> will be in
+<code>examples/api/audio/pnacl/Release</code>, and the directory layout is similar for
+other examples.</p>
+<pre>
+set TOOLCHAIN=pnacl
+set CONFIG=Release
+make
+</pre>
+<p>Your Makefile can be simpler since you will not likely want to build so many
+different configurations of your module. The example Makefiles define
+numerous variables near the top (e.g., <code>CFLAGS</code>) that make it easy
+to customize the commands that are executed for your project and the options
+for each command.</p>
+<p>For details on how to use make, see the <a class="reference external" href="http://www.gnu.org/software/make/manual/make.html">GNU &#8216;make&#8217; Manual</a>.</p>
+</section><section id="libraries-and-header-files-provided-with-the-sdk">
+<h2 id="libraries-and-header-files-provided-with-the-sdk">Libraries and header files provided with the SDK</h2>
+<p>The Native Client SDK includes modified versions of standard toolchain-support
+libraries, such as libpthread and libc, plus the relevant header files.
+The standard libraries are located in the following directories:</p>
+<ul class="small-gap">
+<li>PNaCl toolchain: <code>toolchain/&lt;platform&gt;_pnacl/usr/lib</code></li>
+<li>x86 toolchains: <code>toolchain/&lt;platform&gt;_x86_&lt;library&gt;/x86_64-nacl/lib32</code> and
+<code>/lib64</code> (for the 32-bit and 64-bit target architectures, respectively)</li>
+<li>ARM toolchain: <code>toolchain/&lt;platform&gt;_arm_&lt;library&gt;/arm-nacl/lib</code></li>
+</ul>
+<p>For example, on Windows, the libraries for the x86-64 architecture in the
+newlib toolchain are in <code>toolchain/win_x86_newlib/x86_64-nacl/lib64</code>.</p>
+<p>The header files are in:</p>
+<ul class="small-gap">
+<li>PNaCl toolchain: <code>toolchain/&lt;platform&gt;_pnacl/usr/include</code></li>
+<li>x86 toolchains: <code>toolchain/&lt;platform&gt;_x86_&lt;library&gt;/x86_64-nacl/include</code></li>
+<li>ARM toolchain: <code>toolchain/&lt;platform&gt;_arm_&lt;library&gt;/arm-nacl/include</code></li>
+</ul>
+<p>Many other libraries have been ported for use with Native Client; for more
+information, see the <a class="reference external" href="http://code.google.com/p/naclports/">naclports</a>
+project. If you port an open-source library for your own use, we recommend
+adding it to naclports.</p>
+<p>Besides the standard libraries, the SDK includes Pepper libraries.
+The PNaCl Pepper libraries are located in the the
+<code>&lt;NACL_SDK_ROOT&gt;/lib/pnacl/&lt;Release or Debug&gt;</code> directory.
+The GNU-based toolchain has Pepper libraries in
+<code>&lt;NACL_SDK_ROOT&gt;/lib/newlib_&lt;arch&gt;/&lt;Release or Debug&gt;</code>
+and <code>&lt;NACL_SDK_ROOT&gt;/lib/glibc_&lt;arch&gt;/&lt;Release or Debug&gt;</code>.
+The libraries provided by the SDK allow the application to use Pepper,
+as well as convenience libraries to simplify porting an application that
+uses POSIX functions. Here are descriptions of the Pepper libraries provided
+in the SDK.</p>
+<dl class="docutils" id="devcycle-building-nacl-io">
+<dt>libppapi.a</dt>
+<dd>Implements the Pepper (PPAPI) C interface. Needed for all applications that
+use Pepper (even C++ applications).</dd>
+<dt>libppapi_cpp.a</dt>
+<dd>Implements the Pepper (PPAPI) C++ interface. Needed by C++ applications that
+use Pepper.</dd>
+<dt>libppapi_gles2.a</dt>
+<dd>Implements the Pepper (PPAPI) GLES interface. Needed by applications
+that use the 3D graphics API.</dd>
+<dt>libnacl_io.a</dt>
+<dd>Provides a POSIX layer for NaCl. In particular, the library provides a
+virtual file system and support for sockets. The virtual file system
+allows a module to &#8220;mount&#8221; a given directory tree. Once a module has
+mounted a file system, it can use standard C library file operations:
+<code>fopen</code>, <code>fread</code>, <code>fwrite</code>, <code>fseek</code>, and <code>fclose</code>.
+For more detail, see the header <code>include/nacl_io/nacl_io.h</code>.
+For an example of how to use nacl_io, see <code>examples/demo/nacl_io</code>.</dd>
+<dt>libppapi_simple.a</dt>
+<dd>Provides a familiar C programming environment by letting a module have a
+simple entry point that is registered by <code>PPAPI_SIMPLE_REGISTER_MAIN</code>.
+The entry point is similar to the standard C <code>main()</code> function, complete
+with <code>argc</code> and <code>argv[]</code> parameters. For details see
+<code>include/ppapi_simple/ps.h</code>. For an example of
+how to use ppapi_simple, <code>see examples/tutorial/using_ppapi_simple</code>.</dd>
+</dl>
+<aside class="note">
+<ul class="small-gap">
+<li>Since the Native Client toolchains use their own library and header search
+paths, the tools won&#8217;t find third-party libraries you use in your
+non-Native-Client development. If you want to use a specific third-party
+library for Native Client development, look for it in <a class="reference external" href="http://code.google.com/p/naclports/">naclports</a>, or port the library yourself.</li>
+<li>The order in which you list libraries in your build commands is important,
+since the linker searches and processes libraries in the order in which they
+are specified. See the *_LDFLAGS variables in the Makefiles of the SDK
+examples for the order in which specific libraries should be listed.</li>
+</ul>
+
+</aside>
+</section><section id="troubleshooting">
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>Some common problems, and how to fix them:</p>
+<section id="undefined-reference-error">
+<h3 id="undefined-reference-error">&#8220;Undefined reference&#8221; error</h3>
+<p>An &#8220;undefined reference&#8221; error may indicate incorrect link order and/or
+missing libraries. For example, if you leave out <code>-lppapi</code> when
+compiling Pepper applications you&#8217;ll see a series of undefined
+reference errors.</p>
+<p>One common type of &#8220;undefined reference&#8221; error is with respect to certain
+system calls, e.g., &#8220;undefined reference to &#8216;mkdir&#8217;&#8221;. For security reasons,
+Native Client does not support a number of system calls. Depending on how
+your code uses such system calls, you have a few options:</p>
+<ol class="arabic simple">
+<li>Link with the <code>-lnosys</code> flag to provide empty/always-fail versions of
+unsupported system calls. This will at least get you past the link stage.</li>
+<li>Find and remove use of the unsupported system calls.</li>
+<li>Create your own implementation of the unsupported system calls to do
+something useful for your application.</li>
+</ol>
+<p>If your code uses mkdir or other file system calls, you might find the
+<a class="reference internal" href="building.html#devcycle-building-nacl-io"><em>nacl_io</em></a> library useful.
+The nacl_io library essentially does option (3) for you: It lets your
+code use POSIX-like file system calls, and implements the calls using
+various technologies (e.g., HTML5 file system, read-only filesystems that
+use URL loaders, or an in-memory filesystem).</p>
+</section><section id="can-t-find-libraries-containing-necessary-symbols">
+<h3 id="can-t-find-libraries-containing-necessary-symbols">Can&#8217;t find libraries containing necessary symbols</h3>
+<p>Here is one way to find the appropriate library for a given symbol:</p>
+<pre>
+&lt;NACL_SDK_ROOT&gt;/toolchain/&lt;platform&gt;_pnacl/bin/pnacl-nm -o \
+  toolchain/&lt;platform&gt;_pnacl/usr/lib/*.a | grep &lt;MySymbolName&gt;
+</pre>
+</section><section id="pnacl-abi-verification-errors">
+<h3 id="pnacl-abi-verification-errors">PNaCl ABI Verification errors</h3>
+<p>PNaCl has restrictions on what is supported in bitcode. There is a bitcode
+ABI verifier which checks that the application conforms to the ABI restrictions,
+before it is translated and run in the browser. However, it is best to
+avoid runtime errors for users, so the verifier also runs on the developer&#8217;s
+machine at link time.</p>
+<p>For example, the following program which uses 128-bit integers
+would compile with NaCl GCC for the x86-64 target. However, it is not
+portable and would not compile with NaCl GCC for the i686 target.
+With PNaCl, it would fail to pass the ABI verifier:</p>
+<pre class="prettyprint">
+typedef unsigned int uint128_t __attribute__((mode(TI)));
+
+uint128_t foo(uint128_t x) {
+  return x;
+}
+</pre>
+<p>With PNaCl you would get the following error at link time:</p>
+<pre class="prettyprint">
+Function foo has disallowed type: i128 (i128)
+LLVM ERROR: PNaCl ABI verification failed
+</pre>
+<p>When faced with a PNaCl ABI verification error, check the list of features
+that are <a class="reference internal" href="../../nacl-and-pnacl.html#when-to-use-nacl"><em>not supported by PNaCl</em></a>.
+If the problem you face is not listed as restricted,
+<a class="reference internal" href="../../help.html#help"><em>let us know</em></a>!</p>
+</section></section></section>
+    
+    <footer id="cc-info">
+      <button id="send-feedback" class="google-button" data-feedback>Send Feedback</button>
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo"><a href="http://creativecommons.org/licenses/by/3.0/"><img src="../../../static/images/cc_by.png" alt="Licensed Creative Commons by Attribution"></a></p>
+    </footer>
+    <nav class="inline-toc no-permalink">
+      <section class="related">
+                      <h3 title="">Development Cycle</h3>
+      <ol class="toc">
+                              <li>
+                                <a href="building.html" class="active">Building</a>
+                              </li>
+                              <li>
+                                <a href="running.html">Running</a>
+                              </li>
+                              <li>
+                                <a href="debugging.html">Debugging</a>
+                              </li>
+                              <li>
+                                <a href="vs-addin.html">Debugging with Visual Studio</a>
+                              </li>
+                              <li>
+                                <a href="dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                              </li>
+      </ol>
+      </section>
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="building.html#introduction"
+          >Introduction</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#target-architectures"
+          >Target architectures</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#c-libraries"
+          >C libraries</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#c-standard-libraries"
+          >C++ standard libraries</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#sdk-toolchains"
+          >SDK toolchains</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#sdk-toolchains-versus-your-hosted-toolchain"
+          >SDK toolchains versus your hosted toolchain</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#the-pnacl-toolchain"
+          >The PNaCl toolchain</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#using-the-pnacl-tools-to-compile-link-debug-and-deploy"
+          >Using the PNaCl tools to compile, link, debug, and deploy</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#compile"
+          >Compile</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#create-a-static-library"
+          >Create a static library</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#link-the-application"
+          >Link the application</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#finalizing-the-pexe-for-deployment"
+          >Finalizing the pexe for deployment</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#compressing-the-pexe-for-deployment"
+          >Compressing the pexe for deployment</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#the-gnu-based-toolchains"
+          >The GNU-based toolchains</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#compiling"
+          >Compiling</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#creating-libraries-and-linking"
+          >Creating libraries and Linking</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#finalizing-a-nexe-for-deployment"
+          >Finalizing a nexe for deployment</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#using-make"
+          >Using make</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#libraries-and-header-files-provided-with-the-sdk"
+          >Libraries and header files provided with the SDK</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#troubleshooting"
+          >Troubleshooting</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#undefined-reference-error"
+          >Undefined reference error</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#can-t-find-libraries-containing-necessary-symbols"
+          >Cant find libraries containing necessary symbols</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="building.html#pnacl-abi-verification-errors"
+          >PNaCl ABI Verification errors</a>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="building.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../../../static/js/fatnav.js"></script>
+    <script src="../../../static/js/article.js"></script>
+    <script src="../../../static/js/prettify.js"></script>
+    <script src="../../../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../../../static/js/site.js"></script>
+  </body>
+</html>

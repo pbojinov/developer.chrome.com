@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>Frequently Asked Questions - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="faq.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../index.html">
+          <img alt="Chrome: developer" src="../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="../apps/index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../apps/index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="../apps/first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="../apps/app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="../apps/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="../apps/app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="../apps/app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="../apps/app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="../apps/app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="../apps/app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="../apps/app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="../apps/app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="../apps/app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="../apps/offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="../apps/app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="../apps/cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="../apps/app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="../apps/app_usb.html">USB</a>
+                            </li>
+                            <li><a href="../apps/app_serial">Serial</a>
+                            </li>
+                            <li><a href="../apps/app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="../apps/app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="../apps/app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="../apps/angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="../apps/sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="../apps/google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../apps/analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../apps/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../apps/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../apps/webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="../apps/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../apps/app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../apps/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="../apps/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../apps/overview.html">Overview</a>
+                            </li>
+                            <li><a href="../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="../apps/activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../native-client/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../native-client/nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../native-client/sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../native-client/sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/devcycle/building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/devcycle/building.html">Building</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/running.html">Running</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../native-client/reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../native-client/reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../native-client/help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../native-client/publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../native-client/community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <div itemprop="articleBody">
+
+
+
+<h1>Frequently Asked Questions</h1>
+
+<p>
+The <a href="http://chrome.google.com/webstore">Chrome Web Store</a>
+lets you publish free or paid apps
+where Google Chrome users can easily find them.
+This FAQ answers many common questions about the Chrome Web Store.
+If you don't find your answer here,
+check the <a href="http://code.google.com/chrome/extensions/faq.html">extension FAQs</a> or the
+<a href="http://groups.google.com/a/chromium.org/group/chromium-apps">chromium-apps group</a>.
+</p>
+
+<h2 id="general"> General </h2>
+
+<dl>
+  <dt id="faq-gen-01">What is the Chrome Web Store?</dt>
+    <dd>The Chrome Web Store is an open marketplace for <a href="../apps/index.html">Chrome Apps</a>, <a href="http://code.google.com/chrome/extensions/">Google Chrome Extensions</a>, and <a href="http://code.google.com/chrome/extensions/themes.html">Google Chrome Themes</a>, where consumers may browse, install, and purchase items and install them in their browser. These apps are built with web technologies and run inside of web browsers.</dd>
+  <dt id="faq-gen-02">How many people use Chrome?</dt>
+    <dd>In October 2011, Google announced 200 million active users for Chrome. It's also important to note that Chrome Web Store apps can run in any browser that supports the web technologies used to build the app.</dd>
+  <dt id="faq-gen-05">Is there a road map for Chrome?</dt>
+    <dd>You can follow the <a href="http://googlechromereleases.blogspot.com/">Google Chrome Releases blog</a> to learn about all the latest changes that are being made to Chrome.  You can create and track bugs and features in the <a href="http://crbug.com">Chromium bug tracker</a>, and we recommend that you download and install the <a href="http://www.chromium.org/getting-involved/dev-channel">Dev channel
+build</a> of Chrome browser.</dd>
+  <dt id="faq-gen-06">Which version of Chrome should I target for my Chrome Web Store apps?</dt>
+    <dd>You should target Chrome 8 as a minimum, however the Chrome Web Store was made available to all users in Chrome 9.
+    </dd>
+  <dt id="faq-gen-07">Why would someone install a web app instead of just using a bookmark or typing in a URL?</dt>
+    <dd>Installing an app ensures it is launchable from the New Tab Page via the
+    Chrome apps launcher.  Installing an app also allows you to grant it
+    privileges such as unlimited local storage and background pages.</dd>
+  <dt id="faq-gen-08">Is there an approval process for apps in the store?</dt>
+    <dd>All apps go through an automated review process and in most cases, an app will be published without further manual review.  There may be some instances in which a manual review will be required before the app is published based on our <a href="program_policies.html">program policies</a>.</dd>
+  <dt id="faq-gen-09">How will users find my app?</dt>
+    <dd>The Chrome Web Store will surface web apps in a variety of ways.  Of course, each app gets a page in the store, which will be searchable via the store and other search engines. There will be category lists in the store, as well as a variety of curated and algorithmically generated lists.  We recommend that you broadly promote your web app, through marketing websites and other means, so that users will find your app even outside of the store.</dd>
+ <dt id="faq-gen-11">Why am I being asked to pay a registration fee?</dt>
+    <dd>The new registration fee helps to prevent fraud in the Chrome Web Store.</dd>
+  <dt id="faq-gen-12">Why am I <em>not</em> being asked to pay a registration fee?</dt>
+    <dd>The fee is waived for developers who signed up with the Chrome Extensions Gallery before August 19, 2010.</dd>
+  <dt id="faq-gen-17">How can I signup using my Google Apps email address (for example, admin@example.com)?</dt>
+    <dd> If you can't sign into the Chrome Developer Dashboard
+    with your Google Apps email address, you have two options:
+    <ol>
+      <li> Go to
+        <a href="https://www.google.com/accounts/NewAccount">https://www.google.com/accounts/NewAccount</a>,
+        and create a Google Account whose login email
+        is your Google Apps email address.
+        Once you do this,
+        you'll be able to log in using that email address.
+        Note, however, that you'll have two accounts
+        with the same login email address:
+        a Google Account and a Google Apps account.
+      </li>
+      <li> Wait until the domain is transferred to
+        the new Google Apps account infrastructure.
+        Transitioned Google Apps accounts
+        will be able to log into the Chrome Developer Dashboard.
+        For more information, read the
+        <a href="http://www.google.com/support/a/bin/topic.py?topic=28917">help for the new Google Apps infrastructure</a>.
+      </li>
+    </ol>
+    <p>
+    We recommend option 1 if you want to get up and running as soon as possible.
+    </p>
+    </dd>
+  <dt id="faq-gen-22">What types of apps or extensions are not allowed in the store?</dt>
+  <dd>
+    While we try to allow most apps and extensions, a small number of extensions are explicitly disallowed
+    in our <a href="https://chrome.google.com/extensions/intl/en/dev_tos_text.html">Developer Terms of Service</a>
+    and <a href="https://chrome.google.com/extensions/intl/en/program_policies.html">Program Policies</a>.
+    Such apps or extensions will be removed when they are brought to our attention.
+  </dd>
+  <dt id="faq-gen-23">How do I report an abusive app or extension?</dt>
+  <dd>
+    To report an app or extension which violates our Terms of Service,
+    locate the corresponding listing in
+    the store and use the "Report abuse" link.
+  </dd>
+  <dt id="faq-gen-24">How are items ranked in the store?</dt>
+  <dd>
+    Items in the store are ranked by a heuristic that takes into account ratings from users
+    as well as usage statistics, such as the number of downloads vs. uninstalls over time.
+  </dd>
+  <dt id="faq-gen-25">How are "Featured" items selected?</dt>
+  <dd>
+    The Chrome Web Store team occasionally selects interesting listings as "Featured" listings. We're not accepting requests to be
+    featured at this point, since that would quickly become unmanageable. Here are a few
+    tips to increase the likelihood that we'll feature your listing:
+    <ul>
+      <li>Write a great piece of software</li>
+      <li>
+        Make sure your listing looks really nice (nice icon, good descriptions,
+        crisp screenshots and/or videos)
+      </li>
+      <li>Promote your listing independently so that it starts to rise in the rankings</li>
+    </ul>
+  </dd>
+  <dt id="faq-gen-26">How can my app or extension be selected for a collection?</dt>
+  <dd>
+    The collections are curated, and are not intended to be comprehensive.  There are no
+    specific criteria for being featured or put in a collection, although there are
+    published <a href="best_practices.html">best practices</a>
+    and <a href="https://developers.google.com/chrome/apps/articles/thinking_in_web_apps">general guidelines</a> that
+    we believe help make high quality listings.
+    Solicitations to be placed in a collection are not accepted.
+  </dd>
+  <dt id="faq-gen-27">How can I provide support for users of my app or extension?</dt>
+  <dd>
+    You can set up discussion groups to communicate with your users. One way of doing so
+    is through <a href="http://groups.google.com" target="_blank">Google Groups</a>.
+  </dd>
+  <dt id="faq-gen-28">Can I remove comments from my listing if I believe they are unfair?</dt>
+  <dd>
+    No, you can't remove user comments. However, we encourage you to respond to user
+    feedback in the comments to show that you are addressing their concerns.
+  </dd>
+</dl>
+
+<p class="backtotop"><a href="faq.html#top">Back to top</a></p>
+<h2 id="development"> Development </h2>
+
+<dl>
+  <dt id="faq-dev-01">How do I write an app or extension?</dt>
+  <dd>
+    You can find all the information you need to develop extensions and apps at
+    <a href="../extensions/index.html">http://developer.chrome.com/extensions/</a> and
+    <a href="../apps/index.html">http://developer.chrome.com/apps/</a>, respectively.
+  </dd>
+  <dt id="faq-gen-04">What technologies can I use to build installable web apps?</dt>
+    <dd>Any web technology that works inside a browser is a candidate for building web apps.  Most web apps will be built with HTML, CSS, and JavaScript.  However, developers are free to use other technologies such as Flash or Silverlight (dependent on browser support and installed plugins, of course).
+  <dt id="faq-gen-10">Should I build a web app or an extension?</dt>
+    <dd>Extensions are primarily used to extend functionality of the user's
+    browser.  For instance, extensions are commonly used to interact with the
+    pages that a user views, add custom context menus, or manipulate tabs and
+    windows.  Web apps, on the other hand, are applications in their own right
+    and rarely need to extend browser functionality.  For more information, see
+    <a href="choosing.html">Choosing an App Type</a>.</dd>
+  <dt id="faq-dev-02">How can I push an update of my code to my users?</dt>
+  <dd>
+    Visit <a href="https://chrome.google.com/webstore/developer/dashboard" target="_blank">https://chrome.google.com/webstore/developer/dashboard</a>
+    and click <strong>Edit</strong> on the listing you wish to update. Once you
+    upload a new version and click <strong>Publish</strong>, your update will
+    automatically be pushed out to users over the next few hours.
+  </dd>
+  <dt id="faq-dev-03">Can I host my own app or extension?</dt>
+  <dd>
+    Yes, you may host your own app or extension, although you will need to take care
+    of <a href="http://code.google.com/chrome/extensions/packaging.html" target="_blank">packaging</a>,
+    <a href="http://code.google.com/chrome/extensions/hosting.html" target="_blank">hosting</a>, and serving the
+    <a href="http://code.google.com/chrome/extensions/autoupdate.html" target="_blank">auto-update manifest</a> yourself.
+  </dd>
+</dl>
+
+<p class="backtotop"><a href="faq.html#top">Back to top</a></p>
+<h2 id="listing"> Creating a listing </h2>
+<dl>
+  <dt id="faq-listing-01">In what format should I upload my code?</dt>
+  <dd>
+    To upload an item to the gallery, submit a ZIP file containing the files used in
+    your app, theme, or extension. Do not upload a .crx file; the submission will fail.
+  </dd>
+  <dt id="faq-listing-02">How long will it take for my listing to appear in the store?</dt>
+  <dd>
+    Most listings will appear in the store immediately after being published. If your
+    app or extension doesn't appear after it's uploaded, make sure you've clicked the
+    <strong>Publish</strong> link.
+  </dd>
+  <dt id="faq-listing-03">How can I remove my listing from the store?</dt>
+  <dd>
+    Visit <a href="https://chrome.google.com/webstore/developer/dashboard" target="_blank">https://chrome.google.com/webstore/developer/dashboard</a>
+    and click <strong>Unpublish</strong>.  Your listing will no longer be
+    visible in the store.
+  </dd>
+  <dt id="faq-listing-04">What are the screenshot and text requirements for the store?</dt>
+  <dd>
+    See <a href="images.html">Supplying Images</a> for guidelines on supplying
+    images for the store.  Some other best practices to consider:
+    <ul>
+      <li>Write a catchy title, a clear and descriptive short description, and a
+      detailed long description. </li>
+      <li>Create screenshots that demonstrate how your app or extension works.</li>
+      <li>Upload a screencast, such as a YouTube video or a Google Docs Presentation,
+        to demonstrate how your app or extension works.</li>
+      <li>Post a support link so that users don't clutter your comments thread with bug reports.</li>
+    </ul>
+  </dd>
+  <dt id="faq-listing-05">How can I import an existing app or extension into the store?</dt>
+  <dd>
+    You may import an app or extension with a pre-existing key into the store (see
+    <a href="http://groups.google.com/group/chromium-extensions/browse_thread/thread/defbf282d11a8cc4/a2d1aedb84bc60b9"
+       target="_blank">instructions</a>).
+  </dd>
+  <dt id="faq-listing-06">How can I export an app or extension from the store?</dt>
+  <dd>
+    Currently we do not support exporting a listing's sources or private key
+    from the store.
+  </dd>
+  <dt id="faq-listing-07">Why did I receive a "Cannot parse the manifest" error when uploading my app or extension?</dt>
+  <dd>
+    The manifest file needs to be in JSON format. Most likely, you've included a
+    comment in the manifest file that is not recognized by the gallery's JSON
+    parser. Try removing any comments from the manifest file and try
+    re-uploading.
+  </dd>
+  <dt id="faq-gen-15">I've verified my domain, and I have a wildcard app URL like *://example.com, but the Chrome Web Store is still asking me to verify my domain.  What gives?</dt>
+    <dd>If you use a wildcard like *://example.com, make sure you have verified both http://example.com and https://example.com.</dd>
+  <dt id="faq-gen-16">When I try to upload my app to the Chrome Web Store, I get this error: "(Server rejected) An error occurred: please try again later." What gives?</dt>
+    <dd>This error occasionally occurs if you've been logged into the Chrome Web Store for a long time. If you sign out of your Google Account and then sign back in, you should be able to upload your app.</dd>
+  <dt id="faq-gen-18">Can I control the regions where my app is listed?</dt>
+  <dd>Yes, you can select which regions your application appears in. This might be because your app is only applicable to the local market, or you might have specific obligations that mean you can only make your app available in certain regions.
+  </dd>
+  <dt id="faq-gen-19">How do I localize my listing in the store?</dt>
+  <dd>There are two points where you need to localize your app for listing in a region that isn't your home market.
+    <ol>
+       <li> Your app package. See <a href="i18n.html">Internationalizing Your App</a> for information on localizing your app's presence inside Chrome.</li>
+       <li> Your detailed listing. The developer dashboard now includes the ability for you to select all the regions that you want your application to appear in, allows you to localize the detailed description, price points relative to the market you are in, and screenshots.</li>
+    </ol>
+  </dd>
+  <dt id="faq-gen-20">How do I localize my detailed description?</dt>
+  <dd>You first need to <a href="i18n.html">internationalize</a> your app and specify a "default_locale" attribute in your manifest. Once you upload your internationalized app, a selection box will appear at the top of your app listing, allowing you to switch between languages that you support and change the detailed description.
+  </dd>
+  <dt id="faq-gen-21">How do I show different screenshot images per region?</dt>
+  <dd>Visit your app page in the <a href="https://chrome.google.com/webstore/developer/dashboard">Chrome Web Store Developer Dashboard</a>, change the currently selected language to your desired choice (for example "en-GB") and upload a screenshot as normal. Once the image is uploaded you will be presented with an option to "Show this item in <strong>all</strong> locales" or "Show this item <strong>only</strong> in the 'en-GB' locale". Select the later to show the screenshot to only users of the "en-GB" Chrome Web Store.
+  </dd>
+  <dt id="faq-listing-08">My item’s status says "pending review." What does this mean?</dt>
+  <dd>Your item may be held up in a "pending review" state for a few possible reasons:
+    <ul>
+      <li>The item may have been flagged for further review by automated system checks. For instance an item with an NPAPI plugin or an item potentially containing malware could trigger this flag. These manual reviews may take up to a few business days.</li>
+      <li>The item may have already been previously removed for a legal or policy violation, and has been resubmitted. The "pending review" status means that it’s going through a compliance review. It’s hard for us to provide guidance on how long this review will take, as it depends on the nature of the issue. For questions, respond to the removal notification email from our abuse team.</li>
+      <li>The item may have an NPAPI plugin, which requires a signed
+          agreement from you. Check your email account associated with the item for an agreement notification from our abuse team.</li>
+  </dd>
+</dl>
+
+<p class="backtotop"><a href="faq.html#top">Back to top</a></p>
+<h2 id="payments"> Payments and license server </h2>
+
+<dl>
+  <dt id="faq-payments-01">What technologies does the Chrome Web Store Payments system use?</dt>
+    <dd>
+      The Chrome Web Store Payments system uses 
+      <a href="http://developers.google.com/wallet/digital/docs/">
+        Google Wallet for Digital Goods
+      </a>.
+    </dd>
+  <dt id="faq-payments-02">How can I verify that a user has paid for my app?
+    <dd>You can use the <a href="check_for_payment.html">Chrome Web Store Licensing API</a>.</dd>
+  <dt id="faq-payments-03">What technologies are used to take payments?</dt>
+    <dd>
+      <ul>
+        <li>
+          If you want to use the integrated experience available from 
+          the Chrome Web Store, then the Google Wallet for Digital Goods 
+          system will be used.
+        </li>
+        <li>
+          Alternatively, you are free to integrate with any third party 
+          payment processor. Note however that these payments will not be 
+          integrated with the store experience.
+        </li>
+      </ul>
+    </dd>
+  <dt id="faq-payments-04">I already have a credit card merchant account.  Do I really have to use Google Wallet for Digital Goods?</dt>
+    <dd>No, not to be listed in the store.  Google Wallet for Digital Goods is used to provide an intuitive, integrated experience for users of the Chrome Web Store.  You are free to use a third party payment processor.</dd>
+  <dt id="faq-payments-05">I already use Paypal.  Do I have to use Google Wallet for Digital Goods?</dt>
+    <dd>No, not to be listed in the store.  Google Wallet for Digital Goods is used to provide an intuitive, integrated experience for users of the Chrome Web Store.  However, you may list your app in the store and use any payment processor.</dd>
+  <dt id="faq-payments-06">Does the Chrome Web Store have a preferred way to do in-app payments?</dt>
+    <dd>We recommend the <a href="https://developers.google.com/commerce/wallet/digital/">Google In-App Payments API for the Web</a>, but you are free to use any in-app purchase system.</dd>
+  <dt id="faq-payments-07">Is the Chrome Web Store Licensing API final?</dt>
+    <dd>The API is mostly final, but we might add a few fields in a backward-compatible way.</dd>
+  <dt id="faq-payments-08">How does the Licensing API use OAuth?</dt>
+    <dd>Your app (the "Consumer" in OAuth terms) needs an OAuth access token so that it can use the Licensing API (the Service Provider). You (the User) can ask the Chrome Developer Dashboard to give you an access token for each app that you upload. When the dashboard generates this access token on your behalf, it uses "anonymous" for both the consumer key and secret. If you want to use your own consumer key and secret, you can use an OAuth tool such as the <a href="http://googlecodesamples.com/oauth_playground/">OAuth Playground</a> to get the access token.</dd>
+  <dt id="faq-payments-09">Does the free trial option provide time-limited trials?</dt>
+    <dd>
+      Yes, you can provide a time or feature limited trial of your application.
+      See the section on 
+      <a href="https://developers.google.com/chrome/web-store/docs/payments-otp#verifying-payment">
+        verifying payment and offering free trial
+      </a>.
+    </dd>
+  <dt id="faq-payments-10">Can a Chrome Web Store app be both paid and free trial?</dt>
+    <dd>Yes, you can mark your web app as both paid and free trial.</dd>
+</dl>
+  <dt id="faq-payments-11">I'm not based in the US, can I still sell my app or extension?</dt>
+    <dd>Yes, if you are in a <a href="pricing.html#seller">supported region</a>,
+      you'll be able to sell apps and extensions.
+    </dd>
+  <dt id="faq-payments-12">I am a developer in region X, will I be able to sell my app in region Y?</dt>
+    <dd>Yes. As long as you are a merchant in one of the listed <a
+      href="pricing.html#seller">regions</a> you will be able to sell your app in the store to any user who is in a Google Checkout buyer supported region. If you're in an unsupported region, you can use a custom payment solution to sell your app.
+    </dd>
+  <dt id="faq-payments-13">Great, I can sell my app in many regions.  How do I manage the pricing across all these currencies?</dt>
+    <dd>You may have noticed that apps are placed into a tier for pricing. This allows us to select the most competitive price point for each currency, based on a variety of local factors.
+   </dd>
+  <dt id="faq-payments-14">If pricing is set in tiers, does that mean I am locked in to the same tier across all the regions I sell my app in?</dt>
+    <dd>No. This is the really great part of the system: you can choose a price point for all the regions you want to sell in.  You have a local competitor in your region? Not a problem, you can price your app to be competitive in that market. Simply edit your app in the Chrome Web Store <a href="https://chrome.google.com/webstore/developer/dashboard">Developer Dashboard</a>, select the regions that you want to list your app in and the appropriate price tier.
+    </dd>
+  <dt id="faq-payments-15">Is there a big table that will tell me what I will receive from each region with the fees included?</dt>
+    <dd>Yes. We have a useful <a href="pricing.html#matrix">price matrix</a> for you to use.
+    </dd>
+  <dt id="faq-payments-16">If I list in all these regions, when and how do I get paid?</dt>
+    <dd>You get paid monthly, in your own currency. When an app is purchased the revenue minus the fees will be converted into your own currency.
+    </dd>
+</dl>
+
+
+<p class="backtotop"><a href="faq.html#top">Back to top</a></p>
+<h2 id="apps"> Installable web apps </h2>
+
+<dl>
+  <dt id="faq-app-01">What is the difference between packaged apps and hosted apps?</dt>
+    <dd>Hosted apps operate as traditional web apps (served via web servers and running inside of web browsers) and do not have access to the extended Chrome APIs that extensions can use.  Packaged apps are bundled into the <code>.crx</code> file and can use the extensions APIs.</dd>
+  <dt id="faq-app-02">Can I sell a packaged app?</dt>
+    <dd>Yes, but there are risks in doing so. Specifically, it is easy for motivated people to bypass payments for packaged apps. This holds true even if you have used our Licensing API in your locally stored packaged app, since locally stored content is not secure and can be modified (including calls to the Licensing API). If you’d like to have the option of blocking access to your app by unauthorized users, selling a packaged app may not be the right solution for you. An alternative to consider is moving to a hosted app model with a server-side licensing check. </dd>
+  <dt id="faq-app-02.5">Why do you allow developers the option of paid packaged apps?</dt>
+    <dd>There are good reasons to offer a paid packaged app, even with the <a href="faq.html#faq-app-02">limitations explained above</a>. Packaged apps let you easily provide functionality to your users without the overhead of managing a hosted service. Charging for a packaged app is a quick and simple way to enable a low-friction transaction if the app provides clear user value. However, it is up to the developer to decide which solution is right for him or her.
+    </dd>
+  <dt id="faq-app-03">Can installable web apps have page actions?</d>
+    <dd>No. Although packaged apps get most of the functionality of extensions, they can't have page actions.</dd>
+  <dt id="faq-app-04">Can installable web apps have browser actions?</dt>
+    <dd>No. Although packaged apps get most of the functionality of extensions, they can't have browser actions.</dd>
+  <dt id="faq-app-05">Can I use Google AdSense in my web app?</dt>
+    <dd>Yes, as Chrome Web Store apps are just web apps.</dd>
+  <dt id="faq-app-06">Can I use Google Analytics?</dt>
+    <dd>Yes. Packaged apps and extensions can use the <a href="../apps/analytics.html">Chrome Platform Analytics</a>
+    library. Hosted apps can use one of the Google Analytics libraries for standard websites (e.g.,
+    <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/">analytics.js</a>).
+    </dd>
+  <dt id="faq-app-07">What is the size limit for apps in the store?</dt>
+    <dd>The <code>.crx</code> file is currently limited to 2GB.</dd>
+  <dt id="faq-app-08">I have a free Flash game, can I host it in the store?</dt>
+    <dd>Yes.  If you want to host it on your server, it is exactly the same as hosting a Flash file on your site.  If you create a packaged app, you must include the complete app (with Flash file) in your ZIP file.</dd>
+  <dt id="faq-app-09">I have a Flash game that I would love to be able to take payments for, how can I do it?</dt>
+    <dd>Flash games are hosted inside a web page, this means that the payment infrastructure can be handled on the server that hosts the container page.  Using the Licensing API makes it easy to determine if a user has paid or not.</dd>
+  <dt id="faq-app-10">Do installable web apps run from the desktop, installed as separate apps, or otherwise operate independently of the browser?</dt>
+    <dd>No, Chrome Web Store apps are just web apps written with traditional web technologies, and are run via the browser.</dd>
+  <dt id="faq-app-11">What is actually installed by an installable web app?</dt>
+    <dd>Only the <code>.crx</code> package is actually installed into the browser; any contents not bundled into the <code>.crx</code> package will continue to be served by web servers.  Installable web apps are not installed into the base operating system, desktop, or outside of the browser.</dd>
+  <dt id="faq-app-12">Do Chrome Web Store apps work in browsers other than Chrome?</dt>
+    <dd>Hosted apps are built with standard and common web technologies, and depending on the features you choose, will work in most or all browsers.  The <code>.crx</code> package information you create to list the app in the store will not work with other browsers, but users do not need the <code>.crx</code> package to access a hosted web app in other browsers. (They can always directly access the app.)  Packaged apps, because they are packaged in <code>.crx</code> files and might access the Google Chrome Extension APIs, will not work in other browsers.</dd>
+  <dt id="faq-app-13">Will users of other browsers be able to install apps directly from the Chrome Web Store?</dt>
+    <dd>Not at this point.  However, they will be able to access your app via directly typing in the URL, launching bookmarks, and discovering your app via search engines.  We hope that some form of installable web apps is a concept that appeals to other browsers and will eventually be a cross-browser feature.</dd>
+  <dt id="faq-app-14">Do installable web apps work on different operating systems?</dt>
+    <dd>Yes.  They are just web apps, and are typically written with web technologies like HTML, CSS, and JavaScript.</dd>
+  <dt id="faq-app-15">How do I store my content for offline access?</dt>
+    <dd>This answer to this depends on the type of content and the storage requirements.
+    <ul>
+      <li>For a packaged app or extension, you can put all HTML, CSS, JavaScript, images, and other assets into your <code>.crx</code> file. This embeds everything you need into the installable <code>.crx</code> file.  This bundling might be good for apps with content that rarely changes, such as ebooks. Chrome provides an update mechanism to automatically deliver your updates to your users.</li>
+      <li>The <a href="http://www.html5rocks.com/tutorials/appcache/beginner/">App Cache</a>, an HTML5 feature, is a good way to locally cache resources such as HTML, CSS, and JavaScript.  These resources aren't included in the <code>.crx</code> file, but are downloaded the first time the app is accessed. They are not downloaded again until the App Cache file itself is changed. The App Cache is good for enabling fast startup, while retaining control over asset versioning.</li>
+      <li>Local Storage, another HTML5 feature, is a key/value storage system that can store strings. Local Storage is often used in place of some cookies, and it lives longer than the session. There is no way, however, to send a populated Local Storage database on application install or load. You will need to populate the Local Storage programmatically.
+      <li>WebSQL DB is a full SQL database embedded in the Chrome browser. While stalled in the standards process, this is a very powerful way to store highly structured data.  Again, there is no way to send a populated database on application install or load, so you will have to programmatically populate the database. Also, this database can only store text, but you can use the data URI scheme to store binary data.</li>
+  <li>In the future, the <a href="http://www.w3.org/TR/FileAPI/">File APIs</a> will be a useful addition to this array of offline storage options, as they allow your web app to read and write files to a locally managed file store.  These APIs are not fully supported by Chrome, but follow the <a href="http://googlechromereleases.blogspot.com/">Google Chrome Releases blog</a> to stay up to date.</li>
+  </ul>
+  <p>For more details, read <a href="http://www.html5rocks.com/tutorials/offline/whats-offline/">a more detailed article on HTML5 offline options</a>.</p></dd>
+  <dt id="faq-app-16">What makes a good web app?</dt>
+    <dd>While this is a subjective question, we have some notes in the article <a href="https://developers.google.com/chrome/apps/">Thinking in Web Apps</a>.  Briefly, and generally speaking, apps that are Big Screen, have a Rich Experience, are Good At One Thing, are Visually Appealing, and are Fast will be web apps that people love to use.</dd>
+  <dt id="faq-app-17">What is the screen resolution for Chrome Web Store apps?</dt>
+    <dd>Typical screen resolutions are 1024x768 and 1280x1024, but because users are free to resize their browser windows, we recommend fluid, full screen layouts that resize gracefully down to 1024x768 (but then should scale up to very large, as well).  Consider using Google Analytics to see what the most common screen resolutions are for your app's users.</dd>
+  <dt id="faq-app-18">Do apps run in full screen?</dt>
+    <dd>Apps can run in full screen mode using the <a
+            href="http://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html">Fullscreen API</a>. See this <a href="http://updates.html5rocks.com/2011/10/Let-Your-Content-Do-the-Talking-Fullscreen-API">HTML5Rocks update</a> for more information on using this API in your application.</dd>
+  <dt id="faq-app-19">Will apps work on Android?</dt>
+    <dd>If your app is pure HTML, CSS3, and JavaScript and is hosted on your servers there is a good chance that it will work in the browser on Android. However, <code>.crx</code> files (including packaged apps) are not supported on Android. Users cannot install their apps onto the Android browser, but they can most likely use those apps by directly accessing the app's URL.</dd>
+  <dt id="faq-app-20">Will apps work on Google TV?</dt>
+    <dd>Google TV runs the Chrome browser, so it should be able to run your hosted web app.  Installing apps directly from Chrome Web Store will not be available on Google TV at launch however. Users may directly type the URL for your hosted app, or use traditional search to find and start your app.</dd>
+  <dt id="faq-app-21">What can I do to protect the content of my web app?</dt>
+    <dd>You can determine if a user has paid for access to your app by using the Chrome Web Store Licensing API.  If the user hasn't bought the app you deny access to that resource. Ultimately, Chrome Web Store apps are just web apps, so the same considerations for content protection must be taken into account.</dd>
+  <dt id="faq-app-22">What happens when a user clicks an external link in my app?</dt>
+    <dd>The same thing as if they clicked a link that's internal to your app: the browser follows the link, using the current tab.</dd>
+  <dt id="faq-app-23">How should my app handle the back button?</dt>
+    <dd>As with all web apps, you cannot rely on the back button always being present. Users might hide them, screen readers might not use them correctly, and so on. You should design your app to correctly support both back buttons and application-defined navigation.</dd>
+  <dt id="faq-app-24">How can I detect whether my app is running as an installed web app and via the Chrome app launcher (and not just via a bookmark or link)?  </dt>
+    <dd>Use JavaScript to check whether <code>window.chrome.app.isInstalled</code> is defined. If it is, the app is running from the Chrome app launcher. Here's an example of the code you'd use:
+<pre>
+if (window.chrome.app.isInstalled) {
+ <em>// You're running as an installed app, via the app launcher!</em>
+ } else {
+  <em>// You're running via a bookmark/link.</em>
+}
+</pre>
+    </dd>
+  <dt id="faq-app-25">My app is available in multiple regions. Can I list it in different categories for each region?</dt>
+  <dd>No, the categories will be consistent across regions. If you list in one category, you will be listed in that category in all regions.
+  </dd>
+
+  <dt id="faq-app-26">What is the difference between using inline installation and hosting a .crx file on my own site?</dt>
+  <dd>Both <a href="inline_installation.html">inline installation</a> and
+  hosting your own .crx file allow you to install items directly from your site
+  (instead of sending users away to the Chrome Web Store). Inline installation has
+  two advantages over self-hosted .crx files. Since inline installs are tied to
+  a store entry that has user reviews and ratings, they are considered safer.
+  Therefore, users will not see the "Extensions, apps, and themes can harm your
+  computer..." download bar when the extension or app is about to be installed.
+  Additionally, you don't have to maintain two different .crx files (one for the
+  store and one for self-hosting), if you still want your item to be
+  discoverable in the store.
+  </dd>
+
+  <dt id="faq-app-27">Is inline installation supported with all items?</dt>
+  <dd>Inline installation is only supported for free Chrome Web Store items.
+  If you use it with an item that requires payment at installation time, the
+  failure callback of the install method will be invoked, and the Chrome Web
+  Store page for the item will be opened in a new tab.</dd>
+
+</dl>
+
+
+<p class="backtotop"><a href="faq.html#top">Back to top</a></p>
+<h2 id="extensions"> Extensions </h2>
+
+<dl>
+  <dt id="faq-extensions-01">Can I sell extensions in the store?</dt>
+    <dd>Yes! You can sell your Chrome Extension using 
+      <a href="https://developers.google.com/chrome/web-store/docs/payments-otp">one-time payments</a>.</dd>
+  <dt id="faq-extensions-02">Can I use the Licensing API with extensions?</dt>
+    <dd>Yes, see the section on <a href="https://developers.google.com/chrome/web-store/docs/payments-otp#verifying-payment">
+        verifying payment and offering free trial
+      </a>.
+    </dd>
+</dl>
+
+<p class="backtotop"><a href="faq.html#top">Back to top</a></p>
+<h2 id="themes"> Themes </h2>
+
+<dl>
+  <dt id="faq-themes-01">Can I sell themes in the store?</dt>
+    <dd>Yes! You can sell your Chrome Theme using 
+      <a href="https://developers.google.com/chrome/web-store/docs/payments-otp">one-time payments</a>.</dd>
+  <dt id="faq-themes-02">Can I use the Licensing API with themes?</dt>
+    <dd>No, themes have no code or server-side components.</dd>
+</dl>
+
+
+<p class="backtotop"><a href="faq.html#top">Back to top</a></p>
+    
+    <footer id="cc-info">
+      <button id="send-feedback" class="google-button" data-feedback>Send Feedback</button>
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo"><a href="http://creativecommons.org/licenses/by/3.0/"><img src="../static/images/cc_by.png" alt="Licensed Creative Commons by Attribution"></a></p>
+    </footer>
+    <nav class="inline-toc no-permalink">
+      <section class="related">
+                      <h3 title="">Help</h3>
+      <ol class="toc">
+                              <li>
+                                <a href="best_practices.html">Best Practices</a>
+                              </li>
+                              <li>
+                                <a href="faq.html" class="active">FAQ</a>
+                              </li>
+                              <li>
+                                <a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                              </li>
+                              <li>
+                                <a href="articles">Articles</a>
+                              </li>
+      </ol>
+      </section>
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="faq.html#general"
+          > General </a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#development"
+          > Development </a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#listing"
+          > Creating a listing </a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#payments"
+          > Payments and license server </a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#apps"
+          > Installable web apps </a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#extensions"
+          > Extensions </a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#themes"
+          > Themes </a>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="faq.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../static/js/fatnav.js"></script>
+    <script src="../static/js/article.js"></script>
+    <script src="../static/js/prettify.js"></script>
+    <script src="../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../static/js/site.js"></script>
+  </body>
+</html>

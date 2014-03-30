@@ -1,0 +1,1475 @@
+<link href="../../_static/css/nacl.css" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../../../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../../../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../../../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>pp::FileRef Class Reference - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="classpp_1_1_file_ref.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../../../index.html">
+          <img alt="Chrome: developer" src="../../../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../../../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../../../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../../../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="../../../apps/index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="../../../apps/first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="../../../apps/app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../../../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="../../../apps/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../../../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="../../../apps/app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="../../../apps/cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="../../../apps/app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_usb.html">USB</a>
+                            </li>
+                            <li><a href="../../../apps/app_serial">Serial</a>
+                            </li>
+                            <li><a href="../../../apps/app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="../../../apps/app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="../../../apps/angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="../../../apps/sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="../../../apps/google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../apps/analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../../apps/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../../apps/webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="../../../apps/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../../apps/app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="../../../apps/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/overview.html">Overview</a>
+                            </li>
+                            <li><a href="../../../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../../../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../../../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="../../../apps/activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../../../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../../../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../../../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../../../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../../../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../../../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../../../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../../../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../../../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../../../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../../overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../../nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../../sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../../sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../../sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devguide/tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../../devguide/tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../../devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devguide/devcycle/building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="../../devguide/devcycle/building.html">Building</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/running.html">Running</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devguide/coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../../devguide/coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../../devguide/coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../../devguide/coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../../devguide/coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../../devguide/coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../../devguide/coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../../devguide/coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../../devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../../devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devguide/distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../../glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../../reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../../reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../../reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../../reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../../help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../../publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../../community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../../../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../../../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../../../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../../../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../../../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../../../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../../../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../../../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../../../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../../../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <div itemprop="articleBody">
+
+
+<h1>pp::FileRef Class Reference</h1>
+<div id="doxygen-ref">
+  <div>
+<!-- Generated by Doxygen 1.7.6.1 -->
+
+
+
+</div>
+<!--header-->
+<div class="contents">
+<!-- doxytag: class="pp::FileRef" --><!-- doxytag: inherits="pp::Resource" --><div class="dynheader">
+Inheritance diagram for pp::FileRef:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpp_1_1_file_ref__inherit__graph.png" border="0" usemap="#pp_1_1_file_ref_inherit__map" alt="Inheritance graph" /></div>
+<map name="pp_1_1_file_ref_inherit__map" id="pp_1_1_file_ref_inherit__map">
+<area shape="rect" id="node2" href="classpp_1_1_resource.html" title="A reference counted module resource." alt="" coords="5,5,109,35"></area></map>
+<center><span class="legend">[<a href="http://developer.chrome.com/native-client/pepper_stable/cpp/graph_legend.html">legend</a>]</span></center></div>
+<p><a href="classpp_1_1_file_ref-members.html">List of all members.</a></p>
+<h2>
+Public Member Functions</h2><table class="memberdecls">
+
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpp_1_1_file_ref.html#a4c79db956157379aa877e57ff06d2c10">FileRef</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpp_1_1_file_ref.html#a3345910589954a8fb573cdf2c82166b0">FileRef</a> (PP_Resource resource)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpp_1_1_file_ref.html#a50652a877b8c02c736f86b1d69fc9b11">FileRef</a> (<a class="el" href="namespacepp.html#a339083c1beec620267bf8b3c55decaa5">PassRef</a>, PP_Resource resource)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpp_1_1_file_ref.html#a95aad2e3c8d9b52b1ac09279c8cf8113">FileRef</a> (const <a class="el" href="classpp_1_1_file_system.html">FileSystem</a> &amp;file_system, const char *path)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpp_1_1_file_ref.html#a9a66f16e7d9a4198c206144bc3498ec5">FileRef</a> (const <a class="el" href="classpp_1_1_file_ref.html">FileRef</a> &amp;other)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">PP_FileSystemType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpp_1_1_file_ref.html#a71de4e20d117efcf4ac8000c2149e3f8">GetFileSystemType</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpp_1_1_var.html">Var</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpp_1_1_file_ref.html#acb186b79d906675e288ff5d0d0a7eab2">GetName</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpp_1_1_var.html">Var</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpp_1_1_file_ref.html#a657da250b3ff47ca8f1c616f9ebee6a0">GetPath</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpp_1_1_file_ref.html">FileRef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpp_1_1_file_ref.html#a514534c1a31732e328e062bdaa194919">GetParent</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpp_1_1_file_ref.html#a4efd10cfc69432acb57b2315c5aba44e">MakeDirectory</a> (const <a class="el" href="classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;cc)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpp_1_1_file_ref.html#acf2f9918c2d1b95e64243a2097f2b5ff">MakeDirectoryIncludingAncestors</a> (const <a class="el" href="classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;cc)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpp_1_1_file_ref.html#ab8e5d24d96c7408b140b74aa0ed8d7ca">Touch</a> (PP_Time last_access_time, PP_Time last_modified_time, const <a class="el" href="classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;cc)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpp_1_1_file_ref.html#abfdb9c3db04b0ef2591953f79c255873">Delete</a> (const <a class="el" href="classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;cc)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpp_1_1_file_ref.html#ab1d7f8a63643561a6529952faa881505">Rename</a> (const <a class="el" href="classpp_1_1_file_ref.html">FileRef</a> &amp;new_file_ref, const <a class="el" href="classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;cc)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpp_1_1_file_ref.html#a6de22adc35e4485dfba663dad64c15fb">Query</a> (const <a class="el" href="classpp_1_1_completion_callback_with_output.html">CompletionCallbackWithOutput</a>&lt; PP_FileInfo &gt; &amp;callback)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpp_1_1_file_ref.html#af16f7bba00d624a16a1d9b9b09347c8c">ReadDirectoryEntries</a> (const <a class="el" href="classpp_1_1_completion_callback_with_output.html">CompletionCallbackWithOutput</a>&lt; std::vector&lt; <a class="el" href="classpp_1_1_directory_entry.html">DirectoryEntry</a> &gt; &gt; &amp;callback)</td></tr>
+</table>
+<hr /><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>The <code><a class="el" href="classpp_1_1_file_ref.html" title='The FileRef class represents a "weak pointer" to a file in a file system.'>FileRef</a></code> class represents a "weak pointer" to a file in a file system. </p>
+</div><hr /><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a4c79db956157379aa877e57ff06d2c10"></a><!-- doxytag: member="pp::FileRef::FileRef" ref="a4c79db956157379aa877e57ff06d2c10" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="classpp_1_1_file_ref.html#a4c79db956157379aa877e57ff06d2c10">pp::FileRef::FileRef</a> </td>
+<td>(</td>
+<td class="paramname"></td><td>)</td>
+<td><code> [inline]</code></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p>Default constructor for creating an <a class="el" href="classpp_1_1_resource.html#a859068e34cdc2dc0b78754c255323aa9" title="This functions determines if this resource is invalid or uninitialized.">is_null()</a> <code><a class="el" href="classpp_1_1_file_ref.html" title='The FileRef class represents a "weak pointer" to a file in a file system.'>FileRef</a></code> object. </p>
+</div>
+</div>
+<a class="anchor" id="a3345910589954a8fb573cdf2c82166b0"></a><!-- doxytag: member="pp::FileRef::FileRef" ref="a3345910589954a8fb573cdf2c82166b0" args="(PP_Resource resource)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="classpp_1_1_file_ref.html#a4c79db956157379aa877e57ff06d2c10">pp::FileRef::FileRef</a> </td>
+<td>(</td>
+<td class="paramtype">PP_Resource&#160;</td>
+<td class="paramname"><em>resource</em></td><td>)</td>
+<td><code> [explicit]</code></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p>A constructor used when you have an existing PP_Resource for a <a class="el" href="classpp_1_1_file_ref.html" title='The FileRef class represents a "weak pointer" to a file in a file system.'>FileRef</a> and which to create a C++ object that takes an additional reference to the resource. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">resource</td><td>A PP_Resource corresponding to file reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a50652a877b8c02c736f86b1d69fc9b11"></a><!-- doxytag: member="pp::FileRef::FileRef" ref="a50652a877b8c02c736f86b1d69fc9b11" args="(PassRef, PP_Resource resource)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="classpp_1_1_file_ref.html#a4c79db956157379aa877e57ff06d2c10">pp::FileRef::FileRef</a> </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="namespacepp.html#a339083c1beec620267bf8b3c55decaa5">PassRef</a>&#160;</td>
+<td class="paramname">, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">PP_Resource&#160;</td>
+<td class="paramname"><em>resource</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p>A constructor used when you have received a PP_Resource as a return value that has already been reference counted. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">resource</td><td>A PP_Resource corresponding to file reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a95aad2e3c8d9b52b1ac09279c8cf8113"></a><!-- doxytag: member="pp::FileRef::FileRef" ref="a95aad2e3c8d9b52b1ac09279c8cf8113" args="(const FileSystem &amp;file_system, const char *path)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="classpp_1_1_file_ref.html#a4c79db956157379aa877e57ff06d2c10">pp::FileRef::FileRef</a> </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="classpp_1_1_file_system.html">FileSystem</a> &amp;&#160;</td>
+<td class="paramname"><em>file_system</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char *&#160;</td>
+<td class="paramname"><em>path</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p>A constructor that creates a weak pointer to a file in the given file system. </p>
+<p>File paths are POSIX style.</p>
+<p>If the <code>path</code> is malformed, the resulting <code><a class="el" href="classpp_1_1_file_ref.html" title='The FileRef class represents a "weak pointer" to a file in a file system.'>FileRef</a></code> will have a null <code>PP_Resource</code>.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">file_system</td><td>A <code><a class="el" href="classpp_1_1_file_system.html" title="The FileSystem class identifies the file system type associated with a file.">FileSystem</a></code> corresponding to a file system type. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>A path to the file. Must begin with a '/' character. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a9a66f16e7d9a4198c206144bc3498ec5"></a><!-- doxytag: member="pp::FileRef::FileRef" ref="a9a66f16e7d9a4198c206144bc3498ec5" args="(const FileRef &amp;other)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="classpp_1_1_file_ref.html#a4c79db956157379aa877e57ff06d2c10">pp::FileRef::FileRef</a> </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="classpp_1_1_file_ref.html">FileRef</a> &amp;&#160;</td>
+<td class="paramname"><em>other</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p>The copy constructor for <code><a class="el" href="classpp_1_1_file_ref.html" title='The FileRef class represents a "weak pointer" to a file in a file system.'>FileRef</a></code>. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>A pointer to a <code><a class="el" href="classpp_1_1_file_ref.html" title='The FileRef class represents a "weak pointer" to a file in a file system.'>FileRef</a></code>. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<hr /><h2>Member Function Documentation</h2>
+<a class="anchor" id="abfdb9c3db04b0ef2591953f79c255873"></a><!-- doxytag: member="pp::FileRef::Delete" ref="abfdb9c3db04b0ef2591953f79c255873" args="(const CompletionCallback &amp;cc)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t <a class="el" href="classpp_1_1_file_ref.html#abfdb9c3db04b0ef2591953f79c255873">pp::FileRef::Delete</a> </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;&#160;</td>
+<td class="paramname"><em>cc</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classpp_1_1_file_ref.html#abfdb9c3db04b0ef2591953f79c255873" title="Delete() deletes a file or directory.">Delete()</a> deletes a file or directory. </p>
+<p>If <code>file_ref</code> refers to a directory, then the directory must be empty. It is an error to delete a file or directory that is in use. It is not valid to delete a file in the external file system.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">cc</td><td>A <code><a class="el" href="classpp_1_1_completion_callback.html" title="This API enables you to implement and receive callbacks when Pepper operations complete asynchronousl...">CompletionCallback</a></code> to be called upon completion of <a class="el" href="classpp_1_1_file_ref.html#abfdb9c3db04b0ef2591953f79c255873" title="Delete() deletes a file or directory.">Delete()</a>.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An int32_t containing an error code from <code>pp_errors.h</code>. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a71de4e20d117efcf4ac8000c2149e3f8"></a><!-- doxytag: member="pp::FileRef::GetFileSystemType" ref="a71de4e20d117efcf4ac8000c2149e3f8" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">PP_FileSystemType <a class="el" href="classpp_1_1_file_ref.html#a71de4e20d117efcf4ac8000c2149e3f8">pp::FileRef::GetFileSystemType</a> </td>
+<td>(</td>
+<td class="paramname"></td><td>)</td>
+<td> const</td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classpp_1_1_file_ref.html#a71de4e20d117efcf4ac8000c2149e3f8" title="GetFileSystemType() returns the type of the file system.">GetFileSystemType()</a> returns the type of the file system. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A <code>PP_FileSystemType</code> with the file system type if valid or <code>PP_FILESYSTEMTYPE_INVALID</code> if the provided resource is not a valid file reference. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="acb186b79d906675e288ff5d0d0a7eab2"></a><!-- doxytag: member="pp::FileRef::GetName" ref="acb186b79d906675e288ff5d0d0a7eab2" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="classpp_1_1_var.html">Var</a> <a class="el" href="classpp_1_1_file_ref.html#acb186b79d906675e288ff5d0d0a7eab2">pp::FileRef::GetName</a> </td>
+<td>(</td>
+<td class="paramname"></td><td>)</td>
+<td> const</td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classpp_1_1_file_ref.html#acb186b79d906675e288ff5d0d0a7eab2" title="GetName() returns the name of the file.">GetName()</a> returns the name of the file. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A <code><a class="el" href="classpp_1_1_var.html" title="A generic type used for passing data types between the module and the page.">Var</a></code> containing the name of the file. The value returned by this function does not include any path components (such as the name of the parent directory, for example). It is just the name of the file. Use <a class="el" href="classpp_1_1_file_ref.html#a657da250b3ff47ca8f1c616f9ebee6a0" title="GetPath() returns the absolute path of the file.">GetPath()</a> to get the full file path. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a514534c1a31732e328e062bdaa194919"></a><!-- doxytag: member="pp::FileRef::GetParent" ref="a514534c1a31732e328e062bdaa194919" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="classpp_1_1_file_ref.html">FileRef</a> <a class="el" href="classpp_1_1_file_ref.html#a514534c1a31732e328e062bdaa194919">pp::FileRef::GetParent</a> </td>
+<td>(</td>
+<td class="paramname"></td><td>)</td>
+<td> const</td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classpp_1_1_file_ref.html#a514534c1a31732e328e062bdaa194919" title="GetParent() returns the parent directory of this file.">GetParent()</a> returns the parent directory of this file. </p>
+<p>If <code>file_ref</code> points to the root of the filesystem, then the root is returned.</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A <code><a class="el" href="classpp_1_1_file_ref.html" title='The FileRef class represents a "weak pointer" to a file in a file system.'>FileRef</a></code> containing the parent directory of the file. This function fails if the file system type is <code>PP_FileSystemType_External</code>. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a657da250b3ff47ca8f1c616f9ebee6a0"></a><!-- doxytag: member="pp::FileRef::GetPath" ref="a657da250b3ff47ca8f1c616f9ebee6a0" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="classpp_1_1_var.html">Var</a> <a class="el" href="classpp_1_1_file_ref.html#a657da250b3ff47ca8f1c616f9ebee6a0">pp::FileRef::GetPath</a> </td>
+<td>(</td>
+<td class="paramname"></td><td>)</td>
+<td> const</td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classpp_1_1_file_ref.html#a657da250b3ff47ca8f1c616f9ebee6a0" title="GetPath() returns the absolute path of the file.">GetPath()</a> returns the absolute path of the file. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A <code><a class="el" href="classpp_1_1_var.html" title="A generic type used for passing data types between the module and the page.">Var</a></code> containing the absolute path of the file. This function fails if the file system type is <code>PP_FileSystemType_External</code>. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a4efd10cfc69432acb57b2315c5aba44e"></a><!-- doxytag: member="pp::FileRef::MakeDirectory" ref="a4efd10cfc69432acb57b2315c5aba44e" args="(const CompletionCallback &amp;cc)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t <a class="el" href="classpp_1_1_file_ref.html#a4efd10cfc69432acb57b2315c5aba44e">pp::FileRef::MakeDirectory</a> </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;&#160;</td>
+<td class="paramname"><em>cc</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classpp_1_1_file_ref.html#a4efd10cfc69432acb57b2315c5aba44e" title="MakeDirectory() makes a new directory in the file system.">MakeDirectory()</a> makes a new directory in the file system. </p>
+<p>It is not valid to make a directory in the external file system. <b>Note:</b> Use <a class="el" href="classpp_1_1_file_ref.html#acf2f9918c2d1b95e64243a2097f2b5ff" title="MakeDirectoryIncludingAncestors() makes a new directory in the file system as well as any parent dire...">MakeDirectoryIncludingAncestors()</a> to create parent directories.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">cc</td><td>A <code><a class="el" href="classpp_1_1_completion_callback.html" title="This API enables you to implement and receive callbacks when Pepper operations complete asynchronousl...">CompletionCallback</a></code> to be called upon completion of <a class="el" href="classpp_1_1_file_ref.html#a4efd10cfc69432acb57b2315c5aba44e" title="MakeDirectory() makes a new directory in the file system.">MakeDirectory()</a>.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An int32_t containing an error code from <code>pp_errors.h</code>. Succeeds if the directory already exists. Fails if ancestor directortories do not exist (see MakeDirectoryIncludingAncestors for the alternative). </dd></dl>
+</div>
+</div>
+<a class="anchor" id="acf2f9918c2d1b95e64243a2097f2b5ff"></a><!-- doxytag: member="pp::FileRef::MakeDirectoryIncludingAncestors" ref="acf2f9918c2d1b95e64243a2097f2b5ff" args="(const CompletionCallback &amp;cc)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t <a class="el" href="classpp_1_1_file_ref.html#acf2f9918c2d1b95e64243a2097f2b5ff">pp::FileRef::MakeDirectoryIncludingAncestors</a> </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;&#160;</td>
+<td class="paramname"><em>cc</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classpp_1_1_file_ref.html#acf2f9918c2d1b95e64243a2097f2b5ff" title="MakeDirectoryIncludingAncestors() makes a new directory in the file system as well as any parent dire...">MakeDirectoryIncludingAncestors()</a> makes a new directory in the file system as well as any parent directories. </p>
+<p>It is not valid to make a directory in the external file system.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">cc</td><td>A <code><a class="el" href="classpp_1_1_completion_callback.html" title="This API enables you to implement and receive callbacks when Pepper operations complete asynchronousl...">CompletionCallback</a></code> to be called upon completion of <a class="el" href="classpp_1_1_file_ref.html#acf2f9918c2d1b95e64243a2097f2b5ff" title="MakeDirectoryIncludingAncestors() makes a new directory in the file system as well as any parent dire...">MakeDirectoryIncludingAncestors()</a>.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An int32_t containing an error code from <code>pp_errors.h</code>. Succeeds if the directory already exists. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a6de22adc35e4485dfba663dad64c15fb"></a><!-- doxytag: member="pp::FileRef::Query" ref="a6de22adc35e4485dfba663dad64c15fb" args="(const CompletionCallbackWithOutput&lt; PP_FileInfo &gt; &amp;callback)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t <a class="el" href="classpp_1_1_file_ref.html#a6de22adc35e4485dfba663dad64c15fb">pp::FileRef::Query</a> </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="classpp_1_1_completion_callback_with_output.html">CompletionCallbackWithOutput</a>&lt; PP_FileInfo &gt; &amp;&#160;</td>
+<td class="paramname"><em>callback</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classpp_1_1_file_ref.html#a6de22adc35e4485dfba663dad64c15fb" title="Query() queries info about a file or directory.">Query()</a> queries info about a file or directory. </p>
+<p>You must have access to read this file or directory if it exists in the external filesystem.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>A <code><a class="el" href="classpp_1_1_completion_callback_with_output.html" title="A CompletionCallbackWithOutput defines a completion callback that additionally stores a pointer to so...">CompletionCallbackWithOutput</a></code> to be called upon completion of <a class="el" href="classpp_1_1_file_ref.html#a6de22adc35e4485dfba663dad64c15fb" title="Query() queries info about a file or directory.">Query()</a>.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An int32_t containing an error code from <code>pp_errors.h</code>. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="af16f7bba00d624a16a1d9b9b09347c8c"></a><!-- doxytag: member="pp::FileRef::ReadDirectoryEntries" ref="af16f7bba00d624a16a1d9b9b09347c8c" args="(const CompletionCallbackWithOutput&lt; std::vector&lt; DirectoryEntry &gt; &gt; &amp;callback)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t <a class="el" href="classpp_1_1_file_ref.html#af16f7bba00d624a16a1d9b9b09347c8c">pp::FileRef::ReadDirectoryEntries</a> </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="classpp_1_1_completion_callback_with_output.html">CompletionCallbackWithOutput</a>&lt; std::vector&lt; <a class="el" href="classpp_1_1_directory_entry.html">DirectoryEntry</a> &gt; &gt; &amp;&#160;</td>
+<td class="paramname"><em>callback</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classpp_1_1_file_ref.html#af16f7bba00d624a16a1d9b9b09347c8c" title="ReadDirectoryEntries() Reads all entries in the directory.">ReadDirectoryEntries()</a> Reads all entries in the directory. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">cc</td><td>A <code><a class="el" href="classpp_1_1_completion_callback_with_output.html" title="A CompletionCallbackWithOutput defines a completion callback that additionally stores a pointer to so...">CompletionCallbackWithOutput</a></code> to be called upon completion of <a class="el" href="classpp_1_1_file_ref.html#af16f7bba00d624a16a1d9b9b09347c8c" title="ReadDirectoryEntries() Reads all entries in the directory.">ReadDirectoryEntries()</a>. On success, the directory entries will be passed to the given function.</td></tr>
+</table>
+</dd>
+</dl>
+<p>Normally you would use a <a class="el" href="classpp_1_1_completion_callback_factory.html" title="CompletionCallbackFactory&lt;T&gt; may be used to create CompletionCallback objects that are bound to membe...">CompletionCallbackFactory</a> to allow callbacks to be bound to your class. See <a class="el" href="completion__callback__factory_8h.html" title="This file defines the API to create CompletionCallback objects that are bound to member functions...">completion_callback_factory.h</a> for more discussion on how to use this. Your callback will generally look like:</p>
+<div class="fragment"><pre class="fragment">   <span class="keywordtype">void</span> OnReadDirectoryEntries(
+       int32_t result,
+       <span class="keyword">const</span> std::vector&lt;DirectoryEntry&gt;&amp; entries) {
+     <span class="keywordflow">if</span> (result == PP_OK)
+       <span class="comment">// use entries...</span>
+   }
+</pre></div><dl class="return"><dt><b>Returns:</b></dt><dd>An int32_t containing an error code from <code>pp_errors.h</code>. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ab1d7f8a63643561a6529952faa881505"></a><!-- doxytag: member="pp::FileRef::Rename" ref="ab1d7f8a63643561a6529952faa881505" args="(const FileRef &amp;new_file_ref, const CompletionCallback &amp;cc)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t <a class="el" href="classpp_1_1_file_ref.html#ab1d7f8a63643561a6529952faa881505">pp::FileRef::Rename</a> </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="classpp_1_1_file_ref.html">FileRef</a> &amp;&#160;</td>
+<td class="paramname"><em>new_file_ref</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a class="el" href="classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;&#160;</td>
+<td class="paramname"><em>cc</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classpp_1_1_file_ref.html#ab1d7f8a63643561a6529952faa881505" title="Rename() renames a file or directory.">Rename()</a> renames a file or directory. </p>
+<p>Argument <code>new_file_ref</code> must refer to files in the same file system as in this object. It is an error to rename a file or directory that is in use. It is not valid to rename a file in the external file system.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">new_file_ref</td><td>A <code><a class="el" href="classpp_1_1_file_ref.html" title='The FileRef class represents a "weak pointer" to a file in a file system.'>FileRef</a></code> corresponding to a new file reference. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">cc</td><td>A <code><a class="el" href="classpp_1_1_completion_callback.html" title="This API enables you to implement and receive callbacks when Pepper operations complete asynchronousl...">CompletionCallback</a></code> to be called upon completion of <a class="el" href="classpp_1_1_file_ref.html#ab1d7f8a63643561a6529952faa881505" title="Rename() renames a file or directory.">Rename()</a>.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An int32_t containing an error code from <code>pp_errors.h</code>. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ab8e5d24d96c7408b140b74aa0ed8d7ca"></a><!-- doxytag: member="pp::FileRef::Touch" ref="ab8e5d24d96c7408b140b74aa0ed8d7ca" args="(PP_Time last_access_time, PP_Time last_modified_time, const CompletionCallback &amp;cc)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t <a class="el" href="classpp_1_1_file_ref.html#ab8e5d24d96c7408b140b74aa0ed8d7ca">pp::FileRef::Touch</a> </td>
+<td>(</td>
+<td class="paramtype">PP_Time&#160;</td>
+<td class="paramname"><em>last_access_time</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">PP_Time&#160;</td>
+<td class="paramname"><em>last_modified_time</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a class="el" href="classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;&#160;</td>
+<td class="paramname"><em>cc</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="classpp_1_1_file_ref.html#ab8e5d24d96c7408b140b74aa0ed8d7ca" title="Touch() Updates time stamps for a file.">Touch()</a> Updates time stamps for a file. </p>
+<p>You must have write access to the file if it exists in the external filesystem.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">last_access_time</td><td>The last time the file was accessed. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">last_modified_time</td><td>The last time the file was modified. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">cc</td><td>A <code><a class="el" href="classpp_1_1_completion_callback.html" title="This API enables you to implement and receive callbacks when Pepper operations complete asynchronousl...">CompletionCallback</a></code> to be called upon completion of <a class="el" href="classpp_1_1_file_ref.html#ab8e5d24d96c7408b140b74aa0ed8d7ca" title="Touch() Updates time stamps for a file.">Touch()</a>.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An int32_t containing an error code from <code>pp_errors.h</code>. </dd></dl>
+</div>
+</div>
+<hr />The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="file__ref_8h.html">file_ref.h</a></li>
+</ul>
+</div><!-- contents -->
+</div>
+    
+    <footer id="cc-info">
+      <button id="send-feedback" class="google-button" data-feedback>Send Feedback</button>
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo"><a href="http://creativecommons.org/licenses/by/3.0/"><img src="../../../static/images/cc_by.png" alt="Licensed Creative Commons by Attribution"></a></p>
+    </footer>
+    <nav class="inline-toc no-permalink">
+      <section class="related">
+      <ol class="toc">
+      </ol>
+      </section>
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="classpp_1_1_file_ref.html#"
+          >Public Member Functions</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="classpp_1_1_file_ref.html#"
+          >Detailed Description</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="classpp_1_1_file_ref.html#"
+          >Constructor  Destructor Documentation</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="classpp_1_1_file_ref.html#"
+          >Member Function Documentation</a>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="classpp_1_1_file_ref.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../../../static/js/fatnav.js"></script>
+    <script src="../../../static/js/article.js"></script>
+    <script src="../../../static/js/prettify.js"></script>
+    <script src="../../../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../../../static/js/site.js"></script>
+  </body>
+</html>

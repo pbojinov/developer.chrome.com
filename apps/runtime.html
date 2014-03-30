@@ -1,0 +1,2272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>chrome.runtime - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="manifest/runtime.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../index.html">
+          <img alt="Chrome: developer" src="../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="app_usb.html">USB</a>
+                            </li>
+                            <li><a href="app_serial">Serial</a>
+                            </li>
+                            <li><a href="app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="overview.html">Overview</a>
+                            </li>
+                            <li><a href="../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../native-client/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../native-client/nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../native-client/sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../native-client/sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/devcycle/building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/devcycle/building.html">Building</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/running.html">Running</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../native-client/reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../native-client/reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../native-client/help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../native-client/publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../native-client/community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article>
+  <div itemprop="articleBody" class="api">
+    <h1>chrome.runtime</h1>
+    <table class="intro" id="intro">
+      <tr>
+        <td class="title">Description:</td>
+        <td>
+            Use the <code>chrome.runtime</code> API to retrieve the background page, return details about the manifest, and listen for and respond to events in the app or extension lifecycle. You can also use this API to convert the relative path of URLs to fully-qualified URLs.
+                    <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Availability:</td>
+        <td>
+            Stable since Chrome 22.
+            <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Learn More:</td>
+        <td>
+            <a href="app_lifecycle.html">
+            Manage App Lifecycle
+                    </a>
+            <br>
+            <a href="event_pages.html">
+            Event Pages
+                    </a>
+            <br>
+        </td>
+      </tr>
+    </table>
+    <section id="toc">
+    <h2>Summary</h2>
+    <table class="api-summary">
+      <tr>
+        <tr><th colspan="2">Types</th></tr>
+          <tr><td><a href="manifest/runtime.html#type-Port">Port</a></td></tr>
+          <tr><td><a href="manifest/runtime.html#type-MessageSender">MessageSender</a></td></tr>
+        <tr><th colspan="2">Properties</th></tr>
+          <tr><td><a href="manifest/runtime.html#property-lastError">lastError</a></td>
+          <tr><td><a href="manifest/runtime.html#property-id">id</a></td>
+        <tr><th colspan="2">Methods</th></tr>
+        <tr><td><a href="manifest/runtime.html#method-getBackgroundPage">getBackgroundPage</a> &minus;
+            <code class="prettyprint">
+            chrome.runtime.getBackgroundPage(<span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="manifest/runtime.html#method-getManifest">getManifest</a> &minus;
+            <code class="prettyprint">
+            object
+            chrome.runtime.getManifest()
+            </code>
+          </td></tr>
+        <tr><td><a href="manifest/runtime.html#method-getURL">getURL</a> &minus;
+            <code class="prettyprint">
+            string
+            chrome.runtime.getURL(<span>string path</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="manifest/runtime.html#method-setUninstallURL">setUninstallURL</a> &minus;
+            <code class="prettyprint">
+            chrome.runtime.setUninstallURL(<span>string url</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="manifest/runtime.html#method-reload">reload</a> &minus;
+            <code class="prettyprint">
+            chrome.runtime.reload()
+            </code>
+          </td></tr>
+        <tr><td><a href="manifest/runtime.html#method-requestUpdateCheck">requestUpdateCheck</a> &minus;
+            <code class="prettyprint">
+            chrome.runtime.requestUpdateCheck(<span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="manifest/runtime.html#method-restart">restart</a> &minus;
+            <code class="prettyprint">
+            chrome.runtime.restart()
+            </code>
+          </td></tr>
+        <tr><td><a href="manifest/runtime.html#method-connect">connect</a> &minus;
+            <code class="prettyprint">
+                Port
+            chrome.runtime.connect(<span class="optional">string extensionId</span>, <span class="optional">object connectInfo</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="manifest/runtime.html#method-connectNative">connectNative</a> &minus;
+            <code class="prettyprint">
+                Port
+            chrome.runtime.connectNative(<span>string application</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="manifest/runtime.html#method-sendMessage">sendMessage</a> &minus;
+            <code class="prettyprint">
+            chrome.runtime.sendMessage(<span class="optional">string extensionId</span>, <span>any message</span>, <span class="optional">object options</span>, <span class="optional">function responseCallback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="manifest/runtime.html#method-sendNativeMessage">sendNativeMessage</a> &minus;
+            <code class="prettyprint">
+            chrome.runtime.sendNativeMessage(<span>string application</span>, <span>object message</span>, <span class="optional">function responseCallback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="manifest/runtime.html#method-getPlatformInfo">getPlatformInfo</a> &minus;
+            <code class="prettyprint">
+            chrome.runtime.getPlatformInfo(<span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="manifest/runtime.html#method-getPackageDirectoryEntry">getPackageDirectoryEntry</a> &minus;
+            <code class="prettyprint">
+            chrome.runtime.getPackageDirectoryEntry(<span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><th colspan="2">Events</th></tr>
+          <tr><td><a href="manifest/runtime.html#event-onStartup">onStartup</a></td></tr>
+          <tr><td><a href="manifest/runtime.html#event-onInstalled">onInstalled</a></td></tr>
+          <tr><td><a href="manifest/runtime.html#event-onSuspend">onSuspend</a></td></tr>
+          <tr><td><a href="manifest/runtime.html#event-onSuspendCanceled">onSuspendCanceled</a></td></tr>
+          <tr><td><a href="manifest/runtime.html#event-onUpdateAvailable">onUpdateAvailable</a></td></tr>
+          <tr><td><a href="manifest/runtime.html#event-onBrowserUpdateAvailable">onBrowserUpdateAvailable</a></td></tr>
+          <tr><td><a href="manifest/runtime.html#event-onConnect">onConnect</a></td></tr>
+          <tr><td><a href="manifest/runtime.html#event-onConnectExternal">onConnectExternal</a></td></tr>
+          <tr><td><a href="manifest/runtime.html#event-onMessage">onMessage</a></td></tr>
+          <tr><td><a href="manifest/runtime.html#event-onMessageExternal">onMessageExternal</a></td></tr>
+          <tr><td><a href="manifest/runtime.html#event-onRestartRequired">onRestartRequired</a></td></tr>
+    </table>
+    </section>
+    <section>
+      <div class="api-reference">
+          <h2 id="types">Types</h2>
+            <div>
+              <h3 id="type-Port">Port</h3>
+              <table>
+                <dd>An object which allows two way communication with other pages.</dd>
+                  <tr><th colspan="3" id="Port-properties">properties</th></tr>
+                  <tr>
+                    <td>string</td>
+                    <td>
+                        name</td>
+                    <td>
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        disconnect</td>
+                    <td>
+                    </td>
+                  </tr><tr>
+                    <td>    <a href="events.html#type-Event">events.Event</a></td>
+                    <td>
+                        onDisconnect</td>
+                    <td>
+                    </td>
+                  </tr><tr>
+                    <td>    <a href="events.html#type-Event">events.Event</a></td>
+                    <td>
+                        onMessage</td>
+                    <td>
+                    </td>
+                  </tr><tr>
+                    <td>function</td>
+                    <td>
+                        postMessage</td>
+                    <td>
+                    </td>
+                  </tr><tr>
+                    <td>    <a href="runtime.html#type-MessageSender">MessageSender</a></td>
+                    <td><span class="optional">(optional)</span>
+                        sender</td>
+                    <td>
+                      This property will <b>only</b> be present on ports passed to onConnect/onConnectExternal listeners.
+                    </td>
+                  </tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-MessageSender">MessageSender</h3>
+              <table>
+                <dd>An object containing information about the script context that sent a message or request.</dd>
+                  <tr><th colspan="3" id="MessageSender-properties">properties</th></tr>
+                  <tr>
+                    <td>    <a href="tabs.html#type-Tab">tabs.Tab</a></td>
+                    <td><span class="optional">(optional)</span>
+                        tab</td>
+                    <td>
+                      The <a href="tabs.html#type-Tab">tabs.Tab</a> which opened the connection, if any. This property will <strong>only</strong> be present when the connection was opened from a tab (including content scripts), and <strong>only</strong> if the receiver is an extension, not an app.
+                    </td>
+                  </tr><tr>
+                    <td>string</td>
+                    <td><span class="optional">(optional)</span>
+                        id</td>
+                    <td>
+                      The ID of the extension or app that opened the connection, if any.
+                    </td>
+                  </tr><tr>
+                    <td>string</td>
+                    <td><span class="optional">(optional)</span>
+                        url</td>
+                    <td>
+                      The URL of the page or frame that opened the connection, if any. This property will <strong>only</strong> be present when the connection was opened from a tab or content script.
+                    </td>
+                  </tr><tr>
+                    <td>string</td>
+                    <td><span class="optional">(optional)</span>
+                        tlsChannelId</td>
+                    <td>
+                      The TLS channel ID of the web page that opened the connection, if requested by the extension or app, and if available.
+                    </td>
+                  </tr>
+              </table>
+            </div>
+          <h2 id="properties">Properties</h2>
+          <table>
+            <tr>
+              <td><span class="type_name">  object</span></td>
+              <td><code id="property-lastError">chrome.runtime.lastError</code></td>
+              <td>
+                  This will be defined during an API method callback if there was an error
+                <table class="innerTable">
+                <thead><th colspan="3">Properties</th></thead>
+                  <tr>
+                    <td>string</td>
+                    <td><span class="optional">(optional)</span>
+                        message</td>
+                    <td>
+                      Details about the error which occurred.
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="type_name">  string</span></td>
+              <td><code id="property-id">chrome.runtime.id</code></td>
+              <td>
+                  The ID of the extension/app.
+              </td>
+            </tr>
+          </table>
+          <h2 id="methods">Methods</h2>
+            <div>
+              <h3
+                  id="method-getBackgroundPage"
+                  >getBackgroundPage
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.runtime.getBackgroundPage(<span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Retrieves the JavaScript 'window' object for the background page running inside the current extension/app. If the background page is an event page, the system will ensure it is loaded before calling the callback. If there is no background page, an error is set.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(Window backgroundPage) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>Window</td>
+                              <td><span class="optional">(optional)</span>
+                                  backgroundPage</td>
+                              <td>
+                                The JavaScript 'window' object for the background page.
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-getManifest"
+                  >getManifest
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              object
+              chrome.runtime.getManifest()
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Returns details about the app or extension from the manifest. The object returned is a serialization of the full <a href="manifest.html">manifest file</a>.
+                </p>
+                  <h4 title="">Returns</h4>
+                  <div>
+                    <table>
+                      <dd>The manifest details.</dd>
+                    </table>
+                  </div>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-getURL"
+                  >getURL
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+              string
+              chrome.runtime.getURL(<span>string path</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Converts a relative path within an app/extension install directory to a fully-qualified URL.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>string</td>
+                      <td>
+                          path</td>
+                      <td>
+                        A path to a resource within an app/extension expressed relative to its install directory.
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-setUninstallURL"
+                  >setUninstallURL
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.runtime.setUninstallURL(<span>string url</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Sets the URL to be visited upon uninstallation. This may be used to clean up server-side data, do analytics, and implement surveys. Maximum 255 characters.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>string</td>
+                      <td>
+                          url</td>
+                      <td>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-reload"
+                  >reload
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.runtime.reload()
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Reloads the app or extension.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-requestUpdateCheck"
+                  >requestUpdateCheck
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.runtime.requestUpdateCheck(<span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Requests an update check for this app/extension.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(enum of <code>"throttled"</code>, <code>"no_update"</code>, or <code>"update_available"</code> status, object details) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>enum of <code>"throttled"</code>, <code>"no_update"</code>, or <code>"update_available"</code></td>
+                              <td>
+                                  status</td>
+                              <td>
+                                Result of the update check.
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>object</td>
+                              <td><span class="optional">(optional)</span>
+                                  details</td>
+                              <td>
+                                If an update is available, this contains more information about the available update.
+                                <table class="innerTable">
+                                  <tr>
+                                    <td>string</td>
+                                    <td>
+                                        version</td>
+                                    <td>
+                                      The version of the available update.
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-restart"
+                  >restart
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.runtime.restart()
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Restart the ChromeOS device when the app runs in kiosk mode. Otherwise, it's no-op.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-connect"
+                  >connect
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+                  <a href="runtime.html#type-Port">Port</a>
+              chrome.runtime.connect(<span class="optional">string extensionId</span>, <span class="optional">object connectInfo</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Attempts to connect to connect listeners within an extension/app (such as the background page), or other extensions/apps. This is useful for content scripts connecting to their extension processes, inter-app/extension communication, and <a href="manifest/externally_connectable.html">web messaging</a>. Note that this does not connect to any listeners in a content script. Extensions may connect to content scripts embedded in tabs via <a href="tabs.html#method-connect">tabs.connect</a>.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>string</td>
+                      <td><span class="optional">(optional)</span>
+                          extensionId</td>
+                      <td>
+                        The ID of the extension or app to connect to. If omitted, a connection will be attempted with your own extension. Required if sending messages from a web page for <a href="manifest/externally_connectable.html">web messaging</a>.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>object</td>
+                      <td><span class="optional">(optional)</span>
+                          connectInfo</td>
+                      <td>
+                        <table class="innerTable">
+                          <tr>
+                            <td>string</td>
+                            <td><span class="optional">(optional)</span>
+                                name</td>
+                            <td>
+                              Will be passed into onConnect for processes that are listening for the connection event.
+                            </td>
+                          </tr><tr>
+                            <td>boolean</td>
+                            <td><span class="optional">(optional)</span>
+                                includeTlsChannelId</td>
+                            <td>
+                              Whether the TLS channel ID will be passed into onConnectExternal for processes that are listening for the connection event.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-connectNative"
+                  >connectNative
+              </h3>
+              <div class="summary">
+              <code class="prettyprint">
+                  <a href="runtime.html#type-Port">Port</a>
+              chrome.runtime.connectNative(<span>string application</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Connects to a native application in the host machine.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>string</td>
+                      <td>
+                          application</td>
+                      <td>
+                        The name of the registered application to connect to.
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-sendMessage"
+                  >sendMessage
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.runtime.sendMessage(<span class="optional">string extensionId</span>, <span>any message</span>, <span class="optional">object options</span>, <span class="optional">function responseCallback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Sends a single message to event listeners within your extension/app or a different extension/app. Similar to <a href="runtime.html#method-connect">runtime.connect</a> but only sends a single message, with an optional response. If sending to your extension, the <a href="runtime.html#event-onMessage">runtime.onMessage</a> event will be fired in each page, or <a href="runtime.html#event-onMessageExternal">runtime.onMessageExternal</a>, if a different extension. Note that extensions cannot send messages to content scripts using this method. To send messages to content scripts, use <a href="tabs.html#method-sendMessage">tabs.sendMessage</a>.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>string</td>
+                      <td><span class="optional">(optional)</span>
+                          extensionId</td>
+                      <td>
+                        The ID of the extension/app to send the message to. If omitted, the message will be sent to your own extension/app. Required if sending messages from a web page for <a href="manifest/externally_connectable.html">web messaging</a>.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>any</td>
+                      <td>
+                          message</td>
+                      <td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>object</td>
+                      <td><span class="optional">(optional)</span>
+                          options</td>
+                      <td>
+                        <table class="innerTable">
+                          <tr>
+                            <td>boolean</td>
+                            <td><span class="optional">(optional)</span>
+                                includeTlsChannelId</td>
+                            <td>
+                              Whether the TLS channel ID will be passed into onMessageExternal for processes that are listening for the connection event.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>function</td>
+                      <td><span class="optional">(optional)</span>
+                          responseCallback</td>
+                      <td>
+                          <p>
+                              If you specify the <em>responseCallback</em> parameter, it should
+                              be a function that looks like this:
+                          </p>
+                        <code class="prettyprint">function(any response) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>any</td>
+                              <td>
+                                  response</td>
+                              <td>
+                                The JSON response object sent by the handler of the message. If an error occurs while connecting to the extension, the callback will be called with no arguments and <a href="runtime.html#property-lastError">runtime.lastError</a> will be set to the error message.
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-sendNativeMessage"
+                  >sendNativeMessage
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.runtime.sendNativeMessage(<span>string application</span>, <span>object message</span>, <span class="optional">function responseCallback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Send a single message to a native application.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>string</td>
+                      <td>
+                          application</td>
+                      <td>
+                        The name of the native messaging host.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>object</td>
+                      <td>
+                          message</td>
+                      <td>
+                        The message that will be passed to the native messaging host.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>function</td>
+                      <td><span class="optional">(optional)</span>
+                          responseCallback</td>
+                      <td>
+                          <p>
+                              If you specify the <em>responseCallback</em> parameter, it should
+                              be a function that looks like this:
+                          </p>
+                        <code class="prettyprint">function(any response) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>any</td>
+                              <td>
+                                  response</td>
+                              <td>
+                                The response message sent by the native messaging host. If an error occurs while connecting to the native messaging host, the callback will be called with no arguments and <a href="runtime.html#property-lastError">runtime.lastError</a> will be set to the error message.
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-getPlatformInfo"
+                  >getPlatformInfo
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.runtime.getPlatformInfo(<span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Returns information about the current platform.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                        Called with results
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(object platformInfo) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>object</td>
+                              <td>
+                                  platformInfo</td>
+                              <td>
+                                <table class="innerTable">
+                                  <tr>
+                                    <td>enum of <code>"mac"</code>, <code>"win"</code>, <code>"android"</code>, <code>"cros"</code>, <code>"linux"</code>, or <code>"openbsd"</code></td>
+                                    <td>
+                                        os</td>
+                                    <td>
+                                      The operating system chrome is running on.
+                                    </td>
+                                  </tr><tr>
+                                    <td>enum of <code>"arm"</code>, <code>"x86-32"</code>, or <code>"x86-64"</code></td>
+                                    <td>
+                                        arch</td>
+                                    <td>
+                                      The machine's processor architecture.
+                                    </td>
+                                  </tr><tr>
+                                    <td>enum of <code>"arm"</code>, <code>"x86-32"</code>, or <code>"x86-64"</code></td>
+                                    <td>
+                                        nacl_arch</td>
+                                    <td>
+                                      The native client architecture. This may be different from arch on some platforms.
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-getPackageDirectoryEntry"
+                  >getPackageDirectoryEntry
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.runtime.getPackageDirectoryEntry(<span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Returns a DirectoryEntry for the package directory.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(DirectoryEntry directoryEntry) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>DirectoryEntry</td>
+                              <td>
+                                  directoryEntry</td>
+                              <td>
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+          <h2 id="events">Events</h2>
+            <div>
+              <h3 id="event-onStartup">onStartup</h3>
+              <div class="description">
+            <p>
+                  Fired when a profile that has this extension installed first starts up. This event is not fired when an incognito profile is started, even if this extension is operating in 'split' incognito mode.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.runtime.onStartup.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+            <div>
+              <h3 id="event-onInstalled">onInstalled</h3>
+              <div class="description">
+            <p>
+                  Fired when the extension is first installed, when the extension is updated to a new version, and when Chrome is updated to a new version.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.runtime.onInstalled.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function(object details) <span class="subdued">{...}</span>;</code>
+                                <table class="innerTable">
+                                  <tr>
+                                    <td>object</td>
+                                    <td>
+                                        details</td>
+                                    <td>
+                                      <table class="innerTable">
+                                        <tr>
+                                          <td>enum of <code>"install"</code>, <code>"update"</code>, or <code>"chrome_update"</code></td>
+                                          <td>
+                                              reason</td>
+                                          <td>
+                                            The reason that this event is being dispatched.
+                                          </td>
+                                        </tr><tr>
+                                          <td>string</td>
+                                          <td><span class="optional">(optional)</span>
+                                              previousVersion</td>
+                                          <td>
+                                            Indicates the previous version of the extension, which has just been updated. This is present only if 'reason' is 'update'.
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+            <div>
+              <h3 id="event-onSuspend">onSuspend</h3>
+              <div class="description">
+            <p>
+                  Sent to the event page just before it is unloaded. This gives the extension opportunity to do some clean up. Note that since the page is unloading, any asynchronous operations started while handling this event are not guaranteed to complete. If more activity for the event page occurs before it gets unloaded the onSuspendCanceled event will be sent and the page won't be unloaded. 
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.runtime.onSuspend.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+            <div>
+              <h3 id="event-onSuspendCanceled">onSuspendCanceled</h3>
+              <div class="description">
+            <p>
+                  Sent after onSuspend to indicate that the app won't be unloaded after all.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.runtime.onSuspendCanceled.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+            <div>
+              <h3 id="event-onUpdateAvailable">onUpdateAvailable</h3>
+              <div class="description">
+            <p>
+                  Fired when an update is available, but isn't installed immediately because the app is currently running. If you do nothing, the update will be installed the next time the background page gets unloaded, if you want it to be installed sooner you can explicitly call chrome.runtime.reload().
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.runtime.onUpdateAvailable.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function(object details) <span class="subdued">{...}</span>;</code>
+                                <table class="innerTable">
+                                  <tr>
+                                    <td>object</td>
+                                    <td>
+                                        details</td>
+                                    <td>
+                                      The manifest details of the available update.
+                                      <table class="innerTable">
+                                        <tr>
+                                          <td>string</td>
+                                          <td>
+                                              version</td>
+                                          <td>
+                                            The version number of the available update.
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+            <div>
+              <h3 id="event-onBrowserUpdateAvailable">onBrowserUpdateAvailable</h3>
+              <p class="warning">
+                onBrowserUpdateAvailable is deprecated. Please use <a href="runtime.html#event-onRestartRequired">runtime.onRestartRequired</a>.
+              </p>
+              <div class="description">
+            <p>
+                  Fired when a Chrome update is available, but isn't installed immediately because a browser restart is required.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.runtime.onBrowserUpdateAvailable.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+            <div>
+              <h3 id="event-onConnect">onConnect</h3>
+              <div class="description">
+            <p>
+                  Fired when a connection is made from either an extension process or a content script.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.runtime.onConnect.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function(    <a href="runtime.html#type-Port">Port</a> port) <span class="subdued">{...}</span>;</code>
+                                <table class="innerTable">
+                                  <tr>
+                                    <td>    <a href="runtime.html#type-Port">Port</a></td>
+                                    <td>
+                                        port</td>
+                                    <td>
+                                    </td>
+                                  </tr>
+                                </table>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+            <div>
+              <h3 id="event-onConnectExternal">onConnectExternal</h3>
+              <div class="description">
+            <p>
+                  Fired when a connection is made from another extension.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.runtime.onConnectExternal.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function(    <a href="runtime.html#type-Port">Port</a> port) <span class="subdued">{...}</span>;</code>
+                                <table class="innerTable">
+                                  <tr>
+                                    <td>    <a href="runtime.html#type-Port">Port</a></td>
+                                    <td>
+                                        port</td>
+                                    <td>
+                                    </td>
+                                  </tr>
+                                </table>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+            <div>
+              <h3 id="event-onMessage">onMessage</h3>
+              <div class="description">
+            <p>
+                  Fired when a message is sent from either an extension process or a content script.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.runtime.onMessage.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function(any message,     <a href="runtime.html#type-MessageSender">MessageSender</a> sender, function sendResponse) <span class="subdued">{...}</span>;</code>
+                                <table class="innerTable">
+                                  <tr>
+                                    <td>any</td>
+                                    <td><span class="optional">(optional)</span>
+                                        message</td>
+                                    <td>
+                                      The message sent by the calling script.
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>    <a href="runtime.html#type-MessageSender">MessageSender</a></td>
+                                    <td>
+                                        sender</td>
+                                    <td>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>function</td>
+                                    <td>
+                                        sendResponse</td>
+                                    <td>
+                                      Function to call (at most once) when you have a response. The argument should be any JSON-ifiable object. If you have more than one <code>onMessage</code> listener in the same document, then only one may send a response. This function becomes invalid when the event listener returns, unless you return true from the event listener to indicate you wish to send a response asynchronously (this will keep the message channel open to the other end until <code>sendResponse</code> is called).
+                                    </td>
+                                  </tr>
+                                </table>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+            <div>
+              <h3 id="event-onMessageExternal">onMessageExternal</h3>
+              <div class="description">
+            <p>
+                  Fired when a message is sent from another extension/app. Cannot be used in a content script.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.runtime.onMessageExternal.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function(any message,     <a href="runtime.html#type-MessageSender">MessageSender</a> sender, function sendResponse) <span class="subdued">{...}</span>;</code>
+                                <table class="innerTable">
+                                  <tr>
+                                    <td>any</td>
+                                    <td><span class="optional">(optional)</span>
+                                        message</td>
+                                    <td>
+                                      The message sent by the calling script.
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>    <a href="runtime.html#type-MessageSender">MessageSender</a></td>
+                                    <td>
+                                        sender</td>
+                                    <td>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>function</td>
+                                    <td>
+                                        sendResponse</td>
+                                    <td>
+                                      Function to call (at most once) when you have a response. The argument should be any JSON-ifiable object. If you have more than one <code>onMessage</code> listener in the same document, then only one may send a response. This function becomes invalid when the event listener returns, unless you return true from the event listener to indicate you wish to send a response asynchronously (this will keep the message channel open to the other end until <code>sendResponse</code> is called).
+                                    </td>
+                                  </tr>
+                                </table>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+            <div>
+              <h3 id="event-onRestartRequired">onRestartRequired</h3>
+              <div class="description">
+            <p>
+                  Fired when an app or the device that it runs on needs to be restarted. The app should close all its windows at its earliest convenient time to let the restart to happen. If the app does nothing, a restart will be enforced after a 24-hour grace period has passed. Currently, this event is only fired for Chrome OS kiosk apps.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.runtime.onRestartRequired.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function(enum of <code>"app_update"</code>, <code>"os_update"</code>, or <code>"periodic"</code> reason) <span class="subdued">{...}</span>;</code>
+                                <table class="innerTable">
+                                  <tr>
+                                    <td>enum of <code>"app_update"</code>, <code>"os_update"</code>, or <code>"periodic"</code></td>
+                                    <td>
+                                        reason</td>
+                                    <td>
+                                      The reason that the event is being dispatched. 'app_update' is used when the restart is needed because the application is updated to a newer version. 'os_update' is used when the restart is needed because the browser/OS is updated to a newer version. 'periodic' is used when the system runs for more than the permitted uptime set in the enterprise policy.
+                                    </td>
+                                  </tr>
+                                </table>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+      </div>
+    </section>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="manifest/runtime.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../static/js/fatnav.js"></script>
+    <script src="../static/js/article.js"></script>
+    <script src="../static/js/prettify.js"></script>
+    <script src="../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../static/js/site.js"></script>
+  </body>
+</html>

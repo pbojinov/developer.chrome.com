@@ -1,0 +1,1486 @@
+<link href="../_static/css/nacl.css" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>pp::FileIO Class Reference - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../../index.html">
+          <img alt="Chrome: developer" src="../../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="../../apps/index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../apps/index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="../../apps/first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="../../apps/app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="../../apps/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../apps/app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="../../apps/app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="../../apps/app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="../../apps/app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="../../apps/app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="../../apps/app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="../../apps/app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="../../apps/app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="../../apps/app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../apps/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../apps/offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="../../apps/offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="../../apps/app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="../../apps/cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="../../apps/app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../apps/app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="../../apps/app_usb.html">USB</a>
+                            </li>
+                            <li><a href="../../apps/app_serial">Serial</a>
+                            </li>
+                            <li><a href="../../apps/app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="../../apps/app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../apps/app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="../../apps/app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="../../apps/angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="../../apps/sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="../../apps/google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../apps/analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../apps/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../apps/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../apps/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../apps/webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="../../apps/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../apps/app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../apps/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../apps/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="../../apps/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../apps/overview.html">Overview</a>
+                            </li>
+                            <li><a href="../../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="../../apps/activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../apps/getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devguide/tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../devguide/tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devguide/devcycle/building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="../devguide/devcycle/building.html">Building</a>
+                            </li>
+                            <li><a href="../devguide/devcycle/running.html">Running</a>
+                            </li>
+                            <li><a href="../devguide/devcycle/debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../devguide/devcycle/vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="../devguide/devcycle/dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devguide/coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../devguide/coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../devguide/coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../devguide/coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../devguide/coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../devguide/coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="../devguide/devcycle/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../devguide/coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../devguide/coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devguide/distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <div itemprop="articleBody">
+
+
+<h1>pp::FileIO Class Reference</h1>
+<div id="doxygen-ref">
+  <div>
+<!-- Generated by Doxygen 1.7.6.1 -->
+
+
+
+</div>
+<!--header-->
+<div class="contents">
+<!-- doxytag: class="pp::FileIO" --><!-- doxytag: inherits="pp::Resource" --><div class="dynheader">
+Inheritance diagram for pp::FileIO:</div>
+<div class="dyncontent">
+<div class="center"><img src="../pepper_dev/cpp/classpp_1_1_file_i_o__inherit__graph.png" border="0" usemap="#pp_1_1_file_i_o_inherit__map" alt="Inheritance graph" /></div>
+<map name="pp_1_1_file_i_o_inherit__map" id="pp_1_1_file_i_o_inherit__map">
+<area shape="rect" id="node2" href="../pepper_dev/cpp/classpp_1_1_resource.html" title="A reference counted module resource." alt="" coords="5,5,109,35"></area></map>
+<center><span class="legend">[<a href="http://developer.chrome.com/native-client/pepper_dev/cpp/graph_legend.html">legend</a>]</span></center></div>
+<p><a href="../pepper_dev/cpp/classpp_1_1_file_i_o-members.html">List of all members.</a></p>
+<h2>
+Classes</h2><table class="memberdecls">
+
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><b>CallbackData1_0</b></td></tr>
+</table><h2>
+Public Member Functions</h2><table class="memberdecls">
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a67b9da7adaadcb58c7429aa1984f757e">FileIO</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a7c3f17d75a139e92b2cdc52d8f2f5fd0">FileIO</a> (const <a class="el" href="../pepper_dev/cpp/classpp_1_1_instance_handle.html">InstanceHandle</a> &amp;instance)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a7bc6f391da690a381874111e350692f0">FileIO</a> (const <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html">FileIO</a> &amp;other)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#adafce7733e27fc3bf12cdb7833927bae">Open</a> (const <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_ref.html">FileRef</a> &amp;file_ref, int32_t open_flags, const <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;cc)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a0e1cb3e0e2f1cd73c0d5a08a20e60fab">Query</a> (PP_FileInfo *result_buf, const <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;cc)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a30766070559c1b719784ebc4f8d369f4">Touch</a> (PP_Time last_access_time, PP_Time last_modified_time, const <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;cc)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a9e4576a9a5c946b4aa971daca526e457">Read</a> (int64_t offset, char *buffer, int32_t bytes_to_read, const <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;cc)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a809ad6c8aa27f647c044c7053a84867a">Read</a> (int32_t offset, int32_t max_read_length, const <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback_with_output.html">CompletionCallbackWithOutput</a>&lt; std::vector&lt; char &gt; &gt; &amp;cc)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a9ef23f569178ce6a53536fb27d459bcf">Write</a> (int64_t offset, const char *buffer, int32_t bytes_to_write, const <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;cc)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a49014400d013c27b9950368f54974935">SetLength</a> (int64_t length, const <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;cc)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a074d9c13b5825b378c343e5dd890d789">Flush</a> (const <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;cc)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a5f08c15cc2b23548b2e401c55102d709">Close</a> ()</td></tr>
+</table>
+<hr /><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>The <code><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a></code> class represents a regular file. </p>
+</div><hr /><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a67b9da7adaadcb58c7429aa1984f757e"></a><!-- doxytag: member="pp::FileIO::FileIO" ref="a67b9da7adaadcb58c7429aa1984f757e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a67b9da7adaadcb58c7429aa1984f757e">pp::FileIO::FileIO</a> </td>
+<td>(</td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p>Default constructor for creating an <a class="el" href="../pepper_dev/cpp/classpp_1_1_resource.html#a859068e34cdc2dc0b78754c255323aa9" title="This functions determines if this resource is invalid or uninitialized.">is_null()</a> <code><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a></code> object. </p>
+</div>
+</div>
+<a class="anchor" id="a7c3f17d75a139e92b2cdc52d8f2f5fd0"></a><!-- doxytag: member="pp::FileIO::FileIO" ref="a7c3f17d75a139e92b2cdc52d8f2f5fd0" args="(const InstanceHandle &amp;instance)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a67b9da7adaadcb58c7429aa1984f757e">pp::FileIO::FileIO</a> </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="../pepper_dev/cpp/classpp_1_1_instance_handle.html">InstanceHandle</a> &amp;&#160;</td>
+<td class="paramname"><em>instance</em></td><td>)</td>
+<td><code> [explicit]</code></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p>A constructor used to create a <code><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a></code> and associate it with the provided <code><a class="el" href="../pepper_dev/cpp/classpp_1_1_instance.html">Instance</a></code>. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>The instance with which this resource will be associated. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a7bc6f391da690a381874111e350692f0"></a><!-- doxytag: member="pp::FileIO::FileIO" ref="a7bc6f391da690a381874111e350692f0" args="(const FileIO &amp;other)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a67b9da7adaadcb58c7429aa1984f757e">pp::FileIO::FileIO</a> </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html">FileIO</a> &amp;&#160;</td>
+<td class="paramname"><em>other</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p>The copy constructor for <code><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a></code>. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>A reference to a <code><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a></code>. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<hr /><h2>Member Function Documentation</h2>
+<a class="anchor" id="a5f08c15cc2b23548b2e401c55102d709"></a><!-- doxytag: member="pp::FileIO::Close" ref="a5f08c15cc2b23548b2e401c55102d709" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a5f08c15cc2b23548b2e401c55102d709">pp::FileIO::Close</a> </td>
+<td>(</td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a5f08c15cc2b23548b2e401c55102d709" title="Close() cancels any IO that may be pending, and closes the FileIO object.">Close()</a> cancels any IO that may be pending, and closes the <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> object. </p>
+<p>Any pending callbacks will still run, reporting <code>PP_ERROR_ABORTED</code> if pending IO was interrupted. It is not valid to call <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#adafce7733e27fc3bf12cdb7833927bae" title="Open() opens the specified regular file for I/O according to the given open flags, which is a bit-mask of the PP_FileOpenFlags values.">Open()</a> again after a call to this method.</p>
+<p><b>Note:</b> If the <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> object is destroyed, and it is still open, then it will be implicitly closed, so you are not required to call <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a5f08c15cc2b23548b2e401c55102d709" title="Close() cancels any IO that may be pending, and closes the FileIO object.">Close()</a>. </p>
+</div>
+</div>
+<a class="anchor" id="a074d9c13b5825b378c343e5dd890d789"></a><!-- doxytag: member="pp::FileIO::Flush" ref="a074d9c13b5825b378c343e5dd890d789" args="(const CompletionCallback &amp;cc)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a074d9c13b5825b378c343e5dd890d789">pp::FileIO::Flush</a> </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;&#160;</td>
+<td class="paramname"><em>cc</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a074d9c13b5825b378c343e5dd890d789" title="Flush() flushes changes to disk.">Flush()</a> flushes changes to disk. </p>
+<p>This call can be very expensive!</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">cc</td><td>A <code><a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html" title="This API enables you to implement and receive callbacks when Pepper operations complete asynchronousl...">CompletionCallback</a></code> to be called upon completion of <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a074d9c13b5825b378c343e5dd890d789" title="Flush() flushes changes to disk.">Flush()</a>.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An int32_t containing an error code from <code>pp_errors.h</code>. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="adafce7733e27fc3bf12cdb7833927bae"></a><!-- doxytag: member="pp::FileIO::Open" ref="adafce7733e27fc3bf12cdb7833927bae" args="(const FileRef &amp;file_ref, int32_t open_flags, const CompletionCallback &amp;cc)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#adafce7733e27fc3bf12cdb7833927bae">pp::FileIO::Open</a> </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_ref.html">FileRef</a> &amp;&#160;</td>
+<td class="paramname"><em>file_ref</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t&#160;</td>
+<td class="paramname"><em>open_flags</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;&#160;</td>
+<td class="paramname"><em>cc</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#adafce7733e27fc3bf12cdb7833927bae" title="Open() opens the specified regular file for I/O according to the given open flags, which is a bit-mask of the PP_FileOpenFlags values.">Open()</a> opens the specified regular file for I/O according to the given open flags, which is a bit-mask of the PP_FileOpenFlags values. </p>
+<p>Upon success, the corresponding file is classified as "in use" by this <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> object until such time as the <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> object is closed or destroyed.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">file_ref</td><td>A <code>PP_Resource</code> corresponding to a file reference.</td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">open_flags</td><td>A bit-mask of the <code>PP_FileOpenFlags</code> values. Valid values are:<ul>
+<li>PP_FILEOPENFLAG_READ</li>
+<li>PP_FILEOPENFLAG_WRITE</li>
+<li>PP_FILEOPENFLAG_CREATE</li>
+<li>PP_FILEOPENFLAG_TRUNCATE</li>
+<li>PP_FILEOPENFLAG_EXCLUSIVE See <code>PP_FileOpenFlags</code> in <code>ppb_file_io.h</code> for more details on these flags.</li>
+</ul>
+</td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">cc</td><td>A <code><a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html" title="This API enables you to implement and receive callbacks when Pepper operations complete asynchronousl...">CompletionCallback</a></code> to be called upon completion of <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#adafce7733e27fc3bf12cdb7833927bae" title="Open() opens the specified regular file for I/O according to the given open flags, which is a bit-mask of the PP_FileOpenFlags values.">Open()</a>.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An int32_t containing an error code from <code>pp_errors.h</code>. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a0e1cb3e0e2f1cd73c0d5a08a20e60fab"></a><!-- doxytag: member="pp::FileIO::Query" ref="a0e1cb3e0e2f1cd73c0d5a08a20e60fab" args="(PP_FileInfo *result_buf, const CompletionCallback &amp;cc)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a0e1cb3e0e2f1cd73c0d5a08a20e60fab">pp::FileIO::Query</a> </td>
+<td>(</td>
+<td class="paramtype">PP_FileInfo *&#160;</td>
+<td class="paramname"><em>result_buf</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;&#160;</td>
+<td class="paramname"><em>cc</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a0e1cb3e0e2f1cd73c0d5a08a20e60fab" title="Query() queries info about the file opened by this FileIO object.">Query()</a> queries info about the file opened by this <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> object. </p>
+<p>This function will fail if the <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> object has not been opened.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">result_buf</td><td>The <code>PP_FileInfo</code> structure representing all information about the file. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">cc</td><td>A <code><a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html" title="This API enables you to implement and receive callbacks when Pepper operations complete asynchronousl...">CompletionCallback</a></code> to be called upon completion of <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a0e1cb3e0e2f1cd73c0d5a08a20e60fab" title="Query() queries info about the file opened by this FileIO object.">Query()</a>. <code>result_buf</code> must remain valid until after the callback runs. If you pass a blocking callback, <code>result_buf</code> must remain valid until after <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a0e1cb3e0e2f1cd73c0d5a08a20e60fab" title="Query() queries info about the file opened by this FileIO object.">Query()</a> returns.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An int32_t containing an error code from <code>pp_errors.h</code>. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a9e4576a9a5c946b4aa971daca526e457"></a><!-- doxytag: member="pp::FileIO::Read" ref="a9e4576a9a5c946b4aa971daca526e457" args="(int64_t offset, char *buffer, int32_t bytes_to_read, const CompletionCallback &amp;cc)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a9e4576a9a5c946b4aa971daca526e457">pp::FileIO::Read</a> </td>
+<td>(</td>
+<td class="paramtype">int64_t&#160;</td>
+<td class="paramname"><em>offset</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char *&#160;</td>
+<td class="paramname"><em>buffer</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t&#160;</td>
+<td class="paramname"><em>bytes_to_read</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;&#160;</td>
+<td class="paramname"><em>cc</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p>Reads from an offset in the file. </p>
+<p>The size of the buffer must be large enough to hold the specified number of bytes to read. This function might perform a partial read, meaning that all the requested bytes might not be returned, even if the end of the file has not been reached.</p>
+<p>This function reads into a buffer that the caller supplies. This buffer must remain valid as long as the <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> resource is alive. If you use a completion callback factory and it goes out of scope, it will not issue the callback on your class, BUT the callback factory can NOT cancel the request from the browser's perspective. This means that the browser will still try to write to your buffer even if the callback factory is destroyed!</p>
+<p>So you must ensure that your buffer outlives the <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> resource. If you have one class and use the <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> resource exclusively from that class and never make any copies, this will be fine: the resource will be destroyed when your class is. But keep in mind that copying a <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">pp::FileIO</a> object just creates a second reference to the original resource. For example, if you have a function like this: <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">pp::FileIO</a> MyClass::GetFileIO(); where a copy of your <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> resource could outlive your class, the callback will still be pending when your class goes out of scope, creating the possibility of writing into invalid memory. So it's recommended to keep your <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> resource and any output buffers tightly controlled in the same scope.</p>
+<p><b>Caveat:</b> This <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a9e4576a9a5c946b4aa971daca526e457" title="Reads from an offset in the file.">Read()</a> is potentially unsafe if you're using a <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback_factory.html" title="CompletionCallbackFactory&lt;T&gt; may be used to create CompletionCallback objects that are bound to membe...">CompletionCallbackFactory</a> to scope callbacks to the lifetime of your class. When your class goes out of scope, the callback factory will not actually cancel the callback, but will rather just skip issuing the callback on your class. This means that if the <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> object outlives your class (if you made a copy saved somewhere else, for example), then the browser will still try to write into your buffer when the asynchronous read completes, potentially causing a crash.</p>
+<p>See the other version of <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a9e4576a9a5c946b4aa971daca526e457" title="Reads from an offset in the file.">Read()</a> which avoids this problem by writing into <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback_with_output.html" title="A CompletionCallbackWithOutput defines a completion callback that additionally stores a pointer to so...">CompletionCallbackWithOutput</a>, where the output buffer is automatically managed by the callback.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>The offset into the file. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>The buffer to hold the specified number of bytes read. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">bytes_to_read</td><td>The number of bytes to read from <code>offset</code>. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">cc</td><td>A <code><a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html" title="This API enables you to implement and receive callbacks when Pepper operations complete asynchronousl...">CompletionCallback</a></code> to be called upon completion of <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a9e4576a9a5c946b4aa971daca526e457" title="Reads from an offset in the file.">Read()</a>. <code>buffer</code> must remain valid until after the callback runs. If you pass a blocking callback, <code>buffer</code> must remain valid until after <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a9e4576a9a5c946b4aa971daca526e457" title="Reads from an offset in the file.">Read()</a> returns.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An The number of bytes read an error code from <code>pp_errors.h</code>. If the return value is 0, then end-of-file was reached. It is valid to call <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a9e4576a9a5c946b4aa971daca526e457" title="Reads from an offset in the file.">Read()</a> multiple times with a completion callback to queue up parallel reads from the file at different offsets. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a809ad6c8aa27f647c044c7053a84867a"></a><!-- doxytag: member="pp::FileIO::Read" ref="a809ad6c8aa27f647c044c7053a84867a" args="(int32_t offset, int32_t max_read_length, const CompletionCallbackWithOutput&lt; std::vector&lt; char &gt; &gt; &amp;cc)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a9e4576a9a5c946b4aa971daca526e457">pp::FileIO::Read</a> </td>
+<td>(</td>
+<td class="paramtype">int32_t&#160;</td>
+<td class="paramname"><em>offset</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t&#160;</td>
+<td class="paramname"><em>max_read_length</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback_with_output.html">CompletionCallbackWithOutput</a>&lt; std::vector&lt; char &gt; &gt; &amp;&#160;</td>
+<td class="paramname"><em>cc</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a9e4576a9a5c946b4aa971daca526e457" title="Reads from an offset in the file.">Read()</a> reads from an offset in the file. </p>
+<p>A PP_ArrayOutput must be provided so that output will be stored in its allocated buffer. This function might perform a partial read.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">file_io</td><td>A <code>PP_Resource</code> corresponding to a file <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a>. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>The offset into the file. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">max_read_length</td><td>The maximum number of bytes to read from <code>offset</code>. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">output</td><td>A <code>PP_ArrayOutput</code> to hold the output data. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>A <code>PP_CompletionCallback</code> to be called upon completion of <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a9e4576a9a5c946b4aa971daca526e457" title="Reads from an offset in the file.">Read()</a>.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The number of bytes read or an error code from <code>pp_errors.h</code>. If the return value is 0, then end-of-file was reached. It is valid to call <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a9e4576a9a5c946b4aa971daca526e457" title="Reads from an offset in the file.">Read()</a> multiple times with a completion callback to queue up parallel reads from the file, but pending reads cannot be interleaved with other operations. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a49014400d013c27b9950368f54974935"></a><!-- doxytag: member="pp::FileIO::SetLength" ref="a49014400d013c27b9950368f54974935" args="(int64_t length, const CompletionCallback &amp;cc)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a49014400d013c27b9950368f54974935">pp::FileIO::SetLength</a> </td>
+<td>(</td>
+<td class="paramtype">int64_t&#160;</td>
+<td class="paramname"><em>length</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;&#160;</td>
+<td class="paramname"><em>cc</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a49014400d013c27b9950368f54974935" title="SetLength() sets the length of the file.">SetLength()</a> sets the length of the file. </p>
+<p>If the file size is extended, then the extended area of the file is zero-filled. The <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> object must have been opened with write access.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>The length of the file to be set. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">cc</td><td>A <code><a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html" title="This API enables you to implement and receive callbacks when Pepper operations complete asynchronousl...">CompletionCallback</a></code> to be called upon completion of <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a49014400d013c27b9950368f54974935" title="SetLength() sets the length of the file.">SetLength()</a>.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An int32_t containing an error code from <code>pp_errors.h</code>. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a30766070559c1b719784ebc4f8d369f4"></a><!-- doxytag: member="pp::FileIO::Touch" ref="a30766070559c1b719784ebc4f8d369f4" args="(PP_Time last_access_time, PP_Time last_modified_time, const CompletionCallback &amp;cc)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a30766070559c1b719784ebc4f8d369f4">pp::FileIO::Touch</a> </td>
+<td>(</td>
+<td class="paramtype">PP_Time&#160;</td>
+<td class="paramname"><em>last_access_time</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">PP_Time&#160;</td>
+<td class="paramname"><em>last_modified_time</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;&#160;</td>
+<td class="paramname"><em>cc</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a30766070559c1b719784ebc4f8d369f4" title="Touch() Updates time stamps for the file opened by this FileIO object.">Touch()</a> Updates time stamps for the file opened by this <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> object. </p>
+<p>This function will fail if the <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> object has not been opened.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">last_access_time</td><td>The last time the <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> was accessed. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">last_modified_time</td><td>The last time the <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> was modified. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">cc</td><td>A <code><a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html" title="This API enables you to implement and receive callbacks when Pepper operations complete asynchronousl...">CompletionCallback</a></code> to be called upon completion of <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a30766070559c1b719784ebc4f8d369f4" title="Touch() Updates time stamps for the file opened by this FileIO object.">Touch()</a>.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An int32_t containing an error code from <code>pp_errors.h</code>. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a9ef23f569178ce6a53536fb27d459bcf"></a><!-- doxytag: member="pp::FileIO::Write" ref="a9ef23f569178ce6a53536fb27d459bcf" args="(int64_t offset, const char *buffer, int32_t bytes_to_write, const CompletionCallback &amp;cc)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a9ef23f569178ce6a53536fb27d459bcf">pp::FileIO::Write</a> </td>
+<td>(</td>
+<td class="paramtype">int64_t&#160;</td>
+<td class="paramname"><em>offset</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char *&#160;</td>
+<td class="paramname"><em>buffer</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t&#160;</td>
+<td class="paramname"><em>bytes_to_write</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html">CompletionCallback</a> &amp;&#160;</td>
+<td class="paramname"><em>cc</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a9ef23f569178ce6a53536fb27d459bcf" title="Write() writes to an offset in the file.">Write()</a> writes to an offset in the file. </p>
+<p>This function might perform a partial write. The <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" title="The FileIO class represents a regular file.">FileIO</a> object must have been opened with write access.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>The offset into the file. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>The buffer to hold the specified number of bytes read. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">bytes_to_write</td><td>The number of bytes to write to <code>offset</code>. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">cc</td><td>A <code><a class="el" href="../pepper_dev/cpp/classpp_1_1_completion_callback.html" title="This API enables you to implement and receive callbacks when Pepper operations complete asynchronousl...">CompletionCallback</a></code> to be called upon completion of <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a9ef23f569178ce6a53536fb27d459bcf" title="Write() writes to an offset in the file.">Write()</a>.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>An The number of bytes written or an error code from <code>pp_errors.h</code>. If the return value is 0, then end-of-file was reached. It is valid to call <a class="el" href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#a9ef23f569178ce6a53536fb27d459bcf" title="Write() writes to an offset in the file.">Write()</a> multiple times with a completion callback to queue up parallel writes to the file at different offsets. </dd></dl>
+</div>
+</div>
+<hr />The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="../pepper_dev/cpp/file__io_8h.html">file_io.h</a></li>
+</ul>
+</div><!-- contents -->
+</div>
+    
+    <footer id="cc-info">
+      <button id="send-feedback" class="google-button" data-feedback>Send Feedback</button>
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo"><a href="http://creativecommons.org/licenses/by/3.0/"><img src="../../static/images/cc_by.png" alt="Licensed Creative Commons by Attribution"></a></p>
+    </footer>
+    <nav class="inline-toc no-permalink">
+      <section class="related">
+      <ol class="toc">
+      </ol>
+      </section>
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#"
+          >Classes</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#"
+          >Public Member Functions</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#"
+          >Detailed Description</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#"
+          >Constructor  Destructor Documentation</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="../pepper_dev/cpp/classpp_1_1_file_i_o.html#"
+          >Member Function Documentation</a>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="../pepper_dev/cpp/classpp_1_1_file_i_o.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../../static/js/fatnav.js"></script>
+    <script src="../../static/js/article.js"></script>
+    <script src="../../static/js/prettify.js"></script>
+    <script src="../../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../../static/js/site.js"></script>
+  </body>
+</html>

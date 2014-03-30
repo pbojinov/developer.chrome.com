@@ -1,0 +1,1532 @@
+<link href="../../_static/css/nacl.css" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../../../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../../../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../../../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>Debugging - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="debugging.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../../../index.html">
+          <img alt="Chrome: developer" src="../../../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../../../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../../../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../../../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="../../../apps/index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="../../../apps/first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="../../../apps/app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../../../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="../../../apps/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../../../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="../../../apps/app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="../../../apps/cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="../../../apps/app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_usb.html">USB</a>
+                            </li>
+                            <li><a href="../../../apps/app_serial">Serial</a>
+                            </li>
+                            <li><a href="../../../apps/app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="../../../apps/app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="../../../apps/angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="../../../apps/sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="../../../apps/google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../apps/analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../../apps/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../../apps/webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="../../../apps/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../../apps/app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="../../../apps/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/overview.html">Overview</a>
+                            </li>
+                            <li><a href="../../../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../../../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../../../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="../../../apps/activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../../../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../../../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../../../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../../../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../../../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../../../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../../../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../../../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../../../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../../../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../../overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../../nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../../sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../../sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../../sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="building.html">Building</a>
+                            </li>
+                            <li><a href="running.html">Running</a>
+                            </li>
+                            <li><a href="debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../../pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../../pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../../glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../../reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../../reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../../reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../../reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../../help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../../publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../../community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../../../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../../../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../../../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../../../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../../../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../../../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../../../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../../../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../../../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../../../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <div itemprop="articleBody">
+
+
+
+<section id="debugging">
+<span id="devcycle-debugging"></span><h1 id="debugging"><span id="devcycle-debugging"></span>Debugging</h1>
+<p>This document describes tools and techniques you can use to debug, monitor,
+and measure your application&#8217;s performance.</p>
+<div class="contents local" id="table-of-contents" style="display: none">
+<p class="topic-title first">Table Of Contents</p>
+<ul class="small-gap">
+<li><p class="first"><a class="reference internal" href="debugging.html#diagnostic-information" id="id1">Diagnostic information</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="debugging.html#viewing-process-statistics-with-the-task-manager" id="id2">Viewing process statistics with the task manager</a></li>
+<li><a class="reference internal" href="debugging.html#controlling-the-level-of-native-client-error-and-warning-messages" id="id3">Controlling the level of Native Client error and warning messages</a></li>
+</ul>
+</li>
+<li><p class="first"><a class="reference internal" href="debugging.html#basic-debugging" id="id4">Basic debugging</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="debugging.html#writing-messages-to-the-javascript-console" id="id5">Writing messages to the JavaScript console</a></li>
+<li><p class="first"><a class="reference internal" href="debugging.html#debugging-with-printf" id="id6">Debugging with printf</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="debugging.html#redirecting-output-to-log-files" id="id7">Redirecting output to log files</a></li>
+<li><a class="reference internal" href="debugging.html#redirecting-output-to-the-javascript-console" id="id8">Redirecting output to the JavaScript console</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="debugging.html#logging-calls-to-pepper-interfaces" id="id9">Logging calls to Pepper interfaces</a></li>
+<li><a class="reference internal" href="debugging.html#debugging-with-visual-studio" id="id10">Debugging with Visual Studio</a></li>
+<li><p class="first"><a class="reference internal" href="debugging.html#debugging-with-nacl-gdb" id="id11">Debugging with nacl-gdb</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="debugging.html#debugging-pnacl-pexes" id="id12">Debugging PNaCl pexes</a></li>
+<li><a class="reference internal" href="debugging.html#running-nacl-gdb" id="id13">Running nacl-gdb</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first"><a class="reference internal" href="debugging.html#debugging-with-other-tools" id="id14">Debugging with other tools</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="debugging.html#open-source-profiling-tools" id="id15">Open source profiling tools</a></li>
+</ul>
+</li>
+</ul>
+
+</div><section id="diagnostic-information">
+<h2 id="diagnostic-information">Diagnostic information</h2>
+<section id="viewing-process-statistics-with-the-task-manager">
+<h3 id="viewing-process-statistics-with-the-task-manager">Viewing process statistics with the task manager</h3>
+<p>You can use Chrome&#8217;s Task Manager to display information about a Native Client
+application:</p>
+<ol class="arabic simple">
+<li>Open the Task Manager by clicking the menu icon <img alt="menu-icon" src="../../images/menu-icon.png" /> and choosing
+<strong>Tools &gt; Task manager</strong>.</li>
+<li>When the Task Manager window appears, verify that the columns displaying
+memory information are visible. If they are not, right click in the header
+row and select the memory items from the popup menu that appears.</li>
+</ol>
+<p>A browser window running a Native Client application will have at least two
+processes associated with it: a process for the app&#8217;s top level (the render
+process managing the page including its HTML and any JavaScript) and one or
+more processes for each instance of a Native Client module embedded in the page
+(each process running native code from one nexe file). The top-level process
+appears with the application&#8217;s icon and begins with the text &#8220;App:&#8221;. A Native
+Client process appears with a Chrome extension icon (a jigsaw puzzle piece
+<img alt="puzzle" src="../../images/puzzle.png" />) and begins with the text &#8220;Native Client module&#8221; followed by the URL
+of its manifest file.</p>
+<p>From the Task Manager you can view the changing memory allocations of all the
+processes associated with a Native Client application. Each process has its own
+memory footprint. You can also see the rendering rate displayed as frames per
+second (FPS). Note that the computation of render frames can be performed in
+any process, but the rendering itself is always done in the top level
+application process, so look for the rendering rate there.</p>
+</section><section id="controlling-the-level-of-native-client-error-and-warning-messages">
+<h3 id="controlling-the-level-of-native-client-error-and-warning-messages">Controlling the level of Native Client error and warning messages</h3>
+<p>Native Client prints warning and error messages to stdout and stderr. You can
+increase the amount of Native Client&#8217;s diagnostic output by setting the
+following <a class="reference external" href="http://en.wikipedia.org/wiki/Environment_variable">environment variables</a>:</p>
+<ul class="small-gap">
+<li>NACL_DEBUG_ENABLE=1</li>
+<li>PPAPI_BROWSER_DEBUG=1</li>
+<li>NACL_PLUGIN_DEBUG=1</li>
+<li>NACL_PPAPI_PROXY_DEBUG=1</li>
+<li>NACL_SRPC_DEBUG=[1-255] (use a higher number for more verbose debug output)</li>
+<li>NACLVERBOSITY=[1-255]</li>
+</ul>
+</section></section><section id="basic-debugging">
+<h2 id="basic-debugging">Basic debugging</h2>
+<section id="writing-messages-to-the-javascript-console">
+<h3 id="writing-messages-to-the-javascript-console">Writing messages to the JavaScript console</h3>
+<p>You can send messages from your C/C++ code to JavaScript using the PostMessage
+call in the <a class="reference internal" href="../coding/message-system.html"><em>Pepper messaging system</em></a>. When the
+JavaScript code receives a message, its message event handler can call
+<a class="reference external" href="https://developer.mozilla.org/en/DOM/console.log">console.log()</a> to write
+the message to the JavaScript <a class="reference external" href="https://developers.google.com/chrome-developer-tools/docs/console">console</a> in
+Chrome&#8217;s Developer Tools.</p>
+</section><section id="debugging-with-printf">
+<h3 id="debugging-with-printf">Debugging with printf</h3>
+<p>Your C/C++ code can perform inline printf debugging to stdout and stderr by
+calling fprintf() directly, or by using cover functions like these:</p>
+<pre class="prettyprint">
+#include &lt;stdio.h&gt;
+void logmsg(const char* pMsg){
+  fprintf(stdout,&quot;logmsg: %s\n&quot;,pMsg);
+}
+void errormsg(const char* pMsg){
+  fprintf(stderr,&quot;logerr: %s\n&quot;,pMsg);
+}
+</pre>
+<p>By default stdout and stderr will appear in Chrome&#8217;s stdout and stderr stream
+but they can also be redirected as described below.</p>
+<section id="redirecting-output-to-log-files">
+<h4 id="redirecting-output-to-log-files">Redirecting output to log files</h4>
+<p>You can redirect stdout and stderr to output files by setting these environment variables:</p>
+<ul class="small-gap">
+<li><code>NACL_EXE_STDOUT=c:\nacl_stdout.log</code></li>
+<li><code>NACL_EXE_STDERR=c:\nacl_stderr.log</code></li>
+</ul>
+<p>There is another variable, <code>NACLLOG</code>, that you can use to redirect Native
+Client&#8217;s internally-generated messages. This variable is set to stderr by
+default; you can redirect these messages to an output file by setting the
+variable as follows:</p>
+<ul class="small-gap">
+<li><code>NACLLOG=c:\nacl.log</code></li>
+</ul>
+<aside class="note">
+<strong>Note:</strong> If you set the NACL_EXE_STDOUT, NACL_EXE_STDERR, or NACLLOG
+variables to redirect output to a file, you must run Chrome with the
+<code>--no-sandbox</code> flag.  You must also be careful that each variable points to
+a different file.
+</aside>
+</section><section id="redirecting-output-to-the-javascript-console">
+<h4 id="redirecting-output-to-the-javascript-console">Redirecting output to the JavaScript console</h4>
+<p>You can also cause output from printf statements in your C/C++ code to be
+relayed to the JavaScript side of your application through the Pepper messaging
+system, where you can then write the output to the JavaScript console. Follow
+these steps:</p>
+<ol class="arabic">
+<li><p class="first">Set the NACL_EXE_STDOUT and NACL_EXE_STDERR environment variables as
+follows:</p>
+<ul class="small-gap">
+<li><p class="first">NACL_EXE_STDOUT=DEBUG_ONLY:dev://postmessage</p>
+</li>
+<li><p class="first">NACL_EXE_STDERR=DEBUG_ONLY:dev://postmessage</p>
+</li>
+</ul>
+<p>These settings tell Native Client to use PostMessage() to send output that
+your Native Client module writes to stdout and stderr to the JavaScript side
+of your application.</p>
+</li>
+<li><p class="first">Register a JavaScript handler to receive messages from your Native Client
+module:</p>
+<pre class="prettyprint">
+&lt;div id=&quot;nacl_container&quot;&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    var container = document.getElementById('nacl_container');
+    container.addEventListener('message', handleMessage, true);
+  &lt;/script&gt;
+  &lt;embed id=&quot;nacl_module&quot;
+         src=&quot;my_application.nmf&quot;
+         type=&quot;application/x-nacl&quot; /&gt;
+&lt;/div&gt;
+</pre>
+</li>
+<li><p class="first">Implement a simple JavaScript handler that logs the messages it receives to
+the JavaScript console:</p>
+<pre class="prettyprint">
+function handleMessage(message_event) {
+  console.log(message_event.data);
+}
+</pre>
+<p>This handler works in the simple case where the only messages your Native
+Client module sends to JavaScript are messages with the output from stdout
+and stderr. If your Native Client module also sends other messages to
+JavaScript, your handler will need to be more complex.</p>
+<p>Once you&#8217;ve implemented a message handler and set up the environment
+variables as described above, you can check the JavaScript console to see
+output that your Native Client module prints to stdout and stderr. Keep in
+mind that your module makes a call to PostMessage() every time it flushes
+stdout or stderr.  Your application&#8217;s performance will degrade considerably
+if your module prints and flushes frequently, or if it makes frequent Pepper
+calls to begin with (e.g., to render).</p>
+</li>
+</ol>
+</section></section><section id="logging-calls-to-pepper-interfaces">
+<h3 id="logging-calls-to-pepper-interfaces">Logging calls to Pepper interfaces</h3>
+<p>You can log all Pepper calls your module makes by passing the following flags
+to Chrome on startup:</p>
+<pre class="prettyprint">
+--vmodule=ppb*=4 --enable-logging=stderr
+</pre>
+<p>The <code>vmodule</code> flag tells Chrome to log all calls to C Pepper interfaces that
+begin with &#8220;ppb&#8221; (that is, the interfaces that are implemented by the browser
+and that your module calls). The <code>enable-logging</code> flag tells Chrome to log
+the calls to stderr.</p>
+</section><section id="debugging-with-visual-studio">
+<span id="visual-studio"></span><h3 id="debugging-with-visual-studio"><span id="visual-studio"></span>Debugging with Visual Studio</h3>
+<p>If you develop on a Windows platform you can use the <a class="reference internal" href="vs-addin.html"><em>Native Client Visual
+Studio add-in</em></a> to write and debug your code. The add-in defines new
+project platforms that let you run your module in two different modes: As a
+Pepper plugin and as a Native Client module. When running as a Pepper plugin
+you can use the built-in Visual Studio debugger. When running as a Native
+Client module Visual Studio will launch an instance of nacl-gdb for you and
+link it to the running code.</p>
+</section><section id="debugging-with-nacl-gdb">
+<span id="using-gdb"></span><h3 id="debugging-with-nacl-gdb"><span id="using-gdb"></span>Debugging with nacl-gdb</h3>
+<p>The Native Client SDK includes a command-line debugger that you can use to
+debug Native Client modules. The debugger is based on the GNU debugger <a class="reference external" href="http://www.gnu.org/software/gdb/">gdb</a>, and is located at
+<code>toolchain/&lt;platform&gt;_x86_newlib/bin/x86_64-nacl-gdb</code> (where <em>&lt;platform&gt;</em>
+is the platform of your development machine: <code>win</code>, <code>mac</code>, or
+<code>linux</code>).</p>
+<p>Note that this same copy of GDB can be used to debug any NaCl program,
+whether built using newlib or glibc for x86-32, x86-64 or ARM.  In the SDK,
+<code>i686-nacl-gdb</code> is an alias for <code>x86_64-nacl-gdb</code>, and the <code>newlib</code>
+and <code>glibc</code> toolchains both contain the same version of GDB.</p>
+<section id="debugging-pnacl-pexes">
+<h4 id="debugging-pnacl-pexes">Debugging PNaCl pexes</h4>
+<p>If you want to use GDB to debug a program that is compiled with the PNaCl
+toolchain, you must convert the <code>pexe</code> file to a <code>nexe</code>.  (You can skip
+this step if you are using the GCC toolchain.)</p>
+<ul class="small-gap">
+<li>Firstly, make sure you are passing the <code>-g</code> <a class="reference internal" href="building.html#compile-flags"><em>compile option</em></a> to <code>pnacl-clang</code> to enable generating debugging info.
+You might also want to omit <code>-O2</code> from the compile-time and link-time
+options, otherwise GDB not might be able to print variables&#8217; values when
+debugging (this is more of a problem with the PNaCl/LLVM toolchain than
+with GCC).</li>
+<li><p class="first">Secondly, use <code>pnacl-translate</code> to convert your <code>pexe</code> to one or more
+<code>nexe</code> files.  For example:</p>
+<pre>
+&lt;NACL_SDK_ROOT&gt;/toolchain/win_pnacl/bin/pnacl-translate ^
+  --allow-llvm-bitcode-input hello_world.pexe -arch x86-32 -o hello_world_x86_32.nexe
+&lt;NACL_SDK_ROOT&gt;/toolchain/win_pnacl/bin/pnacl-translate ^
+  --allow-llvm-bitcode-input hello_world.pexe -arch x86-64 -o hello_world_x86_64.nexe
+</pre>
+<p>For this, use the non-finalized <code>pexe</code> file produced by
+<code>pnacl-clang</code>, not the <code>pexe</code> file produced by <code>pnacl-finalize</code>.
+The latter <code>pexe</code> has debugging info stripped out.  The option
+<code>--allow-llvm-bitcode-input</code> tells <code>pnacl-translate</code> to accept a
+non-finalized <code>pexe</code>.</p>
+</li>
+<li><p class="first">Replace the <code>nmf</code> <a class="reference internal" href="../coding/application-structure.html#manifest-file"><em>manifest file</em></a> that points to
+your <code>pexe</code> file with one that points to the <code>nexe</code> files.  For the
+example <code>nexe</code> filenames above, the new <code>nmf</code> file would contain:</p>
+<pre>
+{
+  &quot;program&quot;: {
+    &quot;x86-32&quot;: {&quot;url&quot;: &quot;hello_world_x86_32.nexe&quot;},
+    &quot;x86-64&quot;: {&quot;url&quot;: &quot;hello_world_x86_64.nexe&quot;},
+  }
+}
+</pre>
+</li>
+<li>Change the <code>&lt;embed&gt;</code> HTML element to use
+<code>type=&quot;application/x-nacl&quot;</code> rather than
+<code>type=&quot;application/x-pnacl&quot;</code>.</li>
+<li>Copy the <code>nexe</code> and <code>nmf</code> files to the location that your local web
+server serves files from.</li>
+</ul>
+<aside class="note">
+<strong>Note:</strong> If you know whether Chrome is using the x86-32 or x86-64
+version of the NaCl sandbox on your system, you can translate the
+<code>pexe</code> once to a single x86-32 or x86-64 <code>nexe</code>.  Otherwise, you
+might find it easier to translate the <code>pexe</code> to both <code>nexe</code>
+formats as described above.
+</aside>
+</section><section id="running-nacl-gdb">
+<h4 id="running-nacl-gdb">Running nacl-gdb</h4>
+<p>Before you start using nacl-gdb, make sure you can <a class="reference internal" href="building.html"><em>build</em></a> your
+module and <a class="reference internal" href="running.html"><em>run</em></a> your application normally. This will verify
+that you have created all the required <a class="reference internal" href="../coding/application-structure.html"><em>application parts</em></a> (.html, .nmf, and .nexe files, shared
+libraries, etc.), that your server can access those resources, and that you&#8217;ve
+configured Chrome correctly to run your application.  The instructions below
+assume that you are using a <a class="reference internal" href="running.html#web-server"><em>local server</em></a> to run your
+application; one benefit of doing it this way is that you can check the web
+server output to confirm that your application is loading the correct
+resources. However, some people prefer to run their application as an unpacked
+extension, as described in <a class="reference internal" href="running.html"><em>Running Native Client Applications</em></a>.</p>
+<p>Follow the instructions below to debug your module with nacl-gdb:</p>
+<ol class="arabic">
+<li><p class="first">Compile your module with the <code>-g</code> flag so that your .nexe retains symbols
+and other debugging information (see the <a class="reference internal" href="building.html#compile-flags"><em>recommended compile flags</em></a>).</p>
+</li>
+<li><p class="first">Launch a local web server (e.g., the <a class="reference internal" href="running.html#web-server"><em>web server</em></a> included
+in the SDK).</p>
+</li>
+<li><p class="first">Launch Chrome with these three required flags: <code>--enable-nacl --enable-nacl-debug --no-sandbox</code>.</p>
+<p>You may also want to use some of the optional flags listed below. A typical
+command looks like this:</p>
+<pre class="prettyprint">
+chrome --enable-nacl --enable-nacl-debug --no-sandbox --disable-hang-monitor localhost:5103
+</pre>
+<p><strong>Required flags:</strong></p>
+<dl class="docutils">
+<dt><code>--enable-nacl</code></dt>
+<dd><p class="first last">Enables Native Client for all applications, including those that are
+launched outside the Chrome Web Store.</p>
+</dd>
+<dt><code>--enable-nacl-debug</code></dt>
+<dd><p class="first last">Turns on the Native Client debug stub, opens TCP port 4014, and pauses
+Chrome to let the debugger connect.</p>
+</dd>
+<dt><code>--no-sandbox</code></dt>
+<dd><p class="first last">Turns off the Chrome sandbox (not the Native Client sandbox). This enables
+the stdout and stderr streams, and lets the debugger connect.</p>
+</dd>
+</dl>
+<p><strong>Optional flags:</strong></p>
+<dl class="docutils">
+<dt><code>--disable-hang-monitor</code></dt>
+<dd><p class="first last">Prevents Chrome from displaying a warning when a tab is unresponsive.</p>
+</dd>
+<dt><code>--user-data-dir=&lt;directory&gt;</code></dt>
+<dd><p class="first last">Specifies the <a class="reference external" href="http://www.chromium.org/user-experience/user-data-directory">user data directory</a> from which
+Chrome should load its state.  You can specify a different user data
+directory so that changes you make to Chrome in your debugging session do
+not affect your personal Chrome data (history, cookies, bookmarks, themes,
+and settings).</p>
+</dd>
+<dt><code>&lt;URL&gt;</code></dt>
+<dd><p class="first last">Specifies the URL Chrome should open when it launches. The local server
+that comes with the SDK listens on port 5103 by default, so the URL when
+you&#8217;re debugging is typically <code>localhost:5103</code> (assuming that your
+application&#8217;s page is called index.html and that you run the local server
+in the directory where that page is located).</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Navigate to your application&#8217;s page in Chrome. (You don&#8217;t need to do this if
+you specified a URL when you launched Chrome in the previous step.) Chrome
+will start loading the application, then pause and wait until you start
+nacl-gdb and run the <code>continue</code> command.</p>
+</li>
+<li><p class="first">Go to the directory with your source code, and run nacl-gdb from there. For
+example:</p>
+<pre class="prettyprint">
+cd &lt;NACL_SDK_ROOT&gt;/examples/hello_world_gles
+&lt;NACL_SDK_ROOT&gt;/toolchain/win_x86_newlib/bin/x86_64-nacl-gdb
+</pre>
+<p>The debugger will start and show you a gdb prompt:</p>
+<pre class="prettyprint">
+(gdb)
+</pre>
+</li>
+<li><p class="first">Run the following three commands from the gdb command line:</p>
+<pre class="prettyprint">
+(gdb) nacl-manifest &lt;path-to-your-.nmf-file&gt;
+(gdb) nacl-irt &lt;path-to-Chrome-NaCl-integrated-runtime&gt;
+(gdb) target remote localhost:4014
+</pre>
+<p>These commands are described below:</p>
+<dl class="docutils">
+<dt><code>nacl-manifest &lt;path&gt;</code></dt>
+<dd><p class="first last">Tells the debugger about your Native Client application by pointing it to
+the application&#8217;s manifest (.nmf) file. The manifest file lists your
+application&#8217;s executable (.nexe) files, as well as any libraries that are
+linked with the application dynamically.</p>
+</dd>
+<dt><code>nacl-irt &lt;path&gt;</code></dt>
+<dd><p class="first last">Tells the debugger where to find the Native Client Integrated Runtime
+(IRT). The IRT is located in the same directory as the Chrome executable,
+or in a subdirectory named after the Chrome version. For example, if
+you&#8217;re running Chrome canary on Windows, the path to the IRT typically
+looks something like <code>C:/Users/&lt;username&gt;/AppData/Local/Google/Chrome
+SxS/Application/23.0.1247.1/nacl_irt_x86_64.nexe</code>.</p>
+</dd>
+<dt><code>target remote localhost:4014</code></dt>
+<dd><p class="first last">Tells the debugger how to connect to the debug stub in the Native Client
+application loader. This connection occurs through TCP port 4014 (note
+that this port is distinct from the port which the local web server uses
+to listen for incoming requests, typically port 5103).</p>
+</dd>
+</dl>
+<p>A couple of notes on how to specify path names in the nacl-gdb commands
+above:</p>
+<ul class="small-gap">
+<li><p class="first">You can use a forward slash to separate directories on Linux, Mac, and
+Windows. If you use a backslash to separate directories on Windows, you
+must escape the backslash by using a double backslash &#8220;\&#8221; between
+directories.</p>
+</li>
+<li><p class="first">If any directories in the path have spaces in their name, you must put
+quotation marks around the path.</p>
+</li>
+</ul>
+<p>As an example, here is a what these nacl-gdb commands might look like on
+Windows:</p>
+<pre class="prettyprint">
+nacl-manifest &quot;C:/&lt;NACL_SDK_ROOT&gt;/examples/hello_world_gles/newlib/Debug/hello_world_gles.nmf&quot;
+nacl-irt &quot;C:/Users/&lt;username&gt;/AppData/Local/Google/Chrome SxS/Application/23.0.1247.1/nacl_irt_x86_64.nexe&quot;
+target remote localhost:4014
+</pre>
+<p>To save yourself some typing, you can put put these nacl-gdb commands in a
+script file, and execute the file when you run nacl-gdb, like so:</p>
+<pre class="prettyprint">
+&lt;NACL_SDK_ROOT&gt;/toolchain/win_x86_newlib/bin/x86_64-nacl-gdb -x &lt;nacl-script-file&gt;
+</pre>
+<p>If nacl-gdb connects successfully to Chrome, it displays a message such as
+the one below, followed by a gdb prompt:</p>
+<pre class="prettyprint">
+0x000000000fc00200 in _start ()
+(gdb)
+</pre>
+<p>If nacl-gdb can&#8217;t connect to Chrome, it displays a message such as
+&#8220;<code>localhost:4014: A connection attempt failed</code>&#8221; or &#8220;<code>localhost:4014:
+Connection timed out.</code>&#8221; If you see a message like that, make sure that you
+have launched a web server, launched Chrome, and navigated to your
+application&#8217;s page before starting nacl-gdb.</p>
+</li>
+</ol>
+<p>Once nacl-gdb connects to Chrome, you can run standard gdb commands to execute
+your module and inspect its state. Some commonly used commands are listed
+below.</p>
+<dl class="docutils">
+<dt><code>break &lt;location&gt;</code></dt>
+<dd><p class="first">set a breakpoint at &lt;location&gt;, e.g.:</p>
+<pre class="last prettyprint">
+break hello_world.cc:79
+break hello_world::HelloWorldInstance::HandleMessage
+break Render
+</pre>
+</dd>
+<dt><code>continue</code></dt>
+<dd>resume normal execution of the program</dd>
+<dt><code>next</code></dt>
+<dd>execute the next source line, stepping over functions</dd>
+<dt><code>step</code></dt>
+<dd>execute the next source line, stepping into functions</dd>
+<dt><code>print &lt;expression&gt;</code></dt>
+<dd>print the value of &lt;expression&gt; (e.g., variables)</dd>
+<dt><code>backtrace</code></dt>
+<dd>print a stack backtrace</dd>
+<dt><code>info breakpoints</code></dt>
+<dd>print a table of all breakpoints</dd>
+<dt><code>delete &lt;breakpoint&gt;</code></dt>
+<dd>delete the specified breakpoint (you can use the breakpoint number displayed
+by the info command)</dd>
+<dt><code>help &lt;command&gt;</code></dt>
+<dd>print documentation for the specified gdb &lt;command&gt;</dd>
+<dt><code>quit</code></dt>
+<dd>quit gdb</dd>
+</dl>
+<p>See the <a class="reference external" href="http://sourceware.org/gdb/current/onlinedocs/gdb/#toc_Top">gdb documentation</a> for a
+comprehensive list of gdb commands. Note that you can abbreviate most commands
+to just their first letter (<code>b</code> for break, <code>c</code> for continue, and so on).</p>
+<p>To interrupt execution of your module, press &lt;Ctrl-c&gt;. When you&#8217;re done
+debugging, close the Chrome window and type <code>q</code> to quit gdb.</p>
+</section></section></section><section id="debugging-with-other-tools">
+<h2 id="debugging-with-other-tools">Debugging with other tools</h2>
+<p>If you cannot use the <a class="reference internal" href="debugging.html#visual-studio"><em>Visual Studio add-in</em></a>, or you want
+to use a debugger other than nacl-gdb, you must manually build your module as a
+Pepper plugin (sometimes referred to as a &#8220;<a class="reference external" href="http://www.chromium.org/nativeclient/getting-started/getting-started-background-and-basics#TOC-Trusted-vs-Untrusted">trusted</a>&#8221;
+or &#8220;in-process&#8221; plugin).  Pepper plugins (.DLL files on Windows; .so files on
+Linux; .bundle files on Mac) are loaded directly in either the Chrome renderer
+process or a separate plugin process, rather than in Native Client. Building a
+module as a trusted Pepper plugin allows you to use standard debuggers and
+development tools on your system, but when you&#8217;re finished developing the
+plugin, you need to port it to Native Client (i.e., build the module with one
+of the toolchains in the NaCl SDK so that the module runs in Native Client).
+For details on this advanced development technique, see <a class="reference external" href="http://www.chromium.org/nativeclient/how-tos/debugging-documentation/debugging-a-trusted-plugin">Debugging a Trusted
+Plugin</a>.
+Note that starting with the <code>pepper_22</code> bundle, the NaCl SDK for Windows
+includes pre-built libraries and library source code, making it much easier to
+build a module into a .DLL.</p>
+<section id="open-source-profiling-tools">
+<h3 id="open-source-profiling-tools">Open source profiling tools</h3>
+<p>For the brave-hearted there are open source tools at <a class="reference external" href="http://www.chromium.org/nativeclient">Chromium.org</a> that describe how to do profiling on
+<a class="reference external" href="https://sites.google.com/a/chromium.org/dev/nativeclient/how-tos/profiling-nacl-apps-on-64-bit-windows">64-bit Windows</a>
+and <a class="reference external" href="http://www.chromium.org/nativeclient/how-tos/limited-profiling-with-oprofile-on-x86-64">Linux</a>
+machines.</p>
+</section></section></section>
+    
+    <footer id="cc-info">
+      <button id="send-feedback" class="google-button" data-feedback>Send Feedback</button>
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo"><a href="http://creativecommons.org/licenses/by/3.0/"><img src="../../../static/images/cc_by.png" alt="Licensed Creative Commons by Attribution"></a></p>
+    </footer>
+    <nav class="inline-toc no-permalink">
+      <section class="related">
+                      <h3 title="">Development Cycle</h3>
+      <ol class="toc">
+                              <li>
+                                <a href="building.html">Building</a>
+                              </li>
+                              <li>
+                                <a href="running.html">Running</a>
+                              </li>
+                              <li>
+                                <a href="debugging.html" class="active">Debugging</a>
+                              </li>
+                              <li>
+                                <a href="vs-addin.html">Debugging with Visual Studio</a>
+                              </li>
+                              <li>
+                                <a href="dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                              </li>
+      </ol>
+      </section>
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="debugging.html#diagnostic-information"
+          >Diagnostic information</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="debugging.html#viewing-process-statistics-with-the-task-manager"
+          >Viewing process statistics with the task manager</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="debugging.html#controlling-the-level-of-native-client-error-and-warning-messages"
+          >Controlling the level of Native Client error and warning messages</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="debugging.html#basic-debugging"
+          >Basic debugging</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="debugging.html#writing-messages-to-the-javascript-console"
+          >Writing messages to the JavaScript console</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="debugging.html#debugging-with-printf"
+          >Debugging with printf</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="debugging.html#redirecting-output-to-log-files"
+          >Redirecting output to log files</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="debugging.html#redirecting-output-to-the-javascript-console"
+          >Redirecting output to the JavaScript console</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="debugging.html#logging-calls-to-pepper-interfaces"
+          >Logging calls to Pepper interfaces</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="debugging.html#debugging-with-visual-studio"
+          >Debugging with Visual Studio</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="debugging.html#debugging-with-nacl-gdb"
+          >Debugging with nacl-gdb</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="debugging.html#debugging-pnacl-pexes"
+          >Debugging PNaCl pexes</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="debugging.html#running-nacl-gdb"
+          >Running nacl-gdb</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="debugging.html#debugging-with-other-tools"
+          >Debugging with other tools</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="debugging.html#open-source-profiling-tools"
+          >Open source profiling tools</a>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="debugging.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../../../static/js/fatnav.js"></script>
+    <script src="../../../static/js/article.js"></script>
+    <script src="../../../static/js/prettify.js"></script>
+    <script src="../../../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../../../static/js/site.js"></script>
+  </body>
+</html>

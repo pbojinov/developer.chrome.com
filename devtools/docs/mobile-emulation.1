@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="https://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="https://developer.chrome.com/static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="https://developer.chrome.com/static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="https://developer.chrome.com/static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>Mobile emulation - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="mobile-emulation.1#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="https://developer.chrome.com/">
+          <img alt="Chrome: developer" src="https://developer.chrome.com/static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/index">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="authoring-development-workflow.1">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/console">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="tips-and-tricks.1">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/videos">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/devtools/docs/videos">Videos</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/contributing">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/dom-and-styles">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/css-preprocessors">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/resource-panel">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="javascript-debugging.1">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="mobile-emulation.1">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="remote-debugging.1">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/network">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/timeline">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/cpu-profiling">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/javascript-memory-profiling">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/devtools/docs/javascript-memory-profiling">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/heap-profiling-summary">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="clean-testing-environment.1">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/console-api">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/commandline-api">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/integrating">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/devtools/docs/integrating">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/sample-extensions">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/debugging-clients">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/shortcuts">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/settings">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/devtools/docs/debugger-protocol">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/devtools/docs/debugger-protocol">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/protocol/1.1/index">Version 1.1</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/protocol/1.0/index">Version 1.0</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/protocol/0.1/index">Version .1</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/devtools/docs/protocol/tot/index">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/index">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/user-agent">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="mobile-emulation.1">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="remote-debugging.1">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/faq">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/android/overview">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/android/intents">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/android/installtohomescreen">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/webview/overview">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/webview/gettingstarted">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/webview/workflow">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/ios/overview">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/ios/links">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/multidevice/ios/pocket">Pocket</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/multidevice/ios/feedly">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/about_apps">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/about_apps">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/first_app">Create Your First App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_architecture">App Architecture</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_lifecycle">App Lifecycle</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/contentSecurityPolicy">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/app_codelab1_setup">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab1_setup">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab2_basic">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab3_mvc">3 - Create MVC</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab5_data">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab6_lifecycle">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab7_useridentification">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab8_webresources">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_codelab_10_publishing">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/samples">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/offline_apps">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/offline_apps">Offline First</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_external">Handling External Content</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_storage">Storing Data</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/cloudMessaging">Cloud Messaging</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_identity">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/app_usb">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/app_usb">USB</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_serial">Serial</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_network">Network Communications</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_bluetooth">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/app_frameworks">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/app_frameworks">About MVC Architecture</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/angular_framework">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/sencha_framework">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/publish_app">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/publish_app">Publish Your App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/google_wallet">Monetize Your App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/analytics">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/api_index">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/api_index">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../apps/manifest.1">Manifest File Format</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/tags/webview">Webview Tag</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/api_other">Web APIs</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/apps/app_deprecated">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/apps/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/apps/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/extensions/overview">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/extensions/overview">Overview</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/event_pages">Event Pages</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/content_scripts">Content Scripts</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/activeTab">activeTab Permission</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/whats_new">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/extensions/getstarted">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/extensions/samples">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/extensions/a11y">Accessibility</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/contentSecurityPolicy">Content Security Policy</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/xhr">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../../extensions/tut_debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/i18n">Internationalization</a>
+                            </li>
+                            <li><a href="../../extensions/messaging.html">Message Passing</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/extensions/hosting">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/extensions/hosting">Hosting</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/packaging">Packaging</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/autoupdate">Autoupdating</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/external_extensions">Other Deployment Options</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/tut_analytics">Google Analytics</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/themes">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/extensions/api_index">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/extensions/api_index">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../extensions/manifest.1">Manifest File Format</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/api_other">Web APIs</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/permission_warnings">Permission Warnings</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/permissions">Optional Permissions</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/extensions/match_patterns">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/overview">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/overview">What Is Native Client?</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/nacl-and-pnacl">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/sdk/download">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/download">Download SDK</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/examples">Examples</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/sdk/release-notes">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part1">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part1">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/devcycle/building">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/building">Building</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/running">Running</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/debugging">Debugging</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/vs-addin">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/devcycle/dynamic-loading">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/coding/application-structure">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/application-structure">Application Structure</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/native-client-modules">Native Client Modules</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/3D-graphics">3D Graphics</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/audio">Audio</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/file-io">File I/O</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/message-system">Messaging System</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/progress-events">Progress Events</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/devguide/distributing">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/pepper_stable/index">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/pepper_stable/c/group___interfaces">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/pepper_stable/c/group___structs">Pepper C Structures</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/pepper_stable/c/group___functions">Pepper C Functions</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/pepper_stable/c/group___enums">Pepper C Enums</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/pepper_stable/c/group___typedefs">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/pepper_stable/cpp/inherits">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/glossary">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/glossary">Glossary</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/nacl-manifest-format">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-bitcode-abi">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/pnacl-c-cpp-language-support">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/native-client/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/native-client/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/help">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/native-client/community/security-contest/index">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/index">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/overview">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/get_started_simple">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/samples">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/branding">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/webstore/branding">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../../webstore/images.1">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/money">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/webstore/money">Monetizing Your App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/identify_user">Using Google Accounts</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/check_for_payment">Checking for Payment</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/pricing">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/publish">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/webstore/publish">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/i18n">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/inline_installation">Using Inline Installation</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/rating">Rating Guidelines</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/program_policies">Program Policies</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/terms">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="https://developer.chrome.com/webstore/best_practices">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="https://developer.chrome.com/webstore/best_practices">Best Practices</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="https://developer.chrome.com/webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="https://developer.chrome.com/static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <div itemprop="articleBody">
+
+
+<h1>Mobile emulation</h1>
+
+<p>The mobile web has evolved to enable increasingly sophisticated applications,
+which we often wish to debug during development on the desktop. The DevTools
+include support for a number of features that can help with this which we will
+walk through in this section.</p>
+
+
+<p class="note"><b>Note</b>: Some of our documentation may be ahead of the stable version of Chrome. If you are unable to locate a feature listed, we recommend trying <a href="https://www.google.com/intl/en/chrome/browser/canary.html">Chrome Canary</a> which contains the latest version of the DevTools.</p>
+
+<div class="collapsible">
+<h2 id="enable-emulation-panel">Enabling the Emulation Panel</h2>
+
+<p><a href="https://www.google.com/intl/en/chrome/browser/canary.html" title="Chrome Canary">Chrome Canary</a> has received a number of improved mobile emulation tools which can be accessed by enabling the Emulation panel through the Settings panel. To enable:</p>
+
+<ol>
+  <li>Open the Settings panel within the DevTools.</li>
+  <li>Enable "Show 'Emulation' view in console drawer."</li>
+</ol>
+
+<p><div class="screenshot"><img width="330" src="https://developer.chrome.com/devtools/docs/mobile-emulation/enable-emulation.png" alt="Enabling emulation"/></div></p>
+
+<p>Bring up the DevTools console drawer by hitting the <span class="kbd">Esc</span> key and then select the Emulation panel.</p>
+
+<p><div class="screenshot"><img width="468" src="https://developer.chrome.com/devtools/docs/mobile-emulation/emulation-panel.png" alt="Emulation panel"/></div></p>
+
+<p class="note"><b>Note</b>: Emulation tools within DevTools were previously contained within an <strong>Overrides</strong> pane inside the Settings panel. The Emulation panel is the new Overrides pane.</p>
+
+
+
+</div>
+<div class="collapsible">
+<h2 id="emulate-devices">Emulating Devices</h2>
+
+<p>It's often easier to start prototyping on the desktop and then tackle the
+mobile-specific parts on the devices you intend to support. Device emulation can
+make this process more straightforward.</p>
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/z7sTRdSpA04" frameborder="0" allowfullscreen=""></iframe>
+
+<p>DevTools contains built in presets for a number of devices, this allows you to emulate and debug mobile viewport issues like CSS media query breakpoints. Selecting a device preset automatically enables a number of settings:</p>
+
+  <li><strong>User agent</strong> - a string available at <code>navigator.userAgent</code> and also sent as a request header for page resources. See <a href="mobile-emulation.1#useragent-spoofing">Useragent Spoofing</a>.</li>
+  <li><strong>Screen resolution</strong> - matches the actual dimensions (width and height) of the selected device. For example, selecting the Nexus S will emulate a resolution of 480x800.</li>
+  <li><strong>Device Pixel Ratio</strong> - matches the DPR of the selected device. Allows emulation of a retina device from a non-retina machine. This also means media queries such as <code>@media only screen and (min-device-pixel-ratio: 2)</code> can be tested.</li>
+  <li><strong>Emulate viewport</strong> - zooms the page out to the physical default viewport of that device. In the case of the Nexus 4 this is 768x1280. </li>
+  <li><strong>Text autosizing</strong> - emulate font boosting which occurs on mobile devices.</li>
+    <li><strong>Android font metrics</strong> - Android artificially increases the font metrics used by text autosizing based on the system settings and screen size. Enabled by default only when emulating an Android device.</li>
+  <li><strong>Touch screen</strong> (part of the Sensors pane) - uses touch events, see <a href="mobile-emulation.1#emulate-touch-events">Emulating Touch Events</a>.</li>
+
+<p><div class="screenshot"><img width="746" src="https://developer.chrome.com/devtools/docs/mobile-emulation/viewport-emulation.gif" alt="Viewport emulation"/></div></p>
+
+
+
+<p>Emulate a device via a preset using the following steps:</p>
+
+<ol>
+  <li>Open the Emulation panel within the DevTools</li>
+  <li>With the Device pane selected, select "Google Nexus S".</li>
+  <li>Click Emulate.</li>
+</ol>
+
+<p><div class="screenshot"><img width="550" src="https://developer.chrome.com/devtools/docs/mobile-emulation/image_3.png" alt="Viewport Overrides"/></div></p>
+
+<p>You are now in device emulation mode. The Screen, User Agent, and Sensors panes reflect the device settings which are now enabled. </p>
+
+<p><div class="screenshot"><img width="375" src="https://developer.chrome.com/devtools/docs/mobile-emulation/device_metrics.png" alt="Viewport Overrides"/></div></p>
+
+<h4>Notes</h4>
+<li>The <strong>Swap dimensions</strong> button in between the <em>Resolution</em> values (<img src="https://developer.chrome.com/devtools/docs/mobile-emulation/image_6.png"/>) will swap the width and height.</li>
+<li><b>Shrink to fit</b> ensures the emulated device screen is completely visible within your browser window. This setting does not emulate the device differently.</li>
+<li>Device media queries (e.g <code>@media only screen and (min-device-width:768px)</code>) will be enabled according to the values defined in the Resolution settings.</li>
+<li>You may want to undock DevTools or dock it to the right while working with emulated viewport settings.
+<li>Device settings can be configured independently of a device preset.</li>
+<li>If you would like to contribute patches to support new device presets, please see our <a href="https://developer.chrome.com/devtools/docs/contributing.md">contribution docs</a>.</li>
+
+</div>
+<div class="collapsible">
+<h2 id="emulate-touch-events">Emulating Touch Events</h2>
+
+<p>Touch is an input method that's difficult to test on the desktop, since most
+desktops don't have touch input. Having to test on mobile can lengthen your
+development cycle, since every change you make needs to be pushed out to a
+server and then loaded on the device.</p>
+
+<p>A solution to this problem is to simulate touch events on your development
+machine. For single-touches, the Chrome DevTools supports single<a href="http://www.w3.org/TR/touch-events/">
+</a><a href="http://www.w3.org/TR/touch-events/">touch
+event</a> emulation to make it easier to debug
+mobile applications on the desktop.</p>
+
+<p><strong>To enable support for touch event emulation:</strong></p>
+
+<ol>
+<li>Open the Emulation panel in the DevTools.</li>
+<li>Enable "Emulate touch screen" in the Sensors pane.</li>
+</ol>
+
+<div class="screenshot"><img width="480" src="https://developer.chrome.com/devtools/docs/mobile-emulation/image_0.png" alt="Emulating touch events in the Overrides panel"/></img></div>
+
+<p>Your mouse actions will now also trigger the relevant touch events: <code>touchstart</code>, <code>touchmove</code> and <code>touchend</code>.</p>
+
+<h4>Notes</h4>
+
+<li>Feature detects such as <code><a href="http://modernizr.com">Modernizr.touch</a></code> will now
+succeed on page refresh.</li>
+<li>This feature, like many other overrides, will only work while the DevTools are open.</li>
+<li>The cursor will change to a small circle to emulate a fingertip size.</li>
+<li>Use <span class="kbd">Shift</span> + Drag to emulate a "pinch".</li>
+<li>Enabling "Emulate touch screen" does not disable mouse events entirely, as they are fired on touch devices. Try this <a href="http://patrickhlauke.github.io/touch/tests/event-listener.html">touch event listener test page</a>, touch is another option we can debug with.</li>
+<li>On click, the order of events fired is currently: <code>touchstart > mousedown > touchmove > touchend > mouseup > click</code>. On touch devices, this order is slightly different. The tools will shortly be <a href="https://code.google.com/p/chromium/issues/detail?id=181204">updated with the right order.</li>
+<li><code>elem.ontouch<i>*</i></code> handlers will currently <a href="https://code.google.com/p/chromium/issues/detail?id=133915">not fire</a> with this feature. Use the <code>--touch-events</code> <a href="http://www.chromium.org/developers/how-tos/run-chromium-with-flags">command line flag</a> to let Chrome trigger these handlers.
+
+<div class="screenshot"><img width="495" src="https://developer.chrome.com/devtools/docs/mobile-emulation/scrolling-emulation.gif" alt="Emulating pinch to zoom"/></img></div>
+
+<p><strong>Debugging touch events</strong></p>
+
+<ol>
+<li>Open up the<a href="http://paulirish.com/demo/multi"> </a><a href="http://paulirish.com/demo/multi">Canvas Fingerpaint
+Demo</a></li>
+<li>Navigate to the Sources panel</li>
+<li>Expand the "Event Listener Breakpoints" sub-panel</li>
+<li>Check the "touchstart" and "touchmove" events under "Touch"</li>
+<li>Move your cursor over the paint area</li>
+<li>The debugger should successfully pause on the <span class=
+  "source-code">draw()</span> method</li>
+</ol>
+
+
+<p><div class="screenshot"><img width="700" src="https://developer.chrome.com/devtools/docs/mobile-emulation/image_2.png" alt="Debugging touch events"/></div></p>
+
+You may also monitor touch events as they fire on an element in the console. Use <a href="https://developer.chrome.com/devtools/docs/commandline-api.md#monitoreventsobject-events"><code>monitorEvents</code> from the command line API</a>:
+
+<pre class="prettyprint"><code>monitorEvents(document.body, 'touch')</code></pre>
+
+
+<p><strong>Multi-touch</strong></p>
+
+<p>Multi-touch events can be simulated if you have a device with touch input, such
+as a modern Apple MacBook. For further assistance with multi-touch event
+simulation, see the "Developer tools" chapter of the <a href="http://www.html5rocks.com/en/mobile/touch/"><b>Multi-touch web
+development</b> guide on HTML5 Rocks</a>.</p>
+
+
+
+</div>
+<div class="collapsible">
+<h2 id="useragent-spoofing">Useragent Spoofing</h2>
+
+
+<p><strong>Emulating The User Agent</strong></p>
+
+<ol>
+<li>Navigate to the <a href="http://www.google.com">Google</a> homepage.</li>
+<li>In the DevTools, open up the User Agent pane within the Emulation panel.</li>
+<li>Check "Spoof user agent" and select "Android 2.3 - Nexus S".</li>
+<li>Refresh the page.</li>
+</ol>
+
+<p>An updated user-agent field is now sent as part of the request headers for page resources. Some websites may decide to serve optimized versions of the page depending on the user-agent, this is one case where spoofing a user-agent may be useful.</p>
+
+<table>
+<thead>
+<tr><th>
+Before:
+</th><th>
+After:
+</th></tr>
+</thead>
+<tbody> <tr>
+<td><img style="max-width: 100%" src="https://developer.chrome.com/devtools/docs/mobile-emulation/image_4.png" alt="Before user agent and device metric emulation have been applied"/></td>
+<td><img style="max-width: 100%" src="https://developer.chrome.com/devtools/docs/mobile-emulation/image_5.png" alt="After user agent and device metric emulation are applied"/></td>
+</tr></tbody>
+</table>
+
+
+</div>
+<div class="collapsible">
+<h2 id="network-throttling">Network Bandwidth Throttling</h2>
+
+
+<p>The DevTools does not currently support network throttling, however it's important to understand and test the impact of slower connections on your site.
+
+ <p> On Mac, we recommend using the <a href="http://nshipster.com/network-link-conditioner/">Network Link Conditioner</a> that is available via <a href="https://developer.apple.com/xcode/">Xcode</a>. It has presets for network conditions like EDGE, 3G, DSL, WiFi, High Latency DNS, Very Bad Network, and 100% Loss. Changes made within Network Link Conditioner will affect all system network traffic, including Chrome or any running emulators and simulators.</p>
+
+<img src="https://developer.chrome.com/devtools/docs/mobile-emulation/network-link-conditioner-system-preference.png" alt="Network Link Conditioner preference panel" style="max-height: 300px">
+
+ <p>On Windows, we recommend using <a href="http://jagt.github.io/clumsy/index.html">Clumsy</a>, which can add extra lag, drop packets, throttle and manipulate other network conditions.</p>
+
+<img src="http://jagt.github.io/clumsy/clumsy-demo.gif" alt="Clumsy Options" style="max-height: 300px">
+
+<p>On Linux, there are many options for traffic shaping; <a href="http://info.iet.unipi.it/~luigi/dummynet/">dummynet</a> is the recommended option. </p>
+
+</div>
+<div class="collapsible">
+<h2 id="device-geolocation-overrides">Geolocation Overrides</h2>
+
+<p>When working with HTML5 geolocation support in an application, it can be useful
+to debug the output received when using different values for longitude and
+latitude. The DevTools support both overriding position values for <em>navigator.geolocation
+</em>and simulating geolocation not being available via the Sensors pane.</p>
+
+<p><strong>Overriding geolocation positions</strong></p>
+
+<ol>
+<li>Navigate to the <a href="http://html5demos.com/geo">Geolocation</a> demo and allow the page access to your position.</li>
+<li>In the DevTools, open up the Sensors pane within the Emulation panel.</li>
+<li>Check "Emulate geolocation coordinates" and enter 41.4949819 in the Lat field and -0.1461206 in the Lon field.</li>
+</ol>
+
+
+<p><div class="screenshot"><img src="https://developer.chrome.com/devtools/docs/mobile-emulation/image_11.png"/></div></p>
+
+<ol start="4">
+<li>Refresh the page. The demo will now use your overridden position for geolocation.</li>
+</ol>
+
+
+<p><div class="screenshot"><img src="https://developer.chrome.com/devtools/docs/mobile-emulation/image_12.png"/></div></p>
+
+<ol start="5">
+<li>Check the "Emulate position unavailable" option.</li>
+<li>Refresh the page. The demo will now inform you that finding your location has failed.</li>
+</ol>
+
+
+<p><div class="screenshot"><img src="https://developer.chrome.com/devtools/docs/mobile-emulation/image_13.png"/></div></p>
+
+
+
+</div>
+<div class="collapsible">
+<h2 id="device-orientation-overrides">Device Orientation Overrides</h2>
+
+<p>Many new mobile devices are now shipping with accelerometers, gyroscopes,
+compasses and other hardware designed to determine capture motion and
+orientation data. Many web browsers have access to that new hardware,
+such as via the <a href="http://dev.w3.org/geo/api/spec-source-orientation">HTML5
+DeviceOrientation</a> events.
+These events provide developers with information about the orientation, motion
+and acceleration of the device.</p>
+
+<p>If your application is taking advantage of device orientation events, it can
+also be useful to override the values received by these events during debugging
+to avoid the need to test them on a physical mobile device.</p>
+
+<p><strong>Overriding orientation values</strong></p>
+
+<ol>
+<li>Navigate to the<a href="http://www.html5rocks.com/en/tutorials/device/orientation/deviceorientationsample.html">
+</a><a href="http://www.html5rocks.com/en/tutorials/device/orientation/deviceorientationsample.html">Device
+Orientation</a> demo and notice the standard HTML5 logo along with the current orientation
+values listed above it.</li>
+<li>Open the Emulation panel in the DevTools and click the Sensors pane.</li>
+<li>Check "Accelerometer".</li>
+<li>You will see three fields:
+    <li><b>α</b>: how much the device has been rotated around the
+z-axis.
+  <li><b>β</b>: how much the device is tilted left-to-right.
+  <li><b>γ</b>: how much it's
+tilted front-to-back.</li>
+<li>Change the values to the following:
+
+<ol>
+<li>α - 0</li>
+<li>β - 60</li>
+<li>γ - 60</li>
+</ol>
+</li>
+</ol>
+
+
+<p><div class="screenshot"><img width="401" src="https://developer.chrome.com/devtools/docs/mobile-emulation/image_14.png" alt="Enabling device orientation overrides"/></div></p>
+
+<p>We have altered the left/right tilt and front/back tilt, in this case resulting
+in our application being emulated as rotating in a clockwise direction.</p>
+
+<p><div class="screenshot"><img width="369" src="https://developer.chrome.com/devtools/docs/mobile-emulation/image_15.png" alt="Device orientation allows us to emulate the directions a device may be turned" /></div></p>
+
+
+
+</div>
+<div class="collapsible">
+<h2 id="css-media-type-emulation">CSS Media Type Emulation</h2>
+
+<p>CSS media types allow you to apply different styles to a page depending on the
+medium it is being used through (e.g print, screen, tv, braille and so on).</p>
+
+<p><strong>Emulating media types</strong></p>
+
+<ol>
+<li>Navigate to <a href="http://www.html5rocks.com/en/tutorials/developertools/novdigest/">HTML5 Rocks</a>.</li>
+<li>Open the Emulation panel in the DevTools.</li>
+<li>Enable "CSS media" on the "Screen" pane and select the "print" media type option from the drop-down
+box.</li>
+<li>The page will adjust to using a stylesheet for the chosen CSS media type if
+one is available.</li>
+</ol>
+
+
+<table>
+<thead>
+<tr><th>
+Before:
+</th><th>
+After:
+</th></tr>
+</thead>
+<tbody> <tr>
+<td><img style="max-width: 100%" src="https://developer.chrome.com/devtools/docs/mobile-emulation/emulatecss_before.jpg" alt="Before enabling CSS media type emulation"/></td>
+<td><img style="max-width: 100%" src="https://developer.chrome.com/devtools/docs/mobile-emulation/emulatecss_after.jpg" alt="After enabling CSS media type emulation"/></td>
+</tr></tbody>
+</table>
+
+</div>
+<div class="collapsible">
+<h2 id="faq">Frequently Asked Questions</h2>
+
+<p><strong>Q: Do the DevTools supports remote debugging?</strong><br/>
+A: Yes. Please see our <a href="https://developer.chrome.com/devtools/docs/remote-debugging.html">remote debugging</a>
+documentation for more information.</p>
+
+<p><strong>Q: Can the DevTools emulate lower GPU memory limits or slower CPUs, as found on mobile devices?</strong><br>
+A: Currently there is no means within DevTools or Chrome to emulate these characteristics. </p>
+
+</div>
+    
+    <footer id="cc-info">
+      <button id="send-feedback" class="google-button" data-feedback>Send Feedback</button>
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo"><a href="http://creativecommons.org/licenses/by/3.0/"><img src="https://developer.chrome.com/static/images/cc_by.png" alt="Licensed Creative Commons by Attribution"></a></p>
+    </footer>
+    <nav class="inline-toc no-permalink">
+      <section class="related">
+                  <h3 title="">Use Tools</h3>
+      <ol class="toc">
+                        <li>
+                          <a href="https://developer.chrome.com/devtools/docs/dom-and-styles">Inspecting &amp; Tweaking</a>
+                        </li>
+                        <li>
+                          <a href="javascript-debugging.1">Debugging JavaScript</a>
+                        </li>
+                        <li>
+                          <a href="mobile-emulation.1" class="active">Mobile Emulation</a>
+                        </li>
+                        <li>
+                          <a href="remote-debugging.1">Remote Debugging on Android</a>
+                        </li>
+      </ol>
+      </section>
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="mobile-emulation.1#enable-emulation-panel"
+          >Enabling the Emulation Panel</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="mobile-emulation.1#emulate-devices"
+          >Emulating Devices</a>
+          <ol class="toc">
+              <li><a data-list-item href="mobile-emulation.1#"
+                     >Notes</a>
+              </li>
+          </ol>
+      </li>
+      <li class="toplevel"><a data-list-item href="mobile-emulation.1#emulate-touch-events"
+          >Emulating Touch Events</a>
+          <ol class="toc">
+              <li><a data-list-item href="mobile-emulation.1#"
+                     >Notes</a>
+              </li>
+          </ol>
+      </li>
+      <li class="toplevel"><a data-list-item href="mobile-emulation.1#useragent-spoofing"
+          >Useragent Spoofing</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="mobile-emulation.1#network-throttling"
+          >Network Bandwidth Throttling</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="mobile-emulation.1#device-geolocation-overrides"
+          >Geolocation Overrides</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="mobile-emulation.1#device-orientation-overrides"
+          >Device Orientation Overrides</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="mobile-emulation.1#css-media-type-emulation"
+          >CSS Media Type Emulation</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="mobile-emulation.1#faq"
+          >Frequently Asked Questions</a>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="mobile-emulation.1" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="https://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="https://developer.chrome.com/static/js/fatnav.js"></script>
+    <script src="https://developer.chrome.com/static/js/article.js"></script>
+    <script src="https://developer.chrome.com/static/js/prettify.js"></script>
+    <script src="https://developer.chrome.com/static/js/search.js"></script>
+    <script src="https://www.gstatic.com/feedback/api.js"></script>
+    <script src="https://developer.chrome.com/static/js/site.js"></script>
+  </body>
+</html>

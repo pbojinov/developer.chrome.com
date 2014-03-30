@@ -1,0 +1,1580 @@
+<link href="../../_static/css/nacl.css" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../../../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../../../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../../../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>Functions - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="group___functions.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../../../index.html">
+          <img alt="Chrome: developer" src="../../../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../../../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../../../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../../../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="../../../apps/index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="../../../apps/first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="../../../apps/app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../../../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="../../../apps/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../../../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="../../../apps/app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="../../../apps/cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="../../../apps/app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_usb.html">USB</a>
+                            </li>
+                            <li><a href="../../../apps/app_serial">Serial</a>
+                            </li>
+                            <li><a href="../../../apps/app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="../../../apps/app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="../../../apps/angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="../../../apps/sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="../../../apps/google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../apps/analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../../apps/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../../apps/webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="../../../apps/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../../apps/app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="../../../apps/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/overview.html">Overview</a>
+                            </li>
+                            <li><a href="../../../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../../../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../../../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="../../../apps/activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../../../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../../../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../../../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../../../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../../../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../../../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../../../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../../../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../../../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../../../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../../overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../../nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../../sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../../sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../../sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devguide/tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../../devguide/tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../../devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devguide/devcycle/building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="../../devguide/devcycle/building.html">Building</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/running.html">Running</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devguide/coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../../devguide/coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../../devguide/coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../../devguide/coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../../devguide/coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../../devguide/coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="../../devguide/devcycle/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../../devguide/coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../../devguide/coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../../devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../../devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devguide/distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../../glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../../reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../../reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../../reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../../reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../../help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../../publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../../community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../../../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../../../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../../../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../../../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../../../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../../../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../../../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../../../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../../../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../../../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <div itemprop="articleBody">
+
+
+<h1>Functions</h1>
+<div id="doxygen-ref">
+  <div>
+<!-- Generated by Doxygen 1.7.6.1 -->
+
+</div>
+<!--header-->
+<div class="contents">
+<h2>
+Functions</h2><table class="memberdecls">
+
+<tr><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_p_p___completion_callback.html">PP_CompletionCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#ga8691f15edad9b391c3644064ac57f191">PP_MakeCompletionCallback</a> (<a class="el" href="group___typedefs.html#ga6fe12e1a41df5e10103a811036d4d8d2">PP_CompletionCallback_Func</a> func, void *user_data)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_p_p___completion_callback.html">PP_CompletionCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#gabd6bf83f4c787477631c37d44418c4db">PP_MakeOptionalCompletionCallback</a> (<a class="el" href="group___typedefs.html#ga6fe12e1a41df5e10103a811036d4d8d2">PP_CompletionCallback_Func</a> func, void *user_data)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#gaffce49266a735f9ee8d149b14477404f">PP_RunCompletionCallback</a> (struct <a class="el" href="struct_p_p___completion_callback.html">PP_CompletionCallback</a> *cc, int32_t result)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_p_p___completion_callback.html">PP_CompletionCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#ga340e452b4931d17bd44928769490e282">PP_BlockUntilComplete</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#ga8dac45aa496bbb1f97a15e2833d3ed02">PP_RunAndClearCompletionCallback</a> (struct <a class="el" href="struct_p_p___completion_callback.html">PP_CompletionCallback</a> *cc, int32_t res)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_p_p___point.html">PP_Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#ga15880e8085178758053cc521af33b250">PP_MakePoint</a> (int32_t x, int32_t y)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_p_p___float_point.html">PP_FloatPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#ga0aca79088546fe91d13c97db9033e709">PP_MakeFloatPoint</a> (float x, float y)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_p_p___rect.html">PP_Rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#gaf868e2929269ef195241b79a015fcf61">PP_MakeRectFromXYWH</a> (int32_t x, int32_t y, int32_t w, int32_t h)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_p_p___size.html">PP_Size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#ga35a97e64d18402d8feff46722b98beb0">PP_MakeSize</a> (int32_t w, int32_t h)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_p_p___touch_point.html">PP_TouchPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#gae7f6d41cbb173c12f474242c2a3bf5e7">PP_MakeTouchPoint</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_p_p___var.html">PP_Var</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#ga0edc8314fc1a92f93dd3d0eab286cb5d">PP_MakeUndefined</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_p_p___var.html">PP_Var</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#ga75f83ac65ccbf57866d52d45cd5792e7">PP_MakeNull</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_p_p___var.html">PP_Var</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#ga0fba11ae90d57086064d41b0af710253">PP_MakeBool</a> (<a class="el" href="group___enums.html#ga4f272d99be14aacafe08dfd4ef830918">PP_Bool</a> value)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_p_p___var.html">PP_Var</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#gad14a59fa681d4cc532b3d49c0438f0ca">PP_MakeInt32</a> (int32_t value)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_p_p___var.html">PP_Var</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#gafbebaae212cb7e737efc56eea0e785b5">PP_MakeDouble</a> (double value)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#ga2fc7b396531c19417d8d7171d56da8b6">PPP_InitializeModule</a> (<a class="el" href="group___typedefs.html#gab780dd451cd7f51284cb752edd88f9a0">PP_Module</a> module, <a class="el" href="group___typedefs.html#ga68ad7c927b86e0c29d890603edd33154">PPB_GetInterface</a> get_browser_interface)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#gaa3021aba7ddc17a8cecb4bc4f8374e98">PPP_ShutdownModule</a> (void)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___functions.html#ga4127b148b2bd0f3bc2c078dd38cbe4cf">PPP_GetInterface</a> (const char *interface_name)</td></tr>
+</table>
+<hr /><h2>Function Documentation</h2>
+<a class="anchor" id="ga340e452b4931d17bd44928769490e282"></a><!-- doxytag: member="pp_completion_callback.h::PP_BlockUntilComplete" ref="ga340e452b4931d17bd44928769490e282" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">struct <a class="el" href="struct_p_p___completion_callback.html">PP_CompletionCallback</a> <a class="el" href="group___functions.html#ga340e452b4931d17bd44928769490e282">PP_BlockUntilComplete</a> </td>
+<td>(</td>
+<td class="paramtype">void&#160;</td>
+<td class="paramname"></td><td>)</td>
+<td><code> [read]</code></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="group___functions.html#ga340e452b4931d17bd44928769490e282" title="PP_BlockUntilComplete() is used in place of an actual completion callback to request blocking behavio...">PP_BlockUntilComplete()</a> is used in place of an actual completion callback to request blocking behavior. </p>
+<p>If specified, the calling thread will block until the function completes. Blocking completion callbacks are only allowed from background threads.</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A <code><a class="el" href="struct_p_p___completion_callback.html" title="PP_CompletionCallback is a common mechanism for supporting potentially asynchronous calls in browser ...">PP_CompletionCallback</a></code> structure. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga0fba11ae90d57086064d41b0af710253"></a><!-- doxytag: member="pp_var.h::PP_MakeBool" ref="ga0fba11ae90d57086064d41b0af710253" args="(PP_Bool value)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">struct <a class="el" href="struct_p_p___var.html">PP_Var</a> <a class="el" href="group___functions.html#ga0fba11ae90d57086064d41b0af710253">PP_MakeBool</a> </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="group___enums.html#ga4f272d99be14aacafe08dfd4ef830918">PP_Bool</a>&#160;</td>
+<td class="paramname"><em>value</em></td><td>)</td>
+<td><code> [read]</code></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="group___functions.html#ga0fba11ae90d57086064d41b0af710253" title="PP_MakeBool() is used to wrap a boolean value into a PP_Var struct for passing to the browser...">PP_MakeBool()</a> is used to wrap a boolean value into a <code><a class="el" href="struct_p_p___var.html" title="The PP_VAR struct is a variant data type and can contain any value of one of the types named in the P...">PP_Var</a></code> struct for passing to the browser. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>A <code>PP_Bool</code> enumeration to wrap.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A <code><a class="el" href="struct_p_p___var.html" title="The PP_VAR struct is a variant data type and can contain any value of one of the types named in the P...">PP_Var</a></code> structure. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga8691f15edad9b391c3644064ac57f191"></a><!-- doxytag: member="pp_completion_callback.h::PP_MakeCompletionCallback" ref="ga8691f15edad9b391c3644064ac57f191" args="(PP_CompletionCallback_Func func, void *user_data)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">struct <a class="el" href="struct_p_p___completion_callback.html">PP_CompletionCallback</a> <a class="el" href="group___functions.html#ga8691f15edad9b391c3644064ac57f191">PP_MakeCompletionCallback</a> </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="group___typedefs.html#ga6fe12e1a41df5e10103a811036d4d8d2">PP_CompletionCallback_Func</a>&#160;</td>
+<td class="paramname"><em>func</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void *&#160;</td>
+<td class="paramname"><em>user_data</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td><code> [read]</code></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="group___functions.html#ga8691f15edad9b391c3644064ac57f191" title="PP_MakeCompletionCallback() is used to create a PP_CompletionCallback.">PP_MakeCompletionCallback()</a> is used to create a <code><a class="el" href="struct_p_p___completion_callback.html" title="PP_CompletionCallback is a common mechanism for supporting potentially asynchronous calls in browser ...">PP_CompletionCallback</a></code>. </p>
+<p><b>Example, creating a Required callback:</b></p>
+<div class="fragment"><pre class="fragment"> <span class="keyword">struct </span><a class="code" href="struct_p_p___completion_callback.html" title="PP_CompletionCallback is a common mechanism for supporting potentially asynchronous calls in browser ...">PP_CompletionCallback</a> cc = <a class="code" href="group___functions.html#ga8691f15edad9b391c3644064ac57f191" title="PP_MakeCompletionCallback() is used to create a PP_CompletionCallback.">PP_MakeCompletionCallback</a>(Foo, NULL);
+</pre></div><p><b>Example, creating an Optional callback:</b></p>
+<div class="fragment"><pre class="fragment"> <span class="keyword">struct </span><a class="code" href="struct_p_p___completion_callback.html" title="PP_CompletionCallback is a common mechanism for supporting potentially asynchronous calls in browser ...">PP_CompletionCallback</a> cc = <a class="code" href="group___functions.html#ga8691f15edad9b391c3644064ac57f191" title="PP_MakeCompletionCallback() is used to create a PP_CompletionCallback.">PP_MakeCompletionCallback</a>(Foo, NULL);
+ cc.<a class="code" href="struct_p_p___completion_callback.html#a4bd2d9440bc8dc18eeeca2d464156a38" title="Flags used to control how non-NULL callbacks are scheduled by asynchronous methods.">flags</a> = cc.<a class="code" href="struct_p_p___completion_callback.html#a4bd2d9440bc8dc18eeeca2d464156a38" title="Flags used to control how non-NULL callbacks are scheduled by asynchronous methods.">flags</a> | <a class="code" href="group___enums.html#gga7610f0fba2396d46384859caa4d91798aebb176d8930b14219b7966fd93a2e967" title="This flag allows any method taking such callback to complete synchronously and not call the callback ...">PP_COMPLETIONCALLBACK_FLAG_OPTIONAL</a>;
+</pre></div><dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>A <code>PP_CompletionCallback_Func</code> that will be called. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>A pointer to user data passed to your callback function. This is optional and is typically used to help track state when you may have multiple callbacks pending.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A <code><a class="el" href="struct_p_p___completion_callback.html" title="PP_CompletionCallback is a common mechanism for supporting potentially asynchronous calls in browser ...">PP_CompletionCallback</a></code> structure. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gafbebaae212cb7e737efc56eea0e785b5"></a><!-- doxytag: member="pp_var.h::PP_MakeDouble" ref="gafbebaae212cb7e737efc56eea0e785b5" args="(double value)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">struct <a class="el" href="struct_p_p___var.html">PP_Var</a> <a class="el" href="group___functions.html#gafbebaae212cb7e737efc56eea0e785b5">PP_MakeDouble</a> </td>
+<td>(</td>
+<td class="paramtype">double&#160;</td>
+<td class="paramname"><em>value</em></td><td>)</td>
+<td><code> [read]</code></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="group___functions.html#gafbebaae212cb7e737efc56eea0e785b5" title="PP_MakeDouble() is used to wrap a double value into a PP_Var struct for passing to the browser...">PP_MakeDouble()</a> is used to wrap a double value into a <code><a class="el" href="struct_p_p___var.html" title="The PP_VAR struct is a variant data type and can contain any value of one of the types named in the P...">PP_Var</a></code> struct for passing to the browser. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>A double to wrap.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A <code><a class="el" href="struct_p_p___var.html" title="The PP_VAR struct is a variant data type and can contain any value of one of the types named in the P...">PP_Var</a></code> structure. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga0aca79088546fe91d13c97db9033e709"></a><!-- doxytag: member="pp_point.h::PP_MakeFloatPoint" ref="ga0aca79088546fe91d13c97db9033e709" args="(float x, float y)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">struct <a class="el" href="struct_p_p___float_point.html">PP_FloatPoint</a> <a class="el" href="group___functions.html#ga0aca79088546fe91d13c97db9033e709">PP_MakeFloatPoint</a> </td>
+<td>(</td>
+<td class="paramtype">float&#160;</td>
+<td class="paramname"><em>x</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">float&#160;</td>
+<td class="paramname"><em>y</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td><code> [read]</code></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+</div>
+</div>
+<a class="anchor" id="gad14a59fa681d4cc532b3d49c0438f0ca"></a><!-- doxytag: member="pp_var.h::PP_MakeInt32" ref="gad14a59fa681d4cc532b3d49c0438f0ca" args="(int32_t value)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">struct <a class="el" href="struct_p_p___var.html">PP_Var</a> <a class="el" href="group___functions.html#gad14a59fa681d4cc532b3d49c0438f0ca">PP_MakeInt32</a> </td>
+<td>(</td>
+<td class="paramtype">int32_t&#160;</td>
+<td class="paramname"><em>value</em></td><td>)</td>
+<td><code> [read]</code></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="group___functions.html#gad14a59fa681d4cc532b3d49c0438f0ca" title="PP_MakeInt32() is used to wrap a 32 bit integer value into a PP_Var struct for passing to the browser...">PP_MakeInt32()</a> is used to wrap a 32 bit integer value into a <code><a class="el" href="struct_p_p___var.html" title="The PP_VAR struct is a variant data type and can contain any value of one of the types named in the P...">PP_Var</a></code> struct for passing to the browser. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>An int32 to wrap.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A <code><a class="el" href="struct_p_p___var.html" title="The PP_VAR struct is a variant data type and can contain any value of one of the types named in the P...">PP_Var</a></code> structure. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga75f83ac65ccbf57866d52d45cd5792e7"></a><!-- doxytag: member="pp_var.h::PP_MakeNull" ref="ga75f83ac65ccbf57866d52d45cd5792e7" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">struct <a class="el" href="struct_p_p___var.html">PP_Var</a> <a class="el" href="group___functions.html#ga75f83ac65ccbf57866d52d45cd5792e7">PP_MakeNull</a> </td>
+<td>(</td>
+<td class="paramtype">void&#160;</td>
+<td class="paramname"></td><td>)</td>
+<td><code> [read]</code></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="group___functions.html#ga75f83ac65ccbf57866d52d45cd5792e7" title="PP_MakeNull() is used to wrap a null value into a PP_Var struct for passing to the browser...">PP_MakeNull()</a> is used to wrap a null value into a <code><a class="el" href="struct_p_p___var.html" title="The PP_VAR struct is a variant data type and can contain any value of one of the types named in the P...">PP_Var</a></code> struct for passing to the browser. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A <code><a class="el" href="struct_p_p___var.html" title="The PP_VAR struct is a variant data type and can contain any value of one of the types named in the P...">PP_Var</a></code> structure, </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gabd6bf83f4c787477631c37d44418c4db"></a><!-- doxytag: member="pp_completion_callback.h::PP_MakeOptionalCompletionCallback" ref="gabd6bf83f4c787477631c37d44418c4db" args="(PP_CompletionCallback_Func func, void *user_data)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">struct <a class="el" href="struct_p_p___completion_callback.html">PP_CompletionCallback</a> <a class="el" href="group___functions.html#gabd6bf83f4c787477631c37d44418c4db">PP_MakeOptionalCompletionCallback</a> </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="group___typedefs.html#ga6fe12e1a41df5e10103a811036d4d8d2">PP_CompletionCallback_Func</a>&#160;</td>
+<td class="paramname"><em>func</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void *&#160;</td>
+<td class="paramname"><em>user_data</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td><code> [read]</code></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="group___functions.html#gabd6bf83f4c787477631c37d44418c4db" title="PP_MakeOptionalCompletionCallback() is used to create a PP_CompletionCallback with PP_COMPLETIONCALLB...">PP_MakeOptionalCompletionCallback()</a> is used to create a <a class="el" href="struct_p_p___completion_callback.html" title="PP_CompletionCallback is a common mechanism for supporting potentially asynchronous calls in browser ...">PP_CompletionCallback</a> with PP_COMPLETIONCALLBACK_FLAG_OPTIONAL set. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>A PP_CompletionCallback_Func to be called on completion. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>A pointer to user data passed to be passed to the callback function. This is optional and is typically used to help track state in case of multiple pending callbacks.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A <a class="el" href="struct_p_p___completion_callback.html" title="PP_CompletionCallback is a common mechanism for supporting potentially asynchronous calls in browser ...">PP_CompletionCallback</a> structure. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga15880e8085178758053cc521af33b250"></a><!-- doxytag: member="pp_point.h::PP_MakePoint" ref="ga15880e8085178758053cc521af33b250" args="(int32_t x, int32_t y)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">struct <a class="el" href="struct_p_p___point.html">PP_Point</a> <a class="el" href="group___functions.html#ga15880e8085178758053cc521af33b250">PP_MakePoint</a> </td>
+<td>(</td>
+<td class="paramtype">int32_t&#160;</td>
+<td class="paramname"><em>x</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t&#160;</td>
+<td class="paramname"><em>y</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td><code> [read]</code></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="group___functions.html#ga15880e8085178758053cc521af33b250" title="PP_MakePoint() creates a PP_Point given the x and y coordinates as int32_t values.">PP_MakePoint()</a> creates a <code><a class="el" href="struct_p_p___point.html" title="The PP_Point structure defines the integer x and y coordinates of a point.">PP_Point</a></code> given the x and y coordinates as int32_t values. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>An int32_t value representing a horizontal coordinate of a point, starting with 0 as the left-most coordinate. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>An int32_t value representing a vertical coordinate of a point, starting with 0 as the top-most coordinate.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A <code><a class="el" href="struct_p_p___point.html" title="The PP_Point structure defines the integer x and y coordinates of a point.">PP_Point</a></code> structure. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaf868e2929269ef195241b79a015fcf61"></a><!-- doxytag: member="pp_rect.h::PP_MakeRectFromXYWH" ref="gaf868e2929269ef195241b79a015fcf61" args="(int32_t x, int32_t y, int32_t w, int32_t h)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">struct <a class="el" href="struct_p_p___rect.html">PP_Rect</a> <a class="el" href="group___functions.html#gaf868e2929269ef195241b79a015fcf61">PP_MakeRectFromXYWH</a> </td>
+<td>(</td>
+<td class="paramtype">int32_t&#160;</td>
+<td class="paramname"><em>x</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t&#160;</td>
+<td class="paramname"><em>y</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t&#160;</td>
+<td class="paramname"><em>w</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t&#160;</td>
+<td class="paramname"><em>h</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td><code> [read]</code></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="group___functions.html#gaf868e2929269ef195241b79a015fcf61" title="PP_MakeRectFromXYWH() creates a PP_Rect given x and y coordinates and width and height dimensions as ...">PP_MakeRectFromXYWH()</a> creates a <code><a class="el" href="struct_p_p___rect.html" title="The PP_Rect struct contains the size and location of a 2D rectangle.">PP_Rect</a></code> given x and y coordinates and width and height dimensions as int32_t values. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>An int32_t value representing a horizontal coordinate of a point, starting with 0 as the left-most coordinate. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>An int32_t value representing a vertical coordinate of a point, starting with 0 as the top-most coordinate. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>An int32_t value representing a width. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>An int32_t value representing a height.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A <code><a class="el" href="struct_p_p___rect.html" title="The PP_Rect struct contains the size and location of a 2D rectangle.">PP_Rect</a></code> structure. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga35a97e64d18402d8feff46722b98beb0"></a><!-- doxytag: member="pp_size.h::PP_MakeSize" ref="ga35a97e64d18402d8feff46722b98beb0" args="(int32_t w, int32_t h)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">struct <a class="el" href="struct_p_p___size.html">PP_Size</a> <a class="el" href="group___functions.html#ga35a97e64d18402d8feff46722b98beb0">PP_MakeSize</a> </td>
+<td>(</td>
+<td class="paramtype">int32_t&#160;</td>
+<td class="paramname"><em>w</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t&#160;</td>
+<td class="paramname"><em>h</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td><code> [read]</code></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="group___functions.html#ga35a97e64d18402d8feff46722b98beb0" title="PP_MakeSize() creates a PP_Size given a width and height as int32_t values.">PP_MakeSize()</a> creates a <code><a class="el" href="struct_p_p___size.html" title="The PP_Size struct contains the size of a 2D rectangle.">PP_Size</a></code> given a width and height as int32_t values. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>An int32_t value representing a width. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>An int32_t value representing a height.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A <code><a class="el" href="struct_p_p___size.html" title="The PP_Size struct contains the size of a 2D rectangle.">PP_Size</a></code> structure. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gae7f6d41cbb173c12f474242c2a3bf5e7"></a><!-- doxytag: member="pp_touch_point.h::PP_MakeTouchPoint" ref="gae7f6d41cbb173c12f474242c2a3bf5e7" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">struct <a class="el" href="struct_p_p___touch_point.html">PP_TouchPoint</a> <a class="el" href="group___functions.html#gae7f6d41cbb173c12f474242c2a3bf5e7">PP_MakeTouchPoint</a> </td>
+<td>(</td>
+<td class="paramtype">void&#160;</td>
+<td class="paramname"></td><td>)</td>
+<td><code> [read]</code></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="group___functions.html#gae7f6d41cbb173c12f474242c2a3bf5e7" title="PP_MakeTouchPoint() creates a PP_TouchPoint.">PP_MakeTouchPoint()</a> creates a <code><a class="el" href="struct_p_p___touch_point.html" title="The PP_TouchPoint struct represents all information about a single touch point, such as position...">PP_TouchPoint</a></code>. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A <code><a class="el" href="struct_p_p___touch_point.html" title="The PP_TouchPoint struct represents all information about a single touch point, such as position...">PP_TouchPoint</a></code> structure. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga0edc8314fc1a92f93dd3d0eab286cb5d"></a><!-- doxytag: member="pp_var.h::PP_MakeUndefined" ref="ga0edc8314fc1a92f93dd3d0eab286cb5d" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">struct <a class="el" href="struct_p_p___var.html">PP_Var</a> <a class="el" href="group___functions.html#ga0edc8314fc1a92f93dd3d0eab286cb5d">PP_MakeUndefined</a> </td>
+<td>(</td>
+<td class="paramtype">void&#160;</td>
+<td class="paramname"></td><td>)</td>
+<td><code> [read]</code></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="group___functions.html#ga0edc8314fc1a92f93dd3d0eab286cb5d" title="PP_MakeUndefined() is used to wrap an undefined value into a PP_Var struct for passing to the browser...">PP_MakeUndefined()</a> is used to wrap an undefined value into a <code><a class="el" href="struct_p_p___var.html" title="The PP_VAR struct is a variant data type and can contain any value of one of the types named in the P...">PP_Var</a></code> struct for passing to the browser. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A <code><a class="el" href="struct_p_p___var.html" title="The PP_VAR struct is a variant data type and can contain any value of one of the types named in the P...">PP_Var</a></code> structure. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga8dac45aa496bbb1f97a15e2833d3ed02"></a><!-- doxytag: member="pp_completion_callback.h::PP_RunAndClearCompletionCallback" ref="ga8dac45aa496bbb1f97a15e2833d3ed02" args="(struct PP_CompletionCallback *cc, int32_t res)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void <a class="el" href="group___functions.html#ga8dac45aa496bbb1f97a15e2833d3ed02">PP_RunAndClearCompletionCallback</a> </td>
+<td>(</td>
+<td class="paramtype">struct <a class="el" href="struct_p_p___completion_callback.html">PP_CompletionCallback</a> *&#160;</td>
+<td class="paramname"><em>cc</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t&#160;</td>
+<td class="paramname"><em>res</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="group___functions.html#ga8dac45aa496bbb1f97a15e2833d3ed02" title="PP_RunAndClearCompletionCallback() runs a callback and clears the reference to that callback...">PP_RunAndClearCompletionCallback()</a> runs a callback and clears the reference to that callback. </p>
+<p>This function is used when the null-ness of a completion callback is used as a signal for whether a completion callback has been registered. In this case, after the execution of the callback, it should be cleared. However, this introduces a conflict if the completion callback wants to schedule more work that involves the same completion callback again (for example, when reading data from an URLLoader, one would typically queue up another read callback). As a result, this function clears the pointer before the provided callback is executed. </p>
+</div>
+</div>
+<a class="anchor" id="gaffce49266a735f9ee8d149b14477404f"></a><!-- doxytag: member="pp_completion_callback.h::PP_RunCompletionCallback" ref="gaffce49266a735f9ee8d149b14477404f" args="(struct PP_CompletionCallback *cc, int32_t result)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void <a class="el" href="group___functions.html#gaffce49266a735f9ee8d149b14477404f">PP_RunCompletionCallback</a> </td>
+<td>(</td>
+<td class="paramtype">struct <a class="el" href="struct_p_p___completion_callback.html">PP_CompletionCallback</a> *&#160;</td>
+<td class="paramname"><em>cc</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t&#160;</td>
+<td class="paramname"><em>result</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="group___functions.html#gaffce49266a735f9ee8d149b14477404f" title="PP_RunCompletionCallback() is used to run a callback.">PP_RunCompletionCallback()</a> is used to run a callback. </p>
+<p>It invokes the callback function passing it user data specified on creation and completion |result|.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">cc</td><td>A pointer to a <code><a class="el" href="struct_p_p___completion_callback.html" title="PP_CompletionCallback is a common mechanism for supporting potentially asynchronous calls in browser ...">PP_CompletionCallback</a></code> that will be run. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>The result of the operation. Non-positive values correspond to the error codes from <a class="el" href="pp__errors_8h.html" title="This file defines an enumeration of all PPAPI error codes.">pp_errors.h</a> (excluding PP_OK_COMPLETIONPENDING). Positive values indicate additional information such as bytes read. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ga4127b148b2bd0f3bc2c078dd38cbe4cf"></a><!-- doxytag: member="ppp.h::PPP_GetInterface" ref="ga4127b148b2bd0f3bc2c078dd38cbe4cf" args="(const char *interface_name)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">const void* <a class="el" href="group___functions.html#ga4127b148b2bd0f3bc2c078dd38cbe4cf">PPP_GetInterface</a> </td>
+<td>(</td>
+<td class="paramtype">const char *&#160;</td>
+<td class="paramname"><em>interface_name</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="group___functions.html#ga4127b148b2bd0f3bc2c078dd38cbe4cf" title="PPP_GetInterface() is called by the browser to query the module for interfaces it supports...">PPP_GetInterface()</a> is called by the browser to query the module for interfaces it supports. </p>
+<p>Your module must implement the <code>PPP_Instance</code> interface or it will be unloaded. Other interfaces are optional.</p>
+<p>This function is called from within browser code whenever an interface is needed. This means your plugin could be reentered via this function if you make a browser call and it needs an interface. Furthermore, you should not make any other browser calls from within your implementation to avoid reentering the browser.</p>
+<p>As a result, your implementation of this should merely provide a lookup from the requested name to an interface pointer, via something like a big if/else block or a map, and not do any other work.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">interface_name</td><td>A pointer to a "PPP" (plugin) interface name. Interface names are null-terminated ASCII strings.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A pointer for the interface or <code>NULL</code> if the interface is not supported. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga2fc7b396531c19417d8d7171d56da8b6"></a><!-- doxytag: member="ppp.h::PPP_InitializeModule" ref="ga2fc7b396531c19417d8d7171d56da8b6" args="(PP_Module module, PPB_GetInterface get_browser_interface)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">int32_t <a class="el" href="group___functions.html#ga2fc7b396531c19417d8d7171d56da8b6">PPP_InitializeModule</a> </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="group___typedefs.html#gab780dd451cd7f51284cb752edd88f9a0">PP_Module</a>&#160;</td>
+<td class="paramname"><em>module</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="group___typedefs.html#ga68ad7c927b86e0c29d890603edd33154">PPB_GetInterface</a>&#160;</td>
+<td class="paramname"><em>get_browser_interface</em>&#160;</td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="group___functions.html#ga2fc7b396531c19417d8d7171d56da8b6" title="PPP_InitializeModule() is the entry point for a module and is called by the browser when your module ...">PPP_InitializeModule()</a> is the entry point for a module and is called by the browser when your module loads. </p>
+<p>Your code must implement this function.</p>
+<p>Failure indicates to the browser that this module can not be used. In this case, the module will be unloaded and ShutdownModule will NOT be called.</p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">module</td><td>A handle to your module. Generally you should store this value since it will be required for other API calls. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">get_browser_interface</td><td>A pointer to the function that you can use to query for browser interfaces. Generally you should store this value for future use.</td></tr>
+</table>
+</dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><code>PP_OK</code> on success. Any other value on failure. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaa3021aba7ddc17a8cecb4bc4f8374e98"></a><!-- doxytag: member="ppp.h::PPP_ShutdownModule" ref="gaa3021aba7ddc17a8cecb4bc4f8374e98" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void <a class="el" href="group___functions.html#gaa3021aba7ddc17a8cecb4bc4f8374e98">PPP_ShutdownModule</a> </td>
+<td>(</td>
+<td class="paramtype">void&#160;</td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="memdoc">
+<p><a class="el" href="group___functions.html#gaa3021aba7ddc17a8cecb4bc4f8374e98" title="PPP_ShutdownModule() is sometimes called before the module is unloaded.">PPP_ShutdownModule()</a> is <b>sometimes</b> called before the module is unloaded. </p>
+<p>It is not recommended that you implement this function.</p>
+<p>There is no practical use of this function for third party modules. Its existence is because of some internal use cases inside Chrome.</p>
+<p>Since your module runs in a separate process, there's no need to free allocated memory. There is also no need to free any resources since all of resources associated with an instance will be force-freed when that instance is deleted.</p>
+<p><b>Note:</b> This function will always be skipped on untrusted (Native Client) implementations. This function may be skipped on trusted implementations in certain circumstances when Chrome does "fast shutdown" of a web page. </p>
+</div>
+</div>
+</div><!-- contents -->
+</div>
+    
+    <footer id="cc-info">
+      <button id="send-feedback" class="google-button" data-feedback>Send Feedback</button>
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo"><a href="http://creativecommons.org/licenses/by/3.0/"><img src="../../../static/images/cc_by.png" alt="Licensed Creative Commons by Attribution"></a></p>
+    </footer>
+    <nav class="inline-toc no-permalink">
+      <section class="related">
+                      <h3 title="">Pepper API Reference</h3>
+      <ol class="toc">
+                              <li>
+                                <a href="group___interfaces.html">Pepper C Interfaces</a>
+                              </li>
+                              <li>
+                                <a href="group___structs.html">Pepper C Structures</a>
+                              </li>
+                              <li>
+                                <a href="group___functions.html" class="active">Pepper C Functions</a>
+                              </li>
+                              <li>
+                                <a href="group___enums.html">Pepper C Enums</a>
+                              </li>
+                              <li>
+                                <a href="group___typedefs.html">Pepper C Typedefs</a>
+                              </li>
+                              <li>
+                                <a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                              </li>
+                              <li>
+                                <a href="../cpp/inherits.html">Pepper C++ Classes</a>
+                              </li>
+      </ol>
+      </section>
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="group___functions.html#"
+          >Functions</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="group___functions.html#"
+          >Function Documentation</a>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="group___functions.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../../../static/js/fatnav.js"></script>
+    <script src="../../../static/js/article.js"></script>
+    <script src="../../../static/js/prettify.js"></script>
+    <script src="../../../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../../../static/js/site.js"></script>
+  </body>
+</html>

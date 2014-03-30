@@ -1,0 +1,1663 @@
+<link href="../../_static/css/nacl.css" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../../../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../../../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../../../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>Debugging With Visual Studio - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="vs-addin.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../../../index.html">
+          <img alt="Chrome: developer" src="../../../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../../../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../../../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../../../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../../../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../../../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../../../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="../../../apps/index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="../../../apps/first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="../../../apps/app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../../../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="../../../apps/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="../../../apps/app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../../../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="../../../apps/app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="../../../apps/cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="../../../apps/app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_usb.html">USB</a>
+                            </li>
+                            <li><a href="../../../apps/app_serial">Serial</a>
+                            </li>
+                            <li><a href="../../../apps/app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="../../../apps/app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="../../../apps/angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="../../../apps/sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="../../../apps/google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../apps/analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../../apps/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../../apps/webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="../../../apps/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../../apps/app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="../../../apps/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../../apps/overview.html">Overview</a>
+                            </li>
+                            <li><a href="../../../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../../../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../../../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="../../../apps/activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../../../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../apps/getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../../../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../../../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../../../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../../../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../../../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../../../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../../../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../../../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../../../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../../../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../../overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../../nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../../sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../../sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../../sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="building.html">Building</a>
+                            </li>
+                            <li><a href="running.html">Running</a>
+                            </li>
+                            <li><a href="debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../../pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../../pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../../pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../../glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../../reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../../reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../../reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../../reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../../help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../../publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../../community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../../../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../../../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../../../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../../../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../../../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../../../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../../../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../../../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../../../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../../../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../../../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <div itemprop="articleBody">
+
+
+
+<section id="debugging-with-visual-studio">
+<h1 id="debugging-with-visual-studio">Debugging With Visual Studio</h1>
+<div class="contents local" id="table-of-contents" style="display: none">
+<p class="topic-title first">Table Of Contents</p>
+<ul class="small-gap">
+<li><a class="reference internal" href="vs-addin.html#introduction" id="id1">Introduction</a></li>
+<li><p class="first"><a class="reference internal" href="vs-addin.html#platforms" id="id2">Platforms</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="vs-addin.html#the-ppapi-platform" id="id3">The PPAPI platform</a></li>
+<li><a class="reference internal" href="vs-addin.html#the-native-client-platforms" id="id4">The Native Client platforms</a></li>
+</ul>
+</li>
+<li><p class="first"><a class="reference internal" href="vs-addin.html#installing-the-add-in" id="id5">Installing the add-in</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="vs-addin.html#set-environment-variables" id="id6">Set environment variables</a></li>
+<li><a class="reference internal" href="vs-addin.html#download-the-add-in" id="id7">Download the add-in</a></li>
+<li><a class="reference internal" href="vs-addin.html#run-the-installer" id="id8">Run the installer</a></li>
+</ul>
+</li>
+<li><p class="first"><a class="reference internal" href="vs-addin.html#try-the-hello-world-gles-sample-project" id="id9">Try the <code>hello_world_gles</code> sample project</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="vs-addin.html#select-the-nacl64-platform" id="id10">Select the NaCl64 platform</a></li>
+<li><a class="reference internal" href="vs-addin.html#build-and-run-the-project" id="id11">Build and run the project</a></li>
+<li><a class="reference internal" href="vs-addin.html#test-the-nacl-gdb-debugger" id="id12">Test the nacl-gdb debugger</a></li>
+<li><a class="reference internal" href="vs-addin.html#test-the-visual-studio-debugger" id="id13">Test the Visual Studio debugger</a></li>
+<li><a class="reference internal" href="vs-addin.html#inspect-the-platform-properties" id="id14">Inspect the platform properties</a></li>
+</ul>
+</li>
+<li><p class="first"><a class="reference internal" href="vs-addin.html#developing-for-native-client-in-visual-studio" id="id15">Developing for Native Client in Visual Studio</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="vs-addin.html#adding-platforms-to-a-project" id="id16">Adding platforms to a project</a></li>
+<li><a class="reference internal" href="vs-addin.html#selecting-a-toolchain" id="id17">Selecting a toolchain</a></li>
+<li><a class="reference internal" href="vs-addin.html#adding-libraries-to-a-project" id="id18">Adding libraries to a project</a></li>
+<li><a class="reference internal" href="vs-addin.html#running-a-web-server" id="id19">Running a web server</a></li>
+<li><a class="reference internal" href="vs-addin.html#keeping-track-of-all-the-pieces" id="id20">Keeping track of all the pieces</a></li>
+<li><a class="reference internal" href="vs-addin.html#using-the-debuggers" id="id21">Using the debuggers</a></li>
+<li><a class="reference internal" href="vs-addin.html#disable-chrome-caching" id="id22">Disable Chrome caching</a></li>
+<li><a class="reference internal" href="vs-addin.html#a-warning-about-postmessage" id="id23">A warning about PostMessage</a></li>
+<li><a class="reference internal" href="vs-addin.html#porting-windows-applications-to-native-client-in-visual-studio" id="id24">Porting Windows applications to Native Client in Visual Studio</a></li>
+</ul>
+</li>
+</ul>
+
+</div><p>Whether you&#8217;re porting an existing project or starting from scratch, the Native
+Client Visual Studio add-in makes it easier to set up, build, run and debug
+your Native Client app by integrating the Native Client SDK development tools
+into the Visual Studio environment.</p>
+<aside class="note">
+The Native Client add-in requires Visual Studio 2010 with Service Pack 1. No
+other versions of Visual Studio are currently supported. Visual Studio
+Express is also not supported.
+</aside>
+<section id="introduction">
+<h2 id="introduction">Introduction</h2>
+<p>The Native Client add-in for Visual Studio helps you develop your application
+more efficiently in many ways:</p>
+<ul class="small-gap">
+<li>Organize and maintain your code as a Visual Studio project.</li>
+<li>Iteratively write and test your application more easily. Visual Studio
+handles the details of launching a web server to serve your module and run
+the module in Chrome with a debugger attached.</li>
+<li>Compile your module into a dynamically-linked library (DLL) using Visual
+Studio&#8217;s C/C++ compiler and run it as a Pepper plugin. This allows you to
+develop code incrementally, coding and/or porting one feature at a time into
+the Pepper APIs while continuing to use native Windows APIs that would
+otherwise be unavailable in an actual Native Client module.</li>
+<li>Use Visual Studio&#8217;s built-in debugger to debug your code while it’s running
+as a Pepper plugin.</li>
+<li>Compile your module into a .nexe or .pexe file using the Native Client SDK
+tools and run it as a bona fide Native Client module.</li>
+<li>Use the Native Client debugger, nacl-gdb, to test your code when it’s running
+as a Native Client object.</li>
+</ul>
+<p>The add-in defines five new Visual Studio platforms: <code>PPAPI</code>, <code>NaCl32</code>,
+<code>NaCl64</code>, <code>NaClARM</code>, and <code>PNaCl</code>. These platforms can be applied to the
+debug configuration of solutions and projects. The platforms configure the
+properties of your project so it can be built and run as either a Pepper plugin
+or a Native Client module. The platforms also define the behavior associated
+with the debug command so you can test your code while running in Visual
+Studio.</p>
+</section><section id="platforms">
+<h2 id="platforms">Platforms</h2>
+<p>It is helpful to consider the Visual Studio add-in platforms in two groups. One
+contains the PPAPI platform only. The other group, which we&#8217;ll call the Native
+Client platforms, contains platforms that all have &#8220;NaCl&#8221; in their names:
+<code>NaCl32</code>, <code>NaCl64</code>, <code>NaClARM</code>, and <code>PNaCl</code>. The diagram below shows the
+platforms, the ways they are normally used, and the build products they produce.</p>
+<img alt="/native-client/images/visualstudio4.png" src="../../images/visualstudio4.png" />
+<p>Using platforms, your workflow is faster and more efficient. You can compile,
+start, and debug your code with one click or key-press. When you press F5, the
+“start debugging” command, Visual Studio automatically launches a web server to
+serve your module (if necessary) along with an instance of Chrome that runs
+your Native Client module, and also attaches an appropriate debugger.</p>
+<p>You can switch between platforms as you work to compare the behavior of your
+code.</p>
+<p>When you run your project, Visual Studio launches the PPAPI and Native Client
+platforms in different ways, as explained in the next sections.</p>
+<section id="the-ppapi-platform">
+<h3 id="the-ppapi-platform">The PPAPI platform</h3>
+<p>The PPAPI platform builds your module as a dynamic library and launches a
+version of Chrome that’s configured to run the library as a plugin when it
+encounters an <code>&lt;embed&gt;</code> element with <code>type=application/x-nacl</code> (ignoring
+the information in the manifest file). When running in the PPAPI platform, you
+can use Windows system calls that are unavailable in a regular Native Client
+module built and running as a .nexe file. This offers the ability to port
+existing code incrementally, rewriting functions using the PPAPI interfaces one
+piece at a time. Since the module is built with Visual Studio’s native compiler
+(MSBuild) you can use the Visual Studio debugger to control and inspect your
+code.</p>
+</section><section id="the-native-client-platforms">
+<h3 id="the-native-client-platforms">The Native Client platforms</h3>
+<p>There are four Native Client platforms. All of them can be used to build Native
+Client modules. When you run one of the Native Client platforms Visual Studio
+builds the corresponding type of Native Client module (either a .nexe or
+.pexe), starts a web server to serve it up, and launches a copy of Chrome that
+fetches the module from the server and runs it. Visual Studio will also open a
+terminal window, launch an instance of nacl-gdb, and attach it to your module&#8217;s
+process so you can use gdb commands to debug.</p>
+<section id="nacl32-and-nacl64">
+<h4 id="nacl32-and-nacl64">NaCl32 and NaCl64</h4>
+<p>The platforms named NaCl32 and NaCl64 are targeted at x86 32-bit and 64-bit
+systems respectively. You need both platforms to build a full set of .nexe
+files when you are ready to distribute your application. Note, however, that
+when you are testing in Visual Studio you must select the NaCl64 platform
+(because Chrome for Windows runs Native Client in a 64-bit process). If you try
+to run from the NaCl32 platform you will get an error message.</p>
+</section><section id="naclarm">
+<h4 id="naclarm">NaClARM</h4>
+<p>The NaClARM platform is targeted at ARM-based processors. You can build .nexe
+files with the NaClARM platform in Visual Studio but you cannot run them from
+there. You can use Visual Studio to create a Native Client module that includes
+an ARM-based .nexe file and then run the module from a Chrome browser on an ARM
+device, such as one of the newer Chromebook computers. See the instructions at
+<a class="reference internal" href="running.html"><em>Running Native Client Applications</em></a> for more information on
+testing your module in Chrome.</p>
+<aside class="note">
+Note: The NaClARM platform currently supports the newlib toolchain only.
+</aside>
+</section><section id="pnacl">
+<h4 id="pnacl">PNaCl</h4>
+<p>The PNaCl (portable NaCl) platform is included in the Visual Studio Native
+Client add-in versions 1.1 and higher. It supports the .pexe file format. A
+.pexe file encodes your application as bitcode for a low level virtual machine
+(LLVM). When you deliver a Native Client application as a PNaCl module, the
+manifest file will contain a single .pexe file rather than multiple .nexe
+files. The Chrome client transforms the LLVM bitcode into machine instructions
+for the local system.</p>
+<p>When you run the PNaCl platform from Visual Studio, Visual Studio uses the
+Native Client SDK to transform the .pexe file into a NaCl64 .nexe file and runs
+it as if you were working with a NaCl64 platform.</p>
+<aside class="note">
+Note: The PNaCl platform currently supports the newlib toolchain only.
+</aside>
+</section></section></section><section id="installing-the-add-in">
+<h2 id="installing-the-add-in">Installing the add-in</h2>
+<p>In order to use the Native Client Visual Studio add-in, your development
+environment should include:</p>
+<ul class="small-gap">
+<li>A 64-bit version of Windows Vista or Windows 7.</li>
+<li>Visual Studio 2010 with Service Pack 1.</li>
+<li><a class="reference external" href="https://www.google.com/intl/en/chrome/browser/">Chrome</a> version 23 or
+greater. You can choose to develop using the latest <a class="reference external" href="https://www.google.com/intl/en/chrome/browser/canary.html">canary</a> build of
+Chrome, running the canary version side-by-side with (and separately from)
+your regular version of Chrome.</li>
+<li><a class="reference internal" href="../../sdk/download.html"><em>The Native Client SDK</em></a> with the <code>pepper_23</code>
+bundle or greater. The version of Chrome that you use must be equal or
+greater than the version of the SDK bundle.</li>
+</ul>
+<section id="set-environment-variables">
+<h3 id="set-environment-variables">Set environment variables</h3>
+<p>Before you run the installer you must define two Windows environment variables.
+They point to the bundle in the Native Client SDK that you use to build your
+module, and to the Chrome browser that you choose to use for debugging.</p>
+<p>To set environment variables in Windows 7, go to the Start menu and search for
+&#8220;environment.&#8221; One of the links in the results is &#8220;Edit environment variables
+for your account.&#8221; (You can also reach this link from the <code>Control Panel</code>
+under <code>User Accounts</code>.) Click on the link and use the buttons in the window
+to create or change these user variables (the values shown below are only for
+example):</p>
+<table border="1" class="docutils">
+<colgroup>
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Variable Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>NACL_SDK_ROOT</td>
+<td>The path to the pepper directory in the SDK. Example:
+<code>C:\nacl_sdk\pepper_23</code></td>
+</tr>
+<tr class="row-odd"><td>CHROME_PATH</td>
+<td>The path to the .exe file for the version of Chrome you are
+testing with. Example:
+<code>C:\Users\fred\AppData\Local\Google\Chrome
+SxS\Application\chrome.exe</code></td>
+</tr>
+</tbody>
+</table>
+</section><section id="download-the-add-in">
+<h3 id="download-the-add-in">Download the add-in</h3>
+<p>The Native Client Visual Studio add-in is a separate bundle in the SDK named
+<code>vs_addin</code>. Open a command prompt window, go to the top-level SDK directory,
+and run the update command, specifying the add-in bundle:</p>
+<pre class="prettyprint">
+naclsdk update vs_addin
+</pre>
+<p>This creates a folder named <code>vs_addin</code>, containing the add-in itself, its
+installer files, and a directory of examples.</p>
+<aside class="note">
+Note: The vs_addin bundle is only visible when you run <code>naclsdk</code> on a
+Windows system.
+</aside>
+</section><section id="run-the-installer">
+<h3 id="run-the-installer">Run the installer</h3>
+<p>The installer script is located inside the <code>vs_addin</code> folder in the SDK.
+Right click on the file <code>install.bat</code> and run it as administrator.</p>
+<p>The script always installs the NativeClient platforms, and asks you if you’d
+like to install the PPAPI platform as well. You can skip the PPAPI step and run
+the installer again later to add the PPAPI platform.</p>
+<p>You can usually run the installer successfully with no arguments. The new
+platforms are installed in <code>C:\Program Files
+(x86)\MSBuild\Microsoft.Cpp\v4.0\Platforms</code>.</p>
+<p>In some cases system resources may not be in their default locations. You might
+need to use these command line arguments when you run <code>install.bat</code>:</p>
+<ul class="small-gap">
+<li>The MSBuild folder is assumed to be at <code>C:\Program Files (x86)\MSBuild</code>.
+You can specify an alternate path with the flag <code>--ms-build-path=&lt;path&gt;</code>.
+The installer assumes Visual Studio has created a user folder at</li>
+<li><code>%USERPROFILE%\My Documents\Visual Studio 2010</code>. You can specify an
+alternate path with the flag <code>--vsuser-path=path</code>.</li>
+</ul>
+<p>From time to time an update to the Visual Studio add-in may become available.
+Updates are performed just like an installation. Download the new add-in using
+naclsdk update and run <code>install.bat</code> as administrator.</p>
+<p>To uninstall the add-in, run <code>install.bat</code> as administrator and add the
+<code>--uninstall</code> flag. You&#8217;ll need to run the Command Prompt program as
+administrator in order to add the flag. Go the to the Windows start menu,
+search for &#8220;Command Prompt,&#8221; right click on the program and run it as
+administrator.</p>
+<p>You can verify that the add-in has been installed and determine its version by
+selecting Add-in Manager in the Visual Studio Tools menu. If the add-in has
+been installed it will appear in the list of available add-ins. Select it and
+read its description.</p>
+</section></section><section id="try-the-hello-world-gles-sample-project">
+<h2 id="try-the-hello-world-gles-sample-project">Try the <code>hello_world_gles</code> sample project</h2>
+<p>The add-in comes with an examples directory. Open the sample project
+<code>examples\hello_world_gles\hello_world_gles.sln</code>. This project is an
+application that displays a spinning cube.</p>
+<section id="select-the-nacl64-platform">
+<h3 id="select-the-nacl64-platform">Select the NaCl64 platform</h3>
+<p>Open the sample project in Visual Studio, select the <code>Configuration Manager</code>,
+and confirm that the active solution configuration is <code>Debug</code> and the active
+project platform is <code>NaCl64</code>. Note that the platform for the
+<code>hello_world_gles</code> project is also <code>NaCl64</code>. (You can get to the
+<code>Configuration Manager</code> from the <code>Build</code> menu or the project’s
+<code>Properties</code> window.)</p>
+<img alt="/native-client/images/visualstudio1.png" src="../../images/visualstudio1.png" />
+</section><section id="build-and-run-the-project">
+<h3 id="build-and-run-the-project">Build and run the project</h3>
+<p>Use the debugging command (F5) to build and run the project. As the wheels
+start to turn, you may be presented with one or more alerts. They are benign;
+you can accept them and set options to ignore them when that’s possible. Some
+of the messages you might see include:</p>
+<ul class="small-gap">
+<li>&#8220;This project is out of date, would you like to build it?&#8221;</li>
+<li>&#8220;Please specify the name of the executable file to be used for the debug
+session.&#8221; This should be the value of the environment variable CHROME_PATH,
+which is usually supplied as the default value in the dialog.</li>
+<li>&#8220;Debugging information for chrome.exe cannot be found.&#8221; This is to be
+expected, you are debugging your module&#8217;s code, not Chrome.</li>
+<li>&#8220;Open file - security warning. The publisher could not be verified.&#8221; If
+Visual Studio is complaining about x86_64-nacl-gdb.exe, that’s our debugger.
+Let it be.</li>
+</ul>
+<p>Once you’ve passed these hurdles, the application starts to run and you’ll see
+activity in three places:</p>
+<ol class="arabic simple">
+<li>A terminal window opens running <code>nacl-gdb</code>.</li>
+<li>Chrome launches running your module in a tab.</li>
+<li>The Visual Studio output window displays debugging messages when you select
+the debug output item.
+Stop the debugging session by closing the Chrome window, or select the stop
+debugging command from the debug menu. The nacl-gdb window will close when
+you stop running the program.</li>
+</ol>
+</section><section id="test-the-nacl-gdb-debugger">
+<h3 id="test-the-nacl-gdb-debugger">Test the nacl-gdb debugger</h3>
+<p>Add a breakpoint at the SwapBuffers call in the function MainLoop, which is in
+hello_world.cc.</p>
+<img alt="/native-client/images/visualstudio2.png" src="../../images/visualstudio2.png" />
+<p>Start the debugger again (F5). This time the existing breakpoint is loaded into
+nacl-gcb and the program will pause there. Type c to continue running. You can
+use gdb commands to set more breakpoints and step through the application. For
+details, see <a class="reference internal" href="debugging.html#using-gdb"><em>Debugging with nacl-gdb</em></a> (scroll down to the end
+of the section to see some commonly used gdb commands).</p>
+</section><section id="test-the-visual-studio-debugger">
+<h3 id="test-the-visual-studio-debugger">Test the Visual Studio debugger</h3>
+<p>If you’ve installed the <code>PPAPI</code> platform, go back to the <code>Configuration
+Manager</code> and select the <code>PPAPI</code> platform. This time when Chrome launches the
+<code>nacl-gdb</code> window will not appear; the Visual Studio debugger is fully
+engaged and on the job.</p>
+</section><section id="inspect-the-platform-properties">
+<h3 id="inspect-the-platform-properties">Inspect the platform properties</h3>
+<p>At this point, it may be helpful to take a look at the properties that are
+associated with the PPAPI and Native Client platforms&#8212;see the settings in the
+sample project as an example.</p>
+</section></section><section id="developing-for-native-client-in-visual-studio">
+<h2 id="developing-for-native-client-in-visual-studio">Developing for Native Client in Visual Studio</h2>
+<p>After you’ve installed the add-in and tried the sample project, you’re ready to
+start working with your own code. You can reuse the sample project and the
+PPAPI and Native Client platforms it already has by replacing the source code
+with your own. More likely, you will add the platforms to an existing project,
+or to a new project that you create from scratch.</p>
+<section id="adding-platforms-to-a-project">
+<h3 id="adding-platforms-to-a-project">Adding platforms to a project</h3>
+<p>Follow these steps to add the Native Client and PPAPI platforms to a project:</p>
+<ol class="arabic simple">
+<li>Open the Configuration Manager.</li>
+<li>On the row corresponding to your project, click the Platform column dropdown
+menu and select <code>&lt;New...&gt;</code>.</li>
+<li>Select <code>PPAPI</code>, <code>NaCl32</code>, <code>NaCl64</code>, or <code>PNaCl</code> from the New platform
+menu.</li>
+<li>In most cases, you should select <code>&lt;Empty&gt;</code> in the “Copy settings from”
+menu.  <strong>Never copy settings between ``PPAPI``, ``NaCl32``, ``NaCl64``,
+``NaClARM``, or ``PNaCl`` platforms</strong>. You can copy settings from a Win32
+platform, if one exists, but afterwards be sure that the project properties
+are properly set for the new platform, as mentioned in step 6 below.</li>
+<li>If you like, check the “Create new solutions platform” box to create a
+solution platform in addition to a project platform. (This is optional, but
+it can be convenient since it lets you switch project platforms from the
+Visual Studio main window by selecting the solution platform that has the
+same name.)</li>
+<li>Review the project properties for the new platform you just added. In most
+cases, the default properties for each platform should be correct, but it
+pays to check. Be especially careful about custom properties you may have
+set beforehand, or copied from a Win32 platform. Also confirm that the
+Configuration type is correct:<ul class="small-gap">
+<li><code>Dynamic Library</code> for <code>PPAPI</code></li>
+<li><code>Application (.pexe)</code> for <code>PNaCl</code></li>
+<li><code>Application (.nexe)</code> for <code>NaCl32</code>, <code>NaCl64</code>, and <code>NaClARM</code></li>
+</ul>
+</li>
+</ol>
+</section><section id="selecting-a-toolchain">
+<h3 id="selecting-a-toolchain">Selecting a toolchain</h3>
+<p>When you build a Native Client module directly from the SDK you can use two
+different toolchains, newlib or glibc. See <a class="reference internal" href="dynamic-loading.html"><em>Dynamic Linking and Loading
+with glibc</em></a> for a description of the two toolchains and
+instructions on how to build and deploy an application with the glibc
+toolchain. The Native Client platforms offer you the same toolchain choice. You
+can specify which toolchain to use in the project properties, under
+<code>Configuration Properties &gt; General &gt; Native Client &gt; Toolchain</code>.</p>
+<aside class="note">
+Currently, the NaClARM and PNaCl platforms only support the newlib toolchain.
+</aside>
+<p>There is no toolchain property for the PPAPI platform. The PPAPI platform uses
+the toolchain and libraries that come with Visual Studio.</p>
+</section><section id="adding-libraries-to-a-project">
+<h3 id="adding-libraries-to-a-project">Adding libraries to a project</h3>
+<p>If your Native Client application requires libraries that are not included in
+the SDK you must add them to the project properties (under <code>Configuration
+Properties &gt; Linker &gt; Input &gt; Additional Dependencies</code>), just like any other
+Visual Studio project. This list of dependencies is a semi-colon delimited
+list. On the PPAPI platform the library names include the .lib extension (e.g.,
+<code>ppapi_cpp.lib;ppapi.lib</code>). On the Native Client platforms the extension is
+excluded (e.g., <code>ppapi_cpp;ppapi</code>).</p>
+</section><section id="running-a-web-server">
+<h3 id="running-a-web-server">Running a web server</h3>
+<p>In order for the Visual Studio add-in to test your Native Client module, you
+must serve the module from a web server. There are two options:</p>
+<section id="running-your-own-server">
+<h4 id="running-your-own-server">Running your own server</h4>
+<p>When you start a debug run Visual Studio launches Chrome and tries to connect
+to the web server at the address found in the Chrome command arguments (see the
+project’s Debugging &gt; Command configuration property), which is usually
+<code>localhost:$(NaClWebServerPort)</code>. If you are using your own server be sure to
+specify its address in the command arguments property, and confirm that your
+server is running before starting a debug session. Also be certain that the
+server has all the files it needs to deliver a Native Client module (see
+“Keeping track of all the pieces”, below).</p>
+</section><section id="running-the-sdk-server">
+<h4 id="running-the-sdk-server">Running the SDK server</h4>
+<p>If there is no web server running at the specified port, Visual Studio will try
+to launch the simple Python web server that comes with the Native Client SDK.
+It looks for a copy of the server in the SDK itself (at
+<code>%NACL_SDK_ROOT%\tools\httpd.py</code>), and in the project directory
+(<code>$(ProjectDir)/httpd.py</code>). If the server exists in one of those locations,
+Visual Studio launches the server. The server output appears in Visual Studio’s
+Output window, in the pane named “Native Client Web Server Output”. A server
+launched in this way is terminated when the debugging session ends.</p>
+</section></section><section id="keeping-track-of-all-the-pieces">
+<h3 id="keeping-track-of-all-the-pieces">Keeping track of all the pieces</h3>
+<p>No matter where the web server lives or how it’s launched you must make sure
+that it has all the files that your application needs:</p>
+<ul class="small-gap">
+<li>All Native Client applications must have an <a class="reference internal" href="../coding/application-structure.html#html-file"><em>html host page</em></a>. This file is typically called <code>index.html</code>. The host page
+must have an embed tag with its type attribute set to
+<code>application-type/x-nacl</code>. If you plan to use a Native Client platform the
+embed tag must also include a src attribute pointing to a Native Client
+manifest (.mnf) file.</li>
+<li>If you are using a Native Client platform you must include a valid
+<a class="reference internal" href="../coding/application-structure.html#manifest-file"><em>manifest file</em></a>. The manifest file points to the .pexe
+or .nexe files that Visual Studio builds. These will be placed in the
+directory specified in the project’s <code>General &gt; Output Directory</code>
+configuration property, which is usually <code>$(ProjectDir)$(ToolchainName)</code>.
+Visual Studio can use the Native Client SDK script create_nmf.py to
+automatically generate the manifest file for you.  To use this script set the
+project&#8217;s <code>Linker &gt; General &gt; Create NMF Automatically</code> property to &#8220;yes.&#8221;</li>
+</ul>
+<p>If you are letting Visual Studio discover and run the SDK server, these files
+should be placed in the project directory. If you are running your own server,
+you must be sure that the host page <code>index.html</code> is placed in your server’s
+root directory. Remember, if you’re using one of the Native Client platforms
+the paths for the manifest file and .pexe or .nexe files must be reachable from
+the server.</p>
+<p>The structure of the manifest file can be more complicated if your application
+uses Native Client&#8217;s ability to dynamically link libraries. You may have to add
+additional information about dynamically linked libraries to the manifest file
+even if you create it automatically. The use and limitations of the create_nmf
+tool are explained in <a class="reference internal" href="dynamic-loading.html#dynamic-loading-manifest"><em>Generating a Native Client manifest file for a
+dynamically linked application</em></a>.</p>
+<p>You can look at the example projects in the SDK to see how the index and
+manifest files are organized. The example project <code>hello_nacl</code> has a
+subdirectory also called <code>hello_nacl</code>. That folder contains <code>index.html</code>
+and <code>hello_nacl.nmf</code>. The nexe file is found in
+<code>NaCl64\newlib\Debug\hello_nacl_64.nexe</code>. The <code>hello_world_gles</code> example
+project contains a subdirectory called <cite>hello_world_gles`</cite>. That directory
+contains html files built with both toolchains (<code>index_glibc.html</code> and
+<code>index_newlib.html</code>). The .nexe and .nmf files are found in the newlib and
+glibc subfolders. For additional information about the parts of a Native Client
+application, see <a class="reference internal" href="../coding/application-structure.html"><em>Application Structure</em></a>.</p>
+</section><section id="using-the-debuggers">
+<h3 id="using-the-debuggers">Using the debuggers</h3>
+<p>PPAPI plugins are built natively by Visual Studio’s compiler (MSBuild), and
+work with Visual Studio’s debugger in the usual way. You can set breakpoints in
+the Visual Studio source code files before you begin debugging, and on-the-fly
+while running the program.</p>
+<p>NaCl32 and NaClARM executables (.nexe files) cannot be run or debugged from
+Visual Studio.</p>
+<p>NaCl64 executables (.nexe files) are compiled using one of the Native Client
+toolchains in the SDK, which create an <a class="reference external" href="http://developer.chrome.com/native-client/devguide/devcycle/`http://en.wikipedia.org/wiki/Executable_and_Linkable_Format">ELF-formatted</a> executable. To
+debug a running .nexe you must use nacl-gdb, which is a command line debugger
+that is not directly integrated with Visual Studio. When you start a debugging
+session running from a NaCl64 platform, Visual Studio automatically launches
+nacl-gdb for you and attaches it to the nexe. Breakpoints that you set in
+Visual Studio before you start debugging are transferred to nacl-gdb
+automatically. During a NaCl debugging session you can only use nacl-gdb
+commands.</p>
+<p>The PNaCl platform generates a .pexe file. When you run the debugger add-in
+translates the .pexe file to a .nexe file and runs the resulting binary with
+nacl-gdb attached.</p>
+<p>For additional information about nacl-gdb, see <a class="reference internal" href="debugging.html#using-gdb"><em>Debugging with nacl-gdb</em></a> (scroll down to the end of the section to see some commonly used
+gdb commands).</p>
+<p>Note that you can’t use the Start Without Debugging command (Ctrl+F5) with a
+project in the Debug configuration. If you do, Chrome will hang because the
+Debug platform launches Chrome with the command argument
+<code>--wait-for-debugger-children</code> (in PPAPI) or <code>--enable-nacl-debug</code> (in a
+Native Client platform). These flags cause Chrome to pause and wait for a
+debugger to attach. If you use the Start Without Debugging command, no debugger
+attaches and Chrome just waits patiently. To use Start Without Debugging,
+switch to the Release configuration, or manually remove the offending argument
+from the <code>Command Arguments</code> property.</p>
+</section><section id="disable-chrome-caching">
+<h3 id="disable-chrome-caching">Disable Chrome caching</h3>
+<p>When you debug with a Native Client platform you might want to <a class="reference internal" href="running.html#cache"><em>disable
+Chrome&#8217;s cache</em></a> to be sure you are testing your latest and greatest
+code.</p>
+</section><section id="a-warning-about-postmessage">
+<h3 id="a-warning-about-postmessage">A warning about PostMessage</h3>
+<p>Some Windows libraries define the symbol <code>PostMessage</code> as <code>PostMessageW</code>.
+This can cause havoc if you are working with the PPAPI platform and you use the
+Pepper <code>PostMessage()</code> call in your module. Some Pepper API header files
+contain a self-defensive fix that you might need yourself, while you are
+testing on the PPAPI platform. Here it is:</p>
+<pre class="prettyprint">
+// If Windows defines PostMessage, undef it.
+#ifdef PostMessage
+#undef PostMessage
+#endif
+</pre>
+</section><section id="porting-windows-applications-to-native-client-in-visual-studio">
+<h3 id="porting-windows-applications-to-native-client-in-visual-studio">Porting Windows applications to Native Client in Visual Studio</h3>
+<p>At Google I/O 2012 we demonstrated how to port a Windows desktop application to
+Native Client in 60 minutes. The <a class="reference external" href="http://www.youtube.com/watch?v=1zvhs5FR0X8&amp;feature=plcp">video</a> is available to
+watch on YouTube. The <code>vs_addin/examples</code> folder contains a pair of simple
+examples that demonstrate porting process.  They are designed to be completed
+in just 5 minutes. The two examples are called <code>hello_nacl</code> and
+<code>hello_nacl_cpp</code>. They are essentially the same, but the former uses the C
+PPAPI interface while the latter uses the C++ API.  The application is the
+familiar &#8220;Hello, World.&#8221;</p>
+<p>Each example begins with the Windows desktop version running in the <code>Win32</code>
+platform. From there you move to the <code>PPAPI</code> platform, where you perform a
+series of steps to set up the Native Client framework, use it to run the
+desktop version, and then port the behavior from Windows calls to the PPAPI
+interface.  You wind up with a program that uses no Windows functions, which
+can run in either the <code>PPAPI</code> or the <code>NaCl64</code> platform.</p>
+<p>The example projects use a single source file (<code>hello_nacl.c</code> or
+<code>hello_nacl_cpp.cpp</code>). Each step in the porting process is accomplished by
+progressively defining the symbols STEP1 through STEP6 in the source. Inline
+comments explain how each successive step changes the code. View the example
+code to see how it&#8217;s actually done. Here is a summary of the process:</p>
+<section id="win32-platform">
+<h4 id="win32-platform">Win32 Platform</h4>
+<dl class="docutils">
+<dt>STEP1 Run the desktop application</dt>
+<dd>Begin by running the original Windows application in the Win32 platform.</dd>
+</dl>
+</section><section id="ppapi-platform">
+<h4 id="ppapi-platform">PPAPI Platform</h4>
+<dl class="docutils">
+<dt>STEP2 Launch Chrome with an empty Native Client module</dt>
+<dd>Switch to the PPAPI platform and include the code required to initialize a
+Native Module instance. The code is bare-boned, it does nothing but
+initialize the module. This step illustrates how Visual Studio handles all
+the details of launching a web-server and Chrome, and running the Native
+Client module as a Pepper plugin.</dd>
+<dt>STEP3 Run the desktop application synchronously from the Native Client module</dt>
+<dd>The Native Client creates the window directly and then calls WndProc to run
+the desktop application. Since WndProc spins in its message loop, the call to
+initialize the module never returns. Close the Hello World window and the
+module initialization will finish.</dd>
+<dt>STEP4 Running the desktop application and Native Client asynchronously</dt>
+<dd>In WndProc replace the message loop with a callback function. Now the app
+window and the Native Client module are running concurrently.</dd>
+<dt>STEP5 Redirect output to the web page</dt>
+<dd>The module initialization code calls initInstanceInBrowserWindow rather than
+initInstanceInPCWindow. WndProc is no longer used. Instead, postMessage is
+called to place text (now &#8220;Hello, Native Client&#8221;) in the web page rather than
+opening and writing to a window. Once you&#8217;ve reached this step you can start
+porting pieces of the application one feature at a time.</dd>
+<dt>STEP6 Remove all the Windows code</dt>
+<dd>All the Windows code is def&#8217;d out, proving we are PPAPI-compliant. The
+functional code that is running is the same as STEP5.</dd>
+</dl>
+</section><section id="nacl64-platform">
+<h4 id="nacl64-platform">NaCl64 Platform</h4>
+<dl class="docutils">
+<dt>Run the Native Client Module in the NaCl64 platform</dt>
+<dd>You are still running the STEP6 code, but as a Native Client module rather
+than a Pepper plugin.</dd>
+</dl>
+</section></section></section></section>
+    
+    <footer id="cc-info">
+      <button id="send-feedback" class="google-button" data-feedback>Send Feedback</button>
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo"><a href="http://creativecommons.org/licenses/by/3.0/"><img src="../../../static/images/cc_by.png" alt="Licensed Creative Commons by Attribution"></a></p>
+    </footer>
+    <nav class="inline-toc no-permalink">
+      <section class="related">
+                      <h3 title="">Development Cycle</h3>
+      <ol class="toc">
+                              <li>
+                                <a href="building.html">Building</a>
+                              </li>
+                              <li>
+                                <a href="running.html">Running</a>
+                              </li>
+                              <li>
+                                <a href="debugging.html">Debugging</a>
+                              </li>
+                              <li>
+                                <a href="vs-addin.html" class="active">Debugging with Visual Studio</a>
+                              </li>
+                              <li>
+                                <a href="dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                              </li>
+      </ol>
+      </section>
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="vs-addin.html#introduction"
+          >Introduction</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#platforms"
+          >Platforms</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#the-ppapi-platform"
+          >The PPAPI platform</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#the-native-client-platforms"
+          >The Native Client platforms</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#nacl32-and-nacl64"
+          >NaCl32 and NaCl64</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#naclarm"
+          >NaClARM</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#pnacl"
+          >PNaCl</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#installing-the-add-in"
+          >Installing the add-in</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#set-environment-variables"
+          >Set environment variables</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#download-the-add-in"
+          >Download the add-in</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#run-the-installer"
+          >Run the installer</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#try-the-hello-world-gles-sample-project"
+          >Try the hello_world_gles sample project</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#select-the-nacl64-platform"
+          >Select the NaCl64 platform</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#build-and-run-the-project"
+          >Build and run the project</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#test-the-nacl-gdb-debugger"
+          >Test the nacl-gdb debugger</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#test-the-visual-studio-debugger"
+          >Test the Visual Studio debugger</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#inspect-the-platform-properties"
+          >Inspect the platform properties</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#developing-for-native-client-in-visual-studio"
+          >Developing for Native Client in Visual Studio</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#adding-platforms-to-a-project"
+          >Adding platforms to a project</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#selecting-a-toolchain"
+          >Selecting a toolchain</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#adding-libraries-to-a-project"
+          >Adding libraries to a project</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#running-a-web-server"
+          >Running a web server</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#running-your-own-server"
+          >Running your own server</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#running-the-sdk-server"
+          >Running the SDK server</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#keeping-track-of-all-the-pieces"
+          >Keeping track of all the pieces</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#using-the-debuggers"
+          >Using the debuggers</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#disable-chrome-caching"
+          >Disable Chrome caching</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#a-warning-about-postmessage"
+          >A warning about PostMessage</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#porting-windows-applications-to-native-client-in-visual-studio"
+          >Porting Windows applications to Native Client in Visual Studio</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#win32-platform"
+          >Win32 Platform</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#ppapi-platform"
+          >PPAPI Platform</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="vs-addin.html#nacl64-platform"
+          >NaCl64 Platform</a>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="vs-addin.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../../../static/js/fatnav.js"></script>
+    <script src="../../../static/js/article.js"></script>
+    <script src="../../../static/js/prettify.js"></script>
+    <script src="../../../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../../../static/js/site.js"></script>
+  </body>
+</html>

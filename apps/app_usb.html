@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>USB Devices - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="app_usb.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../index.html">
+          <img alt="Chrome: developer" src="../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="app_usb.html">USB</a>
+                            </li>
+                            <li><a href="app_serial">Serial</a>
+                            </li>
+                            <li><a href="app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="overview.html">Overview</a>
+                            </li>
+                            <li><a href="../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../native-client/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../native-client/nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../native-client/sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../native-client/sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/devcycle/building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/devcycle/building.html">Building</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/running.html">Running</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../native-client/reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../native-client/reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../native-client/help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../native-client/publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../native-client/community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <div itemprop="articleBody">
+
+<h1>USB Devices</h1>
+
+<p>
+This document describes how to use the <a href="usb.html">USB API</a> to communicate
+with USB devices. Some devices are not accessible through the USB API
+(see the <a href="app_usb.html#caveats">Caveats</a> section below for details).
+Chrome Apps can also connect to <a href="serial.html">serial</a> and
+<a href="bluetooth.html">Bluetooth</a> devices.
+</p>
+
+<p class="note">
+<b>Samples:</b> For examples that illustrate how Chrome Apps can connect to hardware devices, see the
+<a href="https://github.com/GoogleChrome/chrome-app-samples/tree/master/serial">serial</a>,
+<a href="https://github.com/GoogleChrome/chrome-app-samples/tree/master/servo">servo</a>,
+<a href="https://github.com/GoogleChrome/chrome-app-samples/tree/master/usb">usb</a>, and
+<a href="https://github.com/GoogleChrome/chrome-app-samples/tree/master/zephyr_hxm">zephyr_hxm
+Bluetooth</a> samples.
+</p>
+
+<p>
+  For background information about USB, see the official
+  <a href="http://www.usb.org/home">USB specifications</a>. <br/>
+  <a href="http://www.beyondlogic.org/usbnutshell/usb1.shtml">
+    <i>USB in a NutShell</i></a>
+  is a reasonable crash course that you may find helpful.
+</p>
+
+<h2 id="manifest">Manifest requirement</h2>
+
+<p>The USB API requires the "usb" permission in the manifest file:</p>
+
+<pre data-filename="manifest.json">
+"permissions": [
+  "usb"
+]
+</pre>
+
+<p>In addition, in order to prevent
+  <a href="http://en.wikipedia.org/wiki/Device_fingerprint">finger-printing</a>,
+  you must declare all the device types you want to access in the manifest file.
+  Each type of USB device corresponds to a vendor id/product id (VID/PID) pair.
+  You can use <a href="usb.html#method-getDevices">usb.getDevices</a> to enumerate devices by their VID/PID
+  pair.
+</p>
+<p>
+  You must declare the VID/PID pairs for each type of device you want to use
+  under the "usbDevices" permission in your app's manifest file, as shown in the
+  example below:</p>
+
+<pre data-filename="manifest.json">
+"permissions": [
+  "usbDevices": [
+    {
+      "vendorId": 123,
+      "productId": 456
+    }
+  ]
+]
+</pre>
+
+<p class="note">Note that only decimal numbers are allowed in JSON format.
+  You cannot use hexadecimal numbers in these fields.</p>
+
+<h2 id="finding_device">Finding a device</h2>
+
+<p>
+  To determine whether one or more specific devices are connected to a user's
+  system, use the <a href="usb.html#method-getDevices">usb.getDevices</a> method:
+</p>
+
+<pre>
+chrome.usb.getDevices(enumerateDevicesOptions, callback);
+</pre>
+
+<br/>
+
+<table class="simple">
+  <tr>
+    <th scope="col">Parameter (type)</th>
+    <th scope="col">Description</th>
+  </tr>
+  <tr>
+    <td>EnumerateDevicesOptions (object)</td>
+    <td>An object specifying both a <code>vendorId</code> (long) and
+      <code>productId</code> (long) used to find the correct type of device on
+      the bus. Your manifest must declare the <code>usbDevices</code> permission
+      section listing all the <code>vendorId</code> and <code>deviceId</code>
+      pairs your app wants to access.
+    </td>
+  </tr>
+  <tr>
+    <td>callback (function)</td>
+    <td>Called when the device enumeration is finished. The callback will be
+      executed with one parameter, an array of <code>Device</code> objects with
+      three properties: <code>device</code>, <code>vendorId</code>,
+      <code>productId</code>. The device property is a stable identifier for a
+      connected device. It will not change until the device is unplugged. The
+      detail of the identifier is opaque and subject to change. Do not rely on
+      its current type. <br/>
+      If no devices are found, the array will be empty.
+    </td>
+  </tr>
+</table>
+
+<p>Example:</p>
+
+<pre>
+function onDeviceFound(devices) {
+  this.devices=devices;
+  if (devices) {
+    if (devices.length > 0) {
+      console.log("Device(s) found: "+devices.length);
+    } else {
+      console.log("Device could not be found");
+    }
+  } else {
+    console.log("Permission denied.");
+  }
+}
+
+chrome.usb.getDevices({"vendorId": vendorId, "productId": productId}, onDeviceFound);
+</pre>
+
+<h2 id="usb_open">Opening a device</h2>
+<p>
+Once the <code>Device</code> objects are returned, you can open a device using
+usb.openDevice to obtain a connection handle. You can only
+communicate with USB devices using connection handles.
+</p>
+
+<table class="simple">
+  <tr>
+    <th scope="col">Property</th>
+    <th scope="col">Description</th>
+  </tr>
+  <tr>
+    <td>device</td>
+    <td>Object received in <a href="usb.html#method-getDevices">usb.getDevices</a> callback.</td>
+  </tr>
+  <tr>
+    <td>data (arraybuffer)</td>
+    <td>Contains the data sent by the device if the transfer was inbound.</td>
+  </tr>
+</table>
+
+<p>Example:</p>
+
+<pre>
+var usbConnection = null;
+var onOpenCallback = function(connection) {
+  if (connection) {
+    usbConnection = connection;
+    console.log("Device opened.");
+  } else {
+    console.log("Device failed to open.");
+  }
+};
+
+chrome.usb.openDevice(device, onOpenCallback);
+</pre>
+
+<p class="note">
+Not every device can be opened successfully. In general, operating systems
+lock down many types of USB interfaces (e.g. keyboards and mice, mass storage
+devices, webcams, etc.) and they cannot be claimed by user applications.
+On Linux (other than Chrome OS), once an interface of a device is locked down by
+the OS, the whole device is locked down (because all the interfaces shares the
+same device file), even if the other interfaces of the device can be used in
+theory. On Chrome OS, you can request access to unlocked interfaces using the
+<a href="usb.html#method-requestAccess">usb.requestAccess</a> method. If permitted, the permission broker will
+unlock the device file for you.
+</p>
+
+<p>
+To simplify the opening process, you can use the <a href="usb.html#method-findDevices">usb.findDevices</a>
+method, which enumerates, requests access, and opens devices in one call:
+</p>
+
+<pre>
+chrome.usb.findDevices({"vendorId": vendorId, "productId": productId, "interfaceId": interfaceId}, callback);
+</pre>
+<p>which is equivalent to:</p>
+<pre>
+chrome.usb.getDevices({"vendorId": vendorId, "productId": productId}, function (devices) {
+  if (!devices) {
+    console.log("Error enumerating devices.");
+    callback();
+    return;
+  }
+  var connections = [], pendingAccessRequests = devices.length;
+  devices.forEach(function (device) {
+    chrome.usb.requestAccess(interfaceId, function () {
+      // No need to check for errors at this point.
+      // Nothing can be done if an error occurs anyway. You should always try
+      // to open the device.
+      chrome.usb.openDevices(device, function (connection) {
+        if (connection) connections.push(connection);
+        pendingAccessRequests--;
+        if (pendingAccessRequests == 0) {
+          callback(connections);
+        }
+      });
+    });
+  })
+});
+</pre>
+
+<h2 id="usb_transfers">USB transfers and receiving data from a device</h2>
+
+<p>
+  The USB protocol defines four types of transfers:
+  <a href="app_usb.html#control_transfers">control</a>,
+  <a href="app_usb.html#bulk_transfers">bulk</a>,
+  <a href="app_usb.html#isochronous_transfers">isochronous</a>
+  and <a href="app_usb.html#interrupt_transfers">interrupt</a>.
+  These transfers are described below.
+</p>
+
+<p>
+  Transfers can occur in both directions: device-to-host (inbound), and
+  host-to-device (outbound). Due to the nature of the USB protocol,
+  both inbound and outbound messages must be initiated by the host (the
+  computer that runs the Chrome app).
+  For inbound (device-to-host) messages, the host (initiated by your JavaScript
+  code) sends a message flagged as "inbound" to the device.
+  The details of the message depend on the device, but usually will have
+  some identification of what you are requesting from it.
+  The device then responds with the requested data.
+  The device's response is handled by Chrome and delivered asynchronously to the
+  callback you specify in the transfer method.
+  An outbound (host-to-device) message is similar, but the response doesn't
+  contain data returned from the device.
+</p>
+
+<p>
+  For each message from the device, the specified callback will receive an event
+  object with the following properties:
+</p>
+
+<br>
+
+<table class="simple">
+  <tr>
+    <th scope="col">Property</th>
+    <th scope="col">Description</th>
+  </tr>
+  <tr>
+    <td>resultCode (integer)</td>
+    <td>0 is success; other values indicate failure. An error string can be<br/>
+      read from <code>chrome.extension.lastError</code> when a failure is<br/>
+      indicated.
+    </td>
+  </tr>
+  <tr>
+    <td>data (arraybuffer)</td>
+    <td>Contains the data sent by the device if the transfer was inbound.</td>
+  </tr>
+</table>
+
+<p>Example:</p>
+
+<pre>
+var onTransferCallback = function(event) {
+   if (event && event.resultCode === 0 && event.data) {
+     console.log("got " + event.data.byteLength + " bytes");
+   }
+};
+
+chrome.usb.bulkTransfer(connectionHandle, transferInfo, onTransferCallback);
+</pre>
+
+<h2 id="control_transfers">CONTROL transfers</h2>
+
+<p>Control transfers are generally used to send or receive configuration or
+  command parameters to a USB device. The controlTransfer method always sends
+  to/reads from endpoint 0, and no claimInterface is required.
+  The method is simple and receives three parameters:</p>
+
+<pre>
+chrome.usb.controlTransfer(connectionHandle, transferInfo, transferCallback)
+</pre>
+
+<br>
+
+<table class="simple">
+  <tr>
+    <th scope="col">Parameter (types)</th>
+    <th scope="col">Description</th>
+  </tr>
+  <tr>
+    <td>connectionHandle</td>
+    <td>Object received in <a href="usb.html#method-openDevice">usb.openDevice</a> callback.
+    </td>
+  </tr>
+  <tr>
+    <td>transferInfo</td>
+    <td>Parameter object with values from the table below. Check your USB
+      device protocol specification for details.
+    </td>
+  </tr>
+  <tr>
+    <td>transferCallback()</td>
+    <td>Invoked when the transfer has completed.</td>
+  </tr>
+</table>
+
+<p>
+  Values for
+  <code>transferInfo</code>
+  object:
+</p>
+
+<table class="simple">
+  <tr>
+    <th scope="col">Value</th>
+    <th scope="col">Description</th>
+  </tr>
+  <tr>
+    <td>requestType (string)</td>
+    <td>"vendor", "standard", "class" or "reserved".</td>
+  </tr>
+  <tr>
+    <td>recipient (string)</td>
+    <td>"device", "interface", "endpoint" or "other".</td>
+  </tr>
+  <tr>
+    <td>direction (string)</td>
+    <td>"in" or "out". The "in" direction is used to notify the device that<br/>
+        it should send information to the host. All communication on a USB<br/>
+        bus is host-initiated, so use an "in" transfer to allow a device to<br/>
+        send information back.
+    </td>
+  </tr>
+  <tr>
+    <td>request (integer)</td>
+    <td>Defined by your device's protocol.</td>
+  </tr>
+  <tr>
+    <td>value (integer)</td>
+    <td>Defined by your device's protocol.</td>
+  </tr>
+  <tr>
+    <td>index (integer)</td>
+    <td>Defined by your device's protocol.</td>
+  </tr>
+  <tr>
+    <td>length (integer)</td>
+    <td>Only used when direction is "in". Notifies the device that this is
+      the amount of data the host is expecting in response.
+    </td>
+  </tr>
+  <tr>
+    <td>data (arraybuffer)</td>
+    <td>Defined by your device's protocol, required when direction is
+      "out".
+    </td>
+  </tr>
+</table>
+
+<p>Example:</p>
+
+<pre>
+var transferInfo = {
+  "requestType": "vendor",
+   "recipient": "device",
+  "direction": "out",
+  "request":  0x31,
+  "value": 120,
+  "index": 0,
+  // Note that the ArrayBuffer, not the TypedArray itself is used.
+  "data": new Uint8Array([4, 8, 15, 16, 23, 42]).buffer
+};
+chrome.usb.controlTransfer(connectionHandle, transferInfo, optionalCallback);
+</pre>
+
+<h2 id="isochronous_transfers">ISOCHRONOUS transfers</h2>
+
+<p>Isochronous transfers are the most complex type of USB transfer. They are
+  commonly used for streams of data, like video and sound. To initiate an
+  isochronous transfer (either inbound or outbound), you must use
+  the <a href="usb.html#method-isochronousTransfer">usb.isochronousTransfer</a> method:</p>
+
+<pre>
+chrome.usb.isochronousTransfer(connectionHandle, isochronousTransferInfo, transferCallback)
+</pre>
+
+<br/>
+
+<table class="simple">
+  <tr>
+    <th scope="col">Parameter</th>
+    <th scope="col">Description</th>
+  </tr>
+  <tr>
+    <td>connectionHandle</td>
+    <td>Object received in <a href="usb.html#method-openDevice">usb.openDevice</a> callback.
+    </td>
+  </tr>
+  <tr>
+    <td>isochronousTransferInfo</td>
+    <td>Parameter object with the values in the table below.</td>
+  </tr>
+  <tr>
+    <td>transferCallback()</td>
+    <td>Invoked when the transfer has completed.</td>
+  </tr>
+</table>
+
+<p>
+  Values for
+  <code>isochronousTransferInfo</code>
+  object:
+</p>
+
+<table class="simple">
+  <tr>
+    <th scope="col">Value</th>
+    <th scope="col">Description</th>
+  </tr>
+  <tr>
+    <td>transferInfo (object)</td>
+    <td>An object with the following attributes:<br/>
+      <b>direction (string): </b>"in" or "out".<br/>
+      <b>endpoint (integer): </b>defined by your device. Usually can be found by
+      looking at an USB instrospection tool, like <code>lsusb -v</code><br/>
+      <b>length (integer): </b>only
+      used when direction is "in". Notifies the device that this is the amount
+      of data the host is expecting in response. <br/>
+
+      Should be AT LEAST <code>packets</code> &times; <code>packetLength</code>.
+      <br/>
+      <b>data (arraybuffer): </b>defined by your device's protocol;
+      only used when direction is "out".
+    </td>
+  </tr>
+  <tr>
+    <td>packets (integer)</td>
+    <td>Total number of packets expected in this transfer.</td>
+  </tr>
+  <tr>
+    <td>packetLength (integer)</td>
+    <td>Expected length of each packet in this transfer.</td>
+  </tr>
+</table>
+
+<p>Example:</p>
+
+<pre>
+var transferInfo = {
+  "direction": "in",
+  "endpoint": 1,
+  "length": 2560
+};
+
+var isoTransferInfo = {
+  "transferInfo": transferInfo,
+  "packets": 20,
+  "packetLength": 128
+};
+
+chrome.usb.isochronousTransfer(connectionHandle, isoTransferInfo, optionalCallback);
+</pre>
+
+<p class="note">
+  <b>Notes:</b> One isochronous transfer will contain
+  <code>isoTransferInfo.packets</code> packets of
+  <code>isoTransferInfo.packetLength</code> bytes.
+  If it is an inbound transfer (your code requested data from the device), the
+  <code>data</code> field in the onUsbEvent will be an ArrayBuffer of size
+  <code>transferInfo.length</code>. It is your duty to walk through this
+  ArrayBuffer and extract the different packets, each starting at a multiple of
+  <code>isoTransferInfo.packetLength</code> bytes. <br/>
+  <br/>
+  If you are expecting a stream of data from the device, remember that
+  you will have to send one "inbound" transfer for each transfer you expect
+  back. USB devices don't send transfers to the USB bus unless the host
+  explicitly requests them through "inbound" transfers.
+</p>
+
+<h2 id="bulk_transfers">BULK transfers</h2>
+
+<p>Bulk transfers are commonly used to transfer a large amount of
+  non-time-sensitive data in a reliable way.
+  <a href="usb.html#method-bulkTransfer">usb.bulkTransfer</a> has three parameters:</p>
+
+<pre>
+chrome.usb.bulkTransfer(connectionHandle, transferInfo, transferCallback);
+</pre>
+
+<br>
+
+<table class="simple">
+  <tr>
+    <th scope="col">Parameter</th>
+    <th scope="col">Description</th>
+  </tr>
+  <tr>
+    <td>connectionHandle</td>
+    <td>Object received in <a href="usb.html#method-openDevice">usb.openDevice</a> callback.
+    </td>
+  </tr>
+  <tr>
+    <td>transferInfo</td>
+    <td>Parameter object with the values in the table below.</td>
+  </tr>
+  <tr>
+    <td>transferCallback</td>
+    <td>Invoked when the transfer has completed.</td>
+  </tr>
+</table>
+
+<p>
+  Values for
+  <code>transferInfo</code>
+  object:
+</p>
+
+<table class="simple">
+  <tr>
+    <th scope="col">Value</th>
+    <th scope="col">Description</th>
+  </tr>
+  <tr>
+    <td>direction (string)</td>
+    <td>"in" or "out".</td>
+  </tr>
+  <tr>
+    <td>endpoint (integer)</td>
+    <td>Defined by your device's protocol.</td>
+  </tr>
+  <tr>
+    <td>length (integer)</td>
+    <td>Only used when direction is "in". Notifies the device that this is
+      the amount of data the host is expecting in response.
+    </td>
+  </tr>
+  <tr>
+    <td>data (ArrayBuffer)</td>
+    <td>Defined by your device's protocol; only used when direction is
+      "out".
+    </td>
+  </tr>
+</table>
+
+<p>Example:</p>
+
+<pre>
+var transferInfo = {
+  "direction": "out",
+  "endpoint": 1,
+  "data": new Uint8Array([4, 8, 15, 16, 23, 42]).buffer
+};
+</pre>
+
+<h2 id="interrupt_transfers">INTERRUPT transfers</h2>
+
+<p>Interrupt transfers are used to small amount of time sensitive data.
+  Since all USB communication is initiated by the host, host code usually polls
+  the device periodically, sending interrupt IN transfers that will make the
+  device send data back if there is anything in the interrupt queue (maintained
+  by the device).
+  <a href="usb.html#method-interruptTransfer">usb.interruptTransfer</a> has three parameters:</p>
+
+<pre>
+chrome.usb.interruptTransfer(connectionHandle, transferInfo, transferCallback);
+</pre>
+
+<br>
+
+<table class="simple">
+  <tr>
+    <th scope="col">Parameter</th>
+    <th scope="col">Description</th>
+  </tr>
+  <tr>
+    <td>connectionHandle</td>
+    <td>Object received in <a href="usb.html#method-openDevice">usb.openDevice</a> callback.
+    </td>
+  </tr>
+  <tr>
+    <td>transferInfo</td>
+    <td>Parameter object with the values in the table below.</td>
+  </tr>
+  <tr>
+    <td>transferCallback</td>
+    <td>Invoked when the transfer has completed. Notice that this callback
+      doesn't contain the device's response. The purpose of the callback is
+      simply to notify your code that the asynchronous transfer requests has
+      been processed.
+    </td>
+  </tr>
+</table>
+
+<p>
+  Values for <code>transferInfo</code> object:
+</p>
+
+<table class="simple">
+<tr>
+  <th scope="col">Value</th>
+  <th scope="col">Description</th>
+</tr>
+<tr>
+  <td>direction (string)</td>
+  <td>"in" or "out".</td>
+</tr>
+<tr>
+  <td>endpoint (integer)</td>
+  <td>Defined by your device's protocol.</td>
+</tr>
+<tr>
+  <td>length (integer)</td>
+  <td>Only used when direction is "in". Notifies the device that this is
+    the amount of data the host is expecting in response.
+  </td>
+</tr>
+<tr>
+  <td>data (ArrayBuffer)</td>
+  <td>Defined by your device's protocol; only used when direction is
+    "out".
+  </td>
+</tr>
+</table>
+
+<p>Example:</p>
+
+<pre>
+var transferInfo = {
+  "direction": "in",
+  "endpoint": 1,
+  "length": 2
+};
+chrome.usb.interruptTransfer(connectionHandle, transferInfo, optionalCallback);
+</pre>
+
+<h2 id="caveats">Caveats</h2>
+
+<p>Not all devices can be accessed through the USB API. In general, devices
+  are not accessible because either the Operating System's kernel or a native
+  driver holds them off from user space code. Some examples are devices with
+  HID profiles on OSX systems, and USB pen drives.</p>
+  
+<p>
+  On most Linux systems, USB devices are mapped with read-only permissions by
+  default. To open a device through this API, your user will need to have
+  write access to it too.
+  A simple solution is to set a udev rule. Create a file
+  <code>/etc/udev/rules.d/50-yourdevicename.rules</code>
+  with the following content:
+</p>
+
+<pre>
+SUBSYSTEM=="usb", ATTR{idVendor}=="[yourdevicevendor]", MODE="0664", GROUP="plugdev"
+</pre>
+
+<p>
+  Then, just restart the udev daemon: <code>service udev restart</code>.
+  You can check if device permissions are set correctly by following these
+  steps:
+</p>
+
+<ul>
+  <li>Run <code>lsusb</code> to find the bus and device numbers.</li>
+  <li>Run <code>ls -al /dev/bus/usb/[bus]/[device]</code>. This file should be
+    owned by group "plugdev" and have group write permissions.
+  </li>
+</ul>
+
+<p>Your app cannot do this automatically since this this procedure requires root
+access. We recommend that you provide instructions to end-users and link to the
+<a href="app_usb.html#caveats">Caveats</a> section on this page for an explanation.</p>
+
+<p>On Chrome OS, simply call <a href="usb.html#method-requestAccess">usb.requestAccess</a>. The permission
+  broker does this for you.</p>
+    
+    <footer id="cc-info">
+      <button id="send-feedback" class="google-button" data-feedback>Send Feedback</button>
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo"><a href="http://creativecommons.org/licenses/by/3.0/"><img src="../static/images/cc_by.png" alt="Licensed Creative Commons by Attribution"></a></p>
+    </footer>
+    <nav class="inline-toc no-permalink">
+      <section class="related">
+                      <h3 title="">User Low-Level System Services</h3>
+      <ol class="toc">
+                              <li>
+                                <a href="app_usb.html" class="active">USB</a>
+                              </li>
+                              <li>
+                                <a href="app_serial">Serial</a>
+                              </li>
+                              <li>
+                                <a href="app_network.html">Network Communications</a>
+                              </li>
+                              <li>
+                                <a href="app_bluetooth.html">Bluetooth</a>
+                              </li>
+      </ol>
+      </section>
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="app_usb.html#manifest"
+          >Manifest requirement</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="app_usb.html#finding_device"
+          >Finding a device</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="app_usb.html#usb_open"
+          >Opening a device</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="app_usb.html#usb_transfers"
+          >USB transfers and receiving data from a device</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="app_usb.html#control_transfers"
+          >CONTROL transfers</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="app_usb.html#isochronous_transfers"
+          >ISOCHRONOUS transfers</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="app_usb.html#bulk_transfers"
+          >BULK transfers</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="app_usb.html#interrupt_transfers"
+          >INTERRUPT transfers</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="app_usb.html#caveats"
+          >Caveats</a>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="app_usb.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../static/js/fatnav.js"></script>
+    <script src="../static/js/article.js"></script>
+    <script src="../static/js/prettify.js"></script>
+    <script src="../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../static/js/site.js"></script>
+  </body>
+</html>

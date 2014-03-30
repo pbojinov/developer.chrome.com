@@ -1,0 +1,1653 @@
+<link href="_static/css/nacl.css" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>Frequently Asked Questions - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="faq.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../index.html">
+          <img alt="Chrome: developer" src="../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="../apps/index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../apps/index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="../apps/first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="../apps/app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="../apps/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="../apps/app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="../apps/app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="../apps/app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="../apps/app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="../apps/app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="../apps/app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="../apps/app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="../apps/app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="../apps/offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="../apps/app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="../apps/cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="../apps/app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="../apps/app_usb.html">USB</a>
+                            </li>
+                            <li><a href="../apps/app_serial">Serial</a>
+                            </li>
+                            <li><a href="../apps/app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="../apps/app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="../apps/app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="../apps/angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="../apps/sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="../apps/google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../apps/analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../apps/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../apps/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../apps/webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="../apps/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../apps/app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../apps/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="../apps/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../apps/overview.html">Overview</a>
+                            </li>
+                            <li><a href="../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="../apps/activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="devguide/tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="devguide/tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="devguide/devcycle/building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="devguide/devcycle/building.html">Building</a>
+                            </li>
+                            <li><a href="devguide/devcycle/running.html">Running</a>
+                            </li>
+                            <li><a href="devguide/devcycle/debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="devguide/devcycle/vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="devguide/devcycle/dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="devguide/coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="devguide/coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="devguide/coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="devguide/coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="devguide/coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="devguide/coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="devguide/devcycle/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="devguide/coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="devguide/coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="devguide/distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="faq.html">FAQ</a>
+                            </li>
+                            <li><a href="help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <div itemprop="articleBody">
+
+
+
+<section id="frequently-asked-questions">
+<h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+<div class="contents local" id="contents" style="display: none">
+<ul class="small-gap">
+<li><p class="first"><a class="reference internal" href="faq.html#what-is-native-client-good-for" id="id3">What is Native Client Good For?</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="faq.html#why-did-google-build-native-client" id="id4">Why did Google build Native Client?</a></li>
+<li><a class="reference internal" href="faq.html#when-should-i-use-native-client" id="id5">When should I use Native Client?</a></li>
+<li><a class="reference internal" href="faq.html#when-should-i-use-portable-native-client" id="id6">When should I use Portable Native Client?</a></li>
+<li><a class="reference internal" href="faq.html#how-fast-does-code-run-in-portable-native-client" id="id7">How fast does code run in Portable Native Client?</a></li>
+<li><a class="reference internal" href="faq.html#why-use-portable-native-client-instead-of-technology-x" id="id8">Why use Portable Native Client instead of <em>&lt;technology X&gt;</em>?</a></li>
+<li><a class="reference internal" href="faq.html#if-i-want-direct-access-to-the-os-should-i-use-native-client" id="id9">If I want direct access to the OS, should I use Native Client?</a></li>
+</ul>
+</li>
+<li><p class="first"><a class="reference internal" href="faq.html#development-environments-and-tools" id="id10">Development Environments and Tools</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="faq.html#what-development-environment-and-development-operating-system-do-you-recommend" id="id11">What development environment and development operating system do you recommend?</a></li>
+<li><a class="reference internal" href="faq.html#i-m-not-familiar-with-native-development-tools-can-i-still-use-the-native-client-sdk" id="id12">I&#8217;m not familiar with native development tools, can I still use the Native Client SDK?</a></li>
+</ul>
+</li>
+<li><p class="first"><a class="reference internal" href="faq.html#openness-and-supported-architectures-and-languages" id="id13">Openness, and Supported Architectures and Languages</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="faq.html#is-native-client-open-is-it-a-standard" id="id14">Is Native Client open? Is it a standard?</a></li>
+<li><a class="reference internal" href="faq.html#what-are-the-supported-instruction-set-architectures" id="id15">What are the supported instruction set architectures?</a></li>
+<li><a class="reference internal" href="faq.html#do-i-have-to-use-c-or-c-i-d-really-like-to-use-another-language" id="id16">Do I have to use C or C++? I&#8217;d really like to use another language.</a></li>
+<li><a class="reference internal" href="faq.html#will-you-only-support-chrome-what-about-other-browsers" id="id17">Will you only support Chrome? What about other browsers?</a></li>
+<li><a class="reference internal" href="faq.html#what-s-the-difference-between-npapi-and-pepper" id="id18">What&#8217;s the difference between NPAPI and Pepper?</a></li>
+<li><a class="reference internal" href="faq.html#is-npapi-part-of-the-native-client-sdk" id="id19">Is NPAPI part of the Native Client SDK?</a></li>
+<li><a class="reference internal" href="faq.html#does-native-client-support-simd-vector-instructions" id="id20">Does Native Client support SIMD vector instructions?</a></li>
+<li><a class="reference internal" href="faq.html#can-i-use-native-client-for-3d-graphics" id="id21">Can I use Native Client for 3D graphics?</a></li>
+<li><a class="reference internal" href="faq.html#does-native-client-support-concurrency-parallelism" id="id22">Does Native Client support concurrency/parallelism?</a></li>
+</ul>
+</li>
+<li><p class="first"><a class="reference internal" href="faq.html#coming-soon" id="id23">Coming Soon</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="faq.html#do-native-client-modules-have-access-to-external-devices" id="id24">Do Native Client modules have access to external devices?</a></li>
+</ul>
+</li>
+<li><p class="first"><a class="reference internal" href="faq.html#security-and-privacy" id="id25">Security and Privacy</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="faq.html#what-happens-to-my-data-when-i-use-native-client" id="id26">What happens to my data when I use Native Client?</a></li>
+<li><a class="reference internal" href="faq.html#how-does-native-client-prevent-sandboxed-code-from-doing-bad-things" id="id27">How does Native Client prevent sandboxed code from doing Bad Things?</a></li>
+<li><a class="reference internal" href="faq.html#how-does-google-know-that-the-safety-measures-in-native-client-are-sufficient" id="id28">How does Google know that the safety measures in Native Client are sufficient?</a></li>
+</ul>
+</li>
+<li><p class="first"><a class="reference internal" href="faq.html#development" id="id29">Development</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="faq.html#how-do-i-debug" id="id30">How do I debug?</a></li>
+<li><a class="reference internal" href="faq.html#how-do-i-build-x86-32-x86-64-or-arm-nexes" id="id31">How do I build x86-32, x86-64 or ARM <code>.nexes</code>?</a></li>
+<li><a class="reference internal" href="faq.html#how-can-my-web-application-determine-which-nexe-to-load" id="id32">How can my web application determine which <code>.nexe</code> to load?</a></li>
+<li><a class="reference internal" href="faq.html#is-it-possible-to-build-a-native-client-module-with-just-plain-c-not-c" id="id33">Is it possible to build a Native Client module with just plain C (not C++)?</a></li>
+<li><a class="reference internal" href="faq.html#what-unix-system-calls-can-i-make-through-native-client" id="id34">What UNIX system calls can I make through Native Client?</a></li>
+<li><a class="reference internal" href="faq.html#is-my-favorite-third-party-library-available-for-native-client" id="id35">Is my favorite third-party library available for Native Client?</a></li>
+<li><a class="reference internal" href="faq.html#do-all-the-files-in-an-application-need-to-be-served-from-the-same-domain" id="id36">Do all the files in an application need to be served from the same domain?</a></li>
+</ul>
+</li>
+<li><p class="first"><a class="reference internal" href="faq.html#portability" id="id37">Portability</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="faq.html#do-i-have-to-do-anything-special-to-make-my-application-run-on-different-operating-systems" id="id38">Do I have to do anything special to make my application run on different operating systems?</a></li>
+<li><a class="reference internal" href="faq.html#how-easy-is-it-to-port-my-existing-native-code-to-native-client" id="id39">How easy is it to port my existing native code to Native Client?</a></li>
+</ul>
+</li>
+<li><p class="first"><a class="reference internal" href="faq.html#troubleshooting" id="id40">Troubleshooting</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="faq.html#my-pexe-isn-t-loading-help" id="id41">My <code>.pexe</code> isn&#8217;t loading, help!</a></li>
+<li><a class="reference internal" href="faq.html#my-nexe-files-never-finish-loading-what-gives" id="id42">My <code>.nexe</code> files never finish loading. What gives?</a></li>
+</ul>
+</li>
+</ul>
+
+</div><p>This document answers some frequently asked questions about Native
+Client (NaCl) and Portable Native Client (PNaCl, pronounced
+&#8220;pinnacle&#8221;). For a high-level overview of Native Client, see the
+<a class="reference internal" href="overview.html"><em>Technical Overview</em></a>.</p>
+<p>If you have questions that aren&#8217;t covered in this FAQ:</p>
+<ul class="small-gap">
+<li>Scan through the <a class="reference internal" href="sdk/release-notes.html"><em>Release Notes</em></a>.</li>
+<li>Search through or ask on the <a class="reference internal" href="help.html"><em>Native Client Forums</em></a>.</li>
+</ul>
+<section id="what-is-native-client-good-for">
+<h2 id="what-is-native-client-good-for">What is Native Client Good For?</h2>
+<section id="why-did-google-build-native-client">
+<h3 id="why-did-google-build-native-client">Why did Google build Native Client?</h3>
+<ul class="small-gap">
+<li><strong>Performance:</strong> Native Client modules run nearly as fast as native
+compiled code.</li>
+<li><strong>Security:</strong> Native Client lets users run native compiled code in the
+browser with the same level of security and privacy as traditional web
+applications.</li>
+<li><p class="first"><strong>Convenience:</strong></p>
+<ul class="small-gap">
+<li>Developers can leverage existing code, written in C/C++ or other
+languages, in their applications without forcing users to install a
+plugin.</li>
+<li>This code can interact with the embedding web page as part of an
+HTML and JavaScript web application, or it can be a self-contained
+and immersive experience.</li>
+</ul>
+</li>
+<li><p class="first"><strong>Portability:</strong> Native Client and Portable Native Client applications
+can execute on:</p>
+<ul class="small-gap">
+<li>The Windows, Mac, Linux or ChromeOS operating systems.</li>
+<li>Processors with the x86-32, x86-64, or ARM instruction set
+architectures. Native Client also has experimental support for MIPS.</li>
+</ul>
+</li>
+</ul>
+<p>Portable Native client further enhances the above:</p>
+<ul class="small-gap">
+<li><strong>Performance:</strong> Each PNaCl release brings with it more performance
+enhancements. Already-released applications get faster over time,
+conserving user&#8217;s battery.</li>
+<li><strong>Security:</strong> Users are kept secure with an ever-improving sandbox
+model which adapts to novel attacks, without affecting
+already-released applications.</li>
+<li><strong>Convenience:</strong> Developers only need to ship a single <code>.pexe</code> file,
+not one <code>.nexe</code> file per supported architecture.</li>
+<li><strong>Portability:</strong> Developers and users don&#8217;t need to worry about
+already-released applications not working on new hardware: PNaCl
+already supports all architectures NaCl does, and as PNaCl evolves it
+gains support for new processors and fully uses their capabilities.</li>
+</ul>
+<p>For more details, refer to the <a class="reference internal" href="nacl-and-pnacl.html"><em>history behind and comparison of
+NaCl and PNaCl</em></a>.</p>
+</section><section id="when-should-i-use-native-client">
+<h3 id="when-should-i-use-native-client">When should I use Native Client?</h3>
+<p>The following are some typical use cases. For details, see the
+<a class="reference internal" href="overview.html"><em>Technical Overview</em></a>.</p>
+<ul class="small-gap">
+<li>Porting existing software components for use in a web application.</li>
+<li>Porting legacy desktop applications.</li>
+<li>Handling browser-side encryption and decryption for an enterprise
+application.</li>
+<li>Handling multimedia for a web application.</li>
+<li>Handling various aspects of web-based games, including physics engines
+and AI.</li>
+</ul>
+<p>Native Client is a versatile technology; we expect that it will also be
+used in many other contexts outside of Chrome.</p>
+</section><section id="when-should-i-use-portable-native-client">
+<h3 id="when-should-i-use-portable-native-client">When should I use Portable Native Client?</h3>
+<p>See <a class="reference internal" href="nacl-and-pnacl.html"><em>NaCl and PNaCl</em></a>. In short: PNaCl works on the
+open web whereas NaCl only works on the Chrome Web Store.</p>
+</section><section id="how-fast-does-code-run-in-portable-native-client">
+<h3 id="how-fast-does-code-run-in-portable-native-client">How fast does code run in Portable Native Client?</h3>
+<p>Fast! The SPEC2k benchmarks (C, C++ and floating-point benchmarks) give
+the following overhead for optimized PNaCl compared to regular optimized
+LLVM:</p>
+<table border="1" class="docutils">
+<colgroup>
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>x86-32</td>
+<td>15%</td>
+</tr>
+<tr class="row-even"><td>x86-64</td>
+<td>25%</td>
+</tr>
+<tr class="row-odd"><td>ARM</td>
+<td>10%</td>
+</tr>
+</tbody>
+</table>
+<p>Note that benchmark performance is sometimes bimodal, so different use
+cases are likely to achieve better or worse performance than the above
+averages. For example floating-point heavy code usually exhibits much
+lower overheads whereas very branch-heavy code often performs worse.</p>
+<p>For details, see:</p>
+<ul class="small-gap">
+<li><a class="reference external" href="https://nativeclient.googlecode.com/svn/data/site/NaCl_SFI.pdf">Adapting Software Fault Isolation to Contemporary CPU Architectures</a> (PDF).</li>
+<li><a class="reference external" href="http://research.google.com/pubs/pub34913.html">Native Client: A Sandbox for Portable, Untrusted x86 Code</a> (PDF).</li>
+</ul>
+<p>If your code isn&#8217;t performing as close to native speed as you&#8217;d expect,
+<a class="reference internal" href="help.html"><em>let us know</em></a>!</p>
+</section><section id="why-use-portable-native-client-instead-of-technology-x">
+<h3 id="why-use-portable-native-client-instead-of-technology-x">Why use Portable Native Client instead of <em>&lt;technology X&gt;</em>?</h3>
+<p>Many other technologies can be compared to Portable Native Client:
+Flash, Java, Silverlight, ActiveX, .NET, asm.js, etc...</p>
+<p>Different technologies have different strengths and weaknesses. In
+appropriate contexts, Portable Native Client can be faster, more secure,
+and/or more compatible across operating systems and architectures than
+other technologies.</p>
+<p>Portable Native Client complement other technologies by giving web
+developers a new capability: the ability to run fast, secure native code
+from a web browser in an architecture-independent way.</p>
+</section><section id="if-i-want-direct-access-to-the-os-should-i-use-native-client">
+<h3 id="if-i-want-direct-access-to-the-os-should-i-use-native-client">If I want direct access to the OS, should I use Native Client?</h3>
+<p>No&#8212;Native Client does not provide direct access to the OS or devices,
+or otherwise bypass the JavaScript security model. For more information,
+see later sections of this FAQ.</p>
+</section></section><section id="development-environments-and-tools">
+<h2 id="development-environments-and-tools">Development Environments and Tools</h2>
+<section id="what-development-environment-and-development-operating-system-do-you-recommend">
+<h3 id="what-development-environment-and-development-operating-system-do-you-recommend">What development environment and development operating system do you recommend?</h3>
+<p>You can develop on Windows, Mac, or Linux, and the resulting Native
+Client or Portable Native Client application will run inside the Google
+Chrome browser on all those platforms as well as ChromeOS. You can also
+develop on ChromeOS with <a class="reference external" href="https://github.com/dnschneid/crouton">Crouton</a>, and we&#8217;re working on
+self-hosting a full development environment on Portable Native Client.</p>
+<p>Any editor+shell combination should work as well as IDEs like Eclipse,
+Visual Studio with the <a class="reference internal" href="devguide/devcycle/vs-addin.html"><em>Native Client Add-In</em></a> on Windows, or Xcode on Mac OSX.</p>
+</section><section id="i-m-not-familiar-with-native-development-tools-can-i-still-use-the-native-client-sdk">
+<h3 id="i-m-not-familiar-with-native-development-tools-can-i-still-use-the-native-client-sdk">I&#8217;m not familiar with native development tools, can I still use the Native Client SDK?</h3>
+<p>You may find our <a class="reference internal" href="devguide/tutorial/index.html"><em>Tutorial</em></a> and <a class="reference internal" href="devguide/devcycle/building.html"><em>Building
+instructions</em></a> useful, and you can look at
+the code and Makefiles for the SDK examples to understand how the
+examples are built and run.</p>
+<p>You&#8217;ll need to learn how to use some tools (like GCC, LLVM, make,
+Eclipse, Visual Studio, or Xcode) before you can get very far with the
+SDK. Try seaching for an <a class="reference external" href="https://www.google.com/search?q=gcc+introduction">introduction to GCC</a>.</p>
+</section></section><section id="openness-and-supported-architectures-and-languages">
+<h2 id="openness-and-supported-architectures-and-languages">Openness, and Supported Architectures and Languages</h2>
+<section id="is-native-client-open-is-it-a-standard">
+<h3 id="is-native-client-open-is-it-a-standard">Is Native Client open? Is it a standard?</h3>
+<p>Native Client is completely open: the executable format is open and the
+<a class="reference external" href="http://developer.chrome.com/native-client/nacl_project_">source code is open</a>. Right
+now the Native Client project is in its early stages, so it&#8217;s premature
+to consider Native Client for standardization.</p>
+<p>We consistenly try to document our design and implementation and hope to
+standardize Portable Native Client when it gains more traction. A good
+example is our <a class="reference internal" href="reference/pnacl-bitcode-abi.html"><em>PNaCl bitcode reference manual</em></a>.</p>
+</section><section id="what-are-the-supported-instruction-set-architectures">
+<h3 id="what-are-the-supported-instruction-set-architectures">What are the supported instruction set architectures?</h3>
+<p>Portable Native Client uses an architecture-independent format (the
+<code>.pexe</code>) which can currently be translated to execute on processors
+with the x86-32, x86-64, and ARM instruction set architectures, as well
+as experimental support for MIPS. As new architectures come along and
+become popular we expect Portable Native Client to support them without
+developers having to recompile their code.</p>
+<p>Native Client can currently execute on the same architectures as
+Portable Native Client but is only supported on the Chrome Web
+Store. Native Client&#8217;s <code>.nexe</code> files are architecture-dependent and
+cannot adapt to new architectures without recompilation, we therefore
+deem them better suited to a web store than to the open web.</p>
+<p>With Portable Native Client we deliver a system that has comparable
+portability to JavaScript and can adapt to new instruction set
+architectures without requiring recompilation. The web is better when
+it&#8217;s platform-independent, and we&#8217;d like it to stay that way.</p>
+</section><section id="do-i-have-to-use-c-or-c-i-d-really-like-to-use-another-language">
+<span id="other-languages"></span><h3 id="do-i-have-to-use-c-or-c-i-d-really-like-to-use-another-language"><span id="other-languages"></span>Do I have to use C or C++? I&#8217;d really like to use another language.</h3>
+<p>Right now only C and C++ are supported directly by the toolchain in the
+SDK. C# and other languages in the .NET family are supported via the
+<a class="reference external" href="https://github.com/elijahtaylor/mono">Mono port</a> for Native
+Client. Moreover, there are several ongoing projects to support
+additional language runtimes (e.g. <a class="reference external" href="https://code.google.com/p/naclports/source/browse#svn%2Ftrunk%2Fsrc%2Fexamples%2Ftools">naclports supports Lua, Python and
+Ruby</a>)
+as well as to compile more languages to LLVM&#8217;s intermediate
+representation (e.g. support Haskell with <a class="reference external" href="http://www.haskell.org/ghc/docs/latest/html/users_guide/code-generators.html">GHC</a>
+or support Fortran with <a class="reference external" href="https://flang-gsoc.blogspot.ie/2013/09/end-of-gsoc-report.html">flang</a>), or
+transpile languages to C/C++ (source-to-source compilation).</p>
+<p>If you&#8217;re interested in getting other languages working, please contact the
+Native Client team by way of the <a class="reference external" href="https://groups.google.com/group/native-client-discuss">native-client-discuss mailing list</a>.</p>
+</section><section id="will-you-only-support-chrome-what-about-other-browsers">
+<h3 id="will-you-only-support-chrome-what-about-other-browsers">Will you only support Chrome? What about other browsers?</h3>
+<p>We aim to support multiple browsers. However, a number of features that
+we consider requirements for a production-quality system that keeps the
+user safe are difficult to implement without help from the
+browser. Specific examples are an out-of-process plugin architecture and
+appropriate interfaces for integrated 3D graphics. We have worked
+closely with Chromium developers to deliver these features and we are
+eager to collaborate with developers from other browsers.</p>
+</section><section id="what-s-the-difference-between-npapi-and-pepper">
+<h3 id="what-s-the-difference-between-npapi-and-pepper">What&#8217;s the difference between NPAPI and Pepper?</h3>
+<p><a class="reference internal" href="pepper_stable/index.html"><em>Pepper</em></a> (also known as PPAPI) is a new API that
+lets Native Client modules communicate with the browser. Pepper supports
+various features that don&#8217;t have robust support in NPAPI, such as event
+handling, out-of-process plugins, and asynchronous interfaces. Native
+Client has transitioned from using NPAPI to using Pepper.</p>
+</section><section id="is-npapi-part-of-the-native-client-sdk">
+<h3 id="is-npapi-part-of-the-native-client-sdk">Is NPAPI part of the Native Client SDK?</h3>
+<p>NPAPI is not supported by the Native Client SDK, and is <a class="reference external" href="http://blog.chromium.org/2013/09/saying-goodbye-to-our-old-friend-npapi.html">deprecated in
+Chrome</a>.</p>
+</section><section id="does-native-client-support-simd-vector-instructions">
+<h3 id="does-native-client-support-simd-vector-instructions">Does Native Client support SIMD vector instructions?</h3>
+<p>Native Client currently supports SSE on x86 and NEON on ARM. Support for
+AVX on x86 is under way.</p>
+<p>Portable Native Client should support SIMD vectors in the near future.</p>
+</section><section id="can-i-use-native-client-for-3d-graphics">
+<h3 id="can-i-use-native-client-for-3d-graphics">Can I use Native Client for 3D graphics?</h3>
+<p>Yes. Native Client supports <a class="reference external" href="https://www.khronos.org/opengles/">OpenGL ES 2.0</a>.</p>
+<p>To alert the user regarding their hardware platform&#8217;s 3D feature set
+before loading a large NaCl application, see <a class="reference internal" href="devguide/coding/3D-graphics.html"><em>Vetting the driver in
+Javascript</em></a>.</p>
+<p>Some GL extensions are exposed to Native Client applications, see the
+<a class="reference external" href="https://src.chromium.org/viewvc/chrome/trunk/src/ppapi/lib/gl/gles2/gles2.c">GLES2 file</a>.
+This file is part of the GL wrapper supplied by the library
+<code>ppapi_gles2</code> which you&#8217;ll want to include in your project.  In most
+cases extensions map to extensions available on other platforms, or
+differ very slightly (if they differ, the extension is usually CHROMIUM
+or ANGLE instead of EXT).</p>
+</section><section id="does-native-client-support-concurrency-parallelism">
+<h3 id="does-native-client-support-concurrency-parallelism">Does Native Client support concurrency/parallelism?</h3>
+<p>Native Client and Portable Native Client both support pthreads,
+C11/C++11 threads, and low-level synchronization primitives (mutex,
+barriers, atomic read/modify/write, compare-and-exchange, etc...), thus
+allowing your Native Client application to utilize several CPU cores.
+Note that this allows you to modify datastructures concurrently without
+needing to copy them, which is often a limitation of shared-nothing
+systems. For more information see <a class="reference internal" href="reference/pnacl-c-cpp-language-support.html#memory-model-and-atomics"><em>memory model and atomics</em></a> and <a class="reference internal" href="reference/pnacl-c-cpp-language-support.html#language-support-threading"><em>threading</em></a>.</p>
+<p>Native Client doesn&#8217;t support HTML5 Web Workers directly but can
+interact with JavaScript code which does.</p>
+</section></section><section id="coming-soon">
+<h2 id="coming-soon">Coming Soon</h2>
+<section id="do-native-client-modules-have-access-to-external-devices">
+<h3 id="do-native-client-modules-have-access-to-external-devices">Do Native Client modules have access to external devices?</h3>
+<p>At this time Native Client modules do not have access to serial ports,
+camera devices, or microphones: Native Client can only use native
+resources that today&#8217;s browsers can access. However, we intend to
+recommend such features to the standards bodies and piggyback on their
+efforts to make these resources available inside the browser.</p>
+<p>You can generally think of Pepper as the C/C++ bindings to the
+capabilities of HTML5. The goal is for Pepper and JavaScript to evolve
+together and stay on par with each other with respect to features and
+capabilities.</p>
+</section></section><section id="security-and-privacy">
+<h2 id="security-and-privacy">Security and Privacy</h2>
+<section id="what-happens-to-my-data-when-i-use-native-client">
+<h3 id="what-happens-to-my-data-when-i-use-native-client">What happens to my data when I use Native Client?</h3>
+<p>Users can opt-in to sending usage statistics and crash information in
+Chrome, which includes usage statistics and crash information about
+Native Client. Crashes in your code won&#8217;t otherwise send your
+information to Google: Google counts the number of such crashes, but
+does so anonymously without sending your application&#8217;s data or its debug
+information.</p>
+<p>For additional information about privacy and Chrome, see the <a class="reference external" href="https://www.google.com/chrome/intl/en/privacy.html">Google
+Chrome privacy policy</a> and the <a class="reference external" href="https://www.google.com/chrome/intl/en/eula_text.html">Google
+Chrome Terms of Service</a>.</p>
+</section><section id="how-does-native-client-prevent-sandboxed-code-from-doing-bad-things">
+<h3 id="how-does-native-client-prevent-sandboxed-code-from-doing-bad-things">How does Native Client prevent sandboxed code from doing Bad Things?</h3>
+<p>Native Client&#8217;s sandbox works by validating the untrusted code (the
+compiled Native Client module) before running it. The validator checks
+the following:</p>
+<ul class="small-gap">
+<li><strong>Data integrity:</strong> No loads or stores are permitted outside of the
+data sandbox. In particular this means that once loaded into memory,
+the binary is not writable. This is enforced by operating system
+protection mechanisms. While new instructions can be inserted at
+runtime to support things like JIT compilers, such instructions will
+be subject to runtime verification according to the following
+constraints before they are executed.</li>
+<li><strong>No unsafe instructions:</strong> The validator ensures that the Native
+Client application does not contain any unsafe instructions. Examples
+of unsafe instructions are <code>syscall</code>, <code>int</code>, and <code>lds</code>.</li>
+<li><strong>Control flow integrity:</strong> The validator ensures that all direct and
+indirect branches target a safe instruction.</li>
+</ul>
+<p>The beauty of the Native Client sandbox is in reducing &#8220;safe&#8221; code to a
+few simple rules that can be verified by a small trusted validator: the
+compiler isn&#8217;t trusted. The same applies to Portable Native Client where
+even the <code>.pexe</code> to <code>.nexe</code> translator, a simplified compiler
+backend, isn&#8217;t trusted: it is validated before executing, and so is its
+output.</p>
+<p>In addition to static analysis of untrusted code, the Native Client
+runtime also includes an outer sandbox that mediates system calls. For
+more details about both sandboxes, see <a class="reference external" href="http://research.google.com/pubs/pub34913.html">Native Client: A Sandbox for
+Portable, Untrusted x86 Code</a>
+(PDF).</p>
+</section><section id="how-does-google-know-that-the-safety-measures-in-native-client-are-sufficient">
+<h3 id="how-does-google-know-that-the-safety-measures-in-native-client-are-sufficient">How does Google know that the safety measures in Native Client are sufficient?</h3>
+<p>Google has taken several steps to ensure that Native Client&#8217;s security
+works, including:</p>
+<ul class="small-gap">
+<li>Open source, peer-reviewed papers describing the design.</li>
+<li>A <a class="reference internal" href="community/security-contest/index.html"><em>security contest</em></a>.</li>
+<li>Multiple internal and external security reviews.</li>
+<li>The ongoing vigilance of our engineering and developer community.</li>
+</ul>
+<p>Google is committed to making Native Client safer than JavaScript and
+other popular browser technologies. If you have suggestions for security
+improvements, let the team know, by way of the <a class="reference external" href="https://groups.google.com/group/native-client-discuss">native-client-discuss
+mailing list</a>.</p>
+</section></section><section id="development">
+<h2 id="development">Development</h2>
+<section id="how-do-i-debug">
+<h3 id="how-do-i-debug">How do I debug?</h3>
+<p>Instructions on <a class="reference internal" href="sdk/examples.html#debugging-the-sdk-examples"><em>debugging the SDK examples</em></a> using GDB are available. You can also
+debug Native Client modules with some <a class="reference internal" href="devguide/devcycle/debugging.html"><em>alternative approaches</em></a>.</p>
+</section><section id="how-do-i-build-x86-32-x86-64-or-arm-nexes">
+<h3 id="how-do-i-build-x86-32-x86-64-or-arm-nexes">How do I build x86-32, x86-64 or ARM <code>.nexes</code>?</h3>
+<p>By default, the applications in the <code>/examples</code> folder create
+architecture-independent <code>.pexe</code> for Portable Native Client. To
+generate a <code>.nexe</code> targetting one specific architecture using the
+Native Client or Portable Native Client toolchains, see the
+<a class="reference internal" href="devguide/devcycle/building.html"><em>Building instructions</em></a>.</p>
+</section><section id="how-can-my-web-application-determine-which-nexe-to-load">
+<h3 id="how-can-my-web-application-determine-which-nexe-to-load">How can my web application determine which <code>.nexe</code> to load?</h3>
+<p>Your application does not need to make the decision of loading an
+x86-32, x86-64 or ARM <code>.nexe</code> explicitly&#8212;the Native Client runtime
+examines a manifest file (<code>.nmf</code>) to pick the right <code>.nexe</code> file for
+a given user. You can generate a manifest file using a Python script
+that&#8217;s included in the SDK (see the <code>Makefile</code> in any of the SDK
+examples for an illustration of how to do so). Your HTML file specifies
+the manifest filename in the <code>src</code> attribute of the <code>&lt;embed&gt;</code>
+tag. You can see the way the pieces fit together by examining the
+examples included in the SDK.</p>
+</section><section id="is-it-possible-to-build-a-native-client-module-with-just-plain-c-not-c">
+<h3 id="is-it-possible-to-build-a-native-client-module-with-just-plain-c-not-c">Is it possible to build a Native Client module with just plain C (not C++)?</h3>
+<p>Yes. See the <code>&quot;Hello, World!&quot;</code> in C example in the SDK under
+<code>examples/tutorial/using_ppapi_simple/</code>, or the Game of Life example
+under <code>examples/demo/life/life.c</code>.</p>
+</section><section id="what-unix-system-calls-can-i-make-through-native-client">
+<h3 id="what-unix-system-calls-can-i-make-through-native-client">What UNIX system calls can I make through Native Client?</h3>
+<p>Native Client doesn&#8217;t directly expose any system calls from the host OS
+because of the inherent security risks and because the resulting
+application would not be portable across operating systems. Instead,
+Native Client provides portable cross-OS abstractions wrapping or
+proxying OS functionality or emulating UNIX system calls. For example,
+Native Client provides an <code>mmap()</code> system call that behaves much like
+the standard UNIX <code>mmap()</code> system call.</p>
+</section><section id="is-my-favorite-third-party-library-available-for-native-client">
+<h3 id="is-my-favorite-third-party-library-available-for-native-client">Is my favorite third-party library available for Native Client?</h3>
+<p>Google has ported several third-party libraries to Native Client; such
+libraries are available in the <a class="reference external" href="https://code.google.com/p/naclports">naclports</a> project. We encourage you to
+contribute libraries to naclports, and/or to host your own ported
+libraries, and to <a class="reference external" href="https://groups.google.com/group/native-client-discuss">let the team know about it</a> when you do.</p>
+</section><section id="do-all-the-files-in-an-application-need-to-be-served-from-the-same-domain">
+<h3 id="do-all-the-files-in-an-application-need-to-be-served-from-the-same-domain">Do all the files in an application need to be served from the same domain?</h3>
+<p>The <code>.nmf</code>, and <code>.nexe</code> or <code>.pexe</code> files must either be served from the
+same origin as the embedding page or an origin that has been configured
+correctly using <a class="reference external" href="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing">CORS</a>.</p>
+<p>For applications installed from the Chrome Web Store the Web Store manifest
+must include the correct, verified domain of the embedding page.</p>
+</section></section><section id="portability">
+<h2 id="portability">Portability</h2>
+<section id="do-i-have-to-do-anything-special-to-make-my-application-run-on-different-operating-systems">
+<h3 id="do-i-have-to-do-anything-special-to-make-my-application-run-on-different-operating-systems">Do I have to do anything special to make my application run on different operating systems?</h3>
+<p>No. Native Client and Portable Native Client applications run without
+modification on all supported operating systems.</p>
+<p>However, to run on different instruction set architectures (such as
+x86-32, x86-64 or ARM), you currently have to either:</p>
+<ul class="small-gap">
+<li>Use Portable Native Client.</li>
+<li>Build and supply a separate <code>.nexe</code> file for each architecture, and
+make them available on the Chrome Web Store. See <a class="reference internal" href="devguide/devcycle/building.html"><em>target
+architectures</em></a> for details about which
+<code>.nexe</code> files will run on which architectures.</li>
+</ul>
+</section><section id="how-easy-is-it-to-port-my-existing-native-code-to-native-client">
+<h3 id="how-easy-is-it-to-port-my-existing-native-code-to-native-client">How easy is it to port my existing native code to Native Client?</h3>
+<p>In most cases you won&#8217;t have to rewrite much, if any, code. The Native
+Client-specific tools, such as <code>pnacl-clang++</code> or <code>x86_64-nacl-g++</code>,
+take care of most of the necessary changes. You may need to make some
+changes to your operating system calls and interactions with external
+devices to work with the web. Porting existing Linux libraries is
+generally straightforward, with large libraries often requiring no
+source change.</p>
+<p>The following kinds of code may be more challenging to port:</p>
+<ul class="small-gap">
+<li>Code that does direct TCP/IP or UDP networking. For security reasons
+these APIs are only available to packaged applications, not on the
+open web, after asking for the appropriate permissions. Native Client
+is otherwise restricted to the networking APIs available in the
+browser.</li>
+<li>Code that creates processes, including UNIX forks. Creating processes
+is not supported for security reasons. However, threads are supported.</li>
+<li>Code that needs to do local file I/O. Native Client is restricted to
+accessing URLs and to local storage in the browser (the Pepper file I/O API
+has access to the same per-application storage that JavaScript has via Local
+Storage). HTML5 File System can be used, among others. For POSIX compatabiliy
+the Native Client SDK includes a library called nacl_io which allows the
+application to interact with all these types of files via standard POSIX I/O
+functions (e.g. open/fopen/read/write/...). See <a class="reference internal" href="devguide/coding/nacl_io.html"><em>Using NaCl I/O</em></a> for more details.</li>
+</ul>
+</section></section><section id="troubleshooting">
+<span id="faq-troubleshooting"></span><h2 id="troubleshooting"><span id="faq-troubleshooting"></span>Troubleshooting</h2>
+<section id="my-pexe-isn-t-loading-help">
+<h3 id="my-pexe-isn-t-loading-help">My <code>.pexe</code> isn&#8217;t loading, help!</h3>
+<ul class="small-gap">
+<li>You must use Google Chrome version 31 or greater for Portable Native
+Client. Make sure you have Portable Native Client installed in
+<code>about:nacl</code>; if not open <code>about:components</code> and &#8220;Check for
+update&#8221; for PNaCl.</li>
+<li>PNaCl <code>.pexe</code> must be compiled with pepper_31 SDK or higher (earlier
+SDK versions had experimental support for PNaCl, now deprecated).</li>
+<li>Your application can verify that Portable Native Client is supported
+in JavaScript with <code>navigator.mimeTypes['application/x-pnacl'] !==
+undefined</code>. This is preferred over checking the Chrome version.</li>
+</ul>
+</section><section id="my-nexe-files-never-finish-loading-what-gives">
+<h3 id="my-nexe-files-never-finish-loading-what-gives">My <code>.nexe</code> files never finish loading. What gives?</h3>
+<p>Here are ways to resolve some common problems that can prevent loading:</p>
+<ul class="small-gap">
+<li>You must use Google Chrome version 14 or greater for Native Client.</li>
+<li>If you haven&#8217;t already done so, enable the Native Client flag in
+Google Chrome. Type <code>about:flags</code> in the Chrome address bar, scroll
+down to &#8220;Native Client&#8221;, click the &#8220;Enable&#8221; link, scroll down to the
+bottom of the page, and click the &#8220;Relaunch Now&#8221; button (all browser
+windows will restart).</li>
+<li>Verify that the Native Client plugin is enabled in Google Chrome. Type
+<code>about:plugins</code> in the Chrome address bar, scroll down to &#8220;Native
+Client&#8221;, and click the &#8220;Enable&#8221; link. (You do not need to relaunch
+Chrome after you enable the Native Client plugin).</li>
+<li>Make sure that the <code>.nexe</code> files are being served from a web
+server. Native Client uses the same-origin security policy, which
+means that modules will not load in pages opened with the <code>file://</code>
+protocol. In particular, you can&#8217;t run the examples in the SDK by
+simply dragging the HTML files from the desktop into the browser. See
+<a class="reference internal" href="devguide/devcycle/running.html"><em>Running Native Client Applications</em></a>
+for instructions on how to run the httpd.py mini-server included in
+the SDK.</li>
+<li>The <code>.nexe</code> files must have been compiled using SDK version 0.5 or
+greater.</li>
+<li>You must load the correct <code>.nexe</code> file for your machine&#8217;s specific
+instruction set architecture (x86-32, x86-64 or ARM). You can ensure
+you&#8217;re loading the correct <code>.nexe</code> file by building a separate
+<code>.nexe</code> for each architecture, and using a <code>.nmf</code> manifest file to
+let the browser select the correct <code>.nexe</code> file. Note: the need to
+select a processor-specific <code>.nexe</code> goes away with Portable Native
+Client.</li>
+<li>If things still aren&#8217;t working, <a class="reference internal" href="help.html"><em>ask for help</em></a>!</li>
+</ul>
+</section></section></section>
+    
+    <footer id="cc-info">
+      <button id="send-feedback" class="google-button" data-feedback>Send Feedback</button>
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo"><a href="http://creativecommons.org/licenses/by/3.0/"><img src="../static/images/cc_by.png" alt="Licensed Creative Commons by Attribution"></a></p>
+    </footer>
+    <nav class="inline-toc no-permalink">
+      <section class="related">
+                      <h3 title="">Help</h3>
+      <ol class="toc">
+                              <li>
+                                <a href="faq.html" class="active">FAQ</a>
+                              </li>
+                              <li>
+                                <a href="help.html">Forums &amp; Issues Tracker</a>
+                              </li>
+                              <li>
+                                <a href="publications-and-presentations">Publications &amp; Presentations</a>
+                              </li>
+                              <li>
+                                <a href="community/security-contest/index.html">Security Contest Archive</a>
+                              </li>
+      </ol>
+      </section>
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="faq.html#what-is-native-client-good-for"
+          >What is Native Client Good For?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#why-did-google-build-native-client"
+          >Why did Google build Native Client?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#when-should-i-use-native-client"
+          >When should I use Native Client?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#when-should-i-use-portable-native-client"
+          >When should I use Portable Native Client?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#how-fast-does-code-run-in-portable-native-client"
+          >How fast does code run in Portable Native Client?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#why-use-portable-native-client-instead-of-technology-x"
+          >Why use Portable Native Client instead of technology X?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#if-i-want-direct-access-to-the-os-should-i-use-native-client"
+          >If I want direct access to the OS, should I use Native Client?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#development-environments-and-tools"
+          >Development Environments and Tools</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#what-development-environment-and-development-operating-system-do-you-recommend"
+          >What development environment and development operating system do you recommend?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#i-m-not-familiar-with-native-development-tools-can-i-still-use-the-native-client-sdk"
+          >Im not familiar with native development tools, can I still use the Native Client SDK?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#openness-and-supported-architectures-and-languages"
+          >Openness, and Supported Architectures and Languages</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#is-native-client-open-is-it-a-standard"
+          >Is Native Client open? Is it a standard?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#what-are-the-supported-instruction-set-architectures"
+          >What are the supported instruction set architectures?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#do-i-have-to-use-c-or-c-i-d-really-like-to-use-another-language"
+          >Do I have to use C or C++? Id really like to use another language.</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#will-you-only-support-chrome-what-about-other-browsers"
+          >Will you only support Chrome? What about other browsers?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#what-s-the-difference-between-npapi-and-pepper"
+          >Whats the difference between NPAPI and Pepper?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#is-npapi-part-of-the-native-client-sdk"
+          >Is NPAPI part of the Native Client SDK?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#does-native-client-support-simd-vector-instructions"
+          >Does Native Client support SIMD vector instructions?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#can-i-use-native-client-for-3d-graphics"
+          >Can I use Native Client for 3D graphics?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#does-native-client-support-concurrency-parallelism"
+          >Does Native Client support concurrency/parallelism?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#coming-soon"
+          >Coming Soon</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#do-native-client-modules-have-access-to-external-devices"
+          >Do Native Client modules have access to external devices?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#security-and-privacy"
+          >Security and Privacy</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#what-happens-to-my-data-when-i-use-native-client"
+          >What happens to my data when I use Native Client?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#how-does-native-client-prevent-sandboxed-code-from-doing-bad-things"
+          >How does Native Client prevent sandboxed code from doing Bad Things?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#how-does-google-know-that-the-safety-measures-in-native-client-are-sufficient"
+          >How does Google know that the safety measures in Native Client are sufficient?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#development"
+          >Development</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#how-do-i-debug"
+          >How do I debug?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#how-do-i-build-x86-32-x86-64-or-arm-nexes"
+          >How do I build x86-32, x86-64 or ARM .nexes?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#how-can-my-web-application-determine-which-nexe-to-load"
+          >How can my web application determine which .nexe to load?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#is-it-possible-to-build-a-native-client-module-with-just-plain-c-not-c"
+          >Is it possible to build a Native Client module with just plain C (not C++)?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#what-unix-system-calls-can-i-make-through-native-client"
+          >What UNIX system calls can I make through Native Client?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#is-my-favorite-third-party-library-available-for-native-client"
+          >Is my favorite third-party library available for Native Client?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#do-all-the-files-in-an-application-need-to-be-served-from-the-same-domain"
+          >Do all the files in an application need to be served from the same domain?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#portability"
+          >Portability</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#do-i-have-to-do-anything-special-to-make-my-application-run-on-different-operating-systems"
+          >Do I have to do anything special to make my application run on different operating systems?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#how-easy-is-it-to-port-my-existing-native-code-to-native-client"
+          >How easy is it to port my existing native code to Native Client?</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#troubleshooting"
+          >Troubleshooting</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#my-pexe-isn-t-loading-help"
+          >My .pexe isnt loading, help!</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="faq.html#my-nexe-files-never-finish-loading-what-gives"
+          >My .nexe files never finish loading. What gives?</a>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="faq.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../static/js/fatnav.js"></script>
+    <script src="../static/js/article.js"></script>
+    <script src="../static/js/prettify.js"></script>
+    <script src="../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../static/js/site.js"></script>
+  </body>
+</html>

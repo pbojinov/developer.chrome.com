@@ -1,0 +1,1340 @@
+<link href="../_static/css/nacl.css" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>PNaCl C/C++ Language Support - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="pnacl-c-cpp-language-support.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../../index.html">
+          <img alt="Chrome: developer" src="../../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="../../apps/index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../apps/index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="../../apps/first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="../../apps/app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="../../apps/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../apps/app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="../../apps/app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="../../apps/app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="../../apps/app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="../../apps/app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="../../apps/app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="../../apps/app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="../../apps/app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="../../apps/app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../apps/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../apps/offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="../../apps/offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="../../apps/app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="../../apps/cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="../../apps/app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../apps/app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="../../apps/app_usb.html">USB</a>
+                            </li>
+                            <li><a href="../../apps/app_serial">Serial</a>
+                            </li>
+                            <li><a href="../../apps/app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="../../apps/app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../apps/app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="../../apps/app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="../../apps/angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="../../apps/sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="../../apps/google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../apps/analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../apps/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../apps/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../apps/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../apps/webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="../../apps/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../apps/app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../apps/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../apps/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="../../apps/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../../apps/overview.html">Overview</a>
+                            </li>
+                            <li><a href="../../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="../../apps/activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../apps/getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devguide/tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../devguide/tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devguide/devcycle/building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="../devguide/devcycle/building.html">Building</a>
+                            </li>
+                            <li><a href="../devguide/devcycle/running.html">Running</a>
+                            </li>
+                            <li><a href="../devguide/devcycle/debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../devguide/devcycle/vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="../devguide/devcycle/dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devguide/coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../devguide/coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../devguide/coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../devguide/coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../devguide/coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../devguide/coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="../devguide/devcycle/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../devguide/coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../devguide/coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devguide/distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <div itemprop="articleBody">
+
+
+
+<section id="pnacl-c-c-language-support">
+<h1 id="pnacl-c-c-language-support">PNaCl C/C++ Language Support</h1>
+<div class="contents local" id="contents" style="display: none">
+<ul class="small-gap">
+<li><p class="first"><a class="reference internal" href="pnacl-c-cpp-language-support.html#source-language-support" id="id2">Source language support</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="pnacl-c-cpp-language-support.html#versions" id="id3">Versions</a></li>
+<li><a class="reference internal" href="pnacl-c-cpp-language-support.html#preprocessor-definitions" id="id4">Preprocessor definitions</a></li>
+</ul>
+</li>
+<li><p class="first"><a class="reference internal" href="pnacl-c-cpp-language-support.html#memory-model-and-atomics" id="id5">Memory Model and Atomics</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="pnacl-c-cpp-language-support.html#memory-model-for-concurrent-operations" id="id6">Memory Model for Concurrent Operations</a></li>
+<li><a class="reference internal" href="pnacl-c-cpp-language-support.html#atomic-memory-ordering-constraints" id="id7">Atomic Memory Ordering Constraints</a></li>
+<li><a class="reference internal" href="pnacl-c-cpp-language-support.html#volatile-memory-accesses" id="id8">Volatile Memory Accesses</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="pnacl-c-cpp-language-support.html#threading" id="id9">Threading</a></li>
+<li><a class="reference internal" href="pnacl-c-cpp-language-support.html#setjmp-and-longjmp" id="id10"><code>setjmp</code> and <code>longjmp</code></a></li>
+<li><a class="reference internal" href="pnacl-c-cpp-language-support.html#c-exception-handling" id="id11">C++ Exception Handling</a></li>
+<li><a class="reference internal" href="pnacl-c-cpp-language-support.html#inline-assembly" id="id12">Inline Assembly</a></li>
+<li><a class="reference internal" href="pnacl-c-cpp-language-support.html#undefined-behavior" id="id13">Undefined Behavior</a></li>
+<li><a class="reference internal" href="pnacl-c-cpp-language-support.html#floating-point" id="id14">Floating-Point</a></li>
+<li><a class="reference internal" href="pnacl-c-cpp-language-support.html#computed-goto" id="id15">Computed <code>goto</code></a></li>
+<li><p class="first"><a class="reference internal" href="pnacl-c-cpp-language-support.html#future-directions" id="id16">Future Directions</a></p>
+<ul class="small-gap">
+<li><a class="reference internal" href="pnacl-c-cpp-language-support.html#simd" id="id17">SIMD</a></li>
+<li><a class="reference internal" href="pnacl-c-cpp-language-support.html#inter-process-communication" id="id18">Inter-Process Communication</a></li>
+<li><a class="reference internal" href="pnacl-c-cpp-language-support.html#posix-style-signal-handling" id="id19">POSIX-style Signal Handling</a></li>
+</ul>
+</li>
+</ul>
+
+</div><section id="source-language-support">
+<h2 id="source-language-support">Source language support</h2>
+<p>The currently supported languages are C and C++. The PNaCl toolchain is
+based on recent Clang, which fully supports C++11 and most of C11. A
+detailed status of the language support is available <a class="reference external" href="http://clang.llvm.org/cxx_status.html">here</a>.</p>
+<p>For information on using languages other than C/C++, see the <a class="reference internal" href="../faq.html#other-languages"><em>FAQ
+section on other languages</em></a>.</p>
+<p>As for the standard libraries, the PNaCl toolchain is currently based on
+<code>libc++</code>, and the <code>newlib</code> standard C library. <code>libstdc++</code> is also
+supported but its use is discouraged; see <a class="reference internal" href="../devguide/devcycle/building.html#building-cpp-libraries"><em>C++ standard libraries</em></a>
+for more details.</p>
+<section id="versions">
+<h3 id="versions">Versions</h3>
+<p>Version information can be obtained:</p>
+<ul class="small-gap">
+<li>Clang/LLVM: run <code>pnacl-clang -v</code>.</li>
+<li><code>newlib</code>: use the <code>_NEWLIB_VERSION</code> macro.</li>
+<li><code>libc++</code>: use the <code>_LIBCPP_VERSION</code> macro.</li>
+<li><code>libstdc++</code>: use the <code>_GLIBCXX_VERSION</code> macro.</li>
+</ul>
+</section><section id="preprocessor-definitions">
+<h3 id="preprocessor-definitions">Preprocessor definitions</h3>
+<p>When compiling C/C++ code, the PNaCl toolchain defines the <code>__pnacl__</code>
+macro. In addition, <code>__native_client__</code> is defined for compatibility
+with other NaCl toolchains.</p>
+</section></section><section id="memory-model-and-atomics">
+<span id="id1"></span><h2 id="memory-model-and-atomics"><span id="id1"></span>Memory Model and Atomics</h2>
+<section id="memory-model-for-concurrent-operations">
+<h3 id="memory-model-for-concurrent-operations">Memory Model for Concurrent Operations</h3>
+<p>The memory model offered by PNaCl relies on the same coding guidelines
+as the C11/C++11 one: concurrent accesses must always occur through
+atomic primitives (offered by <a class="reference external" href="http://developer.chrome.com/native-client/reference/PNaClLangRef.html#atomicintrinsics">atomic intrinsics</a>), and these accesses must always
+occur with the same size for the same memory location. Visibility of
+stores is provided on a happens-before basis that relates memory
+locations to each other as the C11/C++11 standards do.</p>
+<p>Non-atomic memory accesses may be reordered, separated, elided or fused
+according to C and C++&#8217;s memory model before the pexe is created as well
+as after its creation. Accessing atomic memory location through
+non-atomic primitives is <cite>Undefined Behavior &lt;undefined_behavior&gt;</cite>.</p>
+<p>As in C11/C++11 some atomic accesses may be implemented with locks on
+certain platforms. The <code>ATOMIC_*_LOCK_FREE</code> macros will always be
+<code>1</code>, signifying that all types are sometimes lock-free. The
+<code>is_lock_free</code> methods and <code>atomic_is_lock_free</code> will return the
+current platform&#8217;s implementation at translation time. These macros,
+methods and functions are in the C11 header <code>&lt;stdatomic.h&gt;</code> and the
+C++11 header <code>&lt;atomic&gt;</code>.</p>
+<p>The PNaCl toolchain supports concurrent memory accesses through legacy
+GCC-style <code>__sync_*</code> builtins, as well as through C11/C++11 atomic
+primitives and the underlying <a class="reference external" href="http://gcc.gnu.org/wiki/Atomic/GCCMM">GCCMM</a> <code>__atomic_*</code>
+primitives. <code>volatile</code> memory accesses can also be used, though these
+are discouraged. See <a class="reference internal" href="pnacl-c-cpp-language-support.html#volatile-memory-accesses">Volatile Memory Accesses</a>.</p>
+<p>PNaCl supports concurrency and parallelism with some restrictions:</p>
+<ul class="small-gap">
+<li>Threading is explicitly supported and has no restrictions over what
+prevalent implementations offer. See <a class="reference internal" href="pnacl-c-cpp-language-support.html#threading">Threading</a>.</li>
+<li><code>volatile</code> and atomic operations are address-free (operations on the
+same memory location via two different addresses work atomically), as
+intended by the C11/C++11 standards. This is critical in supporting
+synchronous &#8220;external modifications&#8221; such as mapping underlying memory
+at multiple locations.</li>
+<li>Inter-process communication through shared memory is currently not
+supported. See <a class="reference internal" href="pnacl-c-cpp-language-support.html#future-directions">Future Directions</a>.</li>
+<li>Signal handling isn&#8217;t supported, PNaCl therefore promotes all
+primitives to cross-thread (instead of single-thread). This may change
+at a later date. Note that using atomic operations which aren&#8217;t
+lock-free may lead to deadlocks when handling asynchronous
+signals. See <a class="reference internal" href="pnacl-c-cpp-language-support.html#future-directions">Future Directions</a>.</li>
+<li>Direct interaction with device memory isn&#8217;t supported, and there is no
+intent to support it. The embedding sandbox&#8217;s runtime can offer APIs
+to indirectly access devices.</li>
+</ul>
+<p>Setting up the above mechanisms requires assistance from the embedding
+sandbox&#8217;s runtime (e.g. NaCl&#8217;s Pepper APIs), but using them once setup
+can be done through regular C/C++ code.</p>
+</section><section id="atomic-memory-ordering-constraints">
+<h3 id="atomic-memory-ordering-constraints">Atomic Memory Ordering Constraints</h3>
+<p>Atomics follow the same ordering constraints as in regular C11/C++11,
+but all accesses are promoted to sequential consistency (the strongest
+memory ordering) at pexe creation time. We plan to support more of the
+C11/C++11 memory orderings in the future.</p>
+<p>Some additional restrictions, following the C11/C++11 standards:</p>
+<ul class="small-gap">
+<li>Atomic accesses must at least be naturally aligned.</li>
+<li>Some accesses may not actually be atomic on certain platforms,
+requiring an implementation that uses global locks.</li>
+<li>An atomic memory location must always be accessed with atomic
+primitives, and these primitives must always be of the same bit size
+for that location.</li>
+<li>Not all memory orderings are valid for all atomic operations.</li>
+</ul>
+</section><section id="volatile-memory-accesses">
+<h3 id="volatile-memory-accesses">Volatile Memory Accesses</h3>
+<p>The C11/C++11 standards mandate that <code>volatile</code> accesses execute in
+program order (but are not fences, so other memory operations can
+reorder around them), are not necessarily atomic, and can’t be
+elided. They can be separated into smaller width accesses.</p>
+<p>Before any optimizations occur, the PNaCl toolchain transforms
+<code>volatile</code> loads and stores into sequentially consistent <code>volatile</code>
+atomic loads and stores, and applies regular compiler optimizations
+along the above guidelines. This orders <code>volatiles</code> according to the
+atomic rules, and means that fences (including <code>__sync_synchronize</code>)
+act in a better-defined manner. Regular memory accesses still do not
+have ordering guarantees with <code>volatile</code> and atomic accesses, though
+the internal representation of <code>__sync_synchronize</code> attempts to
+prevent reordering of memory accesses to objects which may escape.</p>
+<p>Relaxed ordering could be used instead, but for the first release it is
+more conservative to apply sequential consistency. Future releases may
+change what happens at compile-time, but already-released pexes will
+continue using sequential consistency.</p>
+<p>The PNaCl toolchain also requires that <code>volatile</code> accesses be at least
+naturally aligned, and tries to guarantee this alignment.</p>
+<p>The above guarantees ease the support of legacy (i.e. non-C11/C++11)
+code, and combined with builtin fences these programs can do meaningful
+cross-thread communication without changing code. They also better
+reflect the original code&#8217;s intent and guarantee better portability.</p>
+</section></section><section id="threading">
+<span id="language-support-threading"></span><h2 id="threading"><span id="language-support-threading"></span>Threading</h2>
+<p>Threading is explicitly supported through C11/C++11&#8217;s threading
+libraries as well as POSIX threads.</p>
+<p>Communication between threads should use atomic primitives as described
+in <a class="reference internal" href="pnacl-c-cpp-language-support.html#id1">Memory Model and Atomics</a>.</p>
+</section><section id="setjmp-and-longjmp">
+<h2 id="setjmp-and-longjmp"><code>setjmp</code> and <code>longjmp</code></h2>
+<p>PNaCl and NaCl support <code>setjmp</code> and <code>longjmp</code> without any
+restrictions beyond C&#8217;s.</p>
+</section><section id="c-exception-handling">
+<h2 id="c-exception-handling">C++ Exception Handling</h2>
+<p>PNaCl currently supports C++ exception handling through <code>setjmp()</code> and
+<code>longjmp()</code>, which can be enabled with the <code>--pnacl-exceptions=sjlj</code>
+linker flag. Exceptions are disabled by default so that faster and
+smaller code is generated, and <code>throw</code> statements are replaced with
+calls to <code>abort()</code>. The usual <code>-fno-exceptions</code> flag is also
+supported. PNaCl will support full zero-cost exception handling in the
+future.</p>
+<p>NaCl supports full zero-cost C++ exception handling.</p>
+</section><section id="inline-assembly">
+<h2 id="inline-assembly">Inline Assembly</h2>
+<p>Inline assembly isn&#8217;t supported by PNaCl because it isn&#8217;t portable. The
+one current exception is the common compiler barrier idiom
+<code>asm(&quot;&quot;:::&quot;memory&quot;)</code>, which gets transformed to a sequentially
+consistent memory barrier (equivalent to <code>__sync_synchronize()</code>). In
+PNaCl this barrier is only guaranteed to order <code>volatile</code> and atomic
+memory accesses, though in practice the implementation attempts to also
+prevent reordering of memory accesses to objects which may escape.</p>
+<p>NaCl supports a fairly wide subset of inline assembly through GCC&#8217;s
+inline assembly syntax, with the restriction that the sandboxing model
+for the target architecture has to be respected.</p>
+</section><section id="undefined-behavior">
+<h2 id="undefined-behavior">Undefined Behavior</h2>
+<p>The C and C++ languages expose some undefined behavior which is
+discussed in <cite>PNaCl Undefined Behavior &lt;undefined_behavior&gt;</cite>.</p>
+</section><section id="floating-point">
+<h2 id="floating-point">Floating-Point</h2>
+<p>PNaCl exposes 32-bit and 64-bit floating point operations which are
+mostly IEEE-754 compliant. There are a few caveats:</p>
+<ul class="small-gap">
+<li>Some <a class="reference internal" href="pnacl-undefined-behavior.html#undefined-behavior-fp"><em>floating-point behavior is currently left as undefined</em></a>.</li>
+<li>The default rounding mode is round-to-nearest and other rounding modes
+are currently not usable, which isn&#8217;t IEEE-754 compliant. PNaCl could
+support switching modes (the 4 modes exposed by C99 <code>FLT_ROUNDS</code>
+macros).</li>
+<li>Signaling <code>NaN</code> never fault.</li>
+<li><p class="first">Fast-math optimizations are currently supported before <em>pexe</em> creation
+time. A <em>pexe</em> loses all fast-math information when it is
+created. Fast-math translation could be enabled at a later date,
+potentially at a perf-function granularity. This wouldn&#8217;t affect
+already-existing <em>pexe</em>; it would be an opt-in feature.</p>
+<ul class="small-gap">
+<li>Fused-multiply-add have higher precision and often execute faster;
+PNaCl currently disallows them in the <em>pexe</em> because they aren&#8217;t
+supported on all platforms and can&#8217;t realistically be
+emulated. PNaCl could (but currently doesn&#8217;t) only generate them in
+the backend if fast-math were specified and the hardware supports
+the operation.</li>
+<li>Transcendentals aren&#8217;t exposed by PNaCl&#8217;s ABI; they are part of the
+math library that is included in the <em>pexe</em>. PNaCl could, but
+currently doesn&#8217;t, use hardware support if fast-math were provided
+in the <em>pexe</em>.</li>
+</ul>
+</li>
+</ul>
+</section><section id="computed-goto">
+<h2 id="computed-goto">Computed <code>goto</code></h2>
+<p>PNaCl supports computed <code>goto</code>, a non-standard GCC extension to C used
+by some interpreters, by lowering them to <code>switch</code> statements. The
+resulting use of <code>switch</code> might not be as fast as the original
+indirect branches. If you are compiling a program that has a
+compile-time option for using computed <code>goto</code>, it&#8217;s possible that the
+program will run faster with the option turned off (e.g., if the program
+does extra work to take advantage of computed <code>goto</code>).</p>
+<p>NaCl supports computed <code>goto</code> without any transformation.</p>
+</section><section id="future-directions">
+<h2 id="future-directions">Future Directions</h2>
+<section id="simd">
+<h3 id="simd">SIMD</h3>
+<p>PNaCl currently doesn&#8217;t support SIMD. We plan to add SIMD support in the
+very near future.</p>
+<p>NaCl supports SIMD.</p>
+</section><section id="inter-process-communication">
+<h3 id="inter-process-communication">Inter-Process Communication</h3>
+<p>Inter-process communication through shared memory is currently not
+supported by PNaCl/NaCl. When implemented, it may be limited to
+operations which are lock-free on the current platform (<code>is_lock_free</code>
+methods). It will rely on the address-free properly discussed in <a class="reference internal" href="pnacl-c-cpp-language-support.html#memory-model-for-concurrent-operations">Memory
+Model for Concurrent Operations</a>.</p>
+</section><section id="posix-style-signal-handling">
+<h3 id="posix-style-signal-handling">POSIX-style Signal Handling</h3>
+<p>POSIX-style signal handling really consists of two different features:</p>
+<ul class="small-gap">
+<li><p class="first"><strong>Hardware exception handling</strong> (synchronous signals): The ability
+to catch hardware exceptions (such as memory access faults and
+division by zero) using a signal handler.</p>
+<p>PNaCl currently doesn&#8217;t support hardware exception handling.</p>
+<p>NaCl supports hardware exception handling via the
+<code>&lt;nacl/nacl_exception.h&gt;</code> interface.</p>
+</li>
+<li><p class="first"><strong>Asynchronous interruption of threads</strong> (asynchronous signals): The
+ability to asynchronously interrupt the execution of a thread,
+forcing the thread to run a signal handler.</p>
+<p>A similar feature is <strong>thread suspension</strong>: The ability to
+asynchronously suspend and resume a thread and inspect or modify its
+execution state (such as register state).</p>
+<p>Neither PNaCl nor NaCl currently support asynchronous interruption
+or suspension of threads.</p>
+</li>
+</ul>
+<p>If PNaCl were to support either of these, the interaction of
+<code>volatile</code> and atomics with same-thread signal handling would need
+to be carefully detailed.</p>
+</section></section></section>
+    
+    <footer id="cc-info">
+      <button id="send-feedback" class="google-button" data-feedback>Send Feedback</button>
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo"><a href="http://creativecommons.org/licenses/by/3.0/"><img src="../../static/images/cc_by.png" alt="Licensed Creative Commons by Attribution"></a></p>
+    </footer>
+    <nav class="inline-toc no-permalink">
+      <section class="related">
+                      <h3 title="">Additional Reference &amp; Versions</h3>
+      <ol class="toc">
+                              <li>
+                                <a href="../glossary.html">Glossary</a>
+                              </li>
+                              <li>
+                                <a href="nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                              </li>
+                              <li>
+                                <a href="pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                              </li>
+                              <li>
+                                <a href="pnacl-c-cpp-language-support.html" class="active">PNaCl C/C++ Language Support</a>
+                              </li>
+                              <li>
+                                <a href="sandbox_internals/index">Sandbox Internals</a>
+                              </li>
+      </ol>
+      </section>
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#source-language-support"
+          >Source language support</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#versions"
+          >Versions</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#preprocessor-definitions"
+          >Preprocessor definitions</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#memory-model-and-atomics"
+          >Memory Model and Atomics</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#memory-model-for-concurrent-operations"
+          >Memory Model for Concurrent Operations</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#atomic-memory-ordering-constraints"
+          >Atomic Memory Ordering Constraints</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#volatile-memory-accesses"
+          >Volatile Memory Accesses</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#threading"
+          >Threading</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#setjmp-and-longjmp"
+          >setjmp and longjmp</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#c-exception-handling"
+          >C++ Exception Handling</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#inline-assembly"
+          >Inline Assembly</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#undefined-behavior"
+          >Undefined Behavior</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#floating-point"
+          >Floating-Point</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#computed-goto"
+          >Computed goto</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#future-directions"
+          >Future Directions</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#simd"
+          >SIMD</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#inter-process-communication"
+          >Inter-Process Communication</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="pnacl-c-cpp-language-support.html#posix-style-signal-handling"
+          >POSIX-style Signal Handling</a>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="pnacl-c-cpp-language-support.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../../static/js/fatnav.js"></script>
+    <script src="../../static/js/article.js"></script>
+    <script src="../../static/js/prettify.js"></script>
+    <script src="../../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../../static/js/site.js"></script>
+  </body>
+</html>

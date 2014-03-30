@@ -1,0 +1,2127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>chrome.serial - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="serial.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../index.html">
+          <img alt="Chrome: developer" src="../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="app_usb.html">USB</a>
+                            </li>
+                            <li><a href="app_serial">Serial</a>
+                            </li>
+                            <li><a href="app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="overview.html">Overview</a>
+                            </li>
+                            <li><a href="../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../native-client/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../native-client/nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../native-client/sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../native-client/sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/devcycle/building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/devcycle/building.html">Building</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/running.html">Running</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../native-client/reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../native-client/reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../native-client/help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../native-client/publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../native-client/community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article>
+  <div itemprop="articleBody" class="api">
+    <h1>chrome.serial</h1>
+    <table class="intro" id="intro">
+      <tr>
+        <td class="title">Description:</td>
+        <td>
+             Use the <code>chrome.serial</code> API to read from and write to a device
+             connected to a serial port.
+                    <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Availability:</td>
+        <td>
+            Stable since Chrome 23.
+            <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Permissions:</td>
+        <td>
+            <span class="code">
+            "serial"
+                    </span>
+            <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Learn More:</td>
+        <td>
+            <a href="app_usb.html">
+            Accessing Hardware Devices
+                    </a>
+            <br>
+        </td>
+      </tr>
+    </table>
+    <section id="toc">
+    <h2>Summary</h2>
+    <table class="api-summary">
+      <tr>
+        <tr><th colspan="2">Types</th></tr>
+          <tr><td><a href="serial.html#type-DataBits">DataBits</a></td></tr>
+          <tr><td><a href="serial.html#type-ParityBit">ParityBit</a></td></tr>
+          <tr><td><a href="serial.html#type-StopBits">StopBits</a></td></tr>
+          <tr><td><a href="serial.html#type-ConnectionOptions">ConnectionOptions</a></td></tr>
+          <tr><td><a href="serial.html#type-ConnectionInfo">ConnectionInfo</a></td></tr>
+        <tr><th colspan="2">Methods</th></tr>
+        <tr><td><a href="serial.html#method-getDevices">getDevices</a> &minus;
+            <code class="prettyprint">
+            chrome.serial.getDevices(<span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="serial.html#method-connect">connect</a> &minus;
+            <code class="prettyprint">
+            chrome.serial.connect(<span>string path</span>, <span class="optional">    ConnectionOptions options</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="serial.html#method-update">update</a> &minus;
+            <code class="prettyprint">
+            chrome.serial.update(<span>integer connectionId</span>, <span>    ConnectionOptions options</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="serial.html#method-disconnect">disconnect</a> &minus;
+            <code class="prettyprint">
+            chrome.serial.disconnect(<span>integer connectionId</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="serial.html#method-setPaused">setPaused</a> &minus;
+            <code class="prettyprint">
+            chrome.serial.setPaused(<span>integer connectionId</span>, <span>boolean paused</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="serial.html#method-getInfo">getInfo</a> &minus;
+            <code class="prettyprint">
+            chrome.serial.getInfo(<span>integer connectionId</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="serial.html#method-getConnections">getConnections</a> &minus;
+            <code class="prettyprint">
+            chrome.serial.getConnections(<span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="serial.html#method-send">send</a> &minus;
+            <code class="prettyprint">
+            chrome.serial.send(<span>integer connectionId</span>, <span>ArrayBuffer data</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="serial.html#method-flush">flush</a> &minus;
+            <code class="prettyprint">
+            chrome.serial.flush(<span>integer connectionId</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="serial.html#method-getControlSignals">getControlSignals</a> &minus;
+            <code class="prettyprint">
+            chrome.serial.getControlSignals(<span>integer connectionId</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="serial.html#method-setControlSignals">setControlSignals</a> &minus;
+            <code class="prettyprint">
+            chrome.serial.setControlSignals(<span>integer connectionId</span>, <span>object signals</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><th colspan="2">Events</th></tr>
+          <tr><td><a href="serial.html#event-onReceive">onReceive</a></td></tr>
+          <tr><td><a href="serial.html#event-onReceiveError">onReceiveError</a></td></tr>
+    </table>
+    </section>
+    <section>
+      <div class="api-reference">
+          <h2 id="types">Types</h2>
+            <div>
+              <h3 id="type-DataBits">DataBits</h3>
+              <table>
+                <tr><th>Enum</th></tr>
+                <tr><td>
+                  <code>"seven"</code>, 
+                  or <code>"eight"</code>
+                </td></tr>
+                <dd></dd>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-ParityBit">ParityBit</h3>
+              <table>
+                <tr><th>Enum</th></tr>
+                <tr><td>
+                  <code>"no"</code>, 
+                  <code>"odd"</code>, 
+                  or <code>"even"</code>
+                </td></tr>
+                <dd></dd>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-StopBits">StopBits</h3>
+              <table>
+                <tr><th>Enum</th></tr>
+                <tr><td>
+                  <code>"one"</code>, 
+                  or <code>"two"</code>
+                </td></tr>
+                <dd></dd>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-ConnectionOptions">ConnectionOptions</h3>
+              <table>
+                  <tr><th colspan="3" id="ConnectionOptions-properties">properties</th></tr>
+                  <tr>
+                    <td>boolean</td>
+                    <td><span class="optional">(optional)</span>
+                        persistent</td>
+                    <td>
+                      Flag indicating whether or not the connection should be left open when the application is suspended (see <a href="app_lifecycle.html">Manage App Lifecycle</a>). The default value is "false." When the application is loaded, any serial connections previously opened with persistent=true can be fetched with <code>getConnections</code>.
+                    </td>
+                  </tr><tr>
+                    <td>string</td>
+                    <td><span class="optional">(optional)</span>
+                        name</td>
+                    <td>
+                      An application-defined string to associate with the connection.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        bufferSize</td>
+                    <td>
+                      The size of the buffer used to receive data. The default value is 4096.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        bitrate</td>
+                    <td>
+                      The requested bitrate of the connection to be opened. For compatibility with the widest range of hardware, this number should match one of commonly-available bitrates, such as 110, 300, 1200, 2400, 4800, 9600, 14400, 19200, 38400, 57600, 115200. There is no guarantee, of course, that the device connected to the serial port will support the requested bitrate, even if the port itself supports that bitrate. <code>9600</code> will be passed by default.
+                    </td>
+                  </tr><tr>
+                    <td>    <a href="serial.html#type-DataBits">DataBits</a></td>
+                    <td><span class="optional">(optional)</span>
+                        dataBits</td>
+                    <td>
+                      <code>"eight"</code> will be passed by default.
+                    </td>
+                  </tr><tr>
+                    <td>    <a href="serial.html#type-ParityBit">ParityBit</a></td>
+                    <td><span class="optional">(optional)</span>
+                        parityBit</td>
+                    <td>
+                      <code>"no"</code> will be passed by default.
+                    </td>
+                  </tr><tr>
+                    <td>    <a href="serial.html#type-StopBits">StopBits</a></td>
+                    <td><span class="optional">(optional)</span>
+                        stopBits</td>
+                    <td>
+                      <code>"one"</code> will be passed by default.
+                    </td>
+                  </tr><tr>
+                    <td>boolean</td>
+                    <td><span class="optional">(optional)</span>
+                        ctsFlowControl</td>
+                    <td>
+                      Flag indicating whether or not to enable RTS/CTS hardware flow control. Defaults to false.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        receiveTimeout</td>
+                    <td>
+                      The maximum amount of time (in milliseconds) to wait for new data before raising an <code>onReceiveError</code> event with a "timeout" error. If zero, receive timeout errors will not be raised for the connection. Defaults to 0.
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        sendTimeout</td>
+                    <td>
+                      The maximum amount of time (in milliseconds) to wait for a <code>send</code> operation to complete before calling the callback with a "timeout" error. If zero, send timeout errors will not be triggered. Defaults to 0.
+                    </td>
+                  </tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-ConnectionInfo">ConnectionInfo</h3>
+              <table>
+                  <tr><th colspan="3" id="ConnectionInfo-properties">properties</th></tr>
+                  <tr>
+                    <td>integer</td>
+                    <td>
+                        connectionId</td>
+                    <td>
+                      The id of the serial port connection.
+                    </td>
+                  </tr><tr>
+                    <td>boolean</td>
+                    <td>
+                        paused</td>
+                    <td>
+                      Flag indicating whether the connection is blocked from firing onReceive events.
+                    </td>
+                  </tr><tr>
+                    <td>boolean</td>
+                    <td>
+                        persistent</td>
+                    <td>
+                      See <code>ConnectionOptions.persistent</code>
+                    </td>
+                  </tr><tr>
+                    <td>string</td>
+                    <td>
+                        name</td>
+                    <td>
+                      See <code>ConnectionOptions.name</code>
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td>
+                        bufferSize</td>
+                    <td>
+                      See <code>ConnectionOptions.bufferSize</code>
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td>
+                        receiveTimeout</td>
+                    <td>
+                      See <code>ConnectionOptions.receiveTimeout</code>
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td>
+                        sendTimeout</td>
+                    <td>
+                      See <code>ConnectionOptions.sendTimeout</code>
+                    </td>
+                  </tr><tr>
+                    <td>integer</td>
+                    <td><span class="optional">(optional)</span>
+                        bitrate</td>
+                    <td>
+                      See <code>ConnectionOptions.bitrate</code>. This field may be omitted or inaccurate if a non-standard bitrate is in use, or if an error occurred while querying the underlying device.
+                    </td>
+                  </tr><tr>
+                    <td>    <a href="serial.html#type-DataBits">DataBits</a></td>
+                    <td><span class="optional">(optional)</span>
+                        dataBits</td>
+                    <td>
+                      See <code>ConnectionOptions.dataBits</code>. This field may be omitted if an error occurred while querying the underlying device.
+                    </td>
+                  </tr><tr>
+                    <td>    <a href="serial.html#type-ParityBit">ParityBit</a></td>
+                    <td><span class="optional">(optional)</span>
+                        parityBit</td>
+                    <td>
+                      See <code>ConnectionOptions.parityBit</code>. This field may be omitted if an error occurred while querying the underlying device.
+                    </td>
+                  </tr><tr>
+                    <td>    <a href="serial.html#type-StopBits">StopBits</a></td>
+                    <td><span class="optional">(optional)</span>
+                        stopBits</td>
+                    <td>
+                      See <code>ConnectionOptions.stopBits</code>. This field may be omitted if an error occurred while querying the underlying device.
+                    </td>
+                  </tr><tr>
+                    <td>boolean</td>
+                    <td><span class="optional">(optional)</span>
+                        ctsFlowControl</td>
+                    <td>
+                      See <code>ConnectionOptions.ctsFlowControl</code>. This field may be omitted if an error occurred while querying the underlying device.
+                    </td>
+                  </tr>
+              </table>
+            </div>
+          <h2 id="methods">Methods</h2>
+            <div>
+              <h3
+                  id="method-getDevices"
+                  >getDevices
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.serial.getDevices(<span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Returns information about available serial devices on the system. The list is regenerated each time this method is called.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                        Called with the list of <code>DeviceInfo</code> objects.
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(array of object ports) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>array of object</td>
+                              <td>
+                                  ports</td>
+                              <td>
+                                <h4 title="">Properties of each object</h4>
+                                <dl>
+                                  <div>
+                                    <table>
+                                        <tr>
+                                          <td>string</td>
+                                          <td>
+                                              path</td>
+                                          <td>
+                                            The device's system path. This should be passed as the <code>path</code> argument to <code>chrome.serial.connect</code> in order to connect to this device.
+                                          </td>
+                                        </tr><tr>
+                                          <td>integer</td>
+                                          <td><span class="optional">(optional)</span>
+                                              vendorId</td>
+                                          <td>
+                                            A PCI or USB vendor ID if one can be determined for the underlying device.
+                                          </td>
+                                        </tr><tr>
+                                          <td>integer</td>
+                                          <td><span class="optional">(optional)</span>
+                                              productId</td>
+                                          <td>
+                                            A USB product ID if one can be determined for the underlying device.
+                                          </td>
+                                        </tr><tr>
+                                          <td>string</td>
+                                          <td><span class="optional">(optional)</span>
+                                              displayName</td>
+                                          <td>
+                                            A human-readable display name for the underlying device if one can be queried from the host driver.
+                                          </td>
+                                        </tr>
+                                    </table>
+                                  </div>
+                                </dl>
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-connect"
+                  >connect
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.serial.connect(<span>string path</span>, <span class="optional">    <a href="serial.html#type-ConnectionOptions">ConnectionOptions</a> options</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Connects to a given serial port.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>string</td>
+                      <td>
+                          path</td>
+                      <td>
+                        The system path of the serial port to open.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>    <a href="serial.html#type-ConnectionOptions">ConnectionOptions</a></td>
+                      <td><span class="optional">(optional)</span>
+                          options</td>
+                      <td>
+                        Port configuration options.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                        Called when the connection has been opened.
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(    <a href="serial.html#type-ConnectionInfo">ConnectionInfo</a> connectionInfo) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>    <a href="serial.html#type-ConnectionInfo">ConnectionInfo</a></td>
+                              <td>
+                                  connectionInfo</td>
+                              <td>
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-update"
+                  >update
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.serial.update(<span>integer connectionId</span>, <span>    <a href="serial.html#type-ConnectionOptions">ConnectionOptions</a> options</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Update the option settings on an open serial port connection.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>integer</td>
+                      <td>
+                          connectionId</td>
+                      <td>
+                        The id of the opened connection.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>    <a href="serial.html#type-ConnectionOptions">ConnectionOptions</a></td>
+                      <td>
+                          options</td>
+                      <td>
+                        Port configuration options.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                        Called when the configuation has completed.
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(boolean result) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>boolean</td>
+                              <td>
+                                  result</td>
+                              <td>
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-disconnect"
+                  >disconnect
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.serial.disconnect(<span>integer connectionId</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Disconnects from a serial port.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>integer</td>
+                      <td>
+                          connectionId</td>
+                      <td>
+                        The id of the opened connection.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                        Called when the connection has been closed.
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(boolean result) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>boolean</td>
+                              <td>
+                                  result</td>
+                              <td>
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-setPaused"
+                  >setPaused
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.serial.setPaused(<span>integer connectionId</span>, <span>boolean paused</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Pauses or unpauses an open connection.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>integer</td>
+                      <td>
+                          connectionId</td>
+                      <td>
+                        The id of the opened connection.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>boolean</td>
+                      <td>
+                          paused</td>
+                      <td>
+                        Flag to indicate whether to pause or unpause.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                        Called when the connection has been successfully paused or              unpaused.
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function() <span class="subdued">{...}</span>;</code>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-getInfo"
+                  >getInfo
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.serial.getInfo(<span>integer connectionId</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Retrieves the state of a given connection.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>integer</td>
+                      <td>
+                          connectionId</td>
+                      <td>
+                        The id of the opened connection.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                        Called with connection state information when available.
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(    <a href="serial.html#type-ConnectionInfo">ConnectionInfo</a> connectionInfo) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>    <a href="serial.html#type-ConnectionInfo">ConnectionInfo</a></td>
+                              <td>
+                                  connectionInfo</td>
+                              <td>
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-getConnections"
+                  >getConnections
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.serial.getConnections(<span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Retrieves the list of currently opened serial port connections owned by the application.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                        Called with the list of connections when available.
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(array of     <a href="serial.html#type-ConnectionInfo">ConnectionInfo</a> connectionInfos) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>array of     <a href="serial.html#type-ConnectionInfo">ConnectionInfo</a></td>
+                              <td>
+                                  connectionInfos</td>
+                              <td>
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-send"
+                  >send
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.serial.send(<span>integer connectionId</span>, <span>ArrayBuffer data</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Writes data to the given connection.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>integer</td>
+                      <td>
+                          connectionId</td>
+                      <td>
+                        The id of the connection.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>ArrayBuffer</td>
+                      <td>
+                          data</td>
+                      <td>
+                        The data to send.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                        Called when the operation has completed.
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(object sendInfo) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>object</td>
+                              <td>
+                                  sendInfo</td>
+                              <td>
+                                <table class="innerTable">
+                                  <tr>
+                                    <td>integer</td>
+                                    <td>
+                                        bytesSent</td>
+                                    <td>
+                                      The number of bytes sent.
+                                    </td>
+                                  </tr><tr>
+                                    <td>enum of <code>"disconnected"</code>, <code>"pending"</code>, <code>"timeout"</code>, or <code>"system_error"</code></td>
+                                    <td><span class="optional">(optional)</span>
+                                        error</td>
+                                    <td>
+                                      An error code if an error occurred.
+                                        <dl>
+                                          <dt>disconnected</dt>
+                                          <dd>
+                                            The connection was disconnected.
+                                          </dd>
+                                        </dl>
+                                        <dl>
+                                          <dt>pending</dt>
+                                          <dd>
+                                            A send was already pending.
+                                          </dd>
+                                        </dl>
+                                        <dl>
+                                          <dt>timeout</dt>
+                                          <dd>
+                                            The send timed out.
+                                          </dd>
+                                        </dl>
+                                        <dl>
+                                          <dt>system_error</dt>
+                                          <dd>
+                                            A system error occurred and the connection may be unrecoverable.
+                                          </dd>
+                                        </dl>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-flush"
+                  >flush
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.serial.flush(<span>integer connectionId</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Flushes all bytes in the given connection's input and output buffers.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>integer</td>
+                      <td>
+                          connectionId</td>
+                      <td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(boolean result) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>boolean</td>
+                              <td>
+                                  result</td>
+                              <td>
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-getControlSignals"
+                  >getControlSignals
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.serial.getControlSignals(<span>integer connectionId</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Retrieves the state of control signals on a given connection.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>integer</td>
+                      <td>
+                          connectionId</td>
+                      <td>
+                        The id of the connection.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                        Called when the control signals are available.
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(object signals) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>object</td>
+                              <td>
+                                  signals</td>
+                              <td>
+                                <table class="innerTable">
+                                  <tr>
+                                    <td>boolean</td>
+                                    <td>
+                                        dcd</td>
+                                    <td>
+                                      DCD (Data Carrier Detect) or RLSD (Receive Line Signal/ Detect).
+                                    </td>
+                                  </tr><tr>
+                                    <td>boolean</td>
+                                    <td>
+                                        cts</td>
+                                    <td>
+                                      CTS (Clear To Send).
+                                    </td>
+                                  </tr><tr>
+                                    <td>boolean</td>
+                                    <td>
+                                        ri</td>
+                                    <td>
+                                      RI (Ring Indicator).
+                                    </td>
+                                  </tr><tr>
+                                    <td>boolean</td>
+                                    <td>
+                                        dsr</td>
+                                    <td>
+                                      DSR (Data Set Ready).
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-setControlSignals"
+                  >setControlSignals
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.serial.setControlSignals(<span>integer connectionId</span>, <span>object signals</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Sets the state of control signals on a given connection.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>integer</td>
+                      <td>
+                          connectionId</td>
+                      <td>
+                        The id of the connection.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>object</td>
+                      <td>
+                          signals</td>
+                      <td>
+                        The set of signal changes to send to the device.
+                        <table class="innerTable">
+                          <tr>
+                            <td>boolean</td>
+                            <td><span class="optional">(optional)</span>
+                                dtr</td>
+                            <td>
+                              DTR (Data Terminal Ready).
+                            </td>
+                          </tr><tr>
+                            <td>boolean</td>
+                            <td><span class="optional">(optional)</span>
+                                rts</td>
+                            <td>
+                              RTS (Request To Send).
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                        Called once the control signals have been set.
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(boolean result) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>boolean</td>
+                              <td>
+                                  result</td>
+                              <td>
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+          <h2 id="events">Events</h2>
+            <div>
+              <h3 id="event-onReceive">onReceive</h3>
+              <div class="description">
+            <p>
+                  Event raised when data has been read from the connection.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.serial.onReceive.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function(object info) <span class="subdued">{...}</span>;</code>
+                                <table class="innerTable">
+                                  <tr>
+                                    <td>object</td>
+                                    <td>
+                                        info</td>
+                                    <td>
+                                      Event data.
+                                      <table class="innerTable">
+                                        <tr>
+                                          <td>integer</td>
+                                          <td>
+                                              connectionId</td>
+                                          <td>
+                                            The connection identifier.
+                                          </td>
+                                        </tr><tr>
+                                          <td>ArrayBuffer</td>
+                                          <td>
+                                              data</td>
+                                          <td>
+                                            The data received.
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+            <div>
+              <h3 id="event-onReceiveError">onReceiveError</h3>
+              <div class="description">
+            <p>
+                  Event raised when an error occurred while the runtime was waiting for data on the serial port. Once this event is raised, the connection may be set to <code>paused</code>. A <code>"timeout"</code> error does not pause the connection.
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.serial.onReceiveError.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function(object info) <span class="subdued">{...}</span>;</code>
+                                <table class="innerTable">
+                                  <tr>
+                                    <td>object</td>
+                                    <td>
+                                        info</td>
+                                    <td>
+                                      <table class="innerTable">
+                                        <tr>
+                                          <td>integer</td>
+                                          <td>
+                                              connectionId</td>
+                                          <td>
+                                            The connection identifier.
+                                          </td>
+                                        </tr><tr>
+                                          <td>enum of <code>"disconnected"</code>, <code>"timeout"</code>, <code>"device_lost"</code>, or <code>"system_error"</code></td>
+                                          <td>
+                                              error</td>
+                                          <td>
+                                            An error code indicating what went wrong.
+                                              <dl>
+                                                <dt>disconnected</dt>
+                                                <dd>
+                                                  The connection was disconnected.
+                                                </dd>
+                                              </dl>
+                                              <dl>
+                                                <dt>timeout</dt>
+                                                <dd>
+                                                  No data has been received for <code>receiveTimeout</code> milliseconds.
+                                                </dd>
+                                              </dl>
+                                              <dl>
+                                                <dt>device_lost</dt>
+                                                <dd>
+                                                  The device was most likely disconnected from the host.
+                                                </dd>
+                                              </dl>
+                                              <dl>
+                                                <dt>system_error</dt>
+                                                <dd>
+                                                  A system error occurred and the connection may be unrecoverable.
+                                                </dd>
+                                              </dl>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+      </div>
+    </section>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="serial.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../static/js/fatnav.js"></script>
+    <script src="../static/js/article.js"></script>
+    <script src="../static/js/prettify.js"></script>
+    <script src="../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../static/js/site.js"></script>
+  </body>
+</html>

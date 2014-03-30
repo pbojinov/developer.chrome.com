@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../static/css/out/site.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="../static/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>Google Cloud Messaging - Google Chrome</title>
+  </head>
+
+  <body>
+    <div id="gc-container">
+    <a href="../extensions/cloudMessagingV2.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../index.html">
+          <img alt="Chrome: developer" src="../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="../extensions/app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="../extensions/app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="app_usb.html">USB</a>
+                            </li>
+                            <li><a href="app_serial">Serial</a>
+                            </li>
+                            <li><a href="app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="overview.html">Overview</a>
+                            </li>
+                            <li><a href="../extensions/hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="../extensions/event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="../extensions/content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="../extensions/whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="../extensions/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="../extensions/xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="../extensions/tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="../extensions/i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="../extensions/messaging">Message Passing</a>
+                            </li>
+                            <li><a href="../extensions/tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="../extensions/tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="../extensions/packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../extensions/autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="../extensions/external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="../extensions/tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="../extensions/themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../extensions/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../extensions/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../extensions/permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="../extensions/permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="../extensions/match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../extensions/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../extensions/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../native-client/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../native-client/nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../native-client/sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../native-client/sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/devcycle/building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/devcycle/building.html">Building</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/running.html">Running</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../native-client/reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../native-client/reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../native-client/help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../native-client/publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../native-client/community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article class="article-content">
+  <div itemprop="articleBody">
+
+<meta name="doc-family" content="apps">
+<h1 id="gcm">Google Cloud Messaging</h1>
+
+<p>Google Cloud Messaging (GCM) is a service for both Android-powered device and
+Chrome instances to send and receive message data from servers. <a href="gcm.html">GCM Chrome
+API</a> allows the Chrome apps or extensions to access the GCM
+service for the signed-in Chrome users. The service works even if an app or
+extension isn't currently running. For example, calendar updates could be pushed
+to users even when their calendar app isn't open. </p>
+
+<p>To use both API and service, you must agree to the <a href="https://developers.google.com/terms/">Google APIs Terms of
+Service</a> and <a href="https://developers.google.com/cloud/terms/">Google Cloud Platform Terms
+of Service</a>.</p>
+
+<p>This document describes how to set up and use GCM. For additional information
+see the reference documentation for the <a href="gcm.html">GCM Chrome API</a> and
+the <a href="http://developer.android.com/google/gcm/index.html">GCM Service</a>. To get
+help with GCM or to give us feedback, please see
+<a href="../extensions/cloudMessagingV2.html#feedback">Feedback</a>.</p>
+
+<p>Please note that GCM Chrome API is experimental. It is only available to Chrome
+users on the dev channel.</p>
+
+<p class="note"><strong>API Samples</strong>: Want to play with the code? Check out the
+<a href="https://github.com/GoogleChrome/chrome-app-samples/tree/master/gcm-notifications">gcm-notifications</a>
+sample.</p>
+
+<h2 id="enable_gcm">Enable GCM</h2>
+
+<p>To use GCM for your app or extension, do the following:</p>
+
+<ol>
+<li>Upload your app or extension client to the <a href="https://developers.google.com/chrome/web-store/docs/publish">Chrome Web
+Store</a>.</li>
+<li>A user installs your app or extension.</li>
+<li>Your app or extension client requests a registration ID using <a href="gcm.html#method-register">gcm.register</a>
+function and sends this ID to your server together with information
+identifying the user. For more details, please see <a href="../extensions/cloudMessagingV2.html#obtain_registration_id">Obtain registration
+ID</a>.</li>
+</ol>
+
+<h2 id="receive_a_message">Receive a message</h2>
+
+<p>At a glance, receiving a message works like this:</p>
+
+<ol>
+<li>Your app or extension client should register a handler to receive the
+<a href="gcm.html#event-onMessage">gcm.onMessage</a> event.</li>
+<li>When your server sends a message to the user, it specifies all of the
+registration IDs that are related to that user and passes the message to the
+GCM service.</li>
+<li>GCM servers route the message to all instances of Chrome running apps or
+extensions with one of the registration IDs.</li>
+<li>When the message arrives on the client, Chrome starts the app or extension,
+if it is not already running, and calls the registered handler to process the
+message.</li>
+</ol>
+
+<p>For more details, please see <a href="../extensions/cloudMessagingV2.html#receive_messages">Receive messages</a>.</p>
+
+<h2 id="send_a_message">Send a message</h2>
+
+<p>At a glance, sending a message works like this:</p>
+
+<ol>
+<li>Your app or extension generates a unique message ID, so that it is possible
+to find out which message failed to be queued or delivered.</li>
+<li>Your app or extension calls <a href="gcm.html#method-send">gcm.send</a> function with an object containing
+message ID, destination ID that identifies the server, and data that consist
+of a list of key value pairs. In this step you can also provide an optional
+time-to-live for the message.</li>
+<li>The callback passed to <a href="gcm.html#method-send">gcm.send</a> function will be called to notify the
+result. Your app or extension should check <a href="runtime.html#property-lastError">runtime.lastError</a> to find out if
+the message has been successfully queued for delivery. Please refer to <a href="../extensions/cloudMessagingV2.html#error_reference">Error
+reference</a> for possible error codes that could be
+returned.</li>
+<li>In cases that the queued message could not be delivered to the GCM server,
+like network error, a <a href="gcm.html#event-onSendError">gcm.onSendError</a> event will be fired. Your app or
+extension can listen to this event and react to it, e.g. by trying to resend
+the message. Please refer to <a href="../extensions/cloudMessagingV2.html#error_reference">Error reference</a> for
+possible error codes that could be returned.</li>
+</ol>
+
+<p>For more details, please see <a href="../extensions/cloudMessagingV2.html#send_messages">Send messages</a>.</p>
+
+<h2 id="set_up_project">Set up project</h2>
+
+<h3 id="create_google_api_project">Create Google API project</h3>
+
+<ol>
+<li>Login to the <a href="https://cloud.google.com/console/project">Google Developers
+Console</a> using the same Google <br>
+Account that you will use to upload your app or extension.</li>
+<li>If you haven't created an API project yet, click <strong>Create Project</strong>.</li>
+<li>Supply a project name and click <strong>Create</strong>.</li>
+<li>Once the project has been created, a page appears that displays your project
+number. For example, <strong>Project Number: 670330094152</strong>.</li>
+<li>Copy down your project number. You will use it later on as the GCM sender ID.</li>
+</ol>
+
+<h3 id="enable_the_gcm_service">Enable the GCM service</h3>
+
+<ol>
+<li>In the sidebar on the left, select <strong>APIs &amp; auth</strong>.</li>
+<li>In the displayed list of APIs, turn the <strong>Google Cloud Messaging for
+Android</strong> toggle to ON.</li>
+</ol>
+
+<h2 id="set_up_chrome_app_or_extension">Set up Chrome App or Extension</h2>
+
+<h3 id="add_permission_to_manifest">Add permission to manifest</h3>
+
+<p>To use the gcm service, you must declare the <code>gcm</code> permission in
+<code>manifest.json</code>.</p>
+
+<pre data-filename="manifest.json"><code>
+"permissions": [
+  "gcm", "storage", ...
+]
+</code></pre>
+
+<p>Please note that the <code>storage</code> permission is also provided here because the
+sample codes below needs to persist some data via the
+<a href="storage.html">chrome.storage</a> API.</p>
+
+<h2 id="write_chrome_app_or_extension">Write Chrome App or Extension</h2>
+
+<h3 id="obtain_registration_id">Obtain registration ID</h3>
+
+<p>Your app or extension needs to register with GCM servers before it can receive
+messages. When an app or extension registers, it receives a registration ID.
+This is achieved by calling <a href="gcm.html#method-register">gcm.register</a> and specifying a list of senders
+identified by project numbers from Google Developers Console. Your app or
+extension should pass a callback function to verify that the registration was
+successful. If successful, the received registration ID should be sent back to
+your application server in a secure way, for example, via https. Otherwise, your
+app or extension should handle the error identified by
+<code>chrome.runtime.lastError</code> and retry later.</p>
+
+<p>If your app or extension wishes to receive messages from the different senders,
+it can call <a href="gcm.html#method-register">gcm.register</a> again with the new sender list and the new
+registration ID will be returned.</p>
+
+<pre data-filename="background.js"><code>
+function registerCallback(registrationId) {
+  if (chrome.runtime.lastError) {
+    // When the registration fails, handle the error and retry the
+    // registration later.
+    return;
+  }
+
+  // Send the registration ID to your application server.
+  sendRegistrationId(function(succeed) {
+    // Once the registration ID is received by your server,
+    // set the flag such that register will not be invoked
+    // next time when the app starts up.
+    if (succeed)
+      chrome.storage.local.set({registered: true});
+  });
+}
+
+function sendRegistrationId(callback) {
+  // Send the registration ID to your application server
+  // in a secure way.
+}
+
+chrome.runtime.onStartup.addListener(function() {
+  chrome.storage.local.get("registered", function(result) {
+    // If already registered, bail out.
+    if (result["registered"])
+      return;
+
+    // Up to 100 senders are allowed.
+    var senderIds = ["Your-Sender-ID"];
+    chrome.gcm.register(senderIds, registerCallback);
+  });
+});
+</code></pre>
+
+<p>If your app or extension is installed in different profiles and/or in different
+Chrome instances, each of them will receive a different registration ID.</p>
+
+<p>Your app or extension could call <a href="gcm.html#method-unregister">gcm.unregister</a> to revoke the registration ID.
+The unregistration should only be done in rare cases, such as if your app or
+extension does not want to receive further messages, or the registration ID is
+suspected to be compromised.</p>
+
+<pre data-filename="background.js"><code>
+function unregisterCallback() {
+  if (chrome.runtime.lastError) {
+    // When the unregistration fails, handle the error and retry
+    // the unregistration later.
+    return;
+  }
+}
+
+chrome.gcm.unregister(unregisterCallback);
+</code></pre>
+
+<p>Your app or extension is automatically unregistered from the GCM service when a
+user uninstalls it.</p>
+
+<h3 id="receive_messages">Receive messages</h3>
+
+<p>When your server sends a message to the user, it specifies all of the
+registration IDs that are related to that user and passes the message to the GCM
+service. GCM servers route the message to all instances of Chrome running apps
+or extensions with one of the registration IDs. If your app or extension has
+been installed in more than one profiles in a single Chrome instance, all of
+them can receive messages independently based on their unique registration IDs.</p>
+
+<p>Messages from the server are delivered via the <a href="gcm.html#event-onMessage">gcm.onMessage</a> event. Your app
+or extension must register a handler to receive this event.</p>
+
+<pre data-filename="background.js"><code>
+chrome.gcm.onMessage.addListener(function(message) {
+  // A message is an object with a data property that
+  // consists of key-value pairs.
+});
+</code></pre>
+
+<p>As long as Chrome is running, even if the extension or app is not running, it is
+woken up to deliver a message.</p>
+
+<h3 id="send_messages">Send messages</h3>
+
+<p>To send messages upstream, your app or extension should call <a href="gcm.html#method-send">gcm.send</a> with an
+object containing:</p>
+
+<ul>
+<li>Message ID that identifies the message when it fails to be queued or
+delivered. The message ID can be any kind of string. However, it is
+recommended to stay unique across the lifetime of your app or extension, even
+after it restarts. If you use the same message ID, there may be a chance that
+the previous message gets overridden. If an auto-increment counter is used to
+create the message ID, your app or extension should persist the counter value
+via <a href="storage.html">chrome.storage</a> API and restore it when the app
+reloads.</li>
+<li>Destination ID that identifies the server. This is the project number from the
+Google Developers Console plus the suffix "@gcm.googleapis.com".</li>
+<li>Data that consist of a list of string-to-string key value pairs (up to 4KB
+total).</li>
+<li>Time-to-live (TTL, optional). This property value must be a duration from 0 to
+2,419,200 seconds (4 weeks) and it corresponds to the maximum period of time
+for which GCM will store and try to deliver the message. If this property is
+not set, it is default to the maximum value. When a TTL is set to 0, GCM will
+try to deliver the message immediately. If the immediate effort fails, the
+message will be discarded.</li>
+</ul>
+
+<p>When the callback passed in <a href="gcm.html#method-send">gcm.send</a> is called without runtime error, it does
+not mean that the message was already delivered to the GCM server. Rather, it
+means that it was queued for delivery. If the message fails to reach the
+destination within the specified TTL period, for example due to network error,
+the <a href="gcm.html#event-onSendError">gcm.onSendError</a> will be fired.</p>
+
+<pre data-filename="background.js"><code>
+// Substitute your own sender ID here. This is the project
+// number you got from the Google Developers Console.
+var senderId = "Your-Sender-ID";
+
+// Make the message ID unique across the lifetime of your app.
+// One way to achieve this is to use the auto-increment counter
+// that is persisted to local storage.
+
+// Message ID is saved to and restored from local storage.
+var messageId = 0;
+chrome.storage.local.get("messageId", function(result) {
+  if (chrome.runtime.lastError)
+    return;
+  messageId = parseInt(result["messageId"]);
+  if (isNaN(messageId))
+    messageId = 0;
+});
+
+// Sets up an event listener for send error.
+chrome.gcm.onSendError.addListener(sendError);
+
+// Returns a new ID to identify the message.
+function getMessageId() {
+  messageId++;
+  chrome.storage.local.set({messageId: messageId});
+  return messageId.toString();
+}
+
+function sendMessage() {
+  var message = {
+    messageId: getMessageId(),
+    destinationId: senderId + "@gcm.googleapis.com",
+    timeToLive: 86400,    // 1 day
+    data: {
+      "key1": "value1",
+      "key2": "value2"
+    }
+  };
+  chrome.gcm.send(message, function(messageId) {
+    if (chrome.runtime.lastError) {
+      // Some error occurred. Fail gracefully or try to send
+      // again.
+      return;
+    }
+
+    // The message has been accepted for delivery. If the message
+    // can not reach the destination, onSendError event will be
+    // fired.
+  });
+}
+
+function sendError(error) {
+  console.log("Message " + error.messageId +
+      " failed to be sent: " + error.errorMessage);
+}
+</code></pre>
+
+<h3 id="messages_deleted_event">Messages deleted event</h3>
+
+<p>GCM will store up to 100 non-collapsible messages. After that, all messages are
+discarded from GCM, and an event <a href="gcm.html#event-onMessagesDeleted">gcm.onMessagesDeleted</a> will be fired, which
+tells the client that it falls behind. Your app or extension should respond by
+syncing with your application server to recover the discarded messages.</p>
+
+<pre data-filename="background.js"><code>
+chrome.gcm.onMessagesDeleted.addListener(messagesDeleted);
+
+function messagesDeleted() {
+  // All messages have been discarded from GCM. Sync with
+  // your application server to recover from the situation.
+}
+</code></pre>
+
+<h3 id="collapsible_messages">Collapsible messages</h3>
+
+<p>GCM messages are often a tickle, telling the app or extension to contact the
+server for fresh data. In GCM, it's possible to create collapsible messages for
+this situation, wherein new messages replace older ones. When a collapse key is
+provided and multiple messages are queued up in the GCM servers for the same
+user, only the last one with any given collapse key is delivered to your app or
+extension. As a result the <code>message</code> object passed to the <a href="gcm.html#event-onMessage">gcm.onMessage</a> event
+will contain a <code>collapseKey</code>field. For more details about sending collapsible
+messages, please refer to <a href="http://developer.android.com/google/gcm/adv.html#collapsible">GCM Advance
+Topics</a>.</p>
+
+<h2 id="publish_your_app">Publish your app</h2>
+
+<p>To use the GCM service, you must publish your app in the <a href="https://developers.google.com/chrome/web-store/docs/publish">Chrome Web
+Store</a>.</p>
+
+<h2 id="error_reference">Error reference</h2>
+
+<p>An error could occur when a gcm API function is called. Your app or extension
+should check <a href="runtime.html#property-lastError">runtime.lastError</a> for more information in your callback. The
+error code will also be passed as a parameter to <a href="gcm.html#event-onSendError">gcm.onSendError</a> event.</p>
+
+<p>Here's a brief summary of the gcm errors:</p>
+
+<ul>
+<li><strong>Function was called with invalid parameters</strong>: this could happen when gcm
+functions are called with bad parameters.</li>
+<li><strong>Profile was not signed in</strong>: this could happen when gcm functions are called
+from a profile that was not signed in.</li>
+<li><strong>Asynchronous operation is pending</strong>: this could happen when certain gcm
+function is called again without waiting for the callback passed in previous
+function to be called.</li>
+<li><strong>Network error occurred</strong>: this could happen when GCM server fails to reach
+due to network problem, like losing Internet connection.</li>
+<li><strong>Server error occurred</strong>: this could happen when GCM server fails to reach
+due to server problem, like server busy.</li>
+<li><strong>Time-to-live exceeded</strong>: this could happen when a message could not be
+delivered within the specific time-to-live period.</li>
+<li><strong>Unknown error occurred</strong>: this could happen due to any other internal
+errors.</li>
+</ul>
+
+<h2 id="feedback">Feedback</h2>
+
+<p>You can provide feedback about Google Cloud Messaging and the gcm API through
+the Google Group <a href="https://groups.google.com/forum/#!forum/gcm-for-chrome-feedback">GCM for Chrome
+Feedback</a>.
+Use this group to ask for help, file bug reports, and request features.</p>
+    
+    <footer id="cc-info">
+      <button id="send-feedback" class="google-button" data-feedback>Send Feedback</button>
+      <!--p class="last-updated">Last updated August 2, 2013.</p-->
+      <p class="cc-logo"><a href="http://creativecommons.org/licenses/by/3.0/"><img src="../static/images/cc_by.png" alt="Licensed Creative Commons by Attribution"></a></p>
+    </footer>
+    <nav class="inline-toc no-permalink">
+      <section class="related">
+      <ol class="toc">
+      </ol>
+      </section>
+      <section id="toc">
+    <h3>Contents</h3>
+    <ol class="toc">
+      <li class="toplevel"><a data-list-item href="../extensions/cloudMessagingV2.html#enable_gcm"
+          >Enable GCM</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="../extensions/cloudMessagingV2.html#receive_a_message"
+          >Receive a message</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="../extensions/cloudMessagingV2.html#send_a_message"
+          >Send a message</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="../extensions/cloudMessagingV2.html#set_up_project"
+          >Set up project</a>
+          <ol class="toc">
+              <li><a data-list-item href="../extensions/cloudMessagingV2.html#create_google_api_project"
+                     >Create Google API project</a>
+              </li>
+              <li><a data-list-item href="../extensions/cloudMessagingV2.html#enable_the_gcm_service"
+                     >Enable the GCM service</a>
+              </li>
+          </ol>
+      </li>
+      <li class="toplevel"><a data-list-item href="../extensions/cloudMessagingV2.html#set_up_chrome_app_or_extension"
+          >Set up Chrome App or Extension</a>
+          <ol class="toc">
+              <li><a data-list-item href="../extensions/cloudMessagingV2.html#add_permission_to_manifest"
+                     >Add permission to manifest</a>
+              </li>
+          </ol>
+      </li>
+      <li class="toplevel"><a data-list-item href="../extensions/cloudMessagingV2.html#write_chrome_app_or_extension"
+          >Write Chrome App or Extension</a>
+          <ol class="toc">
+              <li><a data-list-item href="../extensions/cloudMessagingV2.html#obtain_registration_id"
+                     >Obtain registration ID</a>
+              </li>
+              <li><a data-list-item href="../extensions/cloudMessagingV2.html#receive_messages"
+                     >Receive messages</a>
+              </li>
+              <li><a data-list-item href="../extensions/cloudMessagingV2.html#send_messages"
+                     >Send messages</a>
+              </li>
+              <li><a data-list-item href="../extensions/cloudMessagingV2.html#messages_deleted_event"
+                     >Messages deleted event</a>
+              </li>
+              <li><a data-list-item href="../extensions/cloudMessagingV2.html#collapsible_messages"
+                     >Collapsible messages</a>
+              </li>
+          </ol>
+      </li>
+      <li class="toplevel"><a data-list-item href="../extensions/cloudMessagingV2.html#publish_your_app"
+          >Publish your app</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="../extensions/cloudMessagingV2.html#error_reference"
+          >Error reference</a>
+      </li>
+      <li class="toplevel"><a data-list-item href="../extensions/cloudMessagingV2.html#feedback"
+          >Feedback</a>
+      </li>
+    </ol>
+</section>
+
+    </nav>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="../extensions/cloudMessagingV2.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+    <script src="../static/js/fatnav.js"></script>
+    <script src="../static/js/article.js"></script>
+    <script src="../static/js/prettify.js"></script>
+    <script src="../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../static/js/site.js"></script>
+  </body>
+</html>
