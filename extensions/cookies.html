@@ -1,1461 +1,1689 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>chrome.cookies - Google Chrome</title>
+    <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link href="../static/css/site.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../static/css/out/site.css" rel="stylesheet" type="text/css">
     <link href="../static/css/print.css" rel="stylesheet" type="text/css" media="print">
     <link href="../static/css/prettify.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-41980257-1');
-      ga('send', 'pageview');
-    </script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>chrome.cookies - Google Chrome</title>
   </head>
 
   <body>
-    <div id="gc-topnav">
-      <table><tr>
-      <td id="chrome-logo">
-        <a href="index.html" title="Google Chrome Extensions">
-          <img src="../static/images/chrome-logo.png" alt=""> chrome
-        </a>
-        <div id="platform-chooser">
-          <button id="platform-chooser-toggle" data-menu="platform-chooser-popup">
-            extensions &#x25be;&#x202F;
-          </button>
-          <div id="platform-chooser-popup">
-            <button class="apps" data-href="/apps/about_apps.html">apps</button>
-            <button class="extensions" data-href="/extensions">extensions</button>
-          </div>
-        </div>
-      </td>
-      <td>
-        <ul>
-          <li>
-            <a href="samples.html"
-               title="Sample Extensions (with source code)">Samples</a>
-          </li>
-          <li>
-            <a href="http://groups.google.com/a/chromium.org/group/chromium-extensions"
-               title="Google Chrome Extensions developer forum"
-               target="_blank">Group</a>
-          </li>
-          <li>
-            <a href="http://stackoverflow.com/tags/google-chrome-extension/info"
-               title="[google-chrome-extension] tag on Stack Overflow"
-               target="_blank">Stack overflow</a>
-          </li>
-        </ul>
-      </td>
-      </tr></table>
-    </div>
-    <div id="gc-topnav-space"></div>
     <div id="gc-container">
-      <div id="gc-sidebar">
-        <ul 
-            class="level1 ">
-        <li class="level2">
-              <a href="getstarted.html" class="level2 ">Getting Started</a>
-        </li><li class="level2">
-              <a href="overview.html" class="level2 ">Overview</a>
-        </li><li class="level2">
-              <a href="whats_new.html" class="level2 ">What's New?</a>
-        </li><li class="level2">
-              <a href="devguide.html" class="level2 ">Developer's Guide</a>
-          <ul 
-              class="level2 ">
-          <li class="level3">
-              <a class="button level3">
-                <span class="level3">Browser UI</span>
-                <div class="toggleIndicator level3"></div>
-              </a>
-            <ul toggleable
-                class="level3 hidden">
-            <li class="level4">
-                  <a href="browserAction.html" class="level4 ">Browser Actions</a>
-            </li><li class="level4">
-                  <a href="contextMenus.html" class="level4 ">Context Menus</a>
-            </li><li class="level4">
-                  <a href="desktop_notifications.html" class="level4 ">Desktop Notifications</a>
-            </li><li class="level4">
-                  <a href="omnibox.html" class="level4 ">Omnibox</a>
-            </li><li class="level4">
-                  <a href="options.html" class="level4 ">Options Pages</a>
-            </li><li class="level4">
-                  <a href="override.html" class="level4 ">Override Pages</a>
-            </li><li class="level4">
-                  <a href="pageAction.html" class="level4 ">Page Actions</a>
-            </li>
-            </ul>
-          </li><li class="level3">
-              <a class="button level3">
-                <span class="level3">Browser Interaction</span>
-                <div class="toggleIndicator level3 toggled"></div>
-              </a>
-            <ul toggleable
-                class="level3 ">
-            <li class="level4">
-                  <a href="bookmarks.html" class="level4 ">Bookmarks</a>
-            </li><li class="level4">
-                  <a  class="level4 selected">Cookies</a>
-            </li><li class="level4">
-                  <a href="devtools.html" class="level4 ">Extending DevTools</a>
-            </li><li class="level4">
-                  <a href="events.html" class="level4 ">Events</a>
-            </li><li class="level4">
-                  <a href="history.html" class="level4 ">History</a>
-            </li><li class="level4">
-                  <a href="management.html" class="level4 ">Management</a>
-            </li><li class="level4">
-                  <a href="tabs.html" class="level4 ">Tabs</a>
-            </li><li class="level4">
-                  <a href="windows.html" class="level4 ">Windows</a>
-            </li>
-            </ul>
-          </li><li class="level3">
-              <a class="button level3">
-                <span class="level3">Implementation</span>
-                <div class="toggleIndicator level3"></div>
-              </a>
-            <ul toggleable
-                class="level3 hidden">
-            <li class="level4">
-                  <a href="a11y.html" class="level4 ">Accessibility</a>
-            </li><li class="level4">
-                  <a href="event_pages.html" class="level4 ">Event Pages</a>
-            </li><li class="level4">
-                  <a href="contentSecurityPolicy.html" class="level4 ">Content Security Policy</a>
-            </li><li class="level4">
-                  <a href="content_scripts.html" class="level4 ">Content Scripts</a>
-            </li><li class="level4">
-                  <a href="xhr.html" class="level4 ">Cross-Origin XHR</a>
-            </li><li class="level4">
-                  <a href="i18n.html" class="level4 ">Internationalization</a>
-            </li><li class="level4">
-                  <a href="messaging.html" class="level4 ">Message Passing</a>
-            </li><li class="level4">
-                  <a href="permissions.html" class="level4 ">Optional Permissions</a>
-            </li><li class="level4">
-                  <a href="npapi.html" class="level4 ">NPAPI Plugins</a>
-            </li>
-            </ul>
-          </li><li class="level3">
-              <a class="button level3">
-                <span class="level3">Finishing</span>
-                <div class="toggleIndicator level3"></div>
-              </a>
-            <ul toggleable
-                class="level3 hidden">
-            <li class="level4">
-                  <a href="hosting.html" class="level4 ">Hosting</a>
-            </li><li class="level4">
-                  <a href="external_extensions.html" class="level4 ">Other Deployment Options</a>
-            </li>
+    <a href="../apps/cookies.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../index.html">
+          <img alt="Chrome: developer" src="../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
+      </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
             </ul>
           </li>
-          </ul>
-        </li><li class="level2">
-              <a href="tutorials.html" class="level2 ">Tutorials</a>
-          <ul 
-              class="level2 ">
-          <li class="level3">
-                <a href="tut_migration_to_manifest_v2.html" class="level3 ">Manifest V2</a>
-          </li><li class="level3">
-                <a href="tut_debugging.html" class="level3 ">Debugging</a>
-          </li><li class="level3">
-                <a href="tut_analytics.html" class="level3 ">Google Analytics</a>
-          </li><li class="level3">
-                <a href="tut_oauth.html" class="level3 ">OAuth</a>
-          </li>
-          </ul>
-        </li><li class="level2">
-              <span class="level2">Reference</span>
-          <ul 
-              class="level2 ">
-          <li class="level3">
-              <a class="button level3">
-                <span class="level3">Formats</span>
-                <div class="toggleIndicator level3"></div>
-              </a>
-            <ul toggleable
-                class="level3 hidden">
-            <li class="level4">
-                  <a href="manifest.html" class="level4 ">Manifest Files</a>
-            </li><li class="level4">
-                  <a href="match_patterns.html" class="level4 ">Match Patterns</a>
-            </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
             </ul>
-          </li><li class="level3">
-                <a href="permission_warnings.html" class="level3 ">Permission Warnings</a>
-          </li><li class="level3">
-                <a href="api_index.html" class="level3 ">chrome.* APIs</a>
-          </li><li class="level3">
-                <a href="api_other.html" class="level3 ">Other APIs</a>
           </li>
-          </ul>
-        </li><li class="level2">
-              <span class="level2">More</span>
-          <ul 
-              class="level2 ">
-          <li class="level3">
-                <a href="faq.html" class="level3 ">FAQ</a>
-          </li><li class="level3">
-                <a href="http://code.google.com/chrome/webstore/docs/index.html" class="level3 ">Chrome Web Store</a>
-          </li><li class="level3">
-                <a href="http://code.google.com/chrome/apps/docs/developers_guide.html" class="level3 ">Hosted Apps</a>
-          </li><li class="level3">
-                <a href="themes.html" class="level3 ">Themes</a>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="../apps/index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../apps/index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="../apps/first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="../apps/app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="../apps/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="../apps/app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="../apps/app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="../apps/app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="../apps/app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="../apps/app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="../apps/app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="../apps/app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="../apps/app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="../apps/offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="../apps/app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="../apps/cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="../apps/app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="../apps/app_usb.html">USB</a>
+                            </li>
+                            <li><a href="../apps/app_serial">Serial</a>
+                            </li>
+                            <li><a href="../apps/app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="../apps/app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="../apps/app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="../apps/angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="../apps/sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="../apps/google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../apps/analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../apps/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../apps/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../apps/webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="../apps/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../apps/app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../apps/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="../apps/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../apps/overview.html">Overview</a>
+                            </li>
+                            <li><a href="hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="../apps/activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="messaging">Message Passing</a>
+                            </li>
+                            <li><a href="tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../native-client/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../native-client/nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../native-client/sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../native-client/sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/devcycle/building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/devcycle/building.html">Building</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/running.html">Running</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../native-client/reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../native-client/reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../native-client/help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../native-client/publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../native-client/community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
           </li>
-          </ul>
+        <li id="search">
+          <img src="../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
+          </div>
         </li>
-        </ul>
-      </div>
-      <div id="gc-pagecontent">
+      </ul>
+      </nav>
+          </header>
 
-<h1>chrome.cookies</h1>
-<div id="toc">
-  <ol>
-    <li >
-      <a href="cookies.html#manifest">Manifest</a>
-    </li>
-    <li >
-      <a href="cookies.html#examples"> Examples </a>
-    </li>
-    <li >
-      <a href="cookies.html#types">Types</a>
-      <ol>
-        <li><a href="cookies.html#type-Cookie">Cookie</a></li>
-        <li><a href="cookies.html#type-CookieStore">CookieStore</a></li>
-      </ol>
-    </li>
-    <li >
-      <a href="cookies.html#methods">Methods</a>
-    </li>
-    <li >
-      <a href="cookies.html#events">Events</a>
-    </li>
-  </ol>
-</div>
+    <main id="gc-pagecontent" role="main">
 
-<table class="intro" id="intro">
-  <tr>
-    <td class="title">Description:</td>
-    <td>
-        Use the <code>chrome.cookies</code> API to query and modify cookies, and to be notified when they change.
-                <br>
-    </td>
-  </tr>
-  <tr>
-    <td class="title">Availability:</td>
-    <td>
-        Stable since Chrome 6.
-        <br>
-    </td>
-  </tr>
-  <tr>
-    <td class="title">Permissions:</td>
-    <td>
-        <span class="code">
-        "cookies"
-                </span>
-        <br>
-        <a href="declare_permissions.html#host-permissions">
-        host permissions
-                </a>
-        <br>
-    </td>
-  </tr>
-</table>
-<h2 id="manifest">Manifest</h2>
 
-<p>To use the cookies API,
-you must declare the "cookies" permission in your manifest,
-along with <a href="declare_permissions.html">host permissions</a>
-for any hosts whose cookies
-you want to access.
-For example:</p>
-
-<pre data-filename="manifest.json">
-{
-  "name": "My extension",
-  ...
-  <b>"permissions": [
-    "cookies",
-    "*://*.google.com"
-  ]</b>,
-  ...
-}
-</pre>
-
-<h2 id="examples"> Examples </h2>
-
-<p>
-You can find a simple example
-of using the cookies API in the
-<a href="http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/api/cookies/">examples/api/cookies</a>
-directory.
-For other examples
-and for help in viewing the source code,
-see <a href="samples.html">Samples</a>.
-</p>
-<div class="api_reference">
-  <span id="api-reference-header">Reference</span>
-    <h2 id="types">Types</h2>
-      <div>
-        <h3 id="type-Cookie">Cookie</h3>
-        <div>
-          <dd>Represents information about an HTTP cookie.</dd>
-            <h4 id="Cookie-properties" class="capitalize">
-              properties of <a href="cookies.html#type-Cookie">Cookie</a>
-            </h4>
-            <dd>
-              <dl>
-                <div>
-                  <a name="property-Cookie-name"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">name</span>
-                      <span class="property">
-                        (
-                          string
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      The name of the cookie.
-                    </dd>
-                  </dl>
-                </div><div>
-                  <a name="property-Cookie-value"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">value</span>
-                      <span class="property">
-                        (
-                          string
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      The value of the cookie.
-                    </dd>
-                  </dl>
-                </div><div>
-                  <a name="property-Cookie-domain"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">domain</span>
-                      <span class="property">
-                        (
-                          string
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      The domain of the cookie (e.g. "www.google.com", "example.com").
-                    </dd>
-                  </dl>
-                </div><div>
-                  <a name="property-Cookie-hostOnly"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">hostOnly</span>
-                      <span class="property">
-                        (
-                          boolean
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      True if the cookie is a host-only cookie (i.e. a request's host must exactly match the domain of the cookie).
-                    </dd>
-                  </dl>
-                </div><div>
-                  <a name="property-Cookie-path"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">path</span>
-                      <span class="property">
-                        (
-                          string
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      The path of the cookie.
-                    </dd>
-                  </dl>
-                </div><div>
-                  <a name="property-Cookie-secure"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">secure</span>
-                      <span class="property">
-                        (
-                          boolean
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      True if the cookie is marked as Secure (i.e. its scope is limited to secure channels, typically HTTPS).
-                    </dd>
-                  </dl>
-                </div><div>
-                  <a name="property-Cookie-httpOnly"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">httpOnly</span>
-                      <span class="property">
-                        (
-                          boolean
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      True if the cookie is marked as HttpOnly (i.e. the cookie is inaccessible to client-side scripts).
-                    </dd>
-                  </dl>
-                </div><div>
-                  <a name="property-Cookie-session"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">session</span>
-                      <span class="property">
-                        (
-                          boolean
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      True if the cookie is a session cookie, as opposed to a persistent cookie with an expiration date.
-                    </dd>
-                  </dl>
-                </div><div>
-                  <a name="property-Cookie-expirationDate"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">expirationDate</span>
-                      <span class="property">
-                        (
-                          <span class="optional">optional</span>
-                          double
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      The expiration date of the cookie as the number of seconds since the UNIX epoch. Not provided for session cookies.
-                    </dd>
-                  </dl>
-                </div><div>
-                  <a name="property-Cookie-storeId"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">storeId</span>
-                      <span class="property">
-                        (
-                          string
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      The ID of the cookie store containing this cookie, as provided in getAllCookieStores().
-                    </dd>
-                  </dl>
-                </div>
-              </dl>
-            </dd>
-        </div>
-      </div>
-      <div>
-        <h3 id="type-CookieStore">CookieStore</h3>
-        <div>
-          <dd>Represents a cookie store in the browser. An incognito mode window, for instance, uses a separate cookie store from a non-incognito window.</dd>
-            <h4 id="CookieStore-properties" class="capitalize">
-              properties of <a href="cookies.html#type-CookieStore">CookieStore</a>
-            </h4>
-            <dd>
-              <dl>
-                <div>
-                  <a name="property-CookieStore-id"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">id</span>
-                      <span class="property">
-                        (
-                          string
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      The unique identifier for the cookie store.
-                    </dd>
-                  </dl>
-                </div><div>
-                  <a name="property-CookieStore-tabIds"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">tabIds</span>
-                      <span class="property">
-                        (
-                          array of integer
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      Identifiers of all the browser tabs that share this cookie store.
-                    </dd>
-                  </dl>
-                </div>
-              </dl>
-            </dd>
-        </div>
-      </div>
-    <h2 id="methods">Methods</h2>
-      <div>
-        <h4 id="method-get">
-          get
-        </h4>
-        <div class="summary uncapitalize">
-        <div class="line">
-        <span>chrome.cookies.get</span>(<span>object <span class="variable">details</span></span>, <span>function <span class="variable">callback</span></span>)
-        </div>
-        </div>
-        <div class="description">
-          <p>
-            Retrieves information about a single cookie. If more than one cookie of the same name exists for the given URL, the one with the longest path will be returned. For cookies with the same path length, the cookie with the earliest creation time will be returned.
-          </p>
-          <h4>Parameters</h4>
-          <dl>
-              <div>
-                <a name="property-get-details"></a>
-                <dl>
-                  <dt>
-                    <span class="variable">details</span>
-                    <span class="property">
-                      (
-                        object
-                      )
+<article>
+  <div itemprop="articleBody" class="api">
+    <h1>chrome.cookies</h1>
+    <table class="intro" id="intro">
+      <tr>
+        <td class="title">Description:</td>
+        <td>
+            Use the <code>chrome.cookies</code> API to query and modify cookies, and to be notified when they change.
+                    <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Availability:</td>
+        <td>
+            Stable since Chrome 6.
+            <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Permissions:</td>
+        <td>
+            <span class="code">
+            "cookies"
                     </span>
-                  </dt>
-                  <dd>
-                    Details to identify the cookie being retrieved.
-                  </dd>
-                </dl>
-                <dd>
-                  <h5>Properties of <span class="variable">details</span></h5>
-                  <dl>
-                  <div>
-                    <a name="property-details-url"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">url</span>
-                        <span class="property">
-                          (
-                            string
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        The URL with which the cookie to retrieve is associated. This argument may be a full URL, in which case any data following the URL path (e.g. the query string) is simply ignored. If host permissions for this URL are not specified in the manifest file, the API call will fail.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-name"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">name</span>
-                        <span class="property">
-                          (
-                            string
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        The name of the cookie to retrieve.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-storeId"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">storeId</span>
-                        <span class="property">
-                          (
-                            <span class="optional">optional</span>
-                            string
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        The ID of the cookie store in which to look for the cookie. By default, the current execution context's cookie store will be used.
-                      </dd>
-                    </dl>
-                  </div>
-                  </dl>
-                </dd>
-              </div>
-              <div>
-                <a name="property-get-callback"></a>
-                <dl>
-                  <dt>
-                    <span class="variable">callback</span>
-                    <span class="property">
-                      (
-                        function
-                      )
-                    </span>
-                  </dt>
-                  <dd>
-                  </dd>
-                </dl>
-              </div>
-          </dl>
-            <h4>Callback</h4>
-            <p>
-                  The <em>callback</em> parameter should specify a function
-                  that looks like this:
-            </p>
-            <pre>function(<a href="cookies.html#type-Cookie">Cookie</a> cookie) <span class="subdued">{...}</span>;</pre>
-            <dl>
-                <div>
-                  <a name="property-callback-cookie"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">cookie</span>
-                      <span class="property">
-                        (
-                          <span class="optional">optional</span>
-                          <a href="cookies.html#type-Cookie">Cookie</a>
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      Contains details about the cookie. This parameter is null if no such cookie was found.
-                    </dd>
-                  </dl>
-                </div>
-            </dl>
-        </div>
-      </div>
-      <div>
-        <h4 id="method-getAll">
-          getAll
-        </h4>
-        <div class="summary uncapitalize">
-        <div class="line">
-        <span>chrome.cookies.getAll</span>(<span>object <span class="variable">details</span></span>, <span>function <span class="variable">callback</span></span>)
-        </div>
-        </div>
-        <div class="description">
-          <p>
-            Retrieves all cookies from a single cookie store that match the given information.  The cookies returned will be sorted, with those with the longest path first.  If multiple cookies have the same path length, those with the earliest creation time will be first.
-          </p>
-          <h4>Parameters</h4>
-          <dl>
-              <div>
-                <a name="property-getAll-details"></a>
-                <dl>
-                  <dt>
-                    <span class="variable">details</span>
-                    <span class="property">
-                      (
-                        object
-                      )
-                    </span>
-                  </dt>
-                  <dd>
-                    Information to filter the cookies being retrieved.
-                  </dd>
-                </dl>
-                <dd>
-                  <h5>Properties of <span class="variable">details</span></h5>
-                  <dl>
-                  <div>
-                    <a name="property-details-url"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">url</span>
-                        <span class="property">
-                          (
-                            <span class="optional">optional</span>
-                            string
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        Restricts the retrieved cookies to those that would match the given URL.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-name"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">name</span>
-                        <span class="property">
-                          (
-                            <span class="optional">optional</span>
-                            string
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        Filters the cookies by name.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-domain"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">domain</span>
-                        <span class="property">
-                          (
-                            <span class="optional">optional</span>
-                            string
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        Restricts the retrieved cookies to those whose domains match or are subdomains of this one.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-path"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">path</span>
-                        <span class="property">
-                          (
-                            <span class="optional">optional</span>
-                            string
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        Restricts the retrieved cookies to those whose path exactly matches this string.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-secure"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">secure</span>
-                        <span class="property">
-                          (
-                            <span class="optional">optional</span>
-                            boolean
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        Filters the cookies by their Secure property.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-session"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">session</span>
-                        <span class="property">
-                          (
-                            <span class="optional">optional</span>
-                            boolean
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        Filters out session vs. persistent cookies.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-storeId"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">storeId</span>
-                        <span class="property">
-                          (
-                            <span class="optional">optional</span>
-                            string
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        The cookie store to retrieve cookies from. If omitted, the current execution context's cookie store will be used.
-                      </dd>
-                    </dl>
-                  </div>
-                  </dl>
-                </dd>
-              </div>
-              <div>
-                <a name="property-getAll-callback"></a>
-                <dl>
-                  <dt>
-                    <span class="variable">callback</span>
-                    <span class="property">
-                      (
-                        function
-                      )
-                    </span>
-                  </dt>
-                  <dd>
-                  </dd>
-                </dl>
-              </div>
-          </dl>
-            <h4>Callback</h4>
-            <p>
-                  The <em>callback</em> parameter should specify a function
-                  that looks like this:
-            </p>
-            <pre>function(array of <a href="cookies.html#type-Cookie">Cookie</a> cookies) <span class="subdued">{...}</span>;</pre>
-            <dl>
-                <div>
-                  <a name="property-callback-cookies"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">cookies</span>
-                      <span class="property">
-                        (
-                          array of <a href="cookies.html#type-Cookie">Cookie</a>
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      All the existing, unexpired cookies that match the given cookie info.
-                    </dd>
-                  </dl>
-                </div>
-            </dl>
-        </div>
-      </div>
-      <div>
-        <h4 id="method-set">
-          set
-        </h4>
-        <div class="summary uncapitalize">
-        <div class="line">
-        <span>chrome.cookies.set</span>(<span>object <span class="variable">details</span></span>, <span class="optional">function <span class="variable">callback</span></span>)
-        </div>
-        </div>
-        <div class="description">
-          <p>
-            Sets a cookie with the given cookie data; may overwrite equivalent cookies if they exist.
-          </p>
-          <h4>Parameters</h4>
-          <dl>
-              <div>
-                <a name="property-set-details"></a>
-                <dl>
-                  <dt>
-                    <span class="variable">details</span>
-                    <span class="property">
-                      (
-                        object
-                      )
-                    </span>
-                  </dt>
-                  <dd>
-                    Details about the cookie being set.
-                  </dd>
-                </dl>
-                <dd>
-                  <h5>Properties of <span class="variable">details</span></h5>
-                  <dl>
-                  <div>
-                    <a name="property-details-url"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">url</span>
-                        <span class="property">
-                          (
-                            string
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        The request-URI to associate with the setting of the cookie. This value can affect the default domain and path values of the created cookie. If host permissions for this URL are not specified in the manifest file, the API call will fail.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-name"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">name</span>
-                        <span class="property">
-                          (
-                            <span class="optional">optional</span>
-                            string
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        The name of the cookie. Empty by default if omitted.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-value"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">value</span>
-                        <span class="property">
-                          (
-                            <span class="optional">optional</span>
-                            string
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        The value of the cookie. Empty by default if omitted.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-domain"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">domain</span>
-                        <span class="property">
-                          (
-                            <span class="optional">optional</span>
-                            string
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        The domain of the cookie. If omitted, the cookie becomes a host-only cookie.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-path"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">path</span>
-                        <span class="property">
-                          (
-                            <span class="optional">optional</span>
-                            string
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        The path of the cookie. Defaults to the path portion of the url parameter.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-secure"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">secure</span>
-                        <span class="property">
-                          (
-                            <span class="optional">optional</span>
-                            boolean
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        Whether the cookie should be marked as Secure. Defaults to false.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-httpOnly"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">httpOnly</span>
-                        <span class="property">
-                          (
-                            <span class="optional">optional</span>
-                            boolean
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        Whether the cookie should be marked as HttpOnly. Defaults to false.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-expirationDate"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">expirationDate</span>
-                        <span class="property">
-                          (
-                            <span class="optional">optional</span>
-                            double
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        The expiration date of the cookie as the number of seconds since the UNIX epoch. If omitted, the cookie becomes a session cookie.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-storeId"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">storeId</span>
-                        <span class="property">
-                          (
-                            <span class="optional">optional</span>
-                            string
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        The ID of the cookie store in which to set the cookie. By default, the cookie is set in the current execution context's cookie store.
-                      </dd>
-                    </dl>
-                  </div>
-                  </dl>
-                </dd>
-              </div>
-              <div>
-                <a name="property-set-callback"></a>
-                <dl>
-                  <dt>
-                    <span class="variable">callback</span>
-                    <span class="property">
-                      (
-                        <span class="optional">optional</span>
-                        function
-                      )
-                    </span>
-                  </dt>
-                  <dd>
-                  </dd>
-                </dl>
-              </div>
-          </dl>
-            <h4>Callback</h4>
-            <p>
-                  If you specify the <em>callback</em> parameter, it should
-                  specify a function that looks like this:
-            </p>
-            <pre>function(<a href="cookies.html#type-Cookie">Cookie</a> cookie) <span class="subdued">{...}</span>;</pre>
-            <dl>
-                <div>
-                  <a name="property-callback-cookie"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">cookie</span>
-                      <span class="property">
-                        (
-                          <span class="optional">optional</span>
-                          <a href="cookies.html#type-Cookie">Cookie</a>
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      Contains details about the cookie that's been set.  If setting failed for any reason, this will be "null", and "chrome.runtime.lastError" will be set.
-                    </dd>
-                  </dl>
-                </div>
-            </dl>
-        </div>
-      </div>
-      <div>
-        <h4 id="method-remove">
-          remove
-        </h4>
-        <div class="summary uncapitalize">
-        <div class="line">
-        <span>chrome.cookies.remove</span>(<span>object <span class="variable">details</span></span>, <span class="optional">function <span class="variable">callback</span></span>)
-        </div>
-        </div>
-        <div class="description">
-          <p>
-            Deletes a cookie by name.
-          </p>
-          <h4>Parameters</h4>
-          <dl>
-              <div>
-                <a name="property-remove-details"></a>
-                <dl>
-                  <dt>
-                    <span class="variable">details</span>
-                    <span class="property">
-                      (
-                        object
-                      )
-                    </span>
-                  </dt>
-                  <dd>
-                    Information to identify the cookie to remove.
-                  </dd>
-                </dl>
-                <dd>
-                  <h5>Properties of <span class="variable">details</span></h5>
-                  <dl>
-                  <div>
-                    <a name="property-details-url"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">url</span>
-                        <span class="property">
-                          (
-                            string
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        The URL associated with the cookie. If host permissions for this URL are not specified in the manifest file, the API call will fail.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-name"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">name</span>
-                        <span class="property">
-                          (
-                            string
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        The name of the cookie to remove.
-                      </dd>
-                    </dl>
-                  </div><div>
-                    <a name="property-details-storeId"></a>
-                    <dl>
-                      <dt>
-                        <span class="variable">storeId</span>
-                        <span class="property">
-                          (
-                            <span class="optional">optional</span>
-                            string
-                          )
-                        </span>
-                      </dt>
-                      <dd>
-                        The ID of the cookie store to look in for the cookie. If unspecified, the cookie is looked for by default in the current execution context's cookie store.
-                      </dd>
-                    </dl>
-                  </div>
-                  </dl>
-                </dd>
-              </div>
-              <div>
-                <a name="property-remove-callback"></a>
-                <dl>
-                  <dt>
-                    <span class="variable">callback</span>
-                    <span class="property">
-                      (
-                        <span class="optional">optional</span>
-                        function
-                      )
-                    </span>
-                  </dt>
-                  <dd>
-                  </dd>
-                </dl>
-              </div>
-          </dl>
-            <h4>Callback</h4>
-            <p>
-                  If you specify the <em>callback</em> parameter, it should
-                  specify a function that looks like this:
-            </p>
-            <pre>function(object details) <span class="subdued">{...}</span>;</pre>
-            <dl>
-                <div>
-                  <a name="property-callback-details"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">details</span>
-                      <span class="property">
-                        (
-                          <span class="optional">optional</span>
-                          object
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      Contains details about the cookie that's been removed.  If removal failed for any reason, this will be "null", and "chrome.runtime.lastError" will be set.
-                    </dd>
-                  </dl>
-                  <dd>
-                    <h5>Properties of <span class="variable">details</span></h5>
-                    <dl>
-                    <div>
-                      <a name="property-details-url"></a>
-                      <dl>
-                        <dt>
-                          <span class="variable">url</span>
-                          <span class="property">
-                            (
-                              string
-                            )
-                          </span>
-                        </dt>
-                        <dd>
-                          The URL associated with the cookie that's been removed.
-                        </dd>
-                      </dl>
-                    </div><div>
-                      <a name="property-details-name"></a>
-                      <dl>
-                        <dt>
-                          <span class="variable">name</span>
-                          <span class="property">
-                            (
-                              string
-                            )
-                          </span>
-                        </dt>
-                        <dd>
-                          The name of the cookie that's been removed.
-                        </dd>
-                      </dl>
-                    </div><div>
-                      <a name="property-details-storeId"></a>
-                      <dl>
-                        <dt>
-                          <span class="variable">storeId</span>
-                          <span class="property">
-                            (
-                              string
-                            )
-                          </span>
-                        </dt>
-                        <dd>
-                          The ID of the cookie store from which the cookie was removed.
-                        </dd>
-                      </dl>
-                    </div>
-                    </dl>
-                  </dd>
-                </div>
-            </dl>
-        </div>
-      </div>
-      <div>
-        <h4 id="method-getAllCookieStores">
-          getAllCookieStores
-        </h4>
-        <div class="summary uncapitalize">
-        <div class="line">
-        <span>chrome.cookies.getAllCookieStores</span>(<span>function <span class="variable">callback</span></span>)
-        </div>
-        </div>
-        <div class="description">
-          <p>
-            Lists all existing cookie stores.
-          </p>
-          <h4>Parameters</h4>
-          <dl>
-              <div>
-                <a name="property-getAllCookieStores-callback"></a>
-                <dl>
-                  <dt>
-                    <span class="variable">callback</span>
-                    <span class="property">
-                      (
-                        function
-                      )
-                    </span>
-                  </dt>
-                  <dd>
-                  </dd>
-                </dl>
-              </div>
-          </dl>
-            <h4>Callback</h4>
-            <p>
-                  The <em>callback</em> parameter should specify a function
-                  that looks like this:
-            </p>
-            <pre>function(array of <a href="cookies.html#type-CookieStore">CookieStore</a> cookieStores) <span class="subdued">{...}</span>;</pre>
-            <dl>
-                <div>
-                  <a name="property-callback-cookieStores"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">cookieStores</span>
-                      <span class="property">
-                        (
-                          array of <a href="cookies.html#type-CookieStore">CookieStore</a>
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      All the existing cookie stores.
-                    </dd>
-                  </dl>
-                </div>
-            </dl>
-        </div>
-      </div>
-    <h2 id="events">Events</h2>
-      <div>
-        <h4 id="event-onChanged">onChanged</h4>
-        <div class="description">
+            <br>
+            <a href="declare_permissions.html#host-permissions">
+            host permissions
+                    </a>
+            <br>
+        </td>
+      </tr>
+    </table>
+    <section>
+      <h2 id="manifest">Manifest</h2>
+      
+      <p>To use the cookies API,
+      you must declare the "cookies" permission in your manifest,
+      along with <a href="declare_permissions.html">host permissions</a>
+      for any hosts whose cookies
+      you want to access.
+      For example:</p>
+      
+      <pre data-filename="manifest.json">
+      {
+        "name": "My extension",
+        ...
+        <b>"permissions": [
+          "cookies",
+          "*://*.google.com"
+        ]</b>,
+        ...
+      }
+      </pre>
+      
+      <h2 id="examples"> Examples </h2>
+      
       <p>
-            Fired when a cookie is set or removed. As a special case, note that updating a cookie's properties is implemented as a two step process: the cookie to be updated is first removed entirely, generating a notification with "cause" of "overwrite" .  Afterwards, a new cookie is written with the updated values, generating a second notification with "cause" "explicit".
-          </p>      <div>
-              <h4 id="event-onChanged-addListener">
-                addListener
-              </h4>
+      You can find a simple example
+      of using the cookies API in the
+      <a href="http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/api/cookies/">examples/api/cookies</a>
+      directory.
+      For other examples
+      and for help in viewing the source code,
+      see <a href="samples.html">Samples</a>.
+      </p>
+    </section>
+    <section id="toc">
+    <h2>Summary</h2>
+    <table class="api-summary">
+      <tr>
+        <tr><th colspan="2">Types</th></tr>
+          <tr><td><a href="../apps/cookies.html#type-Cookie">Cookie</a></td></tr>
+          <tr><td><a href="../apps/cookies.html#type-CookieStore">CookieStore</a></td></tr>
+        <tr><th colspan="2">Methods</th></tr>
+        <tr><td><a href="../apps/cookies.html#method-get">get</a> &minus;
+            <code class="prettyprint">
+            chrome.cookies.get(<span>object details</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="../apps/cookies.html#method-getAll">getAll</a> &minus;
+            <code class="prettyprint">
+            chrome.cookies.getAll(<span>object details</span>, <span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="../apps/cookies.html#method-set">set</a> &minus;
+            <code class="prettyprint">
+            chrome.cookies.set(<span>object details</span>, <span class="optional">function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="../apps/cookies.html#method-remove">remove</a> &minus;
+            <code class="prettyprint">
+            chrome.cookies.remove(<span>object details</span>, <span class="optional">function callback</span>)
+            </code>
+          </td></tr>
+        <tr><td><a href="../apps/cookies.html#method-getAllCookieStores">getAllCookieStores</a> &minus;
+            <code class="prettyprint">
+            chrome.cookies.getAllCookieStores(<span>function callback</span>)
+            </code>
+          </td></tr>
+        <tr><th colspan="2">Events</th></tr>
+          <tr><td><a href="../apps/cookies.html#event-onChanged">onChanged</a></td></tr>
+    </table>
+    </section>
+    <section>
+      <div class="api-reference">
+          <h2 id="types">Types</h2>
+            <div>
+              <h3 id="type-Cookie">Cookie</h3>
+              <table>
+                <dd>Represents information about an HTTP cookie.</dd>
+                  <tr><th colspan="3" id="Cookie-properties">properties</th></tr>
+                  <tr>
+                    <td>string</td>
+                    <td>
+                        name</td>
+                    <td>
+                      The name of the cookie.
+                    </td>
+                  </tr><tr>
+                    <td>string</td>
+                    <td>
+                        value</td>
+                    <td>
+                      The value of the cookie.
+                    </td>
+                  </tr><tr>
+                    <td>string</td>
+                    <td>
+                        domain</td>
+                    <td>
+                      The domain of the cookie (e.g. "www.google.com", "example.com").
+                    </td>
+                  </tr><tr>
+                    <td>boolean</td>
+                    <td>
+                        hostOnly</td>
+                    <td>
+                      True if the cookie is a host-only cookie (i.e. a request's host must exactly match the domain of the cookie).
+                    </td>
+                  </tr><tr>
+                    <td>string</td>
+                    <td>
+                        path</td>
+                    <td>
+                      The path of the cookie.
+                    </td>
+                  </tr><tr>
+                    <td>boolean</td>
+                    <td>
+                        secure</td>
+                    <td>
+                      True if the cookie is marked as Secure (i.e. its scope is limited to secure channels, typically HTTPS).
+                    </td>
+                  </tr><tr>
+                    <td>boolean</td>
+                    <td>
+                        httpOnly</td>
+                    <td>
+                      True if the cookie is marked as HttpOnly (i.e. the cookie is inaccessible to client-side scripts).
+                    </td>
+                  </tr><tr>
+                    <td>boolean</td>
+                    <td>
+                        session</td>
+                    <td>
+                      True if the cookie is a session cookie, as opposed to a persistent cookie with an expiration date.
+                    </td>
+                  </tr><tr>
+                    <td>double</td>
+                    <td><span class="optional">(optional)</span>
+                        expirationDate</td>
+                    <td>
+                      The expiration date of the cookie as the number of seconds since the UNIX epoch. Not provided for session cookies.
+                    </td>
+                  </tr><tr>
+                    <td>string</td>
+                    <td>
+                        storeId</td>
+                    <td>
+                      The ID of the cookie store containing this cookie, as provided in getAllCookieStores().
+                    </td>
+                  </tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-CookieStore">CookieStore</h3>
+              <table>
+                <dd>Represents a cookie store in the browser. An incognito mode window, for instance, uses a separate cookie store from a non-incognito window.</dd>
+                  <tr><th colspan="3" id="CookieStore-properties">properties</th></tr>
+                  <tr>
+                    <td>string</td>
+                    <td>
+                        id</td>
+                    <td>
+                      The unique identifier for the cookie store.
+                    </td>
+                  </tr><tr>
+                    <td>array of integer</td>
+                    <td>
+                        tabIds</td>
+                    <td>
+                      Identifiers of all the browser tabs that share this cookie store.
+                    </td>
+                  </tr>
+              </table>
+            </div>
+          <h2 id="methods">Methods</h2>
+            <div>
+              <h3
+                  id="method-get"
+                  >get
+              </h3>
               <div class="summary uncapitalize">
-              <div class="line">
-              <span>chrome.cookies.onChanged.addListener</span>(<span>function <span class="variable">callback</span></span>)
-              </div>
+              <code class="prettyprint">
+              chrome.cookies.get(<span>object details</span>, <span>function callback</span>)
+              </code>
               </div>
               <div class="description">
-                <h4>Parameters</h4>
-                <dl>
-                    <div>
-                      <a name="property-onChanged-callback"></a>
-                      <dl>
-                        <dt>
-                          <span class="variable">callback</span>
-                          <span class="property">
-                            (
-                              function
-                            )
-                          </span>
-                        </dt>
-                        <dd>
-                        </dd>
-                      </dl>
-                    </div>
-                </dl>
-                  <h4>Callback</h4>
-                  <p>
-                        The <em>callback</em> parameter should specify a function
-                        that looks like this:
-                  </p>
-                  <pre>function(object changeInfo) <span class="subdued">{...}</span>;</pre>
-                  <dl>
-                      <div>
-                        <a name="property-onChanged-changeInfo"></a>
-                        <dl>
-                          <dt>
-                            <span class="variable">changeInfo</span>
-                            <span class="property">
-                              (
-                                object
-                              )
-                            </span>
-                          </dt>
-                          <dd>
-                          </dd>
-                        </dl>
-                        <dd>
-                          <h5>Properties of <span class="variable">changeInfo</span></h5>
-                          <dl>
-                          <div>
-                            <a name="property-changeInfo-removed"></a>
-                            <dl>
-                              <dt>
-                                <span class="variable">removed</span>
-                                <span class="property">
-                                  (
-                                    boolean
-                                  )
-                                </span>
-                              </dt>
-                              <dd>
-                                True if a cookie was removed.
-                              </dd>
-                            </dl>
-                          </div><div>
-                            <a name="property-changeInfo-cookie"></a>
-                            <dl>
-                              <dt>
-                                <span class="variable">cookie</span>
-                                <span class="property">
-                                  (
-                                    <a href="cookies.html#type-Cookie">Cookie</a>
-                                  )
-                                </span>
-                              </dt>
-                              <dd>
-                                Information about the cookie that was set or removed.
-                              </dd>
-                            </dl>
-                          </div><div>
-                            <a name="property-changeInfo-cause"></a>
-                            <dl>
-                              <dt>
-                                <span class="variable">cause</span>
-                                <span class="property">
-                                  (
-                                    enum of <code>"evicted"</code>, <code>"expired"</code>, <code>"explicit"</code>, <code>"expired_overwrite"</code>, or <code>"overwrite"</code>
-                                  )
-                                </span>
-                              </dt>
-                              <dd>
-                                The underlying reason behind the cookie's change. If a cookie was inserted, or removed via an explicit call to "chrome.cookies.remove", "cause" will be "explicit". If a cookie was automatically removed due to expiry, "cause" will be "expired". If a cookie was removed due to being overwritten with an already-expired expiration date, "cause" will be set to "expired_overwrite".  If a cookie was automatically removed due to garbage collection, "cause" will be "evicted".  If a cookie was automatically removed due to a "set" call that overwrote it, "cause" will be "overwrite". Plan your response accordingly.
-                              </dd>
-                            </dl>
-                          </div>
-                          </dl>
-                        </dd>
-                      </div>
-                  </dl>
+                <p>
+                  Retrieves information about a single cookie. If more than one cookie of the same name exists for the given URL, the one with the longest path will be returned. For cookies with the same path length, the cookie with the earliest creation time will be returned.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>object</td>
+                      <td>
+                          details</td>
+                      <td>
+                        Details to identify the cookie being retrieved.
+                        <table class="innerTable">
+                          <tr>
+                            <td>string</td>
+                            <td>
+                                url</td>
+                            <td>
+                              The URL with which the cookie to retrieve is associated. This argument may be a full URL, in which case any data following the URL path (e.g. the query string) is simply ignored. If host permissions for this URL are not specified in the manifest file, the API call will fail.
+                            </td>
+                          </tr><tr>
+                            <td>string</td>
+                            <td>
+                                name</td>
+                            <td>
+                              The name of the cookie to retrieve.
+                            </td>
+                          </tr><tr>
+                            <td>string</td>
+                            <td><span class="optional">(optional)</span>
+                                storeId</td>
+                            <td>
+                              The ID of the cookie store in which to look for the cookie. By default, the current execution context's cookie store will be used.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(    <a href="cookies.html#type-Cookie">Cookie</a> cookie) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>    <a href="cookies.html#type-Cookie">Cookie</a></td>
+                              <td><span class="optional">(optional)</span>
+                                  cookie</td>
+                              <td>
+                                Contains details about the cookie. This parameter is null if no such cookie was found.
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
               </div>
             </div>
+            <div>
+              <h3
+                  id="method-getAll"
+                  >getAll
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.cookies.getAll(<span>object details</span>, <span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Retrieves all cookies from a single cookie store that match the given information.  The cookies returned will be sorted, with those with the longest path first.  If multiple cookies have the same path length, those with the earliest creation time will be first.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>object</td>
+                      <td>
+                          details</td>
+                      <td>
+                        Information to filter the cookies being retrieved.
+                        <table class="innerTable">
+                          <tr>
+                            <td>string</td>
+                            <td><span class="optional">(optional)</span>
+                                url</td>
+                            <td>
+                              Restricts the retrieved cookies to those that would match the given URL.
+                            </td>
+                          </tr><tr>
+                            <td>string</td>
+                            <td><span class="optional">(optional)</span>
+                                name</td>
+                            <td>
+                              Filters the cookies by name.
+                            </td>
+                          </tr><tr>
+                            <td>string</td>
+                            <td><span class="optional">(optional)</span>
+                                domain</td>
+                            <td>
+                              Restricts the retrieved cookies to those whose domains match or are subdomains of this one.
+                            </td>
+                          </tr><tr>
+                            <td>string</td>
+                            <td><span class="optional">(optional)</span>
+                                path</td>
+                            <td>
+                              Restricts the retrieved cookies to those whose path exactly matches this string.
+                            </td>
+                          </tr><tr>
+                            <td>boolean</td>
+                            <td><span class="optional">(optional)</span>
+                                secure</td>
+                            <td>
+                              Filters the cookies by their Secure property.
+                            </td>
+                          </tr><tr>
+                            <td>boolean</td>
+                            <td><span class="optional">(optional)</span>
+                                session</td>
+                            <td>
+                              Filters out session vs. persistent cookies.
+                            </td>
+                          </tr><tr>
+                            <td>string</td>
+                            <td><span class="optional">(optional)</span>
+                                storeId</td>
+                            <td>
+                              The cookie store to retrieve cookies from. If omitted, the current execution context's cookie store will be used.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(array of     <a href="cookies.html#type-Cookie">Cookie</a> cookies) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>array of     <a href="cookies.html#type-Cookie">Cookie</a></td>
+                              <td>
+                                  cookies</td>
+                              <td>
+                                All the existing, unexpired cookies that match the given cookie info.
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-set"
+                  >set
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.cookies.set(<span>object details</span>, <span class="optional">function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Sets a cookie with the given cookie data; may overwrite equivalent cookies if they exist.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>object</td>
+                      <td>
+                          details</td>
+                      <td>
+                        Details about the cookie being set.
+                        <table class="innerTable">
+                          <tr>
+                            <td>string</td>
+                            <td>
+                                url</td>
+                            <td>
+                              The request-URI to associate with the setting of the cookie. This value can affect the default domain and path values of the created cookie. If host permissions for this URL are not specified in the manifest file, the API call will fail.
+                            </td>
+                          </tr><tr>
+                            <td>string</td>
+                            <td><span class="optional">(optional)</span>
+                                name</td>
+                            <td>
+                              The name of the cookie. Empty by default if omitted.
+                            </td>
+                          </tr><tr>
+                            <td>string</td>
+                            <td><span class="optional">(optional)</span>
+                                value</td>
+                            <td>
+                              The value of the cookie. Empty by default if omitted.
+                            </td>
+                          </tr><tr>
+                            <td>string</td>
+                            <td><span class="optional">(optional)</span>
+                                domain</td>
+                            <td>
+                              The domain of the cookie. If omitted, the cookie becomes a host-only cookie.
+                            </td>
+                          </tr><tr>
+                            <td>string</td>
+                            <td><span class="optional">(optional)</span>
+                                path</td>
+                            <td>
+                              The path of the cookie. Defaults to the path portion of the url parameter.
+                            </td>
+                          </tr><tr>
+                            <td>boolean</td>
+                            <td><span class="optional">(optional)</span>
+                                secure</td>
+                            <td>
+                              Whether the cookie should be marked as Secure. Defaults to false.
+                            </td>
+                          </tr><tr>
+                            <td>boolean</td>
+                            <td><span class="optional">(optional)</span>
+                                httpOnly</td>
+                            <td>
+                              Whether the cookie should be marked as HttpOnly. Defaults to false.
+                            </td>
+                          </tr><tr>
+                            <td>double</td>
+                            <td><span class="optional">(optional)</span>
+                                expirationDate</td>
+                            <td>
+                              The expiration date of the cookie as the number of seconds since the UNIX epoch. If omitted, the cookie becomes a session cookie.
+                            </td>
+                          </tr><tr>
+                            <td>string</td>
+                            <td><span class="optional">(optional)</span>
+                                storeId</td>
+                            <td>
+                              The ID of the cookie store in which to set the cookie. By default, the cookie is set in the current execution context's cookie store.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>function</td>
+                      <td><span class="optional">(optional)</span>
+                          callback</td>
+                      <td>
+                          <p>
+                              If you specify the <em>callback</em> parameter, it should
+                              be a function that looks like this:
+                          </p>
+                        <code class="prettyprint">function(    <a href="cookies.html#type-Cookie">Cookie</a> cookie) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>    <a href="cookies.html#type-Cookie">Cookie</a></td>
+                              <td><span class="optional">(optional)</span>
+                                  cookie</td>
+                              <td>
+                                Contains details about the cookie that's been set.  If setting failed for any reason, this will be "null", and "chrome.runtime.lastError" will be set.
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-remove"
+                  >remove
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.cookies.remove(<span>object details</span>, <span class="optional">function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Deletes a cookie by name.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>object</td>
+                      <td>
+                          details</td>
+                      <td>
+                        Information to identify the cookie to remove.
+                        <table class="innerTable">
+                          <tr>
+                            <td>string</td>
+                            <td>
+                                url</td>
+                            <td>
+                              The URL associated with the cookie. If host permissions for this URL are not specified in the manifest file, the API call will fail.
+                            </td>
+                          </tr><tr>
+                            <td>string</td>
+                            <td>
+                                name</td>
+                            <td>
+                              The name of the cookie to remove.
+                            </td>
+                          </tr><tr>
+                            <td>string</td>
+                            <td><span class="optional">(optional)</span>
+                                storeId</td>
+                            <td>
+                              The ID of the cookie store to look in for the cookie. If unspecified, the cookie is looked for by default in the current execution context's cookie store.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>function</td>
+                      <td><span class="optional">(optional)</span>
+                          callback</td>
+                      <td>
+                          <p>
+                              If you specify the <em>callback</em> parameter, it should
+                              be a function that looks like this:
+                          </p>
+                        <code class="prettyprint">function(object details) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>object</td>
+                              <td><span class="optional">(optional)</span>
+                                  details</td>
+                              <td>
+                                Contains details about the cookie that's been removed.  If removal failed for any reason, this will be "null", and "chrome.runtime.lastError" will be set.
+                                <table class="innerTable">
+                                  <tr>
+                                    <td>string</td>
+                                    <td>
+                                        url</td>
+                                    <td>
+                                      The URL associated with the cookie that's been removed.
+                                    </td>
+                                  </tr><tr>
+                                    <td>string</td>
+                                    <td>
+                                        name</td>
+                                    <td>
+                                      The name of the cookie that's been removed.
+                                    </td>
+                                  </tr><tr>
+                                    <td>string</td>
+                                    <td>
+                                        storeId</td>
+                                    <td>
+                                      The ID of the cookie store from which the cookie was removed.
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+            <div>
+              <h3
+                  id="method-getAllCookieStores"
+                  >getAllCookieStores
+              </h3>
+              <div class="summary uncapitalize">
+              <code class="prettyprint">
+              chrome.cookies.getAllCookieStores(<span>function callback</span>)
+              </code>
+              </div>
+              <div class="description">
+                <p>
+                  Lists all existing cookie stores.
+                </p>
+                <table >
+                  <tr><th colspan="3">Parameters</th></tr>
+                    <tr>
+                      <td>function</td>
+                      <td>
+                          callback</td>
+                      <td>
+                          <p>
+                              The <em>callback</em> parameter should be a function
+                              that looks like this:
+                          </p>
+                        <code class="prettyprint">function(array of     <a href="cookies.html#type-CookieStore">CookieStore</a> cookieStores) <span class="subdued">{...}</span>;</code>
+                          <table class="innerTable">
+                            <tr>
+                              <td>array of     <a href="cookies.html#type-CookieStore">CookieStore</a></td>
+                              <td>
+                                  cookieStores</td>
+                              <td>
+                                All the existing cookie stores.
+                              </td>
+                            </tr>
+                          </table>
+                      </td>
+                    </tr>
+                </table>
+              </div>
+            </div>
+          <h2 id="events">Events</h2>
+            <div>
+              <h3 id="event-onChanged">onChanged</h3>
+              <div class="description">
+            <p>
+                  Fired when a cookie is set or removed. As a special case, note that updating a cookie's properties is implemented as a two step process: the cookie to be updated is first removed entirely, generating a notification with "cause" of "overwrite" .  Afterwards, a new cookie is written with the updated values, generating a second notification with "cause" "explicit".
+                </p>      <tr><td>
+                  <div>
+                    <h4
+                        title="">addListener
+                    </h4>
+                    <div class="summary uncapitalize">
+                    <code class="prettyprint">
+                    chrome.cookies.onChanged.addListener(<span>function callback</span>)
+                    </code>
+                    </div>
+                    <div class="description">
+                      <table class="innerTable">
+                        <tr><th colspan="3">Parameters</th></tr>
+                          <tr>
+                            <td>function</td>
+                            <td>
+                                callback</td>
+                            <td>
+                                <p>
+                                    The <em>callback</em> parameter should be a function
+                                    that looks like this:
+                                </p>
+                              <code class="prettyprint">function(object changeInfo) <span class="subdued">{...}</span>;</code>
+                                <table class="innerTable">
+                                  <tr>
+                                    <td>object</td>
+                                    <td>
+                                        changeInfo</td>
+                                    <td>
+                                      <table class="innerTable">
+                                        <tr>
+                                          <td>boolean</td>
+                                          <td>
+                                              removed</td>
+                                          <td>
+                                            True if a cookie was removed.
+                                          </td>
+                                        </tr><tr>
+                                          <td>    <a href="cookies.html#type-Cookie">Cookie</a></td>
+                                          <td>
+                                              cookie</td>
+                                          <td>
+                                            Information about the cookie that was set or removed.
+                                          </td>
+                                        </tr><tr>
+                                          <td>enum of <code>"evicted"</code>, <code>"expired"</code>, <code>"explicit"</code>, <code>"expired_overwrite"</code>, or <code>"overwrite"</code></td>
+                                          <td>
+                                              cause</td>
+                                          <td>
+                                            The underlying reason behind the cookie's change. If a cookie was inserted, or removed via an explicit call to "chrome.cookies.remove", "cause" will be "explicit". If a cookie was automatically removed due to expiry, "cause" will be "expired". If a cookie was removed due to being overwritten with an already-expired expiration date, "cause" will be set to "expired_overwrite".  If a cookie was automatically removed due to garbage collection, "cause" will be "evicted".  If a cookie was automatically removed due to a "set" call that overwrote it, "cause" will be "overwrite". Plan your response accordingly.
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                  </td></tr>
+              </div>
+            </div>
+      </div>
+    </section>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="../apps/cookies.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
         </div>
       </div>
-</div>
-      </div>
-    </div>
-  </body>
+    </footer>
 
-  <div id="gc-footer">
-    <button class="google-button" id="scroll-to-top">↑</button>
-    <button class="google-button" id="send-feedback">Send Feedback</button>
-    <div class="text">
-      <p>
-        Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>,
-        the content of this page is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons
-        Attribution 3.0 License</a>, and code samples are licensed under the
-        <a rel="license" href="http://code.google.com/google_bsd_license.html">BSD License</a>.
-      </p>
-      <p>
-        ©2013 Google
-      </p>
-      <script src="../static/js/platform_chooser.js" type="text/javascript"></script>
-      <script src="../static/js/popup.js" type="text/javascript"></script>
-      <script src="../static/js/prettify.js" type="text/javascript"></script>
-      <script src="../static/js/scroll.js" type="text/javascript"></script>
-      <script src="../static/js/sidebar.js" type="text/javascript"></script>
-      <script src="../static/js/tabs.js" type="text/javascript"></script>
-      <script>
-        (function() {
-          // Auto syntax highlight all pre tags.
-          var preElements = document.getElementsByTagName('pre');
-          for (var i = 0; i < preElements.length; i++) {
-            var preElement = preElements[i];
-            preElement.classList.add('prettyprint');
-            var datasetFilename = preElement.getAttribute('data-filename');
-            if (datasetFilename) {
-              var filename = document.createElement('div');
-              filename.className = 'filename nocode';
-              filename.textContent = datasetFilename;
-              preElement.insertBefore(filename, preElement.firstChild);
-            }
-          }
-          prettyPrint();
-        })();
-      </script>
-
-      <!-- Feedback. -->
-      <script type="text/javascript" src="http://www.gstatic.com/feedback/api.js"></script>
-      <script type="text/javascript">
-        (function() {
-         document.getElementById('send-feedback').addEventListener('click', function() {
-           userfeedback.api.startFeedback({ productId: 86265 });
-         });
-        })();
-      </script>
-    </div>
   </div>
+
+    <script src="../static/js/fatnav.js"></script>
+    <script src="../static/js/article.js"></script>
+    <script src="../static/js/prettify.js"></script>
+    <script src="../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../static/js/site.js"></script>
+  </body>
 </html>

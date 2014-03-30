@@ -1,546 +1,1220 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>chrome.declarativeContent - Google Chrome</title>
+    <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link href="../static/css/site.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+    <link type="image/ico" rel="icon" href="http://www.google.com/images/icons/product/chrome-32.png">
+
+    <link href="../static/css/out/site.css" rel="stylesheet" type="text/css">
     <link href="../static/css/print.css" rel="stylesheet" type="text/css" media="print">
     <link href="../static/css/prettify.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-41980257-1');
-      ga('send', 'pageview');
-    </script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41980257-1');
+  ga('send', 'pageview');
+
+</script>
+
+    <title>chrome.declarativeContent - Google Chrome</title>
   </head>
 
   <body>
-    <div id="gc-topnav">
-      <table><tr>
-      <td id="chrome-logo">
-        <a href="index.html" title="Google Chrome Extensions">
-          <img src="../static/images/chrome-logo.png" alt=""> chrome
-        </a>
-        <div id="platform-chooser">
-          <button id="platform-chooser-toggle" data-menu="platform-chooser-popup">
-            extensions &#x25be;&#x202F;
-          </button>
-          <div id="platform-chooser-popup">
-            <button class="apps" data-href="/apps/about_apps.html">apps</button>
-            <button class="extensions" data-href="/extensions">extensions</button>
-          </div>
-        </div>
-      </td>
-      <td>
-        <ul>
-          <li>
-            <a href="samples.html"
-               title="Sample Extensions (with source code)">Samples</a>
-          </li>
-          <li>
-            <a href="http://groups.google.com/a/chromium.org/group/chromium-extensions"
-               title="Google Chrome Extensions developer forum"
-               target="_blank">Group</a>
-          </li>
-          <li>
-            <a href="http://stackoverflow.com/tags/google-chrome-extension/info"
-               title="[google-chrome-extension] tag on Stack Overflow"
-               target="_blank">Stack overflow</a>
-          </li>
-        </ul>
-      </td>
-      </tr></table>
-    </div>
-    <div id="gc-topnav-space"></div>
     <div id="gc-container">
-      <div id="gc-sidebar">
-        <ul 
-            class="level1 ">
-        <li class="level2">
-              <a href="getstarted.html" class="level2 ">Getting Started</a>
-        </li><li class="level2">
-              <a href="overview.html" class="level2 ">Overview</a>
-        </li><li class="level2">
-              <a href="whats_new.html" class="level2 ">What's New?</a>
-        </li><li class="level2">
-              <a href="devguide.html" class="level2 ">Developer's Guide</a>
-          <ul 
-              class="level2 ">
-          <li class="level3">
-              <a class="button level3">
-                <span class="level3">Browser UI</span>
-                <div class="toggleIndicator level3"></div>
-              </a>
-            <ul toggleable
-                class="level3 hidden">
-            <li class="level4">
-                  <a href="browserAction.html" class="level4 ">Browser Actions</a>
-            </li><li class="level4">
-                  <a href="contextMenus.html" class="level4 ">Context Menus</a>
-            </li><li class="level4">
-                  <a href="desktop_notifications.html" class="level4 ">Desktop Notifications</a>
-            </li><li class="level4">
-                  <a href="omnibox.html" class="level4 ">Omnibox</a>
-            </li><li class="level4">
-                  <a href="options.html" class="level4 ">Options Pages</a>
-            </li><li class="level4">
-                  <a href="override.html" class="level4 ">Override Pages</a>
-            </li><li class="level4">
-                  <a href="pageAction.html" class="level4 ">Page Actions</a>
-            </li>
-            </ul>
-          </li><li class="level3">
-              <a class="button level3">
-                <span class="level3">Browser Interaction</span>
-                <div class="toggleIndicator level3"></div>
-              </a>
-            <ul toggleable
-                class="level3 hidden">
-            <li class="level4">
-                  <a href="bookmarks.html" class="level4 ">Bookmarks</a>
-            </li><li class="level4">
-                  <a href="cookies.html" class="level4 ">Cookies</a>
-            </li><li class="level4">
-                  <a href="devtools.html" class="level4 ">Extending DevTools</a>
-            </li><li class="level4">
-                  <a href="events.html" class="level4 ">Events</a>
-            </li><li class="level4">
-                  <a href="history.html" class="level4 ">History</a>
-            </li><li class="level4">
-                  <a href="management.html" class="level4 ">Management</a>
-            </li><li class="level4">
-                  <a href="tabs.html" class="level4 ">Tabs</a>
-            </li><li class="level4">
-                  <a href="windows.html" class="level4 ">Windows</a>
-            </li>
-            </ul>
-          </li><li class="level3">
-              <a class="button level3">
-                <span class="level3">Implementation</span>
-                <div class="toggleIndicator level3"></div>
-              </a>
-            <ul toggleable
-                class="level3 hidden">
-            <li class="level4">
-                  <a href="a11y.html" class="level4 ">Accessibility</a>
-            </li><li class="level4">
-                  <a href="event_pages.html" class="level4 ">Event Pages</a>
-            </li><li class="level4">
-                  <a href="contentSecurityPolicy.html" class="level4 ">Content Security Policy</a>
-            </li><li class="level4">
-                  <a href="content_scripts.html" class="level4 ">Content Scripts</a>
-            </li><li class="level4">
-                  <a href="xhr.html" class="level4 ">Cross-Origin XHR</a>
-            </li><li class="level4">
-                  <a href="i18n.html" class="level4 ">Internationalization</a>
-            </li><li class="level4">
-                  <a href="messaging.html" class="level4 ">Message Passing</a>
-            </li><li class="level4">
-                  <a href="permissions.html" class="level4 ">Optional Permissions</a>
-            </li><li class="level4">
-                  <a href="npapi.html" class="level4 ">NPAPI Plugins</a>
-            </li>
-            </ul>
-          </li><li class="level3">
-              <a class="button level3">
-                <span class="level3">Finishing</span>
-                <div class="toggleIndicator level3"></div>
-              </a>
-            <ul toggleable
-                class="level3 hidden">
-            <li class="level4">
-                  <a href="hosting.html" class="level4 ">Hosting</a>
-            </li><li class="level4">
-                  <a href="external_extensions.html" class="level4 ">Other Deployment Options</a>
-            </li>
-            </ul>
-          </li>
-          </ul>
-        </li><li class="level2">
-              <a href="tutorials.html" class="level2 ">Tutorials</a>
-          <ul 
-              class="level2 ">
-          <li class="level3">
-                <a href="tut_migration_to_manifest_v2.html" class="level3 ">Manifest V2</a>
-          </li><li class="level3">
-                <a href="tut_debugging.html" class="level3 ">Debugging</a>
-          </li><li class="level3">
-                <a href="tut_analytics.html" class="level3 ">Google Analytics</a>
-          </li><li class="level3">
-                <a href="tut_oauth.html" class="level3 ">OAuth</a>
-          </li>
-          </ul>
-        </li><li class="level2">
-              <span class="level2">Reference</span>
-          <ul 
-              class="level2 ">
-          <li class="level3">
-              <a class="button level3">
-                <span class="level3">Formats</span>
-                <div class="toggleIndicator level3"></div>
-              </a>
-            <ul toggleable
-                class="level3 hidden">
-            <li class="level4">
-                  <a href="manifest.html" class="level4 ">Manifest Files</a>
-            </li><li class="level4">
-                  <a href="match_patterns.html" class="level4 ">Match Patterns</a>
-            </li>
-            </ul>
-          </li><li class="level3">
-                <a href="permission_warnings.html" class="level3 ">Permission Warnings</a>
-          </li><li class="level3">
-                <a href="api_index.html" class="level3 ">chrome.* APIs</a>
-          </li><li class="level3">
-                <a href="api_other.html" class="level3 ">Other APIs</a>
-          </li>
-          </ul>
-        </li><li class="level2">
-              <span class="level2">More</span>
-          <ul 
-              class="level2 ">
-          <li class="level3">
-                <a href="faq.html" class="level3 ">FAQ</a>
-          </li><li class="level3">
-                <a href="http://code.google.com/chrome/webstore/docs/index.html" class="level3 ">Chrome Web Store</a>
-          </li><li class="level3">
-                <a href="http://code.google.com/chrome/apps/docs/developers_guide.html" class="level3 ">Hosted Apps</a>
-          </li><li class="level3">
-                <a href="themes.html" class="level3 ">Themes</a>
-          </li>
-          </ul>
-        </li>
-        </ul>
+    <a href="declarativeContent.html#gc-pagecontent" class="element-invisible element-focusable">Skip to main content</a>
+
+    <header id="topnav" role="banner">
+      <div id="logo">
+        <a href="../index.html">
+          <img alt="Chrome: developer" src="../static/images/chrome-logo_2x.png">
+        </a>
+        <span class="collase-icon"><!-- <img src="/static/images/burger-icon.png" class="collase-icon">--></span>
       </div>
-      <div id="gc-pagecontent">
-
-<p class="warning">
-  This API is experimental. It is only available to Chrome users on the
-  <a href="http://www.chromium.org/getting-involved/dev-channel">dev channel</a>.
-</p>
-<h1>chrome.declarativeContent</h1>
-<div id="toc">
-  <ol>
-    <li >
-      <a href="declarativeContent.html#usage">Usage</a>
-    </li>
-    <li >
-      <a href="declarativeContent.html#rules">Rules</a>
-    </li>
-    <li >
-      <a href="declarativeContent.html#css-matching">CSS Matching</a>
-    </li>
-    <li >
-      <a href="declarativeContent.html#types">Types</a>
-      <ol>
-        <li><a href="declarativeContent.html#type-PageStateMatcher">PageStateMatcher</a></li>
-        <li><a href="declarativeContent.html#type-ShowPageAction">ShowPageAction</a></li>
-      </ol>
-    </li>
-    <li >
-      <a href="declarativeContent.html#events">Events</a>
-    </li>
-  </ol>
-</div>
-
-<table class="intro" id="intro">
-  <tr>
-    <td class="title">Description:</td>
-    <td>
-        Use the <code>chrome.declarativeContent</code> API to take actions depending on the content of a page, without requiring permission to read the page's content.
-                <br>
-    </td>
-  </tr>
-  <tr>
-    <td class="title">Availability:</td>
-    <td>
-        <a href="http://www.chromium.org/getting-involved/dev-channel">Dev</a> channel only.
-        <br>
-    </td>
-  </tr>
-  <tr>
-    <td class="title">Permissions:</td>
-    <td>
-        <span class="code">
-        "declarativeContent"
-                </span>
-        <br>
-    </td>
-  </tr>
-  <tr>
-    <td class="title">Learn More:</td>
-    <td>
-        <a href="events.html">
-        Declarative Events
-                </a>
-        <br>
-        <a href="activeTab.html">
-        activeTab
-                </a>
-        <br>
-    </td>
-  </tr>
-</table>
-<h2 id="usage">Usage</h2>
-
-<p>
-The Declarative Content API allows you to show your extension's
-<a href="pageAction.html">page action</a> depending on the URL of a web page and
-the CSS selectors its content matches, without needing to take a <a
-href="declare_permissions.html#host-permissions">host permission</a> or
-inject a <a href="content_scripts.html">content script</a>.  Use the
-<a href="activeTab.html">activeTab</a> permission in order to be able
-to interact with a page after the user clicks on your page action.
-</p>
-
-<p>
-If you need more precise control over when your page action appears or
-you need to change its appearance to match the current tab before the
-user clicks on it, you'll have to keep using the <a href="pageAction.html">pageAction</a> API.
-</p>
-
-<h2 id="rules">Rules</h2>
-
-<p>As a <a href="events.html#declarative">declarative API</a>, this
-API lets you register rules on the
-<code><a href="declarativeContent.html#event-onPageChanged">onPageChanged</a></code> <a href="events.html#type-Event">event</a> object which
-take an action (currently just <code><a href="declarativeContent.html#type-ShowPageAction">ShowPageAction</a></code>) when
-a set of conditions, represented as a
-<code><a href="declarativeContent.html#type-PageStateMatcher">PageStateMatcher</a></code>, are met.
-</p>
-
-<p>
-The <code><a href="declarativeContent.html#type-PageStateMatcher">PageStateMatcher</a></code> matches web pages if and only
-if all listed criteria are met. The following rule would show a page
-action for pages on <code>https://www.google.com/</code> when a
-password field is present on it:
-</p>
-
-<pre>
-var rule1 = {
-  conditions: [
-    new <a href="declarativeContent.html#type-PageStateMatcher">chrome.declarativeContent.PageStateMatcher</a>({
-      <a href="declarativeContent.html#property-PageStateMatcher-pageUrl">pageUrl</a>: { <a href="events.html#property-UrlFilter-hostEquals">hostEquals</a>: 'www.google.com', <a href="events.html#property-UrlFilter-schemes">schemes</a>: ['https'] },
-      <a href="declarativeContent.html#property-PageStateMatcher-css">css</a>: ["input[type='password']"]
-    })
-  ],
-  actions: [ new <a href="declarativeContent.html#type-ShowPageAction">chrome.declarativeContent.ShowPageAction</a>() ]
-};
-</pre>
-
-<p class="note">
-<strong>Note:</strong> All conditions and actions are created via a constructor
-as shown in the example above.
-</p>
-
-<p>
-In order to also show a page action for sites with a video, you can
-add a second condition, as each condition is sufficient to trigger all
-specified actions:
-</p>
-<pre>
-var rule2 = {
-  conditions: [
-    new <a href="declarativeContent.html#type-PageStateMatcher">chrome.declarativeContent.PageStateMatcher</a>({
-      <a href="declarativeContent.html#property-PageStateMatcher-pageUrl">pageUrl</a>: { <a href="events.html#property-UrlFilter-hostEquals">hostEquals</a>: 'www.google.com', <a href="events.html#property-UrlFilter-schemes">schemes</a>: ['https'] },
-      <a href="declarativeContent.html#property-PageStateMatcher-css">css</a>: ["input[type='password']"]
-    })<strong>,
-    new <a href="declarativeContent.html#type-PageStateMatcher">chrome.declarativeContent.PageStateMatcher</a>({
-      <a href="declarativeContent.html#property-PageStateMatcher-css">css</a>: ["video"]
-    })</strong>
-  ],
-  actions: [ new <a href="declarativeContent.html#type-ShowPageAction">chrome.declarativeContent.ShowPageAction</a>() ]
-};
-</pre>
-
-<p>
-<a href="events.html#addingrules">Added rules</a> are saved across
-browser restarts, so register them as follows:
-</p>
-<pre>
-<a href="runtime.html#event-onInstalled">chrome.runtime.onInstalled</a>.addListener(function(details) {
-  <a href="declarativeContent.html#event-onPageChanged">chrome.declarativeContent.onPageChanged</a>.<a href="events.html#removingrules">removeRules</a>(undefined, function() {
-    <a href="declarativeContent.html#event-onPageChanged">chrome.declarativeContent.onPageChanged</a>.<a href="events.html#addingrules">addRules</a>([rule2]);
-  });
-});
-</pre>
-
-<p class="note">
-<strong>Note:</strong> You should always register or unregister rules in bulk
-rather than individually because each of these operations recreates internal
-data structures.  This re-creation is computationally expensive but facilitates
-a faster matching algorithm.
-</p>
-
-<p>
-Combine the above rule with the <a href="activeTab.html">activeTab</a>
-permission to create an extension that doesn't need any install-time
-permissions but can invite the user to click its page action on
-relevant pages and can run on those pages when the user clicks the
-page action.
-</p>
-
-<h2 id="css-matching">CSS Matching</h2>
-
-<p><a href="declarativeContent.html#property-PageStateMatcher-css">PageStateMatcher.css</a> conditions must be
-<i><a href="http://www.w3.org/TR/selectors4/#compound">compound selectors</a></i>,
-meaning that you can't
-include <a href="http://www.w3.org/community/webed/wiki/CSS/Selectors#Combinators">combinators</a>
-like whitespace or "<code>&gt;</code>" in your selectors.  This helps Chrome
-match the selectors more efficiently.</p>
-
-<table>
-  <tr><th>Compound Selectors (OK)</th><th>Complex Selectors (Not OK)</th></tr>
-  <tr><td><code>a</code></td><td><code>div p</code></td></tr>
-  <tr><td><code>iframe.special[src^='http']</code></td><td><code>p>span.highlight</code></td></tr>
-  <tr><td><code>ns|*</code></td><td><code>p + ol</code></td></tr>
-  <tr><td><code>#abcd:checked</code></td><td><code>p::first-line</code></td></tr>
-</table>
-
-<p>CSS conditions only match displayed elements: if an element that matches your
-selector is <code>display:none</code> or one of its parent elements
-is <code>display:none</code>, it doesn't cause the condition to match.  Elements
-styled with <code>visibility:hidden</code>, positioned off-screen, or hidden by
-other elements can still make your condition match.</p>
-<div class="api_reference">
-  <span id="api-reference-header">Reference</span>
-    <h2 id="types">Types</h2>
-      <div>
-        <h3 id="type-PageStateMatcher">PageStateMatcher</h3>
-        <div>
-          <dd>Matches the state of a web page by various criteria.</dd>
-            <h4 id="PageStateMatcher-properties" class="capitalize">
-              properties of <a href="declarativeContent.html#type-PageStateMatcher">PageStateMatcher</a>
-            </h4>
-            <dd>
-              <dl>
-                <div>
-                  <a name="property-PageStateMatcher-pageUrl"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">pageUrl</span>
-                      <span class="property">
-                        (
-                          <span class="optional">optional</span>
-                          <a href="events.html#type-UrlFilter">events.UrlFilter</a>
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      Matches if the condition of the UrlFilter are fulfilled for the top-level URL of the page.
-                    </dd>
-                  </dl>
-                </div><div>
-                  <a name="property-PageStateMatcher-css"></a>
-                  <dl>
-                    <dt>
-                      <span class="variable">css</span>
-                      <span class="property">
-                        (
-                          <span class="optional">optional</span>
-                          array of string
-                        )
-                      </span>
-                    </dt>
-                    <dd>
-                      Matches if all of the CSS selectors in the array match displayed elements in a frame with the same origin as the page's main frame.  All selectors in this array must be <a href="http://www.w3.org/TR/selectors4/#compound">compound selectors</a> to speed up matching.  Note that listing hundreds of CSS selectors or CSS selectors that match hundreds of times per page can still slow down web sites.
-                    </dd>
-                  </dl>
-                </div>
-              </dl>
-            </dd>
-        </div>
-      </div>
-      <div>
-        <h3 id="type-ShowPageAction">ShowPageAction</h3>
-        <div>
-          <dd>Declarative event action that shows the extension's <a href="pageAction.html">page action</a> while the corresponding conditions are met.  This action can be used without <a href="declare_permissions.html#host-permissions">host permissions</a>, but the extension must have a page action.  If the extension takes the <a href="activeTab.html">activeTab</a> permission, a click on the page action will grant access to the active tab.</dd>
-        </div>
-      </div>
-    <h2 id="events">Events</h2>
-      <div>
-        <h4 id="event-onPageChanged">onPageChanged</h4>
-        <div class="description">
-          <p>Provides the <a href="events.html#declarative">Declarative Event API</a>
-          consisting of $ref:[events.Event.addRules addRules],
-          $ref:[events.Event.removeRules removeRules], and $ref:[events.Event.getRules
-          getRules].</p>
-          <div class="summary">
-            <div class="line">
-            <span>chrome.declarativeContent.onPageChanged.addRules</span>(<span>array of <a href="declarativeContent.html#type-Rule">Rule</a> <span class="variable">rules</span></span>, <span class="optional">function <span class="variable">callback</span></span>)
-            </div>
-            <div class="line">
-            <span>chrome.declarativeContent.onPageChanged.removeRules</span>(<span class="optional">array of string <span class="variable">ruleIdentifiers</span></span>, <span class="optional">function <span class="variable">callback</span></span>)
-            </div>
-            <div class="line">
-            <span>chrome.declarativeContent.onPageChanged.getRules</span>(<span class="optional">array of string <span class="variable">ruleIdentifiers</span></span>, <span>function <span class="variable">callback</span></span>)
-            </div>
+      <nav id="fatnav" role="navigation">
+      <ul>
+          <li class="pillar">
+            <span class="toplevel">Devtools</span>
+            <ul class="expandee">
+                <li class="submenu">Learn Basics
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/index.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/authoring-development-workflow.html">
+                        Authoring &amp; Development Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/console.md">
+                        Using the Console
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/tips-and-tricks.html">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/videos.html">
+                        Additional Resources
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/videos.html">Videos</a>
+                            </li>
+                            <li><a href="../devtools/docs/blog-posts">Blog Posts</a>
+                            </li>
+                            <li><a href="https://groups.google.com/forum/?fromgroups#!forum/google-chrome-developer-tools">Mailing List</a>
+                            </li>
+                            <li><a href="../devtools/docs/contributing.html">Contributing to DevTools</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Use Tools
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/dom-and-styles.html">
+                        Inspecting &amp; Tweaking
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/elements">Editing Styles &amp; DOM</a>
+                            </li>
+                            <li><a href="../devtools/docs/css-preprocessors.html">Working with CSS Preprocessors</a>
+                            </li>
+                            <li><a href="../devtools/docs/resource-panel.md">Managing Application Storage</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-debugging.html">
+                        Debugging JavaScript
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging on Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Performance &amp; Profiling
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/network.md">
+                        Evaluating Network Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/timeline.html">
+                        Using the Timeline
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/demos/too-much-layout/index">
+                        Timeline Demo: Finding Forced Synchronous Layouts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/cpu-profiling.html">
+                        Profiling JavaScript Performance
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/javascript-memory-profiling.md">
+                        JavaScript Memory Profiling
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/javascript-memory-profiling.md">JavaScript Memory Profiling</a>
+                            </li>
+                            <li><a href="../devtools/docs/heap-profiling-summary.html">Demos</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/clean-testing-environment.html">
+                        Setting Up a Clean Testing Environment
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Reference
+                  <ul>
+                      <li class="category">
+                        <a href="../devtools/docs/console-api.md">
+                        Console API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/commandline-api.md">
+                        Command Line API Reference
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/integrating.md">
+                        DevTools Extensions API
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/integrating.md">Integrating with DevTools</a>
+                            </li>
+                            <li><a href="../devtools/docs/sample-extensions.md">Sample DevTools Extensions</a>
+                            </li>
+                            <li><a href="../devtools/docs/debugging-clients.md">Sample DevTools Protocol Clients</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/shortcuts.html">
+                        Keyboard Shortcuts
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/settings.html">
+                        Settings
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/debugger-protocol.html">
+                        Remote Debugging Protocol
+                        </a>
+                        <ul>
+                            <li><a href="../devtools/docs/debugger-protocol.html">Remote Debugging Protocol</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.1/index.html">Version 1.1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/1.0/index.html">Version 1.0</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/0.1/index.html">Version .1</a>
+                            </li>
+                            <li><a href="../devtools/docs/protocol/tot/index.html">Tip-of-tree</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Multi-device</span>
+            <ul class="expandee">
+                <li class="submenu">Getting Started
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/index.html">
+                        Chrome for a Multi-Device World
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/data-compression">
+                        Data Compression Proxy
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/user-agent.html">
+                        User Agents
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/mobile-emulation.html">
+                        Mobile Emulation
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../devtools/docs/protocol/tot/remote-debugging.html">
+                        Remote Debugging
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/faq.html">
+                        FAQ
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for Android
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/android/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/intents.html">
+                        Android Intents with Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/android/installtohomescreen.html">
+                        Add to Homescreen
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome WebView
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/webview/overview.html">
+                        WebView for Android
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/gettingstarted.html">
+                        Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/pixelperfect">
+                        Pixel-Perfect UI
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/workflow.html">
+                        WebView Workflow
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/webview/tipsandtricks">
+                        Tips &amp; Tricks
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Chrome for iOS
+                  <ul>
+                      <li class="category">
+                        <a href="../multidevice/ios/overview.html">
+                        Overview
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/links.html">
+                        Opening Links in Chrome
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../multidevice/ios/case-studies">
+                        Case Studies
+                        </a>
+                        <ul>
+                            <li><a href="../multidevice/ios/case-studies">Case Studies</a>
+                            </li>
+                            <li><a href="../multidevice/ios/pocket.html">Pocket</a>
+                            </li>
+                            <li><a href="../multidevice/ios/feedly.html">Feedly</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+          <li class="pillar">
+            <span class="toplevel">Platform</span>
+            <ul class="expandee">
+                <li class="submenu">Apps
+                  <ul>
+                      <li class="category">
+                        <a href="../apps/index.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../apps/index.html">What Are Chrome Apps?</a>
+                            </li>
+                            <li><a href="../apps/first_app.html">Create Your First App</a>
+                            </li>
+                            <li><a href="../apps/app_architecture.html">App Architecture</a>
+                            </li>
+                            <li><a href="app_lifecycle.html">App Lifecycle</a>
+                            </li>
+                            <li><a href="../apps/contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/app_codelab1_setup.html">
+                        Learn with Codelab
+                        </a>
+                        <ul>
+                            <li><a href="../apps/app_codelab1_setup.html">1 - Set Up Development Environment</a>
+                            </li>
+                            <li><a href="../apps/app_codelab2_basic.html">2 - Create Basic App</a>
+                            </li>
+                            <li><a href="../apps/app_codelab3_mvc.html">3 - Create MVC</a>
+                            </li>
+                            <li><a href="../apps/app_codelab5_data.html">4 - Save &amp; Fetch Data</a>
+                            </li>
+                            <li><a href="../apps/app_codelab6_lifecycle.html">5 - Manage App Lifecycle</a>
+                            </li>
+                            <li><a href="../apps/app_codelab7_useridentification.html">6 - Access User's Data</a>
+                            </li>
+                            <li><a href="../apps/app_codelab8_webresources.html">7 - Access Web Resources</a>
+                            </li>
+                            <li><a href="../apps/app_codelab_10_publishing.html">8 - Publish App</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/offline_apps.html">
+                        Develop in the Cloud
+                        </a>
+                        <ul>
+                            <li><a href="../apps/offline_apps.html">Offline First</a>
+                            </li>
+                            <li><a href="app_external.html">Handling External Content</a>
+                            </li>
+                            <li><a href="../apps/app_storage.html">Storing Data</a>
+                            </li>
+                            <li><a href="../apps/cloudMessaging.html">Cloud Messaging</a>
+                            </li>
+                            <li><a href="../apps/app_identity.html">User Authentication</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/app_usb.html">
+                        User Low-Level System Services
+                        </a>
+                        <ul>
+                            <li><a href="../apps/app_usb.html">USB</a>
+                            </li>
+                            <li><a href="../apps/app_serial">Serial</a>
+                            </li>
+                            <li><a href="../apps/app_network.html">Network Communications</a>
+                            </li>
+                            <li><a href="../apps/app_bluetooth.html">Bluetooth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/app_frameworks.html">
+                        MVC Architecture &amp; Frameworks
+                        </a>
+                        <ul>
+                            <li><a href="../apps/app_frameworks.html">About MVC Architecture</a>
+                            </li>
+                            <li><a href="../apps/angular_framework.html">Build Apps with AngularJS</a>
+                            </li>
+                            <li><a href="../apps/sencha_framework.html">Build Apps with SenchaJS</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="publish_app.html">
+                        Distribute Apps
+                        </a>
+                        <ul>
+                            <li><a href="publish_app.html">Publish Your App</a>
+                            </li>
+                            <li><a href="../apps/google_wallet.html">Monetize Your App</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../apps/analytics.html">Analytics</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="../apps/api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="../apps/manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="../apps/webview.html">Webview Tag</a>
+                            </li>
+                            <li><a href="../apps/api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="../apps/app_deprecated.html">Disabled Web Features</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../apps/faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/questions/tagged/google-chrome-app">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Extensions
+                  <ul>
+                      <li class="category">
+                        <a href="../apps/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../apps/overview.html">Overview</a>
+                            </li>
+                            <li><a href="hosting_changes">Hosting Changes</a>
+                            </li>
+                            <li><a href="event_pages.html">Event Pages</a>
+                            </li>
+                            <li><a href="content_scripts.html">Content Scripts</a>
+                            </li>
+                            <li><a href="../apps/activeTab.html">activeTab Permission</a>
+                            </li>
+                            <li><a href="whats_new.html">What's New?</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../apps/getstarted.html">
+                        Getting Started Tutorial
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="tut_migration_to_manifest_v2">
+                        Develop Extensions
+                        </a>
+                        <ul>
+                            <li><a href="a11y.html">Accessibility</a>
+                            </li>
+                            <li><a href="contentSecurityPolicy.html">Content Security Policy</a>
+                            </li>
+                            <li><a href="xhr.html">Cross-Origin XHR</a>
+                            </li>
+                            <li><a href="tut_debugging">Debugging</a>
+                            </li>
+                            <li><a href="i18n.html">Internationalization</a>
+                            </li>
+                            <li><a href="messaging">Message Passing</a>
+                            </li>
+                            <li><a href="tut_migration_to_manifest_v2">Migrate to Manifest 2</a>
+                            </li>
+                            <li><a href="tut_oauth">OAuth</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="hosting.html">
+                        Distribute Extensions
+                        </a>
+                        <ul>
+                            <li><a href="hosting.html">Hosting</a>
+                            </li>
+                            <li><a href="packaging.html">Packaging</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="autoupdate.html">Autoupdating</a>
+                            </li>
+                            <li><a href="external_extensions.html">Other Deployment Options</a>
+                            </li>
+                            <li><a href="tut_analytics.html">Google Analytics</a>
+                            </li>
+                            <li><a href="themes.html">Publishing Themes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="api_index.html">
+                        Chrome Platform APIs
+                        </a>
+                        <ul>
+                            <li><a href="api_index.html">JavaScript APIs</a>
+                            </li>
+                            <li><a href="manifest.html">Manifest File Format</a>
+                            </li>
+                            <li><a href="api_other.html">Web APIs</a>
+                            </li>
+                            <li><a href="permission_warnings.html">Permission Warnings</a>
+                            </li>
+                            <li><a href="permissions.html">Optional Permissions</a>
+                            </li>
+                            <li><a href="match_patterns.html">Match Patterns</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="faq">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="faq">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-extensions">Google Groups</a>
+                            </li>
+                            <li><a href="http://stackoverflow.com/tags/google-chrome-extension/info">Stack Overflow</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Native Client
+                  <ul>
+                      <li class="category">
+                        <a href="../native-client/overview.html">
+                        Learn Basics
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/overview.html">What Is Native Client?</a>
+                            </li>
+                            <li><a href="../native-client/nacl-and-pnacl.html">NaCl and PNaCl</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/sdk/download.html">
+                        SDK
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/sdk/download.html">Download SDK</a>
+                            </li>
+                            <li><a href="../native-client/sdk/examples.html">Examples</a>
+                            </li>
+                            <li><a href="../native-client/sdk/release-notes.html">SDK Release Notes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/tutorial/tutorial-part1.html">
+                        Tutorial
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part1.html">Part 1: Simple PNaCl Web App</a>
+                            </li>
+                            <li><a href="../native-client/devguide/tutorial/tutorial-part2">Part 2: SDK Build System and Chrome Apps</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/devcycle/building.html">
+                        Development Cycle
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/devcycle/building.html">Building</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/running.html">Running</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/debugging.html">Debugging</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/vs-addin.html">Debugging with Visual Studio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/dynamic-loading.html">Dynamic Linking and Loading with GlibC</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/coding/application-structure.html">
+                        Coding Your Application
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/devguide/coding/application-structure.html">Application Structure</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/native-client-modules.html">Native Client Modules</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/3D-graphics.html">3D Graphics</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/audio.html">Audio</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/file-io.html">File I/O</a>
+                            </li>
+                            <li><a href="../native-client/devguide/devcycle/nacl_io">The nacl_io Library</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/message-system.html">Messaging System</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/progress-events.html">Progress Events</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/url-loading">URL Loading</a>
+                            </li>
+                            <li><a href="../native-client/devguide/coding/view-focus-input-events">View Change, Focus, &amp; Input Events</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/devguide/distributing.html">
+                        Distribute Your Apps
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/pepper_stable/index.html">
+                        Pepper API Reference
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/pepper_stable/c/group___interfaces.html">Pepper C Interfaces</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___structs.html">Pepper C Structures</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___functions.html">Pepper C Functions</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___enums.html">Pepper C Enums</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/c/group___typedefs.html">Pepper C Typedefs</a>
+                            </li>
+                            <li><a href="http://developer.chrome.com/native-client/pepper_stable/c/global_defs">Pepper C Macros</a>
+                            </li>
+                            <li><a href="../native-client/pepper_stable/cpp/inherits.html">Pepper C++ Classes</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/glossary.html">
+                        Additional Reference &amp; Versions
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/glossary.html">Glossary</a>
+                            </li>
+                            <li><a href="../native-client/reference/nacl-manifest-format.html">Native Client Manifest (nmf) Format</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-bitcode-abi.html">PNaCl Bitcode Reference Manual</a>
+                            </li>
+                            <li><a href="../native-client/reference/pnacl-c-cpp-language-support.html">PNaCl C/C++ Language Support</a>
+                            </li>
+                            <li><a href="../native-client/reference/sandbox_internals/index">Sandbox Internals</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../native-client/faq.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../native-client/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="../native-client/help.html">Forums &amp; Issues Tracker</a>
+                            </li>
+                            <li><a href="../native-client/publications-and-presentations">Publications &amp; Presentations</a>
+                            </li>
+                            <li><a href="../native-client/community/security-contest/index.html">Security Contest Archive</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+                <li class="submenu">Store
+                  <ul>
+                      <li class="category">
+                        <a href="../webstore/index.html">
+                        What Is the Chrome Web Store?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/overview.html">
+                        What Can You Publish?
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/get_started_simple.html">
+                        Tutorial: Getting Started
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/samples.html">
+                        Samples
+                        </a>
+                        <ul>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/branding.html">
+                        Branding
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/branding.html">Branding Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/images.html">Supplying Images</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/money.html">
+                        Monetizing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/money.html">Monetizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/identify_user.html">Using Google Accounts</a>
+                            </li>
+                            <li><a href="../webstore/check_for_payment.html">Checking for Payment</a>
+                            </li>
+                            <li><a href="../webstore/one_time_payments">One-Time Payments</a>
+                            </li>
+                            <li><a href="../webstore/pricing.html">Pricing</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/publish.html">
+                        Publishing
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/publish.html">Publishing Tutorial</a>
+                            </li>
+                            <li><a href="../webstore/i18n.html">Internationalizing Your App</a>
+                            </li>
+                            <li><a href="../webstore/inline_installation.html">Using Inline Installation</a>
+                            </li>
+                            <li><a href="../webstore/rating.html">Rating Guidelines</a>
+                            </li>
+                            <li><a href="../webstore/program_policies.html">Program Policies</a>
+                            </li>
+                            <li><a href="../webstore/terms.html">Terms of Service</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="category">
+                        <a href="../webstore/best_practices.html">
+                        Help
+                        </a>
+                        <ul>
+                            <li><a href="../webstore/best_practices.html">Best Practices</a>
+                            </li>
+                            <li><a href="../webstore/faq.html">FAQ</a>
+                            </li>
+                            <li><a href="https://groups.google.com/a/chromium.org/forum/#!forum/chromium-apps">Google Groups</a>
+                            </li>
+                            <li><a href="../webstore/articles">Articles</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+                </li>
+            </ul>
+          </li>
+        <li id="search">
+          <img src="../static/images/search.png">
+          <div class="expandee">
+      
+      <!-- override search styles set globally by site.css -->
+      <style>
+      .gsc-above-wrapper-area, .gsc-result-info {
+        font-size: 11px;
+      }
+      .gs-webResult div, .gs-result div {
+        line-height: initial;
+      }
+      .gs-webResult a, .gs-result a {
+        text-decoration: none;
+      }
+      td.gcsc-branding-img-noclear, .gcsc-branding-img-noclear a {
+        width: 51px;
+        height: 15px;
+        vertical-align: top;
+      }
+      .gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+        padding: 0;
+      }
+      .gsc-control-cse tr, .gsc-control-cse td, .gsc-control-cse th {
+       padding: inherit;
+       border: none;
+      }
+      .gsc-control-cse {
+        white-space: normal;
+        border: none;
+        padding: 0 1em;
+      }
+      #search .gsc-control-cse img {
+        height: inherit;
+        width: inherit;
+      }
+      .gsc-control-cse table {
+        margin: initial;
+      }
+      .gsc-control-cse * {
+        box-sizing: initial;
+        -webkit-box-sizing: initial;
+        -moz-box-sizing: initial;
+      }
+      #fatnav .expandee .gsc-control-cse a {
+       padding: 0;
+       color: inherit;
+      }
+      </style>
+      
+            <form id="chrome-docs-cse-search-form" action="http://google.com/cse">
+              <input type="search" id="chrome-docs-cse-input" name="q" placeholder="What are you looking for?">
+              <input type="hidden" name="cx" value="010997258251033819707:7owyldxmpkc" />
+              <input type="hidden" name="ie" value="UTF-8" />
+            </form>
+            <gcse:searchresults-only gname="results"></gcse:searchresults-only>
           </div>
-            <h4>Supported conditions</h4>
-            <ul>
-              <div><li><a href="declarativeContent.html#type-PageStateMatcher">PageStateMatcher</a></li></div>
-            </ul>
-            <h4>Supported actions</h4>
-            <ul>
-              <div><li><a href="declarativeContent.html#type-ShowPageAction">ShowPageAction</a></li></div>
-            </ul>
+        </li>
+      </ul>
+      </nav>
+          </header>
+
+    <main id="gc-pagecontent" role="main">
+
+
+<article>
+  <div itemprop="articleBody" class="api">
+    <h1>chrome.declarativeContent</h1>
+    <table class="intro" id="intro">
+      <tr>
+        <td class="title">Description:</td>
+        <td>
+            Use the <code>chrome.declarativeContent</code> API to take actions depending on the content of a page, without requiring permission to read the page's content.
+                    <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Availability:</td>
+        <td>
+            Stable since Chrome 33.
+            <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Permissions:</td>
+        <td>
+            <span class="code">
+            "declarativeContent"
+                    </span>
+            <br>
+        </td>
+      </tr>
+      <tr>
+        <td class="title">Learn More:</td>
+        <td>
+            <a href="events.html">
+            Declarative Events
+                    </a>
+            <br>
+            <a href="activeTab.html">
+            activeTab
+                    </a>
+            <br>
+        </td>
+      </tr>
+    </table>
+    <section>
+      <h2 id="usage">Usage</h2>
+      
+      <p>
+      The Declarative Content API allows you to show your extension's
+      <a href="pageAction.html">page action</a> depending on the URL of a web page and
+      the CSS selectors its content matches, without needing to take a <a
+      href="declare_permissions.html#host-permissions">host permission</a> or
+      inject a <a href="content_scripts.html">content script</a>.  Use the
+      <a href="activeTab.html">activeTab</a> permission in order to be able
+      to interact with a page after the user clicks on your page action.
+      </p>
+      
+      <p>
+      If you need more precise control over when your page action appears or
+      you need to change its appearance to match the current tab before the
+      user clicks on it, you'll have to keep using the <a href="pageAction.html">pageAction</a> API.
+      </p>
+      
+      <h2 id="rules">Rules</h2>
+      
+      <p>As a <a href="events.html#declarative">declarative API</a>, this
+      API lets you register rules on the
+      <code><a href="declarativeContent.html#event-onPageChanged">onPageChanged</a></code> <a href="events.html#type-Event">event</a> object which
+      take an action (currently just <code><a href="declarativeContent.html#type-ShowPageAction">ShowPageAction</a></code>) when
+      a set of conditions, represented as a
+      <code><a href="declarativeContent.html#type-PageStateMatcher">PageStateMatcher</a></code>, are met.
+      </p>
+      
+      <p>
+      The <code><a href="declarativeContent.html#type-PageStateMatcher">PageStateMatcher</a></code> matches web pages if and only
+      if all listed criteria are met. The following rule would show a page
+      action for pages on <code>https://www.google.com/</code> when a
+      password field is present on it:
+      </p>
+      
+      <pre>
+      var rule1 = {
+        conditions: [
+          new <a href="declarativeContent.html#type-PageStateMatcher">chrome.declarativeContent.PageStateMatcher</a>({
+            <a href="declarativeContent.html#property-PageStateMatcher-pageUrl">pageUrl</a>: { <a href="events.html#property-UrlFilter-hostEquals">hostEquals</a>: 'www.google.com', <a href="events.html#property-UrlFilter-schemes">schemes</a>: ['https'] },
+            <a href="declarativeContent.html#property-PageStateMatcher-css">css</a>: ["input[type='password']"]
+          })
+        ],
+        actions: [ new <a href="declarativeContent.html#type-ShowPageAction">chrome.declarativeContent.ShowPageAction</a>() ]
+      };
+      </pre>
+      
+      <p class="note">
+      <strong>Note:</strong> All conditions and actions are created via a constructor
+      as shown in the example above.
+      </p>
+      
+      <p>
+      In order to also show a page action for sites with a video, you can
+      add a second condition, as each condition is sufficient to trigger all
+      specified actions:
+      </p>
+      <pre>
+      var rule2 = {
+        conditions: [
+          new <a href="declarativeContent.html#type-PageStateMatcher">chrome.declarativeContent.PageStateMatcher</a>({
+            <a href="declarativeContent.html#property-PageStateMatcher-pageUrl">pageUrl</a>: { <a href="events.html#property-UrlFilter-hostEquals">hostEquals</a>: 'www.google.com', <a href="events.html#property-UrlFilter-schemes">schemes</a>: ['https'] },
+            <a href="declarativeContent.html#property-PageStateMatcher-css">css</a>: ["input[type='password']"]
+          })<strong>,
+          new <a href="declarativeContent.html#type-PageStateMatcher">chrome.declarativeContent.PageStateMatcher</a>({
+            <a href="declarativeContent.html#property-PageStateMatcher-css">css</a>: ["video"]
+          })</strong>
+        ],
+        actions: [ new <a href="declarativeContent.html#type-ShowPageAction">chrome.declarativeContent.ShowPageAction</a>() ]
+      };
+      </pre>
+      
+      <p>
+      <a href="events.html#addingrules">Added rules</a> are saved across
+      browser restarts, so register them as follows:
+      </p>
+      <pre>
+      <a href="runtime.html#event-onInstalled">chrome.runtime.onInstalled</a>.addListener(function(details) {
+        <a href="declarativeContent.html#event-onPageChanged">chrome.declarativeContent.onPageChanged</a>.<a href="events.html#removingrules">removeRules</a>(undefined, function() {
+          <a href="declarativeContent.html#event-onPageChanged">chrome.declarativeContent.onPageChanged</a>.<a href="events.html#addingrules">addRules</a>([rule2]);
+        });
+      });
+      </pre>
+      
+      <p class="note">
+      <strong>Note:</strong> You should always register or unregister rules in bulk
+      rather than individually because each of these operations recreates internal
+      data structures.  This re-creation is computationally expensive but facilitates
+      a faster matching algorithm.
+      </p>
+      
+      <p>
+      Combine the above rule with the <a href="activeTab.html">activeTab</a>
+      permission to create an extension that doesn't need any install-time
+      permissions but can invite the user to click its page action on
+      relevant pages and can run on those pages when the user clicks the
+      page action.
+      </p>
+      
+      <h2 id="css-matching">CSS Matching</h2>
+      
+      <p><a href="declarativeContent.html#property-PageStateMatcher-css">PageStateMatcher.css</a> conditions must be
+      <i><a href="http://www.w3.org/TR/selectors4/#compound">compound selectors</a></i>,
+      meaning that you can't
+      include <a href="http://www.w3.org/community/webed/wiki/CSS/Selectors#Combinators">combinators</a>
+      like whitespace or "<code>&gt;</code>" in your selectors.  This helps Chrome
+      match the selectors more efficiently.</p>
+      
+      <table>
+        <tr><th>Compound Selectors (OK)</th><th>Complex Selectors (Not OK)</th></tr>
+        <tr><td><code>a</code></td><td><code>div p</code></td></tr>
+        <tr><td><code>iframe.special[src^='http']</code></td><td><code>p>span.highlight</code></td></tr>
+        <tr><td><code>ns|*</code></td><td><code>p + ol</code></td></tr>
+        <tr><td><code>#abcd:checked</code></td><td><code>p::first-line</code></td></tr>
+      </table>
+      
+      <p>CSS conditions only match displayed elements: if an element that matches your
+      selector is <code>display:none</code> or one of its parent elements
+      is <code>display:none</code>, it doesn't cause the condition to match.  Elements
+      styled with <code>visibility:hidden</code>, positioned off-screen, or hidden by
+      other elements can still make your condition match.</p>
+    </section>
+    <section id="toc">
+    <h2>Summary</h2>
+    <table class="api-summary">
+      <tr>
+        <tr><th colspan="2">Types</th></tr>
+          <tr><td><a href="declarativeContent.html#type-PageStateMatcher">PageStateMatcher</a></td></tr>
+          <tr><td><a href="declarativeContent.html#type-ShowPageAction">ShowPageAction</a></td></tr>
+        <tr><th colspan="2">Events</th></tr>
+          <tr><td><a href="declarativeContent.html#event-onPageChanged">onPageChanged</a></td></tr>
+    </table>
+    </section>
+    <section>
+      <div class="api-reference">
+          <h2 id="types">Types</h2>
+            <div>
+              <h3 id="type-PageStateMatcher">PageStateMatcher</h3>
+              <table>
+                <dd>Matches the state of a web page by various criteria.</dd>
+                  <tr><th colspan="3" id="PageStateMatcher-properties">properties</th></tr>
+                  <tr>
+                    <td>    <a href="events.html#type-UrlFilter">events.UrlFilter</a></td>
+                    <td><span class="optional">(optional)</span>
+                        pageUrl</td>
+                    <td>
+                      Matches if the condition of the UrlFilter are fulfilled for the top-level URL of the page.
+                    </td>
+                  </tr><tr>
+                    <td>array of string</td>
+                    <td><span class="optional">(optional)</span>
+                        css</td>
+                    <td>
+                      Matches if all of the CSS selectors in the array match displayed elements in a frame with the same origin as the page's main frame.  All selectors in this array must be <a href="http://www.w3.org/TR/selectors4/#compound">compound selectors</a> to speed up matching.  Note that listing hundreds of CSS selectors or CSS selectors that match hundreds of times per page can still slow down web sites.
+                    </td>
+                  </tr>
+              </table>
+            </div>
+            <div>
+              <h3 id="type-ShowPageAction">ShowPageAction</h3>
+              <table>
+                <dd>Declarative event action that shows the extension's <a href="pageAction.html">page action</a> while the corresponding conditions are met.  This action can be used without <a href="declare_permissions.html#host-permissions">host permissions</a>, but the extension must have a page action.  If the extension takes the <a href="activeTab.html">activeTab</a> permission, a click on the page action will grant access to the active tab.</dd>
+              </table>
+            </div>
+          <h2 id="events">Events</h2>
+            <div>
+              <h3 id="event-onPageChanged">onPageChanged</h3>
+              <div class="description">
+                <p>Provides the <a href="events.html#declarative">Declarative Event API</a>
+                consisting of <a href="events.html#method-Event-addRules">addRules</a>,
+                <a href="events.html#method-Event-removeRules">removeRules</a>, and
+                <a href="events.html#method-Event-addRules">getRules</a>.</p>
+                <div class="summary">
+                  <code class="prettyprint">
+                  chrome.declarativeContent.onPageChanged.addRules(<span>array of     <a href="declarativeContent.html#type-Rule">Rule</a> rules</span>, <span class="optional">function callback</span>)
+                  </code>
+                  <code class="prettyprint">
+                  chrome.declarativeContent.onPageChanged.removeRules(<span class="optional">array of string ruleIdentifiers</span>, <span class="optional">function callback</span>)
+                  </code>
+                  <code class="prettyprint">
+                  chrome.declarativeContent.onPageChanged.getRules(<span class="optional">array of string ruleIdentifiers</span>, <span>function callback</span>)
+                  </code>
+                </div>
+                  <h4 title="">Supported conditions</h4>
+                  <ul>
+                    <div><li><a href="declarativeContent.html#type-PageStateMatcher">PageStateMatcher</a></li></div>
+                  </ul>
+                  <h4 title="">Supported actions</h4>
+                  <ul>
+                    <div><li><a href="declarativeContent.html#type-ShowPageAction">ShowPageAction</a></li></div>
+                  </ul>
+              </div>
+            </div>
+      </div>
+    </section>
+  </div>
+</article>
+    </main>
+
+    <footer id="gc-footer" role="contentinfo" class="span-full">
+      <div class="g-section g-tpl-50-50">
+        <div class="g-unit g-first">
+          <nav class="links">
+            <a href="https://www.google.com/">Google</a><a href="https://developers.google.com/site-terms">Terms of Service</a><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a><a href="declarativeContent.html" data-feedback>Report a bug</a>
+          </nav>
+        </div>
+        <div class="g-unit g-last">
+          <div id="social-buttons">
+            <div data-size="small" data-href="http://www.google.com/chrome" data-annotation="bubble" class="g-plusone"></div>
+            <a rel="publisher" target="_blank" href="https://plus.google.com/+GoogleChromeDevelopers?prsrc=3" data-g-label="plus" data-g-event="nav-subfooter">Add us on <span class="element-invisible">Google+</span><img src="http://ssl.gstatic.com/images/icons/gplus-16.png" data-g-label="plus" data-g-event="nav-subfooter" alt=""></a>
+          </div>
         </div>
       </div>
-</div>
-      </div>
-    </div>
-  </body>
+    </footer>
 
-  <div id="gc-footer">
-    <button class="google-button" id="scroll-to-top">↑</button>
-    <button class="google-button" id="send-feedback">Send Feedback</button>
-    <div class="text">
-      <p>
-        Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>,
-        the content of this page is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons
-        Attribution 3.0 License</a>, and code samples are licensed under the
-        <a rel="license" href="http://code.google.com/google_bsd_license.html">BSD License</a>.
-      </p>
-      <p>
-        ©2013 Google
-      </p>
-      <script src="../static/js/platform_chooser.js" type="text/javascript"></script>
-      <script src="../static/js/popup.js" type="text/javascript"></script>
-      <script src="../static/js/prettify.js" type="text/javascript"></script>
-      <script src="../static/js/scroll.js" type="text/javascript"></script>
-      <script src="../static/js/sidebar.js" type="text/javascript"></script>
-      <script src="../static/js/tabs.js" type="text/javascript"></script>
-      <script>
-        (function() {
-          // Auto syntax highlight all pre tags.
-          var preElements = document.getElementsByTagName('pre');
-          for (var i = 0; i < preElements.length; i++) {
-            var preElement = preElements[i];
-            preElement.classList.add('prettyprint');
-            var datasetFilename = preElement.getAttribute('data-filename');
-            if (datasetFilename) {
-              var filename = document.createElement('div');
-              filename.className = 'filename nocode';
-              filename.textContent = datasetFilename;
-              preElement.insertBefore(filename, preElement.firstChild);
-            }
-          }
-          prettyPrint();
-        })();
-      </script>
-
-      <!-- Feedback. -->
-      <script type="text/javascript" src="http://www.gstatic.com/feedback/api.js"></script>
-      <script type="text/javascript">
-        (function() {
-         document.getElementById('send-feedback').addEventListener('click', function() {
-           userfeedback.api.startFeedback({ productId: 86265 });
-         });
-        })();
-      </script>
-    </div>
   </div>
+
+    <script src="../static/js/fatnav.js"></script>
+    <script src="../static/js/article.js"></script>
+    <script src="../static/js/prettify.js"></script>
+    <script src="../static/js/search.js"></script>
+    <script src="http://www.gstatic.com/feedback/api.js"></script>
+    <script src="../static/js/site.js"></script>
+  </body>
 </html>
